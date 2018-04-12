@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .tabBox {
+            margin: 20px auto;
+            width: 500px;
+        }
+
+        .tabBox ul {
+            position: relative;
+            top: 1px;
+            /*相对在于自己之前的位置向下移动1PX，使边框重合*/
+        }
+
+        .tabBox ul li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 0 10px;
+            line-height: 33px;
+            border: 1px solid #AAA;
+            cursor: pointer;
+        }
+
+        .tabBox ul li.active {
+            color: lightcoral;
+            font-weight: bold;
+            border-bottom-color: #FFF; /*当前LI的边框覆盖着DIV的边框,我们让LI的下边框是背景颜色白色，这样看上去就像没边框了*/
+        }
+
+        .tabBox div {
+            display: none;
+            line-height: 148px;
+            text-align: center;
+            border: 1px solid #AAA;
+        }
+
+        .tabBox div.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!--div.tabBox#tabBox>(ul>li*3)+(div*3) [TAB]-->
+<div class="tabBox" id="tabBox">
+    <ul>
+        <li class="active">新闻</li>
+        <li>电影</li>
+        <li>音乐</li>
+    </ul>
+    <div class="active">金仨胖来华访问</div>
+    <div>复仇者联盟三</div>
+    <div>没时间听音乐</div>
+</div>
+<script src="js/tab.js"></script>
+</body>
+</html>

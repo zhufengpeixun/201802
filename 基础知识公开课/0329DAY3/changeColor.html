@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .box {
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        .box li {
+            padding: 0 5px;
+            line-height: 35px;
+            border-bottom: 1px dashed #AAA;
+            cursor: pointer;
+
+            /*超出一行的内容自动裁切,以省略号代替*/
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .bgColor {
+            background-color: lightcyan;
+        }
+
+        /*==CSS3==*/
+        /*
+         * nth-child(n):当前容器所有子元素中的第N个
+         *    .box li:nth-child(1)：BOX容器所有子元素中的第一个并且标签名是LI的
+         *
+         * nth-of-type(n):先给当前容器按照某一个标签名进行分组,获取分组中的第N个
+         *    .box li:nth-of-type(1)：先获取BOX中所有的LI，在获取LI中的第一个
+         */
+        /*.box li:nth-of-type(even) { !*EVEN:偶数 ODD:奇数*!
+            background: lightcyan;
+        }
+
+        .box li:hover { !*鼠标滑过的样式,鼠标离开回归原有样式*!
+            background: lightcoral;
+        }*/
+        /*.box li:nth-of-type(3n+1) {
+            color: red;
+        }
+
+        .box li:nth-of-type(3n+2) {
+            color: green;
+        }
+
+        .box li:nth-of-type(3n) {
+            color: blue;
+        }*/
+    </style>
+</head>
+<body>
+<ul class="box" id="box">
+    <li>岁末，珠峰就业还在一直创造奇迹</li>
+    <li>珠峰成长的秘密-兴盛衰败一挥间，长留慈悲在心念</li>
+    <li>珠峰培训帮我实现外企梦—上海姑娘徐米米的故事</li>
+    <li>应届毕业生也能拿20多万年薪，我是面霸，我一口气拿下六个大公司offer</li>
+    <li>学完之真的能推荐进百度吗，我来揭发珠峰培训的老底</li>
+    <li>担心逻辑差，学不会，23岁切图小妹工资翻倍</li>
+</ul>
+<script src="js/changeColor.js"></script>
+</body>
+</html>

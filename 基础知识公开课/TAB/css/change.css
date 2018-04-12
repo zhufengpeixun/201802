@@ -1,0 +1,22 @@
+.changeBox {
+    margin: 20px auto;
+    width: 300px;
+}
+
+.changeBox li {
+    line-height: 35px;
+    border-bottom: 1px dashed #DDD;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.changeBox li:nth-child(even) {
+    background: linen;
+}
+
+.changeBox li:hover{
+    background: lightskyblue;
+}
