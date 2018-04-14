@@ -1,0 +1,35 @@
+.tab {
+    margin: 20px auto;
+    width: 600px;
+}
+
+.tab ul{
+    position: relative;
+    top: 1px;
+}
+
+.tab ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 10px;
+    line-height: 35px;
+    cursor: pointer;
+    border: 1px solid #AAA;
+}
+
+.tab ul li.active {
+	color: red;
+    border-bottom-color: #FFF;
+}
+
+.tab div {
+    display: none;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border: 1px solid #AAA;
+}
+
+.tab div.active {
+    display: block;
+}
