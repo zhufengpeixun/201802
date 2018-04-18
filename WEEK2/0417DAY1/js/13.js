@@ -33,4 +33,3 @@ var Tom = {
 };
 Tom.wait();//=>this:Tom
 */
-
