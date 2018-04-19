@@ -1,0 +1,12 @@
+.transition(@property:all,@duration:.5s,@timing-function:linear,@delay:0s) {
+  -webkit-transition: @arguments;
+  transition: @arguments;
+}
+
+.centerPos(@w:100,@h:100) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: unit(-(@h/2), px);
+  margin-left: unit(-(@w/2), px);
+}

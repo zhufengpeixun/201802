@@ -1,0 +1,52 @@
+@import (reference) "common";/*reference:只把内容导入过来使用,但是不会编译common中的内容*/
+
+.cc{
+  .transition;/*默认值*/
+  .transition(@duration: 1s);
+}
+
+@link-color: #555;
+@bg-src: "../img";
+
+@H: 200;
+.pub {
+  @H: 100;
+  .bg { /*.pub .bg*/
+    a {
+      width: unit(@H, px); /*300*/
+    }
+    @H: 300;
+  }
+
+  & > .bg { /*.pub > .bg*/
+
+  }
+
+  &.bg { /*.pub.bg*/
+
+  }
+
+  &:hover { /*.pub:hover*/
+
+  }
+}
+
+.pub.bg {
+
+}
+
+.box {
+  .centerPos();
+  width: 100px;
+  height: 100px;
+  background: url("@{bg-src}/news_1.png") no-repeat;
+
+  a {
+    color: @link-color;
+  }
+}
+
+.hover {
+  color: @link-color;
+}
+
