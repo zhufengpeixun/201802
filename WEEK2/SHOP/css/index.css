@@ -1,0 +1,108 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #F4F4F4;
+    font-size: 14px;
+    color: #555;
+}
+
+.container {
+    margin: 20px auto;
+    width: 1200px;
+    overflow: hidden;
+}
+
+/*--HEADER--*/
+.header {
+    background: #FFF;
+}
+
+.header span {
+    float: left;
+    width: 90px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.header a {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    line-height: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.header a i {
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    margin-top: -4px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    border: 4px solid transparent;
+}
+
+.header a i.up {
+    margin-top: -9px;
+    border-bottom-color: #999;
+}
+
+.header a i.down {
+    margin-top: 1px;
+    border-top-color: #999;
+}
+
+.header a i.up.bg {
+    border-bottom-color: #E01D20;
+}
+
+.header a i.down.bg {
+    border-top-color: #E01D20;
+}
+
+.header a:hover {
+    color: #E01D20;
+}
+
+/*--LIST--*/
+.list {
+    width: 1205px;
+    margin-top: 20px;
+}
+
+.list li {
+    margin: 0 10px 10px 0;
+    float: left;
+}
+
+.list li a {
+    display: block;
+    padding: 0 16px;
+    width: 193px;
+    background: #FFF;
+    border: 3px solid transparent;
+}
+
+.list li a img {
+    display: block;
+    width: 100%;
+}
+
+.list li a p {
+    height: 40px;
+    line-height: 20px;
+    color: #999;
+    overflow: hidden;
+}
+
+.list li a span {
+    line-height: 40px;
+    color: #555;
+}
+
+.list li a:hover {
+    border: 3px solid #E01D20;
+}
