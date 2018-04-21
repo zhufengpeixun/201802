@@ -85,15 +85,97 @@
 // ajax();
 
 //=======================[...]
+/*
+ * 1.拓展运算符
+ * 2.剩余运算符
+ * 3.展开运算符
+ */
 //=>对象克隆[展开运算符]
-let obj = {name: 'xxx', age: 27};
-let newObj = {...obj, sex: 0};//=>展开运算符
-console.log(newObj);
+// let obj = {name: 'xxx', age: 27};
+// let newObj = {...obj, sex: 0};//=>展开运算符
+// console.log(newObj);
 
+// let ary = [12, 23];
+// let newAry = [...ary, 34];
+// console.log(newAry);
 
+// let [...arr] = ary;
+// console.log(arr);
 
+// let ary = [12, 23, 14, 25, 35, 26];
+// console.log(Math.max(...ary));
+// let fn = function (...arg) {
+//     //=>剩余预算符：把传递参数除了前面形参接收的以外,其余的都存储到ARG中,ARG是一个数组
+// };
+// fn(...ary);//=>fn(12, 23, 14, 25, 35, 26) 展开运算符
 
+// let fn = function (...arg) {
+//     arg.sort(function (a, b) {
+//         return a - b;
+//     });
+//     arg.pop();
+//     arg.shift();
+//     return eval(arg.join('+')) / arg.length;
+// };
+// let score = fn(100, 85, 60, 89, 95, 92, 73);
+// console.log(score);
 
+//======================[箭头函数]
 
+// let fn = (x, y) => {
+//
+// };
+// fn(10, 20);
 
+// let fn = x => {
+//     //=>只有一个形参，我们可以省略小括号
+// };
+// fn(10);
 
+// let fn = function (x, y) {
+//     return x + y;
+// };
+// let fn = (x = 0, y = 0) => x + y; //=>如果函数体中只有一句操作，并且是RETURN的，我们可以省略大括号（给形参设置默认值）
+// console.log(fn(10, 20));
+
+// let fn = x => y => x + y;
+// /*
+//  var fn = function fn(x) {
+//   return function (y) {
+//     return x + y;
+//   };
+//  };
+//  */
+
+//1.箭头函数中没有arguments
+// let fn = (...arg) => {
+//     // console.log(arguments);//=>Uncaught ReferenceError: arguments is not defined
+//     // console.log(arg);//=>可以使用剩余运算符代替，而且ARG是一个数组
+// };
+// fn(10, 20, 30, 40);
+
+//2.箭头函数中没有自己的执行主体(THIS)，它的THIS都是继承上下文中的THIS
+/*
+let obj = {
+    fn: (function () {
+        //=>this:window
+        let _this = this;//=>window
+        return function () {
+            // console.log(this);
+            console.log(_this);//=>_this只是一个变量，不是私有的，找上级作用域中的
+        }
+    })()
+};
+// obj.fn();//=>this:obj  如果我想让obj.fn执行,this也是window，该如何处理?
+// obj.fn.call(window);//=>this:window
+*/
+
+// let obj = {
+//     fn: (function () {
+//         //=>this:window
+//         return () => {
+//             console.log(this);
+//         }
+//     })()
+// };
+// obj.fn();//=>this:window 箭头函数执行和是否有点，点前面是谁都没关系了，因为它没有自己的执行主体，在箭头函数中使用到的THIS都是直接找上下文中的THIS来使用
