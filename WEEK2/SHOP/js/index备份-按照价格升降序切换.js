@@ -33,9 +33,7 @@ let listBox = document.getElementById('list'),
         <a href="javascript:;">
             <img src="${img}" alt="">
             <p>${title}</p>
-            <span>￥${price}</span><br/>
-            <span>时间：${time}</span><br/>
-            <span>热度：${hot}</span>
+            <span>￥${price}</span>
         </a></li>`;
     }
     listBox.innerHTML = str;
@@ -44,17 +42,19 @@ let listBox = document.getElementById('list'),
 //=>HANDLE CLICK
 ~function () {
     let sortList = function () {
-        let {index: _index, flag: _flag} = this,
-            productAry = [].slice.call(productList);
+        //=>this:当前操作的A
+        let productAry = [].slice.call(productList);
+        /*
+         let _this=this;
+         productAry.sort(function(a,b){
+             //this:window
+             _this.flag
+         });*/
         productAry.sort((a, b) => {
-            let ary = ['data-time', 'data-price', 'data-hot'];
-            let aInn = a.getAttribute(ary[_index]),
-                bInn = b.getAttribute(ary[_index]);
-            if (_index === 0) {
-                aInn = aInn.replace(/-/g, '');
-                bInn = bInn.replace(/-/g, '');
-            }
-            return (aInn - bInn) * _flag;
+            //=>this:当前操作的A
+            let aP = a.getAttribute('data-price'),
+                bP = b.getAttribute('data-price');
+            return (aP - bP) * this.flag;
         });
         for (let i = 0; i < productAry.length; i++) {
             let curLi = productAry[i];
@@ -62,20 +62,10 @@ let listBox = document.getElementById('list'),
         }
     };
 
-    for (let i = 0; i < linkList.length; i++) {
-        let curLink = linkList[i];
-        curLink.index = i;
-        curLink.flag = -1;
-        curLink.onclick = function () {
-            //=>点击当前的A标签，我们需要让其余的A标签的FLAG回归原始值-1，这样下一次再点击某一个A标签，还是从-1开始乘，变为1，也就是从升序开始的
-            for (let j = 0; j < linkList.length; j++) {
-                let item = linkList[j];
-                if (item !== this) {
-                    item.flag = -1;
-                }
-            }
-            this.flag *= -1;
-            sortList.call(this);
-        };
-    }
+    linkList[1].flag = -1;
+    linkList[1].onclick = function () {
+        //=>this:当前操作的A标签(价格A标签)
+        this.flag *= -1;//=>每一次点击可以让FLAG的值从1~-1来回切换(第一次点击变为1,第二次变为-1...)
+        sortList.call(this);//=>执行SORT-LIST，让方法中的THIS关键字改为操作的A标签  (箭头函数虽然很强大，但是不可以乱用，尤其是在需要改变函数中THIS的情况下，箭头函数中的THIS不受我们管控，都是默认继承上下文中的，我们基于call也改不了)
+    };
 }();

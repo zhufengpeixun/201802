@@ -44,17 +44,28 @@ let listBox = document.getElementById('list'),
 //=>HANDLE CLICK
 ~function () {
     let sortList = function () {
-        let {index: _index, flag: _flag} = this,
-            productAry = [].slice.call(productList);
+        //=>this:点击的A标签
+        let productAry = [].slice.call(productList);
         productAry.sort((a, b) => {
-            let ary = ['data-time', 'data-price', 'data-hot'];
-            let aInn = a.getAttribute(ary[_index]),
-                bInn = b.getAttribute(ary[_index]);
-            if (_index === 0) {
-                aInn = aInn.replace(/-/g, '');
-                bInn = bInn.replace(/-/g, '');
+            //=>需要获取当前点击A的索引,通过索引不同,按照不同的方式进行排序
+            let aInn,
+                bInn;
+            switch (this.index) {
+                case 0:
+                    //=>日期不能直接的相减，需要把字符串中的“-”去掉在相减
+                    aInn = a.getAttribute('data-time').replace(/-/g, '');
+                    bInn = b.getAttribute('data-time').replace(/-/g, '');
+                    break;
+                case 1:
+                    aInn = a.getAttribute('data-price');
+                    bInn = b.getAttribute('data-price');
+                    break;
+                case 2:
+                    aInn = a.getAttribute('data-hot');
+                    bInn = b.getAttribute('data-hot');
+                    break;
             }
-            return (aInn - bInn) * _flag;
+            return (aInn - bInn) * this.flag;
         });
         for (let i = 0; i < productAry.length; i++) {
             let curLi = productAry[i];
@@ -62,18 +73,12 @@ let listBox = document.getElementById('list'),
         }
     };
 
+    //=>给每一个LINK都绑定点击切换
     for (let i = 0; i < linkList.length; i++) {
         let curLink = linkList[i];
-        curLink.index = i;
-        curLink.flag = -1;
+        curLink.index = i;//=>设置自定义属性存储A的索引
+        curLink.flag = -1;//=>每一个A标签上都有一个FLAG，能够在点击的时候实现1~-1之间的切换,点击都要执行SORT-LIST，同时方法中的THIS也都改为当前点击的A
         curLink.onclick = function () {
-            //=>点击当前的A标签，我们需要让其余的A标签的FLAG回归原始值-1，这样下一次再点击某一个A标签，还是从-1开始乘，变为1，也就是从升序开始的
-            for (let j = 0; j < linkList.length; j++) {
-                let item = linkList[j];
-                if (item !== this) {
-                    item.flag = -1;
-                }
-            }
             this.flag *= -1;
             sortList.call(this);
         };
