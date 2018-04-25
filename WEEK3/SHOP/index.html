@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>珠峰培训-商品排序</title>
+    <!--&lt;!&ndash;IMPORT LESS (development [DEV])&ndash;&gt;
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>-->
+
+    <!--IMPORT CSS [PRO]-->
+    <link rel="stylesheet" href="css/index.min.css">
 </head>
 <body>
+<div class="container">
+    <header class="headerBox">
+        <span>排序：</span>
+        <a href="javascript:;">上架时间</a>
+        <a href="javascript:;">价格</a>
+        <a href="javascript:;">热销</a>
+    </header>
+    <ul class="productBox clearfix">
+        <li><a href="#">
+            <img src="img/1.jpg" alt="">
+            <p title="HUAWEI P10 Plus 6GB+128GB 全网通版（钻雕金）">HUAWEI P10 Plus 6GB+128GB 全网通版（钻雕金）</p>
+            <span>￥4888</span>
+            <span>时间：2014-01-01</span>
+            <span>热度：9999</span>
+        </a></li>
+    </ul>
+</div>
 
+
+<!--
+ 真实项目中我们经常使用A标签做一些点击的按钮
+   1.因为A标签的:hover伪类兼容所有的浏览器
+
+ A标签的HREF属性存储的是点击需要跳转的页面，或者是#XXX，这个是HASH定位，如果只想让其作为一个普通的按钮，我们需要阻止A标签点击跳转的默认行为
+    <a href="javascript:;">珠峰</a>
+-->
+<!--<a href="javascript:;">珠峰</a>-->
 </body>
 </html>

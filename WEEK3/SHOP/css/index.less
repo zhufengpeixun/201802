@@ -1,0 +1,124 @@
+/*
+ * RESET是清空默认样式的,不仅需要导入进来使用,最后需要和我们写的CSS一起编译，放到浏览器中渲染解析才可以
+ *
+ * COMMON中存放的一般都是公用的变量或者方法，只需要调取使用即可，编译的时候不需要编译这些内容，所以用 REFERENCE 修饰一下
+ *
+ * @import导入的时候最好都是导入less文件，这样可以在编译这个less的时候，把所有的less编译到一个css中，实现css的合并和压缩
+ */
+@import "reset";
+@import (reference) "common";
+
+html, body {
+  background: #F4F4F4;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 20px auto;
+  width: 1200px;
+}
+
+.headerBox {
+  @H: 50px;
+  @F: 14px;
+
+  height: @H;
+  line-height: @H;
+  background: @con-bg;
+  font-size: 0;
+
+  span {
+    display: inline-block; /*使用INLINE-BLOCK会把标签之间的空格和换行当做元素占位，导致元素之间有间隙。解决：让父元素的FONT-SIZE:0*/
+    width: 90px;
+    text-align: center;
+    height: @H;
+    line-height: @H;
+    font-size: @F;
+    color: @text-black;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 15px;
+    height: @H;
+    line-height: @H;
+    font-size: @F;
+    color: @text-gray;
+
+    &:hover { /*a:hover*/
+      color: @text-active;
+    }
+  }
+}
+
+.productBox {
+  margin: 20px 0 0 0;
+  overflow: hidden;
+
+  li {
+    float: left; /*子元素浮动，子元素的高度不能撑开父元素（脱离文档流）。解决：清除子元素浮动对父元素的影响 =>clear:both*/
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: @con-bg;
+
+    &:nth-child(5n) { /*五个为一组,一组中的第五个*/
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+      box-sizing: border-box; /*CSS3新盒子模型：我们设置的WIDTH是盒子最后的宽度，包括（边框、PADDING、内容宽度）*/
+      width: 232px;
+      padding: 0 16px;
+      border: 3px solid transparent;
+      .transition(@duration: .2s);
+
+      &:hover {
+        border-color: @text-active;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 194px;
+      }
+
+      p {
+        font-size: 14px;
+        color: @text-gray;
+        height: 40px;
+        line-height: 20px;
+        overflow: hidden;
+      }
+
+      span {
+        display: block;
+        line-height: 25px;
+        font-size: 12px;
+        color: @text-black;
+
+        &:nth-of-type(1) {
+          /*
+          a span:nth-child(1) 不是所有SPAN中的第一个，它是A子元素中的第一个，并且是SPAN标签
+          nth-of-type(1) 先按照SPAN标签分组，获取分组中的第一个
+          */
+          color: @text-active;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
