@@ -50,9 +50,14 @@ let productRender = (function () {
                     }
                     return (aInn - bInn) * this.flag;
                 });
+
+                //=>基于文档碎片减少DOM回流
+                let frg = document.createDocumentFragment();
                 productList.forEach(curLi => {
-                    productBox.appendChild(curLi);
+                    frg.appendChild(curLi);
                 });
+                productBox.appendChild(frg);
+                frg = null;
             }
         });
     };
