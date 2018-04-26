@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .marqueeBox {
+            position: relative;
+            margin: 20px auto;
+            width: 500px;
+            height: 100px;
+            border: 1px solid green;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 900px;
+            height: 100px;
+        }
+
+        .wrapper li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .wrapper li:nth-child(3n+1) {
+            background: lightblue;
+        }
+
+        .wrapper li:nth-child(3n+2) {
+            background: lightcyan;
+        }
+
+        .wrapper li:nth-child(3n+3) {
+            background: lightpink;
+        }
+    </style>
+</head>
+<body>
+<!--
+  在LONG LONG AGO以前，实现跑马灯用的是MARQUEE
+    1.不好实现无缝衔接
+    2.开始显示内容的时候后有空白
+    3.性能消耗大
+    4.目前MARQUEE标签基本上被舍弃了
+    ...
+
+  现如今跑马灯都是基于JS动画或者CSS3动画实现的
+-->
+
+<div class="marqueeBox">
+    <ul class="wrapper">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/跑马灯.js"></script>
+</body>
+</html>

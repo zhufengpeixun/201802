@@ -48,7 +48,7 @@ let utils = (function () {
         let curLeft = curEle.offsetLeft,
             curTop = curEle.offsetTop,
             p = curEle.offsetParent;
-        
+
         //2.累加父参照物的边框和偏移(一直向上找,找到BODY为止,每当找到一个父参照物都把它的边框和偏移累加起来,根据元素不一样,具体找几次也不知道)
         //TAG-NAME获取当前元素的标签名(大写的)
         while (p.tagName !== 'BODY') {//=>当找到的父参照物是BODY结束查找和累加操作
@@ -66,8 +66,20 @@ let utils = (function () {
         };
     };
 
+    //=>操作浏览器盒子模型属性的
+    let winHandle = function (attr, value) {
+        if (typeof value !== 'undefined') {
+            //=>设置盒子模型属性值:SCROLL-TOP/LEFT
+            document.documentElement[attr] = value;
+            document.body[attr] = value;
+            return;
+        }
+        return document.documentElement[attr] || document.body[attr];
+    };
+
     return {
         css, //=>在ES6中直接这样写相当于 css:css
-        offset
+        offset,
+        winHandle
     }
 })();
