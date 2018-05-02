@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/banner.min.css">
+</head>
+<body>
+<div class="container">
+    <ul class="wrapper">
+        <!--<li class="slide">
+            <img src="" data-img="img/banner1.jpg" alt="">
+        </li>-->
+    </ul>
+    <ul class="focusBox clearfix">
+        <!--<li class="select"></li>
+        <li></li>
+        <li></li>
+        <li class="last"></li>-->
+    </ul>
+    <a href="javascript:;" class="arrow arrowLeft"></a>
+    <a href="javascript:;" class="arrow arrowRight"></a>
+</div>
+
+<div class="container">
+    <ul class="wrapper">
+        <!--<li class="slide">
+            <img src="" data-img="img/banner1.jpg" alt="">
+        </li>-->
+    </ul>
+    <ul class="focusBox clearfix"></ul>
+</div>
+
+<!--IMPORT JS-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-banner.min.js"></script>
+<script>
+    $('.container').each(function (index, item) {
+        if (index === 0) {
+            $(item).pluginBanner({
+                url: 'json/banner.json',
+                initIndex: 3,
+                eventFocus: 'click'
+            });
+        }
+
+        if (index === 1) {
+            $(item).pluginBanner({
+                url: 'json/banner2.json',
+                autoInterval: 3000,
+                needFocus: false,
+                showArrow: false,
+                needArrow: false
+            });
+        }
+    });
+</script>
+</body>
+</html>

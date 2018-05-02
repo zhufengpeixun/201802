@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%; /*此时盒子的左上角处于页面中间位置*/
+    margin-left: -320px;
+    margin-top: -480px; /*此时盒子处于页面中间*/
+
+    width: 640px;
+    height: 960px;
+    background: url("../img/zf_cubeBg.jpg") no-repeat;
+    background-size: cover; /*按照比例把背景图覆盖整个容器*/
+
+    /*模拟出用户和舞台的视距*/
+    perspective: 2000px;
+}
+
+.container .cubeBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+
+    /*让盒子呈现3D空间效果*/
+    transform-style: preserve-3d;
+
+    /*为了初始的时候看到魔方的效果，我们把魔方略微旋转一定角度*/
+    /*scale：缩放*/
+    transform: scale(0.6) rotateX(-30deg) rotateY(45deg);
+}
+
+.container .cubeBox li {
+    position: absolute;
+    top: 0;
+    left: 0; /*开始让六个面叠加在一起*/
+    width: 100%;
+    height: 100%;
+}
+
+.container .cubeBox li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container .cubeBox li:nth-child(1) { /*获取第一个LI*/
+    /*translate:位移*/
+    transform: translateZ(150px);
+}
+
+.container .cubeBox li:nth-child(2) {
+    /*rotate：旋转*/
+    transform: translateZ(-150px) rotateY(180deg);
+}
+
+.container .cubeBox li:nth-child(3) {
+    transform: translateX(150px) rotateY(90deg);
+}
+
+.container .cubeBox li:nth-child(4) {
+    transform: translateX(-150px) rotateY(-90deg);
+}
+
+.container .cubeBox li:nth-child(5) {
+    transform: translateY(-150px) rotateX(90deg);
+}
+
+.container .cubeBox li:nth-child(6) {
+    transform: translateY(150px) rotateX(-90deg);
+}
