@@ -1,0 +1,97 @@
+<!DOCTYPE html><html><head><title>1. ES6新语法</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<p>阶段复习-前三周 <br>
+</p>
+
+<h3 id="1-es6新语法">1. ES6新语法</h3>
+
+<ul><li>let / const</li>
+</ul>
+
+<blockquote>
+  <p>和ES5中的VAR的区别 <br>
+  1)let不存在变量提升机制（变量不允许在声明之前使用） <br>
+  2)let不允许重复声明 <br>
+  3)在全局作用域中基于let声明的变量不是window的一个属性，和他没关系 <br>
+  4)typeof 未被声明的变量   =&gt;不是undefined而是报错（暂时性死区） <br>
+  5)let会形成块级作用域（类似于私有作用域，大部分大括号都会形成块作用域） <br>
+  …</p>
+</blockquote>
+
+<ul><li>解构赋值</li>
+<li>“…” 拓展、剩余、展开运算符</li>
+<li><p>ES6中的模板字符串</p></li>
+<li><p>箭头函数</p></li>
+</ul>
+
+<blockquote>
+  <p>和普通函数的区别 <br>
+  1)没有arguments，但是可以基于…arg获取实参集合（结果是一个数组） <br>
+  2)没有自己的this，箭头函数中的this是上下文中的this</p>
+</blockquote>
+
+<ul><li>Promise（async/await）</li>
+<li>class（ES6中创建类的）</li>
+<li>interator（for of 循环）</li>
+<li>Map / Set</li>
+<li>…</li>
+</ul>
+
+
+
+<h3 id="2-请说出你对-重排回流和重绘读写分离-的理解">2. 请说出你对 “重排(回流)和重绘读写分离”  的理解！</h3>
+
+<blockquote>
+  <p>思路： <br>
+  1.首先说出什么是重排和重绘 <br>
+  2.突出他们耗性能 <br>
+  3.突出自己写项目的时候重点注意了这些事情，以及自己的解决方案（说一下解决原理）</p>
+</blockquote>
+
+<p>浏览器渲染一个页面的时候是按照“先创建DOM树-&gt;在加载CSS-&gt;生成渲染树 RENDER TREE-&gt;把渲染树交给浏览器（GPU）进行绘制”，如果后期我们修改了元素的样式（但是没有改变大小和位置），浏览器会把当前元素重新生成渲染树，然后重新渲染，这个机制是重绘，但是一旦元素的位置或者大小等发生改变，浏览器就要从DOM树重新计算渲染，这个机制是回流(重排)，不论是重排还是重绘都非常的消耗性能</p>
+
+<p>在我的以前项目中，我特意的重视了这个问题，尽量减少操作DOM引发的回流和重绘问题，常用的解决方案：</p>
+
+<ol><li rel="1">需要动态向页面追加元素的时候，基于文档碎片或者先把需要增加的所有元素拼接成字符串，最后统一进行增加</li>
+<li rel="2">读写分离：把统一修改样式都放到一起执行，新版浏览器都有一个自己检测的机制，如果发现下面紧挨着的操作也是修改元素的样式，会把所有修改的事先存起来，直到遇到非修改样式的操作，会把之前存储的统一执行，引发一次回流和重绘</li>
+</ol>
+
+<p>当然还有一些其它的办法，这些是最常注意的，我认为减少DOM的回流重绘是非常重要的性能优化手段之一</p>
+
+
+
+<h3 id="5用户昵称规定只能是数字大小写字母组成而且不能少于2位也不能超过20位写个正则匹配这个需求">5.用户昵称规定只能是“数字、大小写字母”组成，而且不能少于2位，也不能超过20位，写个正则匹配这个需求</h3>
+
+
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs lsl"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>let reg = /^[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-zA-Z]{<span class="hljs-number">2</span>,<span class="hljs-number">20</span>}$/;
+</div></code></pre>
+
+
+
+<h3 id="6-谈谈你对面向对象的理解">6. 谈谈你对面向对象的理解！</h3>
+
+<p>[JS本身就是面向对象编程的] <br>
+JS本身就是基于面向对象(OOP)编程思想开发出来的语言，我们学习JS就是在学习JS中的类和实例，例如： <br>
+数组是Array的实例、对象是Object的实例、函数是Function的实例…，在这些内置类的原型上有很多公共的属性和方法，这些方法可以被实例调用，我们学习JS就是学习这些方法…</p>
+
+<p>[面向对象真实项目的应用] <br>
+平时的业务逻辑开发，我没有刻意使用类的方式来做，只有在一些组件或者插件封装的时候才会基于构造函数和原型链使用类和实例完成，例如：我之前封装过一些 TAB页卡、轮播图、模态框、表单验证等插件，就是这样处理的（我之前看了一些类库和插件的源码，也都是基于面向对象封装的）</p>
+
+<p>[面向对象中的一些语法和特点] <br>
+所谓面向对象就是基于class或者function创建一个类，执行的时候new执行创建一个实例，这样实例就可以调取类上提供的方法，想要基于面向对象进行插件封装，必须掌握关于类的继承、封装和多态，封装就是提取公共的方法、JS中没有严格意义的多态，不能进行方法的重写，常用的继承方式有很多，例如：原型继承、call继承、寄生组合继承、es6中的继承等，有些方式会存在一些问题，我项目中后来都是基于class中的extend实现继承的</p>
+
+
+
+<h3 id="10谈一下你对作用域链和原型链的理解">10.谈一下你对作用域链和原型链的理解</h3>
+
+<p><code>作用域链</code> <br>
+函数执行会形成一个私有的作用域，形参和在当前私有作用域中声明的变量都是私有变量，当前的私有作用域有自我保护机制，私有变量和外界是没有关系的，但是如果私有作用域中遇到一个非私有的变量，则向它的上级作用域找，如果还不是上级作用域私有的，则继续向上查找，一直找到window为止。这种变量一层层向上查找的机制就是“作用域链机制”</p>
+
+<p><code>原型链</code> <br>
+它也是一种查找机制，实例首先在自己的私有属性中进行属性的查找，如果不是私有属性，基于__proto__ 向所属类的原型上进行查找，如果在找不到，则继续基于__proto__ 向上查找，一直找到Object.prototype为止，例如：obj.hasOwnProperty() 这里调取的hasOwnProperty这个属性就是找到Object.prototype才找到的</p></div></body></html>
