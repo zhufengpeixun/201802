@@ -29,19 +29,19 @@ const div2 = (x) => x / 2;
  *
  *   我们把JS中基于闭包实现的预先存储的思想成为 “柯理化函数思想”
  */
-const compose = (...arg) => {
-    //=>arg:[div2, mul3, add1, add1]
-    arg = arg.reverse();//=>[add1, add1,mul3,div2]
-    return val => {
-        //=>val:0
-        arg.forEach(item => {
-            val = item(val);
-            //第一次 add1(0) =>1  =>val=1
-            //第二次 add1(1) =>2  =>val=2
-            //第三次 mul3(2) ...
-        });
-        return val;
-    }
-};
-let fn = compose(div2, mul3, add1, add1);
-console.log(fn(0));//=>div2(mul3(add1(add1(0))))
+// const compose = (...arg) => {
+//     //=>arg:[div2, mul3, add1, add1]
+//     arg = arg.reverse();//=>[add1, add1,mul3,div2]
+//     return val => {
+//         //=>val:0
+//         arg.forEach(item => {
+//             val = item(val);
+//             //第一次 add1(0) =>1  =>val=1
+//             //第二次 add1(1) =>2  =>val=2
+//             //第三次 mul3(2) ...
+//         });
+//         return val;
+//     }
+// };
+// let fn = compose(div2, mul3, add1, add1);
+// console.log(fn(0));//=>div2(mul3(add1(add1(0))))
