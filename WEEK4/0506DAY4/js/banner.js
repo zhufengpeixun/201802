@@ -11,7 +11,7 @@ let bannerRender = (function () {
     //=>轮播图运动的基础参数
     let stepIndex = 0,//=>STEP-INDEX记录当前展示块的索引(步长)
         autoTimer = null,//=>AUTO-TIMER自动轮播的定时器
-        interval = 1000;//=>INTERVAL间隔多长时间自动切换一次
+        interval = 3000;//=>INTERVAL间隔多长时间自动切换一次
 
     //=>AUTO-MOVE：控制轮播图的运动和切换
     /*
