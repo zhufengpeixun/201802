@@ -1,0 +1,81 @@
+.container {
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.container .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4000px; /*根据JS中获取的数据动态控制宽度*/
+    height: 100%;
+}
+
+.container .wrapper .slide {
+    float: left;
+    width: 1000px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container .wrapper .slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container .focus {
+    position: absolute;
+    z-index: 999;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /*基于CSS3中的TRANSFORM变形属性，在不固定的宽度的情况下实现水品居中 translateX:让当前元素在水平方向发生位移(此处-50%向左移动当前盒子的一半)*/
+
+    padding: 4px;
+    height: 12px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px; /*让其为盒子高度的一半,这样把长方型的盒子修改为椭圆状*/
+    font-size: 0;
+}
+
+.container .focus li {
+    display: inline-block;
+    margin: 0 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.container .focus li.active {
+    background: #DB192A;
+}
+
+.container .arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -22.5px;
+    width: 28px;
+    height: 45px;
+    background: url("../img/pre.png") no-repeat;
+    opacity: 0.3;
+}
+
+.container .arrow:hover {
+    opacity: 1;
+}
+
+.container .arrow.arrowLeft {
+    left: 0;
+    background-position: 0 0;
+}
+
+.container .arrow.arrowRight {
+    right: 0;
+    background-position: -50px 0;
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "img": "img/banner1.jpg",
+    "desc": "广阔的就业推荐机会",
+    "link": "http://www.zhufengpeixun.cn/"
+  },
+  {
+    "id": 2,
+    "img": "img/banner2.jpg",
+    "desc": "梦想起飞从选择珠峰培训开始",
+    "link": "http://www.zhufengpeixun.cn/"
+  },
+  {
+    "id": 3,
+    "img": "img/banner3.jpg",
+    "desc": "把握未来，掌握先机",
+    "link": "http://www.zhufengpeixun.cn/"
+  }
+]
