@@ -1,0 +1,92 @@
+.container {
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.container .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .wrapper .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*默认展示第一个*/
+.container .wrapper .slide:nth-of-type(1) {
+    z-index: 1;
+    opacity: 1;
+}
+
+.container .wrapper .slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container .focus {
+    position: absolute;
+    z-index: 999;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 4px;
+    height: 12px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    font-size: 0;
+}
+
+.container .focus li {
+    display: inline-block;
+    margin: 0 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.container .focus li.active {
+    background: #DB192A;
+}
+
+.container .arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -22.5px;
+    width: 28px;
+    height: 45px;
+    background: url("../img/pre.png") no-repeat;
+    opacity: 0.3;
+}
+
+.container .arrow:hover {
+    opacity: 1;
+}
+
+.container .arrow.arrowLeft {
+    left: 0;
+    background-position: 0 0;
+}
+
+.container .arrow.arrowRight {
+    right: 0;
+    background-position: -50px 0;
+}
