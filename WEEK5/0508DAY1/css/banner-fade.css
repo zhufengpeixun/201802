@@ -70,6 +70,7 @@
     display: none;
     position: absolute;
     top: 50%;
+    z-index: 999;
     margin-top: -22.5px;
     width: 28px;
     height: 45px;
