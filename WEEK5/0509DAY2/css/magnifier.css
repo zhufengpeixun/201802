@@ -1,0 +1,45 @@
+.magnifierBox {
+    margin: 20px auto;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.magnifierBox .smallBox, .magnifierBox .bigBox {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.magnifierBox .smallBox img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.magnifierBox .smallBox .mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    background: #E01D20;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    cursor: move; /*鼠标是可移动的图标*/
+}
+
+.magnifierBox .bigBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 900px; /*MARK/SMALL-BOX===BIG-BOX:BIG-IMG*/
+}
+
+.magnifierBox .smallBox .mark, .magnifierBox .bigBox {
+    display: none;
+}
