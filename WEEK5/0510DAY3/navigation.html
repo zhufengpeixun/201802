@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .menuBox {
+            margin: 20px auto;
+            width: 700px;
+            height: 270px;
+            border: 1px solid #000;
+        }
+
+        .navBox {
+            float: left;
+            width: 200px;
+            background: lightblue;
+        }
+
+        .navBox ul li {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .navBox ul li a {
+            display: block;
+            padding: 0 10px;
+            height: 100%;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .navBox ul li a:hover {
+            background: lightcoral;
+        }
+
+        .detailBox {
+            display: none;
+            float: left;
+            width: 500px;
+            height: 100%;
+            background: #EEE;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<section class="menuBox">
+    <nav class="navBox">
+        <ul>
+            <li><a href="#" target="_blank">导航1</a></li>
+            <li><a href="#" target="_blank">导航2</a></li>
+            <li><a href="#" target="_blank">导航3</a></li>
+            <li><a href="#" target="_blank">导航4</a></li>
+            <li><a href="#" target="_blank">导航5</a></li>
+            <li><a href="#" target="_blank">导航6</a></li>
+            <li><a href="#" target="_blank">导航7</a></li>
+            <li><a href="#" target="_blank">导航8</a></li>
+            <li><a href="#" target="_blank">导航9</a></li>
+        </ul>
+    </nav>
+    <div class="detailBox">导航1对应的详情内容</div>
+</section>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    //=>基于事件委托给最外层的盒子的MOUSE-OVER绑定方法，这样不管操作后代元素中的谁的MOUSE-OVER，这个方法都会执行
+    let $detailBox = $('.detailBox');
+    $(document.body).on('mouseover', function (ev) {
+        let target = ev.target,
+            tag = target.tagName,
+            $target = $(target),
+            $pars = $target.parents();//=>获取当前事件源的祖先元素
+
+        //=>如果事件源是NAV-BOX中的A或者LI（让DETAIL-BOX显示）
+        let flag = $pars.filter('.navBox').length > 0 ? true : false;//=>TRUE祖先中包含NAV-BOX,FALSE则相反
+        if ((tag === 'A' || tag === 'LI') && flag) {
+            let val = $target.text().match(/\d+/);
+            $detailBox.css('display', 'block').html(`导航${val}对应的内容`);
+            return;
+        }
+
+        /*//=>如果事件源是DETAIL-BOX或者是它的后代元素，不做处理
+        if ($target.hasClass('detailBox') || $pars.filter('.detailBox').length > 0) {
+            return;
+        }*/
+
+        $detailBox.css('display', 'none');
+    });
+
+    $detailBox.on('mouseover', function (ev) {
+        ev.stopPropagation();
+    });
+</script>
+</body>
+</html>

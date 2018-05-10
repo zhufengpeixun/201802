@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .container {
+            position: relative;
+            margin: 20px auto;
+            width: 462px;
+            height: 77px;
+        }
+
+        .container .imgBox li {
+            float: left;
+            margin-right: 18px;
+            width: 100px;
+            height: 75px;
+            border: 1px solid #000;
+        }
+
+        .container .imgBox li:nth-last-child(1) {
+            margin-right: 0;
+        }
+
+        .container .imgBox li img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .mark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+
+        .container .mark img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <ul class="imgBox clearfix">
+        <!--
+          如果小图和大图在名字上“没有固定的规则”，我们把大图地址都以自定义属性的方式存储起来，后期需要展示大图的时候，从自定义属性获取即可
+          <li><img src="img/apple_1.jpg" data-big="img/apple_1_bigger.jpg" alt=""></li>
+
+          如果有固定的规则，我们完全可以不采用自定义属性的方式，而是基于规则自己处理和匹配即可
+        -->
+        <li><img src="img/apple_1.jpg" alt=""></li>
+        <li><img src="img/apple_2.jpg" alt=""></li>
+        <li><img src="img/apple_3.jpg" alt=""></li>
+        <li><img src="img/apple_4.jpg" alt=""></li>
+    </ul>
+    <!--
+      在JS中根据操作动态创建和移除的
+        <div class="mark">
+            <img src="img/apple_1_bigger.jpg" alt="">
+        </div>
+    -->
+</section>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    let $container = $('.container'),
+        $imgList = $('.container>.imgBox>li'),
+        $mark = null;
+    $imgList.on('mouseover', function (ev) {
+        //=>创建MARK:根据经过的LI中的小图片,动态管控MARK中的大图片
+        let srcStr = $(this).children('img').attr('src');
+        srcStr = srcStr.replace(/_(\d+)/g, '_$1_bigger');
+        if (!$mark) {
+            $mark = $(`<div class="mark">
+                <img src="${srcStr}" alt="">
+            </div>`);
+            $container.append($mark);
+        }
+    }).on('mouseout', function (ev) {
+        //=>移除MARK
+        if ($mark) {
+            $mark.remove();
+            $mark = null;
+        }
+    }).on('mousemove', function (ev) {
+        //=>根据鼠标的位置计算出MARK的位置
+        let {top: conTop, left: conLeft} = $container.offset(),
+            curL = ev.pageX - conLeft + 20,
+            curT = ev.pageY - conTop + 20;
+        $mark.css({
+            top: curT,
+            left: curL
+        });
+    });
+</script>
+</body>
+</html>
+<!--
+  方案一：
+    每一个LI中都有一个大盒子，大盒子中存放的是大图，开始是隐藏的，鼠标进入到LI中，让其显示，并且让他的位置跟随鼠标的位置改变即可，鼠标离开LI，让自己的大盒子消失即可（类似于放大镜SMALL-BOX中出现的MARK）
+
+  方案二：
+    只有一个大盒子（可以在JS中动态创建，也可以事先写好，控制显示隐藏），鼠标进入任意一个LI，都让大盒子出来，并且大盒子中存放的图片根据当前进入的LI动态改变，同样实现鼠标移动，让大盒子也跟着移动
+-->

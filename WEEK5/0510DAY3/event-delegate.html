@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .shop {
+            margin: 20px auto;
+            width: 200px;
+            height: 50px;
+        }
+
+        .shop .shopLink {
+            position: relative;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            background: lightblue;
+            text-align: center;
+        }
+
+        .shop .shopLink .shopList {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background: lightcoral;
+        }
+
+        .shop .shopLink:hover .shopList {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="shop">
+    <a href="javascript:;" class="shopLink">
+        我的购物车
+        <!--基于CSS完成显示隐藏，需要保证列表是A的子元素，这样从A进入到列表不算离开A，这样列表就不会消失了-->
+        <div class="shopList">
+            购物车列表
+        </div>
+    </a>
+</div>
+
+
+</body>
+</html>
