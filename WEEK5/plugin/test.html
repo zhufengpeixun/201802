@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .container {
+            position: relative;
+            margin: 20px auto;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #DDD;
+            overflow: hidden;
+        }
+
+        .container .itemBox {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            width: 100px;
+            height: 100%;
+        }
+
+        .container .itemBox li {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+            border: 2px solid transparent;
+        }
+
+        .container .itemBox li.active {
+            border-color: lightcoral;
+        }
+
+        .container .itemBox li img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .imgBox {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .container .imgBox.active {
+            display: block;
+        }
+
+        .container .imgBox img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all .5s linear 0s;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="imgBox"><img src="img/apple_1_bigger.jpg" alt=""></div>
+    <div class="imgBox"><img src="img/apple_2_bigger.jpg" alt=""></div>
+    <div class="imgBox"><img src="img/apple_3_bigger.jpg" alt=""></div>
+    <ul class="itemBox">
+        <li><img src="img/apple_1.jpg" alt=""></li>
+        <li><img src="img/apple_2.jpg" alt=""></li>
+        <li><img src="img/apple_3.jpg" alt=""></li>
+    </ul>
+</div>
+<script src="js/TabPlugin.min.js"></script>
+<script>
+    new TabPlugin(container, {
+        customPageClass: 'itemBox',
+        customContentClass: 'imgBox',
+        changeEnd: function (curLi, curCon) {
+            let tempImg = curCon.getElementsByTagName('img')[0];
+            tempImg.style.transform = 'scale(1.5)';
+        }
+    });
+</script>
+
+</body>
+</html>

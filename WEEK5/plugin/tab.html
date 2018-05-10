@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        /*==选项卡样式（用户决定）==*/
+        .tabBox {
+            margin: 20px auto;
+            width: 360px;
+        }
+
+        .tabBox .option {
+            height: 34px;
+            border: 1px solid #DBDEE1;
+            background: #EEE;
+        }
+
+        .tabBox .option li {
+            float: left;
+            padding: 0 12px;
+            height: 34px;
+            line-height: 34px;
+        }
+
+        .tabBox .option li a {
+            display: block;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .tabBox .option li.active {
+            /*==插件中要求想让谁选中，给谁加ACTIVE样式类即可==*/
+            border-top: 3px solid #FF8400;
+            height: 33px;
+            line-height: 33px;
+            margin-top: -1px;
+            background: #FFF;
+        }
+
+        .tabBox .con {
+            display: none;
+            padding-top: 10px;
+            height: 220px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .tabBox .con.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!--
+  1.外层容器包裹着整个选项卡
+  2.页卡项都存储到样式类为OPTION的UL中,每一个页卡项都是一个LI（LI中放什么无所谓）
+  3.每一个页卡对应的内容都在样式类为CON的DIV中（内容放什么无所谓）
+  4.想让谁选中，就给谁加ACTIVE样式类（具体的选中样式用户自己规划，但是对于CON来说，开始是隐藏的，选中后是显示的）
+-->
+<div class="tabBox" id="tabBox">
+    <ul class="option">
+        <li class="active"><a href="#">图片</a></li>
+        <li><a href="#">专栏</a></li>
+        <li><a href="#">热点</a></li>
+    </ul>
+    <div class="con active">
+        <!--每一个CON中存放什么用户自己确定-->
+        1
+    </div>
+    <div class="con">2</div>
+    <div class="con">3</div>
+</div>
+
+<div class="tabBox" id="tabBox2">
+    <ul class="option">
+        <li class="active"><a href="#">图片</a></li>
+        <li><a href="#">专栏</a></li>
+        <li><a href="#">热点</a></li>
+        <li><a href="#">趣图</a></li>
+    </ul>
+    <div class="con active">
+        <!--每一个CON中存放什么用户自己确定-->
+        1
+    </div>
+    <div class="con">2</div>
+    <div class="con">3</div>
+    <div class="con">4</div>
+</div id>
+
+<script src="js/tabPlugin.js"></script>
+<script>
+    new TabPlugin(tabBox, {
+        eventType: 'click'
+    });
+
+    new TabPlugin(tabBox2, {
+        lastIndex: 2,
+        changeEnd: function (curLi, curCon, index, lastIndex) {
+
+        }
+    });
+</script>
+</body>
+</html>
