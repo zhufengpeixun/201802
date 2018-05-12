@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .menuBox {
+            width: 300px;
+            height: 100%;
+            overflow: auto;
+            /*CSS3中新增的背景颜色渐变*/
+            background: -webkit-linear-gradient(top left, lightblue, lightcyan, lightpink, lightgoldenrodyellow);
+        }
+
+        .menuBox li {
+            position: relative;
+        }
+
+        .menuBox li span {
+            margin-left: 20px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+
+        .menuBox li em {
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 16px;
+            height: 16px;
+            background: url("img/icon.png") no-repeat;
+        }
+
+        .menuBox li em.plus {
+            background-position: -59px -28px;
+        }
+
+        .menuBox li em.minus {
+            background-position: -42px -29px;
+        }
+
+        .menuBox .level1 {
+            margin-left: 10px;
+        }
+
+        .menuBox .level2 {
+            margin-left: 20px;
+        }
+
+        .menuBox .level3 {
+            margin-left: 30px;
+        }
+
+        .menuBox .level4 {
+            margin-left: 40px;
+        }
+
+        /*CSS3中的NOT伪类：除了XXX*/
+        .menuBox ul:not(.level1) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--
+  事件委托（事件代理）
+    一个容器中，很多后代元素的点击行为都要处理一些事情，之前的思路是把需要操作的元素一一获取，然后再一一做事件绑定，在不同的方法中完成不同的需求；现在不用了，基于事件的冒泡传播，我们可以只给容器的CLICK绑定一个方法，这样不管以后点击的是容器中的哪一个后代元素，都会通过事件的冒泡传播机制，把容器的CLICK行为触发，把绑定的方法执行，我们在方法执行的时候，根据事件对象中的事件源（EV.TARGET）来做不同的业务处理即可，这种机制即使事件委托机制
+
+    1.容器中很多后代元素的某个行为要进行操作，委托给容器处理是不错的选择
+    2.元素是动态绑定的
+    3.需求是除了某某某，剩下的操作都是干同样的事情（此时把点击行为的操作委托给BODY，事件源是某某做什么，不是统一做什么）
+    ...
+-->
+<section class="menuBox">
+    <ul class="level1">
+        <li>
+            <!--每个LI中必有SPAN，如果有下一级，再有EM和UL即可-->
+            <!--plus:+  minus:- -->
+            <em class="plus"></em><span>产品技术部</span>
+            <ul class="level2">
+                <li><span>产品小组</span></li>
+                <li>
+                    <em class="plus"></em><span>UI小组</span>
+                    <ul class="level3">
+                        <li><span>UI设计师</span></li>
+                        <li><span>UE体验师</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <em class="plus"></em><span>开发小组</span>
+                    <ul class="level3">
+                        <li>
+                            <em class="plus"></em><span>前端开发</span>
+                            <ul class="level4">
+                                <li><span>传统前端开发</span></li>
+                                <li><span>VR/AI开发</span></li>
+                                <li><span>NATIVE-APP开发</span></li>
+                                <li><span>NODE开发</span></li>
+                            </ul>
+                        </li>
+                        <li><span>后台开发</span></li>
+                        <li><span>服务器开发</span></li>
+                        <li><span>公共技术研发团队</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <em class="plus"></em><span>测试小组</span>
+                    <ul class="level3">
+                        <li><span>黑盒测试</span></li>
+                        <li><span>白盒测试</span></li>
+                    </ul>
+                </li>
+                <li><span>运维小组</span></li>
+            </ul>
+        </li>
+        <li>
+            <!--每个LI中必有SPAN，如果有下一级，再有EM和UL即可-->
+            <!--plus:+  minus:- -->
+            <em class="plus"></em><span>产品技术部</span>
+            <ul class="level2">
+                <li><span>产品小组</span></li>
+                <li>
+                    <em class="plus"></em><span>UI小组</span>
+                    <ul class="level3">
+                        <li><span>UI设计师</span></li>
+                        <li><span>UE体验师</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <em class="plus"></em><span>开发小组</span>
+                    <ul class="level3">
+                        <li>
+                            <em class="plus"></em><span>前端开发</span>
+                            <ul class="level4">
+                                <li><span>传统前端开发</span></li>
+                                <li><span>VR/AI开发</span></li>
+                                <li><span>NATIVE-APP开发</span></li>
+                                <li><span>NODE开发</span></li>
+                            </ul>
+                        </li>
+                        <li><span>后台开发</span></li>
+                        <li><span>服务器开发</span></li>
+                        <li><span>公共技术研发团队</span></li>
+                    </ul>
+                </li>
+                <li><span>测试小组</span></li>
+                <li><span>运维小组</span></li>
+            </ul>
+        </li>
+        <li>
+            <!--每个LI中必有SPAN，如果有下一级，再有EM和UL即可-->
+            <!--plus:+  minus:- -->
+            <em class="plus"></em><span>产品技术部</span>
+            <ul class="level2">
+                <li><span>产品小组</span></li>
+                <li>
+                    <em class="plus"></em><span>UI小组</span>
+                    <ul class="level3">
+                        <li><span>UI设计师</span></li>
+                        <li><span>UE体验师</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <em class="plus"></em><span>开发小组</span>
+                    <ul class="level3">
+                        <li>
+                            <em class="plus"></em><span>前端开发</span>
+                            <ul class="level4">
+                                <li><span>传统前端开发</span></li>
+                                <li><span>VR/AI开发</span></li>
+                                <li><span>NATIVE-APP开发</span></li>
+                                <li><span>NODE开发</span></li>
+                            </ul>
+                        </li>
+                        <li><span>后台开发</span></li>
+                        <li><span>服务器开发</span></li>
+                        <li><span>公共技术研发团队</span></li>
+                    </ul>
+                </li>
+                <li><span>测试小组</span></li>
+                <li><span>运维小组</span></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/tree.js"></script>
+</body>
+</html>
