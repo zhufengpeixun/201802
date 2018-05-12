@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: lightblue;
+            overflow: hidden;
+        }
+
+        #outer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            background: lightcoral;
+        }
+
+        #inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 150px;
+            height: 150px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div id="inner">
+
+    </div>
+</div>
+
+<script>
+    window.onclick = function (ev) {
+        console.log('window');
+    };
+
+    document.onclick = function (ev) {
+        console.log('document');
+    };
+
+    document.documentElement.onclick = function (ev) {
+        console.log('html');
+    };
+
+    document.body.onclick = function (ev) {
+        console.log('body');
+
+        //=>阻止了冒泡传播
+        console.log(ev);
+        ev = ev || window.event;
+        ev.stopPropagation ? ev.stopPropagation() : ev.cancelBubble = true;
+    };
+
+    outer.onclick = function (ev) {
+        console.log('outer');
+    };
+
+    inner.onclick = function (ev) {
+        console.log('inner');
+    };
+
+
+</script>
+</body>
+</html>

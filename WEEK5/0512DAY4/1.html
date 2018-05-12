@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        #box {
+            display: inline-block;
+            padding: 0 20px;
+            line-height: 35px;
+            background: lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box">珠峰培训</div>
+
+<script>
+    /*
+     * 事件(EVENT)
+     *   1.什么是事件：元素天生自带的行为（不管你在JS中是否进行了某些操作，行为本身是存在的，只要我们操作元素，就会触发其相关事件）
+     *
+     *   2.事件绑定：给元素的某个行为绑定方法，当行为触发的时候，能让其执行对应的方法做一些事情
+     *    [DOM0事件绑定]
+     *      box.onclick=function(){}
+     *      事件行为是click，onclick是当点击的时候做什么
+     *
+     *    [DOM2事件绑定]
+     *      box.addEventListener('click',function(){},false)
+     */
+
+    // box.onclick = function () {
+    //     //=>给元素BOX的点击行为绑定方法，当点击BOX的时候，触发点击事件，把对应的方法执行
+    //     console.log('ok');
+    // };
+
+    /*
+     * 元素天生自带的行为
+     *   [鼠标事件]
+     *      click：点击（移动端的CLICK是单击：单击和点击的区别在于，点击是不管你点的快慢，只要点了事件就触发，而单击是在一段时间内[300MS]只能点一次才可以，点多次算是双击 =>“移动端是用CLICK会有300MS延迟”）
+     *      dblclick：双击
+     *      mouseover/out：鼠标滑入滑出
+     *      mouseenter/leave：鼠标进入离开
+     *      mousedown/up：鼠标按下抬起
+     *      mousewheel：鼠标滚轮滚动
+     *      mousemove：鼠标在当前容器中移动
+     *      ...
+     *
+     *   [键盘事件]
+     *      keydown/up：键盘按下抬起
+     *      keypress：和keydown类似，但是获取的结果不太一样
+     *      ...
+     *      移动设备上的键盘是虚拟触控键盘，不是PC上的实体物理键盘，所以大部分手机都是不支持key系列事件的，想要在移动设备上监听键盘的操作，使用 input 事件
+     *      userNameBox.oninput=function(){}
+     *
+     *   [手指事件=>移动端事件]
+     *      单手指操作
+     *         touchstart：按下
+     *         touchmove：移动
+     *         touchend：离开
+     *         touchcancel：意外操作导致的取消（例如没电关机）
+     *
+     *      多手指操作
+     *         gesturestart
+     *         gesturechange
+     *         gestureend
+     *
+     *      其它的事件（大部分都是浏览器事件）
+     *         调取手机的重力感应
+     *         调取手机的GPS定位
+     *         ...
+     *
+     *   [其它的]
+     *      load：加载成功
+     *      error：加载失败
+     *      readystatechange：AJAX状态改变
+     *      canplay：可以播放
+     *      scroll：滚动
+     *      resize：大小改变  window.onresize浏览器窗口大小改变触发
+     *      ...
+     */
+</script>
+</body>
+</html>

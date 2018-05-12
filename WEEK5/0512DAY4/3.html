@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        #box {
+            margin: 1000px auto;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        #userInp {
+            display: block;
+            margin: 20px;
+            padding: 0 5px;
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<!--<a href="http://www.zhufengpeixun.cn/main/jiuye.html">珠峰培训最新就业</a>-->
+
+<!--<a href="#box">红盒子</a>-->
+<!--<div id="box"></div>-->
+
+<!--<a href="http://www.zhufengpeixun.cn/main/jiuye.html" id="link">
+    珠峰培训
+</a>-->
+
+<input type="text" id="userInp">
+<script>
+    /*
+     * 阻止默认行为：很多浏览器的标签都有自己的默认行为
+     *   [A标签]
+     *     1.点击A实现页面跳转
+     *     2.锚点定位（HREF="元素的ID"），点击的时候URL中设置对应的HASH值（#xxx），页面加载完成后会定位到ID和HASH值相同的盒子位置
+     *
+     *     真实项目中我们往往需要A标签就是一个普通的按钮，不想实现页面跳转或者锚点定位，此时我们需要阻止点击A时候的默认行为
+     *     [结构上阻止]
+     *       <a href="javascript:;"></a>
+     *     [JS中阻止]
+     *
+     */
+
+    // link.onclick = function (ev) {
+    //     ev = ev || window.event;
+    //     ev.preventDefault ? ev.preventDefault() : ev.returnValue = false;
+    // };
+
+    // link.onclick = function () {
+    //     return false;//=>原理：点击A的时候，首先触发的是CLICK，其次才会触发它的默认行为（我们在CLICK中返回FALSE，其意思是阻止下一步继续操作）
+    // };
+
+    /*
+     * INPUT也有自己的默认行为
+     *   1.可以在文本框中输入内容
+     *   2.偶尔有些浏览器在输入的时候会把之前输入的内容作为底下的提示
+     *
+     *   真实项目中我们根据需求可能会阻止文本框输入内容，此时其实就是在阻止它的默认行为
+     */
+    userInp.onkeydown = userInp.onkeyup = function (ev) {
+        //=>键盘按下输入内容会触发这个行为：超过10位不允许输入
+        let val = this.value.trim(),
+            len = val.length;
+        if (len > 10) {
+            this.value = val.substr(0, 10);//=>超过10位的截掉
+            //=>有值的键是不允许输入的:DEL/BACK-SPACE/SPACE/SHIFT/CTRL/ALT/TAB...还是可以操作的
+            if (!/(46|8|32|16|17|18|9)/.test(ev.which)) {
+                ev.preventDefault();
+            }
+        }
+    };
+
+
+</script>
+</body>
+</html>

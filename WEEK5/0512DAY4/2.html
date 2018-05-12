@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        #box {
+            display: inline-block;
+            padding: 0 20px;
+            line-height: 35px;
+            background: lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box">珠峰培训</div>
+
+<script>
+    /*
+     * 给元素的事件行为绑定方法，当行为触发的时候，浏览器会把绑定的方法执行
+     *   1.方法中的THIS:当前操作的元素(除非自己改动了THIS)
+     *   2.事件绑定是异步操作，绑定的时候方法没有执行，还是创建方法的阶段呢，当行为触发，浏览器才会把绑定的方法执行（当然也有变态的执行方式：box.onclick()，这样执行仅仅是把它当做一个变量和函数执行的，和事件没啥关系）
+     *
+     *   3.浏览器不仅把这个方法执行了，而且还记录了当前本次操作的相关信息（如果是鼠标点击，浏览器记录了点击的位置，点的是谁等信息），把这些信息都存储到一个对象中【这个对象就是“事件对象”：记录当前本次操作信息的对象】；更主要的是，标准浏览器会把这个对象(堆地址)传递给执行的方法，我们可以在方法中通过形参或者实参集合等方式接收到传递的事件对象信息；
+     */
+
+    /*box.onclick = function (ev) {
+        console.log(ev);
+        /!*
+         * EV是事件对象（浏览器执行方法传递进来的）
+         *   type：'click'  记录的是事件类型
+         *   target：div#box  记录的是事件源（操作的是谁）
+         *   path：[div#box, body, html, document, Window] 记录的是事件冒泡传播的路径
+         *
+         *   clientX/Y：当前操作这一个点距离当前窗口左上角的X/Y轴坐标值
+         *   pageX/Y：当前操作这一个点距离BODY左上角的X/Y轴坐标值
+         *
+         *   preventDefault()：阻止默认行为
+         *   stopPropagation()：阻止冒泡传播
+         *
+         * 如果是键盘事件对象（键盘操作）
+         *   which：记录键盘按键的码
+         *     DEL：46
+         *     BACK-SPACE：8
+         *     ENTER：13
+         *     SPACE：32
+         *     ALT：18
+         *     CTRL：17
+         *     SHIFT：16
+         *     左-上-右-下：37~40
+         *     ...
+        *!/
+    };*/
+
+    /*
+     * 在IE低版本浏览器中（IE6~8），浏览器把当前操作的相关信息存储到了window.event属性上，执行方法的时候并没有用传递给函数，都需要我们自己去window.event上获取才可以
+     */
+
+    /*box.onclick = function (ev) {
+        //=>EV:UNDEFINED 浏览器并没把事件对象传递进来
+        ev = window.event;
+        //=>IE低版本不兼容的事件对象属性
+        // ev.target  <=> ev.srcElement
+        // ev.pageX/pageY <=> ev.clientX/clientY + scrollLeft/scrollTop
+        // ev.preventDefault() <=> ev.returnValue=false;
+        // ev.stopPropagation() <=> ev.cancelBubble=true;
+        // ev.which <=> ev.keyCode
+        // ...
+    };*/
+
+    //======================
+
+    //[用到其中的某几个属性，需要处理兼容]
+    // box.onclick = function (ev) {
+    //     ev = ev || window.event;
+    //     let target = ev.target || ev.srcElement,
+    //         pageY = ev.pageY || (ev.clientY + (document.documentElement.scrollTop || document.body.scrollTop));
+    //     //...
+    // };
+
+    //[很多地方都用到这些属性了，而且用的很多]
+    function handleEvent(ev) {
+        if (!ev || !ev.target) {
+            //=>IE低版本：我们需要处理的不仅仅是把EV赋值，还要把高版本中有低版本没有的属性给EV加上
+            ev = window.event;
+            ev.target = ev.srcElement;
+            ev.pageX = ev.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+            ev.pageY = ev.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+            ev.which = ev.keyCode;
+            ev.preventDefault = function preventDefault() {
+                ev.returnValue = false;
+            };
+            ev.stopPropagation = function stopPropagation() {
+                ev.cancelBubble = true;
+            };
+        }
+        return ev;
+    }
+
+    box.onclick = function (ev) {
+        ev = handleEvent(ev);
+        //=>目的：以后直接按照标准的语法使用EV即可
+        let target = ev.target;
+        ev.preventDefault();
+    };
+</script>
+</body>
+</html>
