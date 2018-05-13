@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        #box {
+            margin: 20px auto;
+            width: 100px;
+            height: 100px;
+            background: lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+
+<script>
+    /*
+     * 事件绑定
+     *   DOM0
+     *     box.onclick=function(){}
+     *     每一个元素对象都是对应类的实例，浏览器天生为其设置了很多私有属性和公有的属性方法，而onclick就是其中的一个私有属性（事件类私有属性，还有很多其它的事件私有属性），这些属性默认值是null
+     *     DOM0事件绑定的原理：就是给元素的某一个事件私有属性赋值（浏览器会建立监听机制，当我们触发元素的某个行为，浏览器会自己把属性中赋的值去执行）
+     *
+     *   DOM2
+     *     box.addEventListener('click',function(){},false)  =>removeEventListener是移除（使用的方法都是EventTarget.prototype定义的）
+     *
+     *     在IE低版本中使用的是attachEvent来处理的：box.attachEvent('onclick',function(){})  移除使用的是dettachEvent
+     *
+     *    1.DOM2事件绑定可以给当前元素的某一个事件行为绑定“多个不同的方法”
+     */
+
+    /*//=>DOM0事件绑定：只允许给当前元素的某个事件行为绑定一个方法，多次绑定，后面绑定的内容会替换前面绑定的，以最后一次绑定的方法为主
+    box.onclick = function () {
+        console.log(1);
+    };
+    box.onclick = function () {
+        console.log(2);//=>触发点击行为，只输出2
+    };*/
+
+    /*function fn1(){console.log(1);}
+    function fn2(){console.log(2);}
+    function fn3(){console.log(3);}
+    function fn4(ev){
+        console.log(4,this===box,ev.target);
+        box.detachEvent('onclick',fn5);
+        box.detachEvent('onclick',fn8);
+    }
+    function fn5(){console.log(5);}
+    function fn6(){console.log(6);}
+    function fn7(){console.log(7);}
+    function fn8(){console.log(8);}
+    function fn9(){console.log(9);}
+    function fn10(){console.log(10);}
+    function fn11(){console.log(11);}
+    function fn12(){console.log(12);}
+
+    box.attachEvent('onclick',fn1);
+    box.attachEvent('onclick',fn3);
+    box.attachEvent('onclick',fn5);
+    box.attachEvent('onclick',fn7);
+    box.attachEvent('onclick',fn9);
+    box.attachEvent('onclick',fn2);
+    box.attachEvent('onclick',fn2);//=>重复
+    box.attachEvent('onclick',fn2);//=>重复
+    // box.addEventListener('mouseenter',fn2);//=>增加到事件池中的
+    box.attachEvent('onclick',fn4);
+    box.attachEvent('onclick',fn6);
+    box.attachEvent('onclick',fn8);
+    box.attachEvent('onclick',fn10);
+    box.attachEvent('onclick',fn11);
+    box.attachEvent('onclick',fn12);*/
+
+    /*
+     * DOM2事件绑定的兼容
+     *   [谷歌 VS IE高版本]
+     *     在移除事件绑定的时候，如果移除操作发生在正要执行的方法之前（例如：点击的时候，正要执行FN8，但是在执行FN4的时候，我们把FN8从事件池中移除了），谷歌下是立即移除生效，第一次也不再执行FN8了，而IE是当前本次不生效，下一次点击才生效，第一次点击还是要执行FN8的；
+     *
+     *   [标准 VS IE低版本]
+     *     标准：addEventListener / removeEventListener
+     *     IE低：attachEvent / detachEvent
+     *
+     *     标准用的是行为名称“click”，而IE低版本使用时前面要加on“onclick”
+     *
+     *     1.THIS问题
+     *       标准浏览器中，行为触发方法执行，方法中的THIS是当前元素本身，IE低版本中THIS指向了WINDOW
+     *
+     *     2.重复问题
+     *       标准浏览器中的事件池是默认去重复的，同一个元素的同一个事件行为不能出现相同的绑定方法，但是IE低版本的事件池机制没有这么完善，不能默认去重，也就是可以给同个元素的同个事件绑定相同的方法了
+     *
+     *     3.顺序问题
+     *       标准浏览器是按照向事件池中存放的顺序依次执行的，而IE低版本是乱序执行的，没有规律
+     *
+     *     IE低版本浏览器出现的所有问题都是由于本身自带的事件池机制不完整导致的
+     */
+
+    /*
+     * DOM0事件绑定和DOM2事件绑定的区别
+     *   1.机制不一样
+     *    DOM0采用的是给私有属性赋值，所以只能绑定一个方法
+     *    DOM2采用的是事件池机制，所以能绑定多个不同的方法
+     *
+     *   2.移除的操作
+     *   3.DOM2事件绑定中增加了一些DOM0无法操作的事件行为，例如：DOMContentLoaded事件（当页面中的HTML结构加载完成就会触发执行）
+     */
+
+    // box.onclick = function () {
+    //
+    // };
+    // box.onclick = null;//=>赋值为NULL就移除了（所以不需要考虑绑定的是谁）
+
+    // box.addEventListener('click', function () {
+    //     console.log(1);
+    // });
+    // box.removeEventListener('click', function () {
+    //     //=>DOM2在移除的时候，必须清楚要移除哪一个方法，才能在事件池中移除掉，所以基于DOM2做事件绑定，我们要有 “瞻前顾后” 的思路，也就是绑定的时候考虑一下如何移除（技巧：不要绑定匿名函数，都绑定实名函数）
+    //     console.log(1);
+    // });
+
+    // let fn = function () {
+    //     //...
+    // };
+    // box.addEventListener('DOMContentLoaded', fn);//=>可以
+    // box.onDOMContentLoaded = fn;//=>不可以,BOX没有这个属性
+
+    /*window.onload = function () {
+        //=>当页面中的资源都加载完成（HTML结构加载完、CSS和JS等资源加载完成等）才会触发执行
+    };
+    // window.addEventListener('load',function(){}); //=>这样处理也可以执行多次了
+
+    //=>$(document).ready(function(){})
+    //原理：基于DOMContentLoaded完成的(IE中用的是onreadystatechange监听的，在document.readyState === "complete"时候执行函数)
+    $(function () {
+        //=>当页面中的HTML结构加载完成就会执行
+
+    });
+
+    $(function(){
+        //=>基于DOM2事件绑定的，所以在同一个页面中可以执行多次（绑定多个不同的方法），当结构加载完成，会依次执行这些方法
+    });*/
+
+    //=>可以共存，执行顺序和编写顺序有关系
+    box.addEventListener('click', function () {
+        console.log(2);
+    });
+    box.onclick = function () {
+        console.log(1);
+    };
+    box.addEventListener('click', function () {
+        console.log(3);
+    });
+</script>
+</body>
+</html>

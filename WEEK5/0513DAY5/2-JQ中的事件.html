@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: lightcyan;
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    /*
+     * JQ中的事件绑定
+     *   on / off：基于DOM2事件绑定实现事件的绑定和移除（兼容了所有的浏览器）
+     *
+     *   one：只绑定一次，第一次执行完成后，会把绑定的方法移除(基于ON/OFF完成的)
+     *   click / mouseover / mouseout ...：JQ提供快捷绑定方法，但是这些方法最后都是基于ON/OFF完成的
+     *   delegate：事件委托方法（1.7版本以前用的是live方法）
+     *   bind / unbind：正常绑定
+     *   ...
+     */
+    let fn = function (ev) {
+        console.log(1);
+    };
+    // $(document).on('click', fn);
+    // $(document).off('click', fn);
+    // $(document).one('click', fn);
+    // $(document).click(fn);
+    // $(document).delegate('#box', 'click', fn);//=>把点击行为委托给DOCUMENT，不管点击文档中的哪一个元素，都会触发文档的点击行为，第一个参数代指事件源是#BOX我们执行FN这件事
+</script>
+</body>
+</html>
