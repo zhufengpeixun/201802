@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>珠峰培训</title>
+    <!--DEV-->
+    <!--<link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>-->
+
+    <link rel="stylesheet" href="css/index.min.css">
+
+    <!--REM-->
+    <script>
+        ~function () {
+            let computed = function () {
+                //=>DES-W:设计稿宽度 DEV-W:设备的宽度
+                let desW = 640;
+                let devW = document.documentElement.clientWidth;
+                if (devW >= 640) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = devW / desW * 100 + 'px';
+            };
+            computed();
+            window.addEventListener('resize', computed, false);
+        }();
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <!--LOADING-->
+    <section class="loadingBox">
+        <div class="title">
+            <h1>珠峰培训</h1>
+            <h2>H5场景的交互型简历</h2>
+        </div>
+        <div class="progress">
+            <div class="run"></div>
+        </div>
+    </section>
+
+    <!--PHONE-->
+    <section class="phoneBox">
+        <div class="header">
+            <img src="img/zf_phoneLogo.png" alt="珠峰培训" class="logo">
+            <span class="time">00:00</span>
+        </div>
+        <div class="listen">
+            <div class="move"></div>
+            <a href="javascript:;" class="touch"></a>
+        </div>
+        <div class="detail">
+            <a href="javascript:;" class="touch"></a>
+        </div>
+
+        <!--AUDIO-->
+        <audio src="audio/bell.mp3" loop preload="none" id="audioBell"></audio>
+        <audio src="audio/say.mp3" preload="none" id="audioSay"></audio>
+    </section>
+
+    <!--MESSAGE-->
+    <section class="messageBox">
+        <ul class="talkBox clearfix">
+            <li class="student">
+                <img src="img/zf_messageStudent.png" alt="">
+                <i></i>
+                明天放假吗？
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                什么是假
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                需要大家把HTML5+CSS3+JS掌握扎实些，这样才能找到好工作啊...
+            </li>
+            <li class="student">
+                <img src="img/zf_messageStudent.png" alt="">
+                <i></i>
+                都学了啊，可还是找不到工作!
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+            <li class="teacher">
+                <img src="img/zf_messageLogo.png" alt="">
+                <i></i>
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </li>
+        </ul>
+        <div class="keyBord">
+            <span>都学了啊，可还是找不到工作!</span>
+            <a href="javascript:;" class="submit"></a>
+        </div>
+        <audio src="audio/music.mp3" loop preload="none" id="musicAudio"></audio>
+    </section>
+
+    <!--CUBE-->
+    <section class="cubeBox">
+        <ul class="box">
+            <li><img src="img/zf_cube1.png" alt=""></li>
+            <li><img src="img/zf_cube2.png" alt=""></li>
+            <li><img src="img/zf_cube3.png" alt=""></li>
+            <li><img src="img/zf_cube4.png" alt=""></li>
+            <li><img src="img/zf_cube5.png" alt=""></li>
+            <li><img src="img/zf_cube6.png" alt=""></li>
+        </ul>
+        <img src="img/zf_cubeTip.png" alt="" class="tip">
+    </section>
+
+    <!--DETAIL-->
+    <section class="detailBox">
+        <!--RETURN-->
+        <a href="javascript:;" class="returnLink"></a>
+
+        <!--SWIPER-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page1">
+                    <dl id="makisuBox">
+                        <dt>自我介绍</dt>
+                        <dd>
+                            <em>01</em>
+                            <p>姓名：周啸天</p>
+                        </dd>
+                        <dd>
+                            <em>02</em>
+                            <p>性别：男</p>
+                        </dd>
+                        <dd>
+                            <em>03</em>
+                            <p>年龄：27</p>
+                        </dd>
+                        <dd>
+                            <em>04</em>
+                            <p>毕业院校：珠峰大学</p>
+                        </dd>
+                        <dd>
+                            <em>05</em>
+                            <p>学历：博士</p>
+                        </dd>
+                        <dd>
+                            <em>06</em>
+                            <p>工作经验：8年</p>
+                        </dd>
+                        <dd>
+                            <em>07</em>
+                            <p>户籍：河北省承德市</p>
+                        </dd>
+                        <dd>
+                            <em>08</em>
+                            <p>邮箱：1282347298@qq.com</p>
+                        </dd>
+                        <dd>
+                            <em>09</em>
+                            <p>电话：18310612838</p>
+                        </dd>
+                        <dd>
+                            <em>10</em>
+                            <p>座右铭：合理的是锻炼，不合理的是磨练</p>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="swiper-slide page2">
+                    <h2>专业技能</h2>
+                    <img src="img/zf_course1.png" alt="">
+                    <img src="img/zf_course2.png" alt="">
+                    <img src="img/zf_course3.png" alt="">
+                    <img src="img/zf_course4.png" alt="">
+                    <img src="img/zf_course5.png" alt="">
+                    <img src="img/zf_course6.png" alt="">
+                    <img src="img/zf_course.png" alt="">
+                </div>
+
+                <div class="swiper-slide page3">
+
+                </div>
+                <div class="swiper-slide page4">
+
+                </div>
+                <div class="swiper-slide page5">
+
+                </div>
+                <div class="swiper-slide page6">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--IMPORT JS-->
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/makisu.min.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

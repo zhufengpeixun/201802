@@ -1,0 +1,52 @@
+[
+  {
+    "news": [
+      {
+        "id": 1,
+        "title": "房企再次涌入到三四线市场，持久性待考察",
+        "src": "images/news.jpg",
+        "comment": "20万",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "title": "房企再次涌入到三四线市场，持久性待考察",
+        "src": "images/news.jpg",
+        "comment": "20万",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "title": "房企再次涌入到三四线市场，持久性待考察",
+        "src": "images/news.jpg",
+        "comment": "20万",
+        "link": "#"
+      },
+      {
+        "id": 4,
+        "title": "房企再次涌入到三四线市场，持久性待考察",
+        "src": "images/news.jpg",
+        "comment": "20万",
+        "link": "#"
+      },
+      {
+        "id": 5,
+        "title": "房企再次涌入到三四线市场，持久性待考察",
+        "src": "images/news.jpg",
+        "comment": "20万",
+        "link": "#"
+      },
+      {
+        "id": 6,
+        "title": "房企再次涌入到三四线市场，持久性待考察",
+        "imgList": [
+          "images/news.jpg",
+          "images/news.jpg",
+          "images/news.jpg"
+        ],
+        "comment": "20万",
+        "link": "#"
+      }
+    ]
+  }
+]

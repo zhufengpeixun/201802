@@ -1,0 +1,301 @@
+@import "reset";
+@import "swiper";
+@import "font";
+@import (reference) "common";
+
+html {
+  font-size: 100px; /*640PX：1REM=100PX*/
+}
+
+html, body {
+  background: #F4F4F4;
+  overflow-x: hidden;
+}
+
+.mainBox {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+/*--HEADER--*/
+.headerBox {
+  /*BASE*/
+  .baseBox {
+    @H: 1rem;
+    padding: 0 .2rem;
+    height: @H;
+    background: @blue;
+
+    h1 {
+      float: left;
+      width: .8rem;
+      height: @H;
+      line-height: @H;
+      font-size: 0;
+
+      a {
+        color: @white;
+        font-size: .8rem;
+      }
+    }
+
+    .weather, .menu, .person {
+      float: right;
+      margin-left: .32rem;
+      width: .44rem;
+      height: @H;
+      line-height: @H;
+      font-size: .44rem;
+      color: @white;
+    }
+
+    .weather {
+      background: url("../images/cloud.gif") no-repeat center center;
+      background-size: 100%;
+    }
+  }
+
+  /*NAV*/
+  .navBox {
+    padding: 0;
+    height: 0; //=>目标值(PADDING:.16REM HEIGHT:1.28REM)
+    overflow: hidden;
+    .transition;
+
+    a {
+      float: left;
+      //width: unit(100/6, %);
+      width: 16%;
+      height: .64rem;
+      line-height: .64rem;
+      text-align: center;
+      color: @gray;
+      font-size: .32rem;
+
+      &:nth-of-type(6n+1) {
+        margin-left: 2%;
+      }
+    }
+  }
+}
+
+/*--BANNER--*/
+.bannerBox {
+  display: none;
+  position: relative;
+  height: 3.4rem;
+
+  .swiper-wrapper, .swiper-slide {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    background: #CCC;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      p {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: .6rem;
+        line-height: .6rem;
+        text-indent: .2rem;
+
+        color: @white;
+        font-size: .28rem;
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  //=>修改SWIPER默认的样式(分析出它具备的样式类,然后我们自己重写即可)
+  .swiper-pagination {
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+    width: 1rem;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    font-size: .28rem;
+    color: rgba(255, 255, 255, 0.5);
+
+    span {
+      &:nth-of-type(1) {
+        font-weight: bold;
+        color: @white;
+      }
+    }
+  }
+}
+
+/*--LIVE--*/
+.liveBox {
+  display: none;
+  @H: .8rem;
+  position: relative;
+  margin: .16rem 0;
+  height: @H;
+  background: #FFF;
+
+  .tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1rem;
+    height: 100%;
+
+    &:after {
+      display: block;
+      content: '直播';
+
+      .center(.74, .4);
+      width: .74rem;
+      height: .4rem;
+      line-height: .4rem;
+      text-align: center;
+      color: @white;
+      font-size: .3rem;
+      background: #FA4E46;
+    }
+  }
+
+  .liveCon {
+    margin-left: 1rem;
+    height: @H;
+
+    .swiper-slide {
+      height: @H;
+      line-height: @H;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: .28rem;
+        color: @gray;
+        .subText;
+      }
+    }
+  }
+}
+
+/*--NEWS--*/
+.newsBox {
+  display: none;
+  padding: 0 .2rem;
+  background: #FFF;
+
+  .newsGroup {
+    li {
+      padding: .2rem 0;
+      border-bottom: .02rem solid #DDD;
+
+      a {
+        display: block;
+        position: relative;
+
+        div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2rem;
+          height: 1.28rem;
+          background: #CCC;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            .transition;
+          }
+        }
+
+        h3 {
+          margin-left: 2.2rem;
+          height: .96rem;
+          line-height: unit(.96/2, rem);
+          font-size: .30rem;
+          color: @gray;
+          font-weight: normal;
+        }
+
+        span {
+          display: block;
+          margin-left: 2.2rem;
+          height: .32rem;
+          line-height: .32rem;
+          font-size: .22rem;
+          color: lighten(@gray, 20%);
+          text-align: right;
+          vertical-align: middle;
+
+          i {
+            font-size: .24rem;
+            margin-left: .1rem;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &.latest {
+        a {
+          span, h3 {
+            margin-left: 0;
+          }
+
+          h3 {
+            height: .48rem;
+            .subText;
+          }
+
+          div {
+            position: static;
+            margin: .3rem 0;
+            width: 100%;
+            height: 1.24rem;
+            background: none;
+
+            p {
+              float: left;
+              margin-right: 2%;
+              width: 32%;
+              height: 100%;
+              &:nth-last-of-type(1) {
+                margin-right: 0;
+              }
+              background: #CCC;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
