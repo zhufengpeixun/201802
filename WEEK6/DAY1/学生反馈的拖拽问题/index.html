@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+  <meta name="description" content="magnify,jquery plugin,lightbox,viewer,Windows 照片查看器,图片查看器,模态窗,拖拽,缩放,旋转,平移,最大化">
+  <title>图片拖拽缩放</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/balloon-css/0.5.0/balloon.min.css" rel="stylesheet">
+  <link href="css/jquery.magnify.css" rel="stylesheet">
+  <link href="css/snack.css" rel="stylesheet">
+  <link href="css/snack-helper.css" rel="stylesheet">
+  <link href="css/docs.css" rel="stylesheet">
+  <link class="magnify-theme" href="css/magnify-simple-theme.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .image-set img{
+      display: block;
+    }
+    .magnify-modal  .magnify-header {
+      display:block;
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="container">
+    <div id="playground">
+      <div class="image-set m-t-20">
+        <ul>
+          <li><a data-magnify="gallery" data-src="" data-caption="Slipping Away by Jerry Fryer" data-group="a" href="https://farm1.staticflickr.com/313/31812080833_297acfbbd9_z.jpg">
+            <img src="https://farm1.staticflickr.com/313/31812080833_297acfbbd9_s.jpg" alt="" id="img1">
+          </a></li>
+          <li>
+            <a data-magnify="gallery" data-src="" data-caption="Mi Fuego by albert dros" data-group="a" href="https://farm4.staticflickr.com/3804/33589584740_b0fbdcd4aa_z.jpg">
+              <img src="https://farm4.staticflickr.com/3804/33589584740_b0fbdcd4aa_s.jpg" alt="" id="img2">
+            </a>
+          </li>
+          <li>
+            <a data-magnify="gallery" data-src="" data-caption="Winter Fairytale by Achim Thomae" data-group="a" href="https://farm1.staticflickr.com/470/31340603494_fb7228020d_z.jpg">
+              <img src="https://farm1.staticflickr.com/470/31340603494_fb7228020d_s.jpg" alt="" id="img3">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
+  </script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/prettify/r298/prettify.min.js"></script>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script> -->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.magnify.js"></script>
+  <script>
+    window.prettyPrint && prettyPrint();
+
+    var defaultOpts = {
+      draggable: true,
+      resizable: true,
+      movable: true,
+      keyboard: true,
+      title: false,
+      modalWidth: 100,
+      modalHeight:100,
+      fixedContent: true,
+      fixedModalSize: false,
+      initMaximized: false,
+      gapThreshold: 0.02,
+      ratioThreshold: 0.1,
+      minRatio: 0.1,
+      maxRatio: 16,
+      headToolbar: ['close'],
+      footToolbar: [''],
+      multiInstances: true,
+      initEvent: 'click',
+      initAnimation: true,
+      fixedModalPos: false,
+      zIndex: 1090,
+      dragHandle: '',
+      callbacks: {
+          beforeOpen: function(el){
+            // Will fire before modal is opened
+          },
+          opened: function(el){
+            // Will fire after modal is opened
+            changeState(); 
+          },
+          beforeClose: function(el){
+            // Will fire before modal is closed
+          },
+          closed: function(el){
+            // Will fire after modal is closed
+          }
+      }
+    };
+    $('[data-magnify=gallery]').magnify(defaultOpts); 
+    // close show hide 为以后 canvas 截图 
+    function changeState() {
+      $('.magnify-modal').on('mouseleave',function(){
+          $(this).find('.magnify-header').hide()
+      })
+      $('.magnify-modal').on('mouseenter',function(){
+          $(this).find('.magnify-header').show()
+      })
+      $('.magnify-modal').resize(function(){
+      	    console.log(1);
+			$(this).find('.magnify-image').css({
+				width:'100%',
+				height:'100%'
+			});
+      });
+    }
+  </script>
+</body>
+
+</html>
