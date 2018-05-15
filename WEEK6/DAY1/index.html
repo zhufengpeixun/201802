@@ -10,7 +10,7 @@
             overflow: hidden;
         }
 
-        #box {
+        #box, #box2, #box3 {
             position: absolute;
             top: 100px;
             left: 100px;
@@ -18,13 +18,134 @@
             height: 150px;
             background: lightcoral;
             cursor: move;
+            z-index: 0;
+        }
+
+        #box2 {
+            top: 200px;
+            left: 400px;
+            background: lightgreen;
+        }
+
+        #box3 {
+            top: 50px;
+            left: 50px;
+            background: orange;
         }
     </style>
 </head>
 <body>
 <div id="box"></div>
+<div id="box2"></div>
+<div id="box3"></div>
 
 <script src="js/subscribe.js"></script>
-<script src="js/1-drag.js"></script>
+<script src="js/drag.js"></script>
+<script>
+    let drag1 = new Drag(box),
+        drag2 = new Drag(box2),
+        drag3 = new Drag(box3);
+
+    let change = function change(curEle) {
+        [].forEach.call(document.querySelectorAll('div'), item => {
+            item.style.zIndex = 0;
+        });
+        curEle.style.zIndex = 1;
+    };
+    drag1.subDown.add(change);
+    drag2.subDown.add(change);
+    drag3.subDown.add(change);
+
+    let computedFly = function computedFly(curEle) {
+        if (!curEle.lastFly) {
+            curEle.lastFly = curEle.offsetLeft;
+            curEle.speedFly = 0;
+            return;
+        }
+        curEle.speedFly = curEle.offsetLeft - curEle.lastFly;
+        curEle.lastFly = curEle.offsetLeft;
+    };
+    drag1.subMove.add(computedFly);
+    drag2.subMove.add(computedFly);
+    drag3.subMove.add(computedFly);
+
+    let stopAnimate = function stopAnimate(curEle) {
+        clearInterval(curEle.flyTimer);
+        curEle.speedFly = undefined;
+        clearInterval(curEle.dropTimer);
+    };
+    drag1.subDown.add(stopAnimate);
+    drag2.subDown.add(stopAnimate);
+    drag3.subDown.add(stopAnimate);
+
+    let animateFly = function animateFly(curEle) {
+        let minL = 0,
+            maxL = document.documentElement.clientWidth - curEle.offsetWidth;
+        let speed = curEle.speedFly,
+            dir = 'right';
+        speed < 0 ? dir = 'left' : null;
+        speed = Math.abs(speed);
+        curEle.flyTimer = setInterval(() => {
+            if (speed < 0.5) {
+                clearInterval(curEle.flyTimer);
+                return;
+            }
+            speed *= .98;
+            let curL = curEle.offsetLeft;
+            if (dir === 'right') {
+                if (curL >= maxL) {
+                    curEle.style.left = maxL + 'px';
+                    dir = 'left';
+                    return;
+                }
+                curL += speed;
+            } else {
+                if (curL <= minL) {
+                    curEle.style.left = minL + 'px';
+                    dir = 'right';
+                    return;
+                }
+                curL -= speed;
+            }
+            curEle.style.left = curL + 'px';
+        }, 17);
+    };
+    drag1.add(animateFly);
+    drag2.add(animateFly);
+    drag3.add(animateFly);
+
+    let animateDrop = function animateDrop(curEle) {
+        let speed = 9.8,
+            minT = 0,
+            maxT = document.documentElement.clientHeight - curEle.offsetHeight,
+            flag = 0;
+        curEle.dropTimer = setInterval(() => {
+            if (flag > 1) {
+                clearInterval(curEle.dropTimer);
+                return;
+            }
+            speed += 10;
+            speed *= .98;
+            let curT = curEle.offsetTop;
+            curT += speed;
+            if (curT >= maxT) {
+                curEle.style.top = maxT + 'px';
+                speed *= -1;
+                flag++;
+                return;
+            }
+            if (curT <= minT) {
+                curEle.style.top = minT + 'px';
+                speed *= -1;
+                return;
+            }
+            curEle.style.top = curT + 'px';
+            flag = 0;
+        }, 17);
+    };
+    drag1.add(animateDrop);
+    drag2.add(animateDrop);
+    drag3.add(animateDrop);
+</script>
 </body>
 </html>
