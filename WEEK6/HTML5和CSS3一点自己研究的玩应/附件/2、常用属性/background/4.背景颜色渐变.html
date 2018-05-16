@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            float: left;
+            margin: 20px;
+            padding: 20px;
+            width: 160px;
+            height: 160px;
+            border-radius: 10px;
+        }
+
+        /*linear-gradient:线性渐变*/
+        /*to top\to left\to bottom\to right*/
+        .menu:nth-child(1) {
+            background: -webkit-linear-gradient(to top, orange, green);
+            background: linear-gradient(to top, orange, green);
+        }
+
+        /*写度数*/
+        .menu:nth-child(2) {
+            background: -webkit-linear-gradient(45deg, orange, green);
+            background: linear-gradient(45deg, orange, green);
+        }
+
+        /*多方向:to top left...*/
+        .menu:nth-child(3) {
+            background: -webkit-linear-gradient(to top left, orange, green);
+            background: linear-gradient(to top left, orange, green);
+        }
+
+        /*多颜色*/
+        .menu:nth-child(4) {
+            background: -webkit-linear-gradient(to top left, orange, yellow, green, blue, indigo, violet);
+            background: linear-gradient(to top left, orange, yellow, green, blue, indigo, violet);
+        }
+
+        /*指定区域*/
+        .menu:nth-child(5) {
+            background: -webkit-linear-gradient(to top left, orange 0%, yellow 11%, green 28%, blue 60%, indigo 88%, violet 100%);
+            background: linear-gradient(to top left, orange 0%, yellow 11%, green 28%, blue 60%, indigo 88%, violet 100%);
+        }
+
+        /*
+        CSS3径向渐变[radial-gradient]:
+            <position>:指定径向渐变的开始圆心位置
+                length:用长度指定渐变圆心的x/y坐标,可以是负值
+                percent:用百分比指定渐变圆心的x/y坐标
+                left\center\right\top\bottom
+            <shape>
+                circle:圆形径向渐变 size==length
+                ellipse:椭圆形径向渐变 size!=length
+            <size> 径向渐变的结束形状大小(一般遵从默认值)
+                closest-side:半径的长度为从圆心到离圆心最近的边
+                closest-corner:半径的长度为从圆心到离圆心最近的角
+                farthest-side:半径的长度为从圆心到离圆心最远的边(默认值)
+                farthest-corner:半径的长度为从圆心到离圆心最远的角
+            <color-stop> 渐变的颜色
+        */
+        .menu:nth-child(6) {
+            background: -webkit-radial-gradient(orange 0%, yellow 11%, green 28%, blue 60%, indigo 88%, violet 100%);
+            background: radial-gradient(orange 0%, yellow 11%, green 28%, blue 60%, indigo 88%, violet 100%);
+        }
+
+        .menu:nth-child(7) {
+            background: -webkit-radial-gradient(at center, rgb(220, 75, 200), rgb(0, 0, 75));
+            background: radial-gradient(at center, rgb(220, 75, 200), rgb(0, 0, 75));
+        }
+
+        .menu:nth-child(8) {
+            background: -webkit-radial-gradient(at bottom, rgb(220, 75, 200), rgb(0, 0, 75));
+            background: radial-gradient(at bottom, rgb(220, 75, 200), rgb(0, 0, 75));
+        }
+
+        .menu:nth-child(9) {
+            background: -webkit-radial-gradient(at left bottom, rgb(220, 75, 200), rgb(0, 0, 75));
+            background: radial-gradient(at left bottom, rgb(220, 75, 200), rgb(0, 0, 75));
+        }
+    </style>
+</head>
+<body>
+<div class="menu">1</div>
+<div class="menu">2</div>
+<div class="menu">3</div>
+<div class="menu">4</div>
+<div class="menu">5</div>
+
+<div class="menu">6</div>
+<div class="menu">7</div>
+<div class="menu">8</div>
+<div class="menu">9</div>
+</body>
+</html>

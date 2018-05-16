@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, table, thead, tbody, th, tr, td, h2, h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-weight: normal;
+            -webkit-user-select: none;
+        }
+
+        html, body {
+            width: 100%;
+        }
+
+        h1 {
+            margin: 20px auto 0 auto;
+            width: 93%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #box {
+            margin: 10px auto;
+            padding: 0 20px 30px 20px;
+            width: 90%;
+            border: 1px solid #0fb200;
+            border-radius: 10px;
+            background: #fcf0b5;
+        }
+
+        h2 {
+            margin: 20px 0 10px 0;
+            font-size: 16px;
+            color: #ff3333;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .tab {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        .tab th, .tab td {
+            width: 14%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-right: none;
+        }
+
+        .tab th {
+            color: #0fb200;
+        }
+
+        .tab th.first {
+            width: 30%;
+        }
+
+        .tab td.red {
+            font-weight: bold;
+            color: #ff3333;
+        }
+    </style>
+</head>
+<body>
+<h1>珠峰培训CSS/CSS3常用选择器一览表</h1>
+
+<div id="box"></div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var oBox = document.getElementById("box");
+        var str = "";
+        for (var i = 0; i < data.length; i++) {
+            var cur = data[i];
+            str += "<h2>" + (i + 1) + "、" + cur.title + "</h2>";
+            str += "<table cellpadding='0' cellspacing='0' class='tab'>";
+            str += "<thead><tr><th class='first'>选择器</th><th>IE</th><th>firefox</th><th>chrome</th><th>opera</th><th>safari</th></tr></thead>";
+            str += "<tbody>";
+            for (var k = 0; k < cur.child.length; k++) {
+                var curChild = cur.child[k];
+                str += "<tr>";
+                var temp = 0;
+                for (var key in curChild) {
+                    temp++;
+                    var tempC = temp > 1 && curChild[key] !== "ok" ? "red" : null;
+                    str += "<td class='" + tempC + "'>" + curChild[key] + "</td>";
+                }
+                str += "</tr>"
+            }
+            str += "</tbody>"
+            str += "</table>";
+        }
+        oBox.innerHTML = str;
+    };
+</script>
+<script type="text/javascript">
+    var data = [
+        {
+            title: "基本选择器",
+            child: [
+                {name: "*  [通配符选择器]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E [元素选择器]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "#id [ID选择器]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: ".class [类选择器]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "selector1,selectorN [群组选择器]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"}
+            ]
+        },
+        {
+            title: "层次选择器",
+            child: [
+                {name: "E F [后代选择器]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E>F [子选择器]", isIE: "ok 7+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E+F [下一个弟弟]", isIE: "ok 7+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E~F [所有的弟弟]", isIE: "ok 7+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"}
+            ]
+        },
+        {
+            title: "动态伪类选择器",
+            child: [
+                {name: "E:link [链接伪类选择器,未访问]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:visited [链接伪类选择器,已访问]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:active [行为之元素激活]", isIE: "ok 8+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:hover [行为之鼠标停留]", isIE: "ok", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:focus [行为之获取焦点]", isIE: "ok 8+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"}
+            ]
+        },
+        {
+            title: "目标伪类选择器",
+            child: [
+                {name: "E:target [目标伪类选择器]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok 9.6+", isSar: "ok"}
+            ]
+        },
+        {
+            title: "UI元素状态伪类选择器",
+            child: [
+                {name: "E:checked [选中状态]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:enabled [启用状态]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:disabled [不可用状态]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"}
+            ]
+        },
+        {
+            title: "结构伪类选择器",
+            child: [
+                {name: "E:first-child [第一个子元素]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:last-child [最后一个子元素]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {
+                    name: "E F:nth-child(n) [E下的第n个子元素F] 注:n从1开始,可以是数字,也可以是even、odd,还可以是公式:2n/2n+1/n+5(从第五个开始)/-n+5(第一个到第五个)...",
+                    isIE: "ok 9+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {
+                    name: "E F:nth-last-child(n) [选择倒数第n个]",
+                    isIE: "ok 9+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {name: "E:root [E所在文档的根元素,HTML中根元素永远是HTML]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:only-child [只有一个子元素]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {name: "E:empty [一个子元素都没有的]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"}
+            ]
+        },
+        {
+            title: "否定伪类选择器",
+            child: [
+                {name: "E:not(F) [匹配除了F外的E元素]", isIE: "ok 9+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"}
+            ]
+        }, {
+            title: "属性选择器",
+            child: [
+                {name: "E[attr] [具有attr属性的元素]", isIE: "ok 7+", isFir: "ok", isChr: "ok", isOpe: "ok", isSar: "ok"},
+                {
+                    name: "E[attr=val] [attr属性等于val的元素]",
+                    isIE: "ok 7+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {
+                    name: "E[attr|=val] [attr具有val或者以val-开始的元素]",
+                    isIE: "ok 7+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {
+                    name: "E[attr~=val] [attr具有多个空格分开的值，其中有一个是val的元素]",
+                    isIE: "ok 7+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {
+                    name: "E[attr*=val] [attr包含val的元素]",
+                    isIE: "ok 7+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {
+                    name: "E[attr^=val] [attr以val开头的元素]",
+                    isIE: "ok 7+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                },
+                {
+                    name: "E[attr$=val] [attr以val结尾的元素]",
+                    isIE: "ok 7+",
+                    isFir: "ok",
+                    isChr: "ok",
+                    isOpe: "ok",
+                    isSar: "ok"
+                }
+            ]
+        }
+    ];
+</script>
+</body>
+</html>

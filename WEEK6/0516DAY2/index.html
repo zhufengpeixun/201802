@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <style>
+        body{
+            background-origin: ;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+年龄：
+<input type="number" id="ageInp" step="1" max="65" min="18" value="25" disabled>
+<input type="range" id="rangeInp" step="1" max="65" min="18" value="25">
+<script>
+    //=>INPUT：移动端没有KEY-DOWM/KEY-UP，用INPUT代替，代表正在操作当前表单元素（例如正在输入等）
+    rangeInp.oninput = function () {
+        let val = this.value;
+        ageInp.value = val;
+    };
+</script>-->
+
+<!--<input type="color" id="colorInp">
+<script>
+    colorInp.onchange = function () {
+        console.log(this.value);//=>16进制的颜色值
+    };
+</script>-->
+
+<!--
+ 表单元素中新增加的类型作用
+   1.功能强大了(很多东西不需要自己导入JS插件完成了，例如：日历)
+   2.在移动端根据设置的类型不一样，用户输入过程中调取出来的虚拟键盘也不一样（例如：number类型的文本框调取出来的是数字键盘）
+   3.新增加的类型提供了CSS/JS验证，可以验证用户输入的内容是否符合格式（之前我们都是用正则自己解决，现在H5中的新类型自带验证机制）
+
+   H5中给表单元素设置了一个新的属性：placeholder 用来做文本框的默认提示的  （自己扩展：使用JS实现一套和PLACE-HOLDER一模一样的效果）
+-->
+<!--<style>
+    #userEmail {
+        border: 1px solid #DDD;
+        outline: none; /*当文本框获取焦点后取出浏览器默认的边框选中颜色*/
+    }
+
+    #userEmail:valid {
+        /*通过验证:不输入或者输入的格式正确*/
+        border-color: green;
+    }
+
+    #userEmail:invalid {
+        /*没通过验证*/
+        border-color: red;
+    }
+
+    #userEmail:valid + span:after {
+        content: '邮箱格式正确';
+    }
+
+    #userEmail:invalid + span:after {
+        content: '邮箱不符合格式';
+    }
+</style>
+<input type="email" id="userEmail" placeholder="请输入邮箱!">
+<span id="spanEmail"></span>
+<script>
+    userEmail.onkeyup = function () {
+        //=>checkValidity:H5新提供的表单内容格式验证方法（新表单类型中有内置验证机制的，都可以基于这个方法验证）
+        if (this.checkValidity()) {
+            spanEmail.innerHTML = 'OK';
+        } else {
+            spanEmail.innerHTML = 'NO';
+        }
+    };
+</script>
+
+<script>
+    //=>BLUR:失去焦点
+    //=>FOCUS:获取焦点
+    userEmail.onkeyup = userEmail.onblur = function () {
+        let val = this.value.trim();
+        if (val.length === 0) {
+            spanEmail.innerHTML = '必填';
+            return;
+        }
+        let reg = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if (!reg.test(val)) {
+            spanEmail.innerHTML = 'NO';
+            return;
+        }
+        spanEmail.innerHTML = 'OK';
+    };
+</script>-->
+
+<!--下拉框（扩展：实现省市县三级联动）-->
+<!--地区：
+<select id="selectCity">
+    <option value="">==请选择==</option>
+    <option value="北京">北京</option>
+    <option value="上海">上海</option>
+    <option value="广州">广州</option>
+    <option value="深圳">深圳</option>
+    <option value="杭州">杭州</option>
+    <option value="成都">成都</option>
+</select>-->
+
+<!--<input id="myCar" list="cars" />
+<datalist id="cars">
+    <option value="BMW">
+    <option value="Ford">
+    <option value="Volvo">
+</datalist>-->
+
+
+
+</body>
+</html>

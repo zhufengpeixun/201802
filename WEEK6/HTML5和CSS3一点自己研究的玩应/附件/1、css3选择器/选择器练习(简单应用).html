@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, ul, li, h2 {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 14px;
+            -webkit-user-select: none;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        h2 {
+            line-height: 35px;
+        }
+
+        .box1, .box2, .box3 {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            padding: 10px 0 0 10px;
+            width: 150px;
+            border: 1px solid #11c900;
+            overflow: hidden;
+        }
+
+        .box2 {
+            left: 250px;
+        }
+
+        .box3 {
+            left: 450px;
+        }
+
+        li {
+            margin: 0 5px 5px 0;
+            float: left;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        /*nth-child是从1开始，如果你填写的是一个数字n，代表的是第n个*/
+        .box1 li:nth-child(1), .box1 li:nth-child(5), .box1 li:nth-child(10) {
+            background: #11c900;
+        }
+
+        /*nth-last-child 如果你填写的是一个数字n，代表的是倒数第n个*/
+        .box1 li:nth-last-child(2), .box1 li:nth-last-child(5), .box1 li:nth-last-child(8) {
+            background: #FFCF78;
+        }
+
+        /*even是偶数->2n  odd是奇数->2n+1*/
+        .box2 li:nth-child(even) {
+            background: #11c900;
+        }
+
+        .box2 li:nth-child(odd) {
+            background: #FFCF78;
+        }
+
+        /*公式:xn是x的倍数 例如:4n 就是4的倍数 4n+1就是4的倍数在加1*/
+        .box3 li:nth-child(4n) {
+            background: #FFCF78;
+        }
+
+        .box3 li:nth-child(4n+1) {
+            background: #11c900;
+        }
+
+        /*active实现移动端点击的按下态*/
+        .btn{
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            letter-spacing: 5px;
+            border: 1px solid #11c900;
+            cursor: pointer;
+        }
+
+        .btn2{
+            position: absolute;
+            top: 300px;
+            left: 510px;
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            letter-spacing: 5px;
+            border: 1px solid #11c900;
+            cursor: pointer;
+        }
+
+        .btn2:active{
+            background: #CCCCCC;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <h2>指定某一个变色</h2>
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+    </ul>
+</div>
+<div class="box2">
+    <h2>奇偶数变色</h2>
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+    </ul>
+</div>
+<div class="box3">
+    <h2>自定义规则变色</h2>
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+    </ul>
+</div>
+
+<!--按下态反馈-->
+<div class="btn">立即学习</div>
+<div class="btn2">立即学习</div>
+
+</body>
+</html>

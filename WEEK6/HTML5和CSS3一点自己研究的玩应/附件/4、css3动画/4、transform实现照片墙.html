@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: #eee;
+            overflow: hidden;
+        }
+
+        .box {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            margin: -225px 0 0 -480px;
+            width: 960px;
+            height: 450px;
+        }
+
+        .box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px;
+            width: 250px;
+            max-height: 250px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            z-index: 1;
+            cursor: pointer;
+
+            /*批量给所有的图片设置运动的方式*/
+            -webkit-transition: all 0.8s ease-in-out 0s;
+            transition: all 0.8s ease-in-out 0s;
+        }
+
+        /*让每一张图片的位置进行调整*/
+        .box img:nth-child(odd) {
+            top: 0;
+            left: 0;
+            -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+        }
+
+        .box img:nth-child(even) {
+            top: 0;
+            left: 0;
+            -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+        }
+
+        .box img:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        .box img:nth-child(2) {
+            top: 0;
+            left: 250px;
+        }
+
+        .box img:nth-child(3) {
+            top: 0;
+            left: 500px;
+        }
+
+        .box img:nth-child(4) {
+            top: 0;
+            left: 750px;
+        }
+
+        .box img:nth-child(5) {
+            top: 120px;
+            left: 380px;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        .box img:nth-child(6) {
+            top: 250px;
+            left: 0px;
+        }
+
+        .box img:nth-child(7) {
+            top: 250px;
+            left: 250px;
+        }
+
+        .box img:nth-child(8) {
+            top: 250px;
+            left: 500px;
+        }
+
+        .box img:nth-child(9) {
+            top: 250px;
+            left: 750px;
+        }
+
+        /*给所有的图片增加过渡效果*/
+        .box img:hover {
+            z-index: 10; /*让其显示在最顶端的位置*/
+            box-shadow: 0 0 20px 0 #ff3333;
+
+            -webkit-transform: rotate(0deg) scale(1.5);
+            transform: rotate(0deg) scale(1.3);
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="img/dog/dog1.jpg"/>
+    <img src="img/dog/dog2.jpg"/>
+    <img src="img/dog/dog3.jpg"/>
+    <img src="img/dog/dog4.jpg"/>
+    <img src="img/dog/dog5.jpg"/>
+    <img src="img/dog/dog6.jpg"/>
+    <img src="img/dog/dog7.jpg"/>
+    <img src="img/dog/dog8.jpg"/>
+    <img src="img/dog/dog9.jpg"/>
+</div>
+</body>
+</html>

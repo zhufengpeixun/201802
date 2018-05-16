@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, ul, li, em, span {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        ul {
+            margin: 20px auto;
+            width: 400px;
+        }
+
+        ul li {
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px dashed #ccc;
+            overflow: hidden;
+        }
+
+        ul li em, ul li span {
+            display: block;
+            float: left;
+        }
+
+        ul li em {
+            margin: 13px 5px 0 0;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            background: #ff3333;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            font-style: normal;
+            border-radius: 5px;
+        }
+
+        ul li span.time {
+            float: right;
+            width: 70px;
+            text-align: right;
+            color: #999;
+        }
+
+        /*text-overflow兼容IE6及以上浏览器*/
+        ul li span.text {
+            width: 298px; /*做单行文本裁切的时候，一定要设置宽度:可以是具体值，也可以是百分比*/
+            text-overflow: ellipsis; /*文本裁切-->ellipsis:超出部分裁掉，并且显示...  clip:超出部分裁掉*/
+            white-space: nowrap; /*强制不换行*/
+            overflow: hidden; /*隐藏溢出的内容*/
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <em>01</em>
+        <span class="text">2015年珠峰培训第一期JavaScript培训创造的就业奇迹</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>02</em>
+        <span class="text">零工作经验的应届大学毕业生是如何拿到20多万年薪的</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>03</em>
+        <span class="text">选择珠峰，让我知道自己有多优秀</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>04</em>
+        <span class="text">我们是珠峰培训里最得意的小两口〈滴滴〉</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>05</em>
+        <span class="text">珠峰培训--创造奇迹的地方、梦想起航的地方</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>06</em>
+        <span class="text">2015年珠峰培训第一期JavaScript培训创造的就业奇迹</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>07</em>
+        <span class="text">零工作经验的应届大学毕业生是如何拿到20多万年薪的</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>08</em>
+        <span class="text">选择珠峰，让我知道自己有多优秀</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>09</em>
+        <span class="text">我们是珠峰培训里最得意的小两口〈滴滴〉</span>
+        <span class="time">2015-08-03</span>
+    </li>
+    <li>
+        <em>10</em>
+        <span class="text">珠峰培训--创造奇迹的地方、梦想起航的地方</span>
+        <span class="time">2015-08-03</span>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div {
+            margin: 0;
+            padding: 0;
+            font-size: 28px;
+            color: #ff3333;
+            font-weight: bold;
+        }
+
+        .menu {
+            margin: 20px auto;
+            width: 500px;
+            line-height: 50px;
+            letter-spacing: 5px;
+            border: 1px solid #ffe470;
+            text-align: center;
+        }
+
+        .blur {
+            text-shadow: 0 0 0 rgb(188, 178, 188),
+            1px -1px 0 rgb(173, 163, 173),
+            2px -2px 0 rgb(157, 147, 157),
+            3px -3px 0 rgb(142, 132, 142),
+            4px -4px 0 rgb(126, 116, 126),
+            5px -5px 0 rgb(111, 101, 111),
+            6px -6px 0 rgb(95, 85, 95),
+            7px -7px 0 rgb(79, 69, 79),
+            8px -8px 7px rgba(0, 0, 0, 0.35),
+            8px -8px 1px rgba(0, 0, 0, 0.5),
+            0 0 7px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<!--
+    text-shadow在IE9及以上兼容
+    text-shadow:x-offset、y-offset、blur-radius、color
+-->
+<div class="menu blur">珠峰培训</div>
+</body>
+</html>

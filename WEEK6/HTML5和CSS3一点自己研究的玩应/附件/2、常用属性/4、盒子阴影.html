@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            margin: 30px auto;
+            width: 100px;
+            height: 100px;
+            border: 1px solid orange;
+        }
+
+        /*IE9及以上、谷歌、火狐、欧朋、safari浏览器都支持*/
+        .menu1 {
+            box-shadow: 0 5px 10px -6px green;
+        }
+
+        .menu2 {
+            box-shadow: 0 0 15px 0 green;
+            /*IE6-8下采用filter滤镜进行处理*/
+            filter: progid:DXImageTransform.Microsoft.Shadow(color=green, Direction=5px, Strength=15px);
+        }
+
+        .menu3 {
+            box-shadow: inset -3px -3px 15px 0 green;
+        }
+
+        .menu4 {
+            box-shadow: 0 0 0 2px red, 0 0 0 4px blue, 0 0 0 6px yellow, 0 0 0 8px orange;
+        }
+    </style>
+</head>
+<body>
+<div class="menu1"></div>
+<div class="menu2"></div>
+<div class="menu3"></div>
+<div class="menu4"></div>
+</body>
+</html>

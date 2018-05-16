@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 10px auto;
+            width: 960px;
+        }
+
+        .box .header {
+            margin: 10px 0;
+            height: 100px;
+            background: #ffe470;
+        }
+
+        .box .menu {
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 220px;
+            height: 300px;
+            background: #999999;
+        }
+
+        .box .content {
+            float: left;
+            margin: 0 0 10px 0;
+            width: 720px;
+            height: 300px;
+            background: #999999;
+        }
+
+        .box .footer {
+            height: 100px;
+            background: #ffe470;
+            clear: both;
+        }
+
+        .box {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="header" id="header"></div>
+    <div class="menu" id="menu"></div>
+    <div class="content" id="content"></div>
+    <div class="footer" id="footer"></div>
+</div>
+
+<script type="text/javascript">
+    var header = document.getElementById("header");
+    var menu = document.getElementById("menu");
+    var content = document.getElementById("content");
+    var footer = document.getElementById("footer");
+
+    //总宽度是960px，menu是220px，content是720px，中间间隔20px，正好是960px
+
+    //第一步：我们给menu和content都加上padding=10px，看效果
+    //menu.style.padding = "10px";
+    //content.style.padding = "10px";
+    //由于w3c模式对于元素的宽度，需要加上padding，所以我们发现现在的总宽度相加已经大于960px，整体结构就乱了，不仅这样，我们增加border，同样这样的效果，因为border也是w3c模式下需要加的内容...
+    //menu.style.border = "1px solid red";
+    //content.style.border = "1px solid red";
+
+    //第二步：我们的box-sizing可以设置按照什么样的模式来解析，而IE下的传统模式，盒子宽度就是width(width、padding、border都在内)，所以不管我们如何的修改border或者padding，都不影响
+//    menu.className += " box";
+//    content.className += " box";
+//
+//    menu.style.padding = "10px";
+//    content.style.padding = "10px";
+//
+//    menu.style.border = "1px solid red";
+//    content.style.border = "1px solid red";
+</script>
+</body>
+</html>

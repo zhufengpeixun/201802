@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            float: left;
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background: #11c900;
+            cursor: pointer;
+        }
+
+        .box:nth-child(even) {
+            background: #ffe470;
+        }
+
+        /*1、整个盒子的所有属性一起跟着运动，并且使用:hover触发*/
+        .box:nth-child(1) {
+            -webkit-transition: all 1s ease 0s;
+            transition: all 1s ease 0s;
+        }
+
+        .box:nth-child(1):hover {
+            width: 200px;
+            height: 200px;
+        }
+
+        /*2、接下来我们改一下效果：展开的时候1s完成，收起的时候0.5s完成*/
+        .box:nth-child(2) {
+            -webkit-transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s;
+        }
+
+        .box:nth-child(2):hover {
+            -webkit-transition-duration: 1s; /*设置:hover时候的运动时间*/
+            transition-duration: 1s;
+            width: 200px;
+            height: 200px;
+        }
+
+        /*3、我们在改一下需求，只让部分样式改变，不设置all了*/
+        .box:nth-child(3) {
+            -webkit-transition: width 1s ease 0s, height 1s ease 0s, border-radius 1s ease 1s; /*设置两个运动，第一个先运动，第一个运动完成，第二个在运动*/
+            transition: width 1s ease 0s, height 1s ease 0s, border-radius 1s ease 1s;
+        }
+
+        .box:nth-child(3):hover {
+            width: 200px;
+            border-radius: 50%;
+            height: 200px; /*我们发现高度是立即变为200，而不是像宽度一样有1s的过渡效果，如果想解决的话，把height也加上即可，或者使用all(使用all就不能一个个的设置了)*/
+        }
+
+        /*4、我们在换一种触发的方式：js触发*/
+        .box:nth-child(4) {
+            -webkit-transition: all 1s ease 0s;
+            transition: all 1s ease 0s;
+        }
+
+        .click {
+            width: 200px;
+            height: 200px;
+            background: #330033;
+        }
+
+        /*5、我们在换一种触发的方式：媒体适配触发*/
+        @media all and (max-width: 640px) {
+            .box:nth-child(5) {
+                -webkit-transition: all 1s ease 0s;
+                transition: all 1s ease 0s;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+
+        /*6、在性能不好的手机上,当遇到卡顿或者有滞留的痕迹的时候，我们可以通过css开启硬件加速*/
+        .box:nth-child(6) {
+            -webkit-transition: all 2s ease-in-out 0s;
+            transition: all 2s ease-in-out 0s;
+
+            -webkit-transform: translate(0); /*这个就是开启硬件加速*/
+            transform: translate(0);
+        }
+
+        .box:nth-child(6):hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box" id="box4"></div>
+<div class="box"></div>
+<div class="box"></div>
+<script type="text/javascript">
+    var box4 = document.getElementById("box4");
+    box4.onclick = function () {
+        this.className += " click";
+    };
+
+    //:hover实现鼠标离开又回去的效果是这个伪类本身的特点，我们也可以通过js实现
+    box4.onmouseover = function () {
+        this.className += " click";
+    };
+
+    box4.onmouseout = function () {
+        this.className = "box";
+    };
+</script>
+</body>
+</html>

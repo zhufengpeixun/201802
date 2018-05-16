@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训-省市县级联菜单</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .menu {
+            margin: 20px auto;
+            padding: 20px;
+            width: 360px;
+            border: 1px solid lightblue;
+        }
+
+        .menu select {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 0 5px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #DDD;
+        }
+
+        /*IE浏览器中使用SELECT标签,样式太难看:可以自己回去查一下样式如何兼容处理*/
+    </style>
+</head>
+<body>
+<div class="menu">
+    <select name="region" id="province">
+        <option value="">请选择</option>
+    </select>
+    <select name="region" id="city">
+        <option value="">请选择</option>
+    </select>
+    <select name="region" id="county">
+        <option value="">请选择</option>
+    </select>
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/1-cascadingMenu.js"></script>
+</body>
+</html>

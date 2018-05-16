@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, a, h2, p {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 12px;
+            color: #424242;
+            -webkit-user-select: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .menu {
+            margin: 10px auto;
+            padding: 10px;
+            width: 500px;
+            background: #fff;
+        }
+
+        .menu h2 {
+            margin: 5px 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .menu h2:before {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            content: "";
+            width: 0;
+            height: 0;
+            border: 5px solid #fff;
+            border-color: #fff transparent transparent;
+        }
+
+        .menu h2 a {
+            display: block;
+            margin: 0;
+            padding: 10px;
+            background: #888;
+            background: -webkit-linear-gradient(top, #ddd, #888);
+            background: -moz-linear-gradient(top, #ddd, #888);
+            background: -ms-linear-gradient(top, #ddd, #888);
+            background: -o-linear-gradient(top, #ddd, #888);
+        }
+
+        .menu:target h2 a, .menu h2 a:focus, .menu h2 a:hover, .menu h2 a:active {
+            background: #008000;
+            background: -webkit-linear-gradient(top, #11c900, #11c900);
+            background: -moz-linear-gradient(top, #11c900, #11c900);
+            background: -ms-linear-gradient(top, #11c900, #11c900);
+            background: -o-linear-gradient(top, #11c900, #11c900);
+            color: #FFF;
+        }
+
+        .menu p {
+            margin: 5px 0;
+            padding: 0 10px;
+            height: 0;
+            line-height: 25px;
+            overflow: hidden;
+            -webkit-transition: height 0.5s ease-in;
+            -moz-transition: height 0.5s ease-in;
+            -o-transition: height 0.5s ease-in;
+            transition: height 0.5s ease-in;
+        }
+
+        .menu :target p {
+            height: 75px;
+        }
+
+        .menu :target h2:before {
+            border-color: transparent transparent transparent #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div id="company">
+        <h2><a href="#company">公司简介</a></h2>
+
+        <p>
+            北京珠峰世纪技术培训有限公司(简称珠峰培训)，成立于2009年，本着"一心一意为学生服务"的办学理念，为社会培养大批的前端技术精英，每年有超过30%以上的学员进入了BAT等一线互联网公司，学员的平均就业薪资在12~14k，创造了培训行业的就业传奇!</p>
+    </div>
+
+    <div id="job">
+        <h2><a href="#job">就业信息</a></h2>
+
+        <p>
+            北京珠峰世纪技术培训有限公司(简称珠峰培训)，成立于2009年，本着"一心一意为学生服务"的办学理念，为社会培养大批的前端技术精英，每年有超过30%以上的学员进入了BAT等一线互联网公司，学员的平均就业薪资在12~14k，创造了培训行业的就业传奇!</p>
+    </div>
+
+    <div id="teacher">
+        <h2><a href="#teacher">师资力量</a></h2>
+
+        <p>
+            北京珠峰世纪技术培训有限公司(简称珠峰培训)，成立于2009年，本着"一心一意为学生服务"的办学理念，为社会培养大批的前端技术精英，每年有超过30%以上的学员进入了BAT等一线互联网公司，学员的平均就业薪资在12~14k，创造了培训行业的就业传奇!</p>
+    </div>
+</div>
+
+</body>
+</html>

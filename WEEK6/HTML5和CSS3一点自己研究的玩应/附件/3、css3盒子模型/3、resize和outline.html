@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        /*outline和border的主要区别：
+            1、border设置完会影响盒子模型的宽高，而outline不会
+            2、border可以分别修改四个方向的值，outline只能统一设置一样的
+        */
+        textarea {
+            /*outline: none; /!*当你的文本框获取焦点后,不会出现默认的边框颜色 IE8及以上兼容*!/*/
+            /*outline: 1px solid #11c900;*/
+            /*我们一般都会使用outline: none;，然后用border设置元素的边框*/
+            outline: none;
+            border: 1px solid #11c900;
+        }
+
+        .desc {
+            width: 500px;
+            height: 150px;
+            resize: none; /*加上后就不在允许用户手动的拖拽了 IE不兼容*/
+        }
+    </style>
+</head>
+<body>
+<textarea class="desc"></textarea>
+</body>
+</html>

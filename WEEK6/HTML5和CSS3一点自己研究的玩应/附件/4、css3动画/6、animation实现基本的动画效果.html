@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, ul, li, img {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 12px;
+            -webkit-user-select: none;
+            color: #fff;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        html, body, .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box .bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 210px;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .box .inner {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin-left: -525px;
+            padding: 0 0 0 10px;
+            width: 1050px;
+            height: 150px;
+            z-index: 1002;
+        }
+
+        .box .inner li {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            padding: 60px 10px 10px;
+            width: 176px;
+            height: 86px;
+            line-height: 22px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+
+            /*设置底部导航的动画效果*/
+            -webkit-transition: all .2s ease-in-out 0s;
+            transition: all .2s ease-in-out 0s;
+        }
+
+        /*设置底部导航鼠标滑过是缩小的效果*/
+        .box .inner li:hover {
+            -webkit-transform: scale(.95);
+            transform: scale(.95);
+        }
+
+        .box .inner li img {
+            position: absolute;
+            left: 50px;
+            top: -50px;
+            padding: 5px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #fff;
+            z-index: 1003;
+        }
+
+        /*设置每一张图片的初始值*/
+        .box .imgCon {
+            width: 100%;
+            height: 100%;
+            background: #eee;
+        }
+
+        .box .imgCon img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .box .imgCon img:nth-child(1) {
+            left: -100%;
+            z-index: 5;
+        }
+
+        .box .imgCon img:nth-child(2) {
+            top: -100%;
+            z-index: 4;
+        }
+
+        .box .imgCon img:nth-child(3) {
+            opacity: 0;
+            z-index: 3;
+        }
+
+        .box .imgCon img:nth-child(4) {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            z-index: 2;
+        }
+
+        .box .imgCon img:nth-child(5) {
+            z-index: 1;
+            opacity: 0;
+        }
+
+        /*设置css3 animation动画*/
+        .move {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .move1 {
+            -webkit-animation-name: move1;
+            animation-name: move1;
+        }
+
+        @-webkit-keyframes move1 {
+            from {
+                left: -100%;
+            }
+            to {
+                left: 0;
+            }
+        }
+
+        .move2 {
+            -webkit-animation-name: move2;
+            animation-name: move2;
+        }
+
+        @-webkit-keyframes move2 {
+            0% {
+                top: -100%;
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        .move3 {
+            -webkit-animation-name: move3;
+            animation-name: move3;
+        }
+
+        @-webkit-keyframes move3 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .move4 {
+            -webkit-animation-name: move4;
+            animation-name: move4;
+
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+        }
+
+        @-webkit-keyframes move4 {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            33.3333% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            66.6666% {
+                -webkit-transform: scale(.5) rotate(180deg);
+                transform: scale(.5) rotate(180deg);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        .move5 {
+            -webkit-animation-name: move5;
+            animation-name: move5;
+        }
+
+        @-webkit-keyframes move5 {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="bg"></div>
+    <ul class="inner">
+        <li><img src="img/girl/1.jpg"/>珠峰培训创立于2009年,多年来本着一心一意为学生服务的宗旨，创造了平均薪资12k+的就业传奇，超过30%的学员进入BAT...</li>
+        <li><img src="img/girl/2.jpg"/>珠峰培训创立于2009年,多年来本着一心一意为学生服务的宗旨，创造了平均薪资12k+的就业传奇，超过30%的学员进入BAT...</li>
+        <li><img src="img/girl/3.jpg"/>珠峰培训创立于2009年,多年来本着一心一意为学生服务的宗旨，创造了平均薪资12k+的就业传奇，超过30%的学员进入BAT...</li>
+        <li><img src="img/girl/4.jpg"/>珠峰培训创立于2009年,多年来本着一心一意为学生服务的宗旨，创造了平均薪资12k+的就业传奇，超过30%的学员进入BAT...</li>
+        <li><img src="img/girl/5.jpg"/>珠峰培训创立于2009年,多年来本着一心一意为学生服务的宗旨，创造了平均薪资12k+的就业传奇，超过30%的学员进入BAT...</li>
+    </ul>
+    <div class="imgCon">
+        <img src="img/girl/1.jpg"/>
+        <img src="img/girl/2.jpg"/>
+        <img src="img/girl/3.jpg"/>
+        <img src="img/girl/4.jpg"/>
+        <img src="img/girl/5.jpg"/>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var oImgs = document.querySelectorAll(".imgCon img");
+    oImgs[0].className = "move move1";
+
+    var oLis = document.querySelectorAll(".inner li");
+    for (var i = 0; i < oLis.length; i++) {
+        oLis[i].index = i;
+        oLis[i].onclick = function () {
+            var _this = this;
+            for (var k = 0; k < oImgs.length; k++) {
+                if (k != _this.index) {
+                    oImgs[k].className = null;
+                }
+            }
+            oImgs[_this.index].className = "move move" + (_this.index + 1);
+        }
+    }
+</script>
+</body>
+</html>

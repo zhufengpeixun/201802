@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            float: left;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            /*background-image:设置背景图片地址*/
+            background-image: url("img/baby.jpg");
+            /*background-repeat:设置背景图片是否平铺*/
+            background-repeat: no-repeat;
+        }
+
+        .menu:nth-child(2) {
+            /*background-position:设置背景图片的位置,默认值是(0,0)||(0%,0%)||(left top)*/
+            background-position: center center;
+            /*background-position: 50% 50%;*/
+        }
+
+        /*以下是css3新增加的属性*/
+        /*background-size:指定背景图片的尺寸 cover:把背景图片放大,以适合铺满整个容器 contain:把内容填满*/
+        .menu:nth-child(3), .menu:nth-child(4), .menu:nth-child(5) {
+            background-size: 100% 100%;
+        }
+
+        .menu:nth-child(6) {
+            background-size: cover;
+        }
+
+        .menu:nth-child(7) {
+            background-size: contain;
+        }
+
+        /*background-origin:决定背景的定位起始位置 padding-box、border-box、content-box*/
+        .menu:nth-child(3) {
+            -webkit-background-origin: padding-box;
+            -moz-background-origin: padding-box;
+            -ms-background-origin: padding-box;
+            -o-background-origin: padding-box;
+            background-origin: padding-box;
+        }
+
+        .menu:nth-child(4) {
+            -webkit-background-origin: border-box;
+            -moz-background-origin: border-box;
+            -ms-background-origin: border-box;
+            -o-background-origin: border-box;
+            background-origin: border-box;
+        }
+
+        .menu:nth-child(5) {
+            -webkit-background-origin: content-box;
+            -moz-background-origin: content-box;
+            -ms-background-origin: content-box;
+            -o-background-origin: content-box;
+            background-origin: content-box;
+        }
+
+        /*background-clip:背景裁切 padding-box、border-box、content-box、text*/
+        .menu:nth-child(8) {
+            /*padding-box:背景延伸到padding的外边缘,但不会超出边框的范围*/
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding-box;
+            -ms-background-clip: padding-box;
+            -o-background-clip: padding-box;
+            background-clip: padding-box;
+        }
+
+        .menu:nth-child(9) {
+            /*border-box:默认值,背景图片在边框下*/
+            -webkit-background-clip: border-box;
+            -moz-background-clip: border-box;
+            -ms-background-clip: border-box;
+            -o-background-clip: border-box;
+            background-clip: border-box;
+        }
+
+        .menu:nth-child(10) {
+            /*content-box:背景仅仅在内容区域内绘制*/
+            -webkit-background-clip: content-box;
+            -moz-background-clip: content-box;
+            -ms-background-clip: content-box;
+            -o-background-clip: content-box;
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">1</div>
+<div class="menu">2</div>
+<div class="menu">3</div>
+<div class="menu">4</div>
+<div class="menu">5</div>
+
+<div class="menu">6</div>
+<div class="menu">7</div>
+
+<div class="menu">8</div>
+<div class="menu">9</div>
+<div class="menu">10</div>
+
+</body>
+</html>
