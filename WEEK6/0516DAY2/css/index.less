@@ -1,0 +1,113 @@
+/*
+ * 虽然移动端（安卓&IOS）上的浏览器大部分都是WEBKIT内核的，但是由于很多手机操作系统版本过低（尤其是安卓手机），导致很多CSS3新特性不能有效识别，此时我们使用的大部分CSS3属性都要写两套才能兼容（加前缀的在前，不加的在后）
+ *  -webkit-animation
+ *  animation
+ *
+ * 太麻烦了，不过没关系，有JS插件可以帮我们搞定这件事情 （prefixfree.min.js）, 导入插件后，它会帮我们把所有需要加前缀的都加上
+ */
+@import "reset.min.less";
+@import (reference) "common";
+
+html {
+  font-size: 100px; /*640PX设计稿尺寸中：1REM=100PX*/
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: #F4F4F4;
+  font-family: "Microsoft JhengHei";
+}
+
+.mainBox {
+  margin: 0 auto;
+  max-width: 640px;
+  height: 100%;
+  background: #FFF;
+}
+
+.loadingBox {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*LOADING*/
+.loadingBox {
+  background: #000;
+
+  .title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -2.2rem; /* -0.7(正中间)+1.5(距离中间靠上的位移) */
+    width: 100%;
+    height: 1.4rem;
+    color: #FFF;
+
+    h1 {
+      line-height: .75rem;
+      font-size: .5rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: .2rem;
+      line-height: .45rem;
+      text-align: center;
+      letter-spacing: .04rem;
+    }
+  }
+
+  .progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: .85rem 0 0 -2.3rem;
+    width: 4.6rem;
+    height: .3rem;
+    background: #FFF;
+
+    .current {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: -webkit-linear-gradient(left bottom, #5CB85C 0%, #5CB85C 25%, #74C274 25%, #74C274 50%, #5CB85C 50%, #5CB85C 75%, #74C274 75%, #74C274 100%);
+      background: linear-gradient(left bottom, #5CB85C 0%, #5CB85C 25%, #74C274 25%, #74C274 50%, #5CB85C 50%, #5CB85C 75%, #74C274 75%, #74C274 100%);
+      background-size: .3rem .3rem;
+      animation: loadingMove .5s linear 0s infinite both;
+
+      /*给CURRENT设置一个过渡动画:当我们在JS中控制它的宽度在变化的时候,给其一个平稳的过渡动画效果(而不是生硬的改变)*/
+      transition: .3s;
+    }
+  }
+}
+
+@keyframes loadingMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
