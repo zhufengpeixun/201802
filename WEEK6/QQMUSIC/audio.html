@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<!--
+  AUDIO:音频标签
+    1.H5中AUDIO支持的音乐播放格式
+     MP3(常用)    MP4=>VIDEO(常用)
+     OGG         OGG
+     WAV         WMV
+
+     M3U8:直播流
+
+   2.常用属性
+     controls:设置这个属性，则使用浏览器默认的播放器控制（项目中很少使用默认播放器，一般都是自己做的）
+     autoplay:自动播放
+     loop:播放完成后是否循环播放
+     preload:资源预加载模式 (none开始的时候什么都不加载，播放的时候才加载[常用]  metadata开始加载一些基础信息  auto加载页面就开始加载资源)
+-->
+<!--
+ <audio>
+    <source src="xxx.mp3" type="audio/mpeg">
+    <source src="xxx.ogg" type="audio/ogg">
+    <source src="xxx.wav" type="audio/wav">
+    当前浏览器版本过低，不支持AUDIO播放! （有的项目中，上面三种都不支持，会继续使用FLASH完成音频的播放）
+ </audio>
+-->
+<audio src="img/myDream.m4a" controls autoplay loop preload="none"></audio>
+
+<!--POSTER:设置视频的封面-->
+<video src="http://220.194.121.21/variety.tc.qq.com/Aqo4A2qmSlvqlKmfeHRqYvj2JM8Xtihr7EJGA8gcOEy4/k0200dgeb4x.p202.1.mp4?vkey=AC44C6F3A0139050C2C70A6BE4A5E0716C262257CE9FB2C9012ACA776ABF12C4F168DA05FEEF849BA109AE3740DEA2687A74FB4DAF2C473BA4817D133C92B4C95C25132A08FB69759D0C29594DAA98CC3DCA35D79C655337C6A9975363EA9019A992353B3B558B6964B4EB1D539D64CEAEFEBA50D365FE22&platform=4100201&sdtfrom=&fmt=hd&level=0&locid=0fda3915-993f-4146-af16-43c4880d15c8&size=2243103&ocid=377164972" poster="img/myDream.jpg" controls></video>
+</body>
+</html>
