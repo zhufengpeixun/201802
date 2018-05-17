@@ -1,3 +1,28 @@
+/*
+ * 关于AUDIO的一些常用属性
+ *    [属性]
+ *    duration:播放的总时间(S)
+ *    currentTime:当前已经播放的时间(S)
+ *    ended:是否已经播放完成
+ *    paused:当前是否为暂停状态
+ *    volume:控制音量 (0~1)
+ *
+ *    [方法]
+ *    pause() 暂停
+ *    play() 播放
+ *
+ *    [事件]
+ *    canplay：可以正常播放（但是播放过程中可能出现卡顿）
+ *    canplaythrough：资源加载完毕，可以顺畅的播放了
+ *    ended：播放完成
+ *    loadedmetadata：资源的基础信息已经加载完成
+ *    loadeddata：整个资源都加载完成
+ *    pause:触发了暂停
+ *    play:触发了播放
+ *    playing:正在播放中
+ */
+
+/*LOADING*/
 let loadingRender = (function () {
     let $loadingBox = $('.loadingBox'),
         $current = $loadingBox.find('.current');
@@ -55,4 +80,73 @@ let loadingRender = (function () {
         }
     }
 })();
-loadingRender.init();
+
+/*PHONE*/
+let phoneRender = (function () {
+    let $phoneBox = $('.phoneBox'),
+        $time = $phoneBox.find('span'),
+        $answer = $phoneBox.find('.answer'),
+        $answerMarkLink = $answer.find('.markLink'),
+        $hang = $phoneBox.find('.hang'),
+        $hangMarkLink = $hang.find('.markLink'),
+        answerBell = $('#answerBell')[0],
+        introduction = $('#introduction')[0];
+
+    //=>点击ANSWER-MARK
+    let answerMarkTouch = function answerMarkTouch() {
+        //1.REMOVE ANSWER
+        $answer.remove();
+        answerBell.pause();
+        $(answerBell).remove();//=>一定要先暂停播放然后再移除，否则即使移除了浏览器也会播放着这个声音
+
+        //2.SHOW HANG
+        $hang.css('transform', 'translateY(0rem)');
+        $time.css('display', 'block');
+        introduction.play();
+        computedTime();
+
+    };
+
+    //=>计算播放时间
+    let autoTimer = null;
+    let computedTime = function computedTime() {
+        let duration = introduction.duration;
+        autoTimer = setInterval(() => {
+            let val = introduction.currentTime;
+            //=>播放完成
+            if (val >= duration) {
+                clearInterval(autoTimer);
+                return;
+            }
+            let minute = Math.floor(val / 60),
+                second = Math.floor(val - minute * 60);
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+            $time.html(`${minute}:${second}`);
+        }, 1000);
+    };
+
+    return {
+        init: function () {
+            //=>播放BELL
+            answerBell.play();
+            answerBell.volume = 0.3;
+
+            $answerMarkLink.on('click', answerMarkTouch);
+        }
+    }
+})();
+
+
+//=>开发过程中,由于当前项目版块众多(每一个版块都是一个单例),我们最好规划一种机制:通过标识的判断可以让程序只执行对应版块内容,这样开发哪个版块,我们就把标识改为啥（HASH路由控制）
+let url = window.location.href,//=>获取当前页面的URL地址  location.href='xxx'这种写法是让其跳转到某一个页面
+    well = url.indexOf('#'),
+    hash = well === -1 ? null : url.substr(well + 1);
+switch (hash) {
+    case 'loading':
+        loadingRender.init();
+        break;
+    case 'phone':
+        phoneRender.init();
+        break;
+}

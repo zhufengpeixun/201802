@@ -13,6 +13,8 @@ html {
 }
 
 html, body {
+  position: relative;
+  z-index: -4;
   height: 100%;
   overflow: hidden;
   background: #F4F4F4;
@@ -20,13 +22,16 @@ html, body {
 }
 
 .mainBox {
+  position: relative;
+  z-index: -3;
   margin: 0 auto;
   max-width: 640px;
   height: 100%;
   background: #FFF;
 }
 
-.loadingBox {
+.loadingBox, .phoneBox {
+  display: none;
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -94,20 +99,97 @@ html, body {
   }
 }
 
+/*PHONE*/
+.phoneBox {
+  display: block;
 
+  z-index: -2;
+  background: url("../img/zf_phoneBg.jpg") no-repeat;
+  background-size: cover;
 
+  h2 {
+    margin-top: .5rem;
+    text-align: center;
 
+    img {
+      display: inline-block;
+      width: 2.62rem;
+      height: 1.25rem;
+    }
 
+    span {
+      display: none;
+      margin-top: .1rem;
+      line-height: .3rem;
+      font-size: .3rem;
+      color: #FFF;
+      letter-spacing: .05rem;
+    }
+  }
 
+  .answer {
+    position: absolute;
+    bottom: .3rem;
+    left: 50%;
+    margin-left: -2.6rem;
+    width: 5.2rem;
+    height: 3.6rem;
+    background: url("../img/zf_phoneListen.png") no-repeat;
+    background-size: 100% 100%;
 
+    .markMove {
+      position: absolute;
+      right: -.06rem;
+      bottom: .48rem;
+      z-index: -1;
+      box-sizing: border-box;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      border: .03rem solid #0F0;
+      animation: answerMove 1s linear infinite both;
+    }
 
+    .markLink {
+      .markMove; //=>把MARK-MOVE的样式继承过来使用
+      z-index: 1;
+      border: none;
+      border-radius: 0;
+      animation: none;
+    }
+  }
 
+  .hang {
+    position: absolute;
+    bottom: .3rem;
+    left: 50%;
+    margin-left: -2.6rem;
+    width: 5.2rem;
+    height: 6.59rem;
+    background: url('../img/zf_phoneDetail.png') no-repeat;
+    background-size: 100% 100%;
 
+    //=>初始位置是在PHONE的底部（看不见：溢出内容隐藏），当点击接听按钮后，控制它从底下出来即可（JS中改变样式） “我们可以基于TRANSFORM改变样式的尽量不要使用传统的样式属性，因为TRANSFORM操作开启了浏览器的硬件加速，性能更高一些”
+    transform: translateY(6.89rem);
+    transition: .3s;
 
+    .markLink {
+      position: absolute;
+      bottom: .26rem;
+      left: 50%;
+      z-index: 1;
+      margin-left: -.8rem;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
 
-
-
-
-
-
-
+@keyframes answerMove {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(0);
+  }
+}
