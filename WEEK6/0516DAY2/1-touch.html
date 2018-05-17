@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠峰培训</title>
+    <link rel="stylesheet/less" href="css/reset.min.less">
+    <script src="js/less-2.5.3.min.js"></script>
+    <style>
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    let box = document.querySelector('.box');
+
+    box.ontouchstart = function (ev) {
+        // console.dir(ev);
+        /*
+         * TouchEvent：手指事件对象
+         *   changedTouches
+         *   touches
+         *   手指操作的信息集合，集合中记录了每一根操作的手指的相关信息（包含触发点的坐标位置），touches记录的信息只有手指在屏幕上才有，也就是手指离开屏幕的时候信息就消失了，changedTouches本意上记录的是改变的值，即使手指离开，信息值也在
+         */
+
+        //=>按下的时候记录手指的起始位置
+        let point = ev.changedTouches[0];
+        this.strX = point.clientX;
+        this.strY = point.clientY;
+        this.isMove = false;
+    };
+    box.ontouchmove = function (ev) {
+        let point = ev.changedTouches[0];
+        this.changeX = point.clientX - this.strX;
+        this.changeY = point.clientY - this.strY;
+        if (Math.abs(this.changeX) > 10 || Math.abs(this.changeY) > 10) {
+            //=>10是操作误差值
+            this.isMove = true;
+        }
+    };
+    box.ontouchend = function (ev) {
+        if (this.isMove) {
+            //=>滑动
+            return;
+        }
+        //=>点击
+        console.log('我是点击操作');
+    };
+</script>
+
+<script src="js/zepto.min.js"></script>
+<script>
+    /*
+     * CLICK在移动端是单击事件行为，当触发点击操作，浏览器总会等待300MS，验证是否触发了第二次点击操作，没有触发才会执行CLICK对应的方法（CLICK在移动端的300MS延迟问题）
+     *   1.不建议大家在移动端使用CLICK（如果非要使用也可以，最好导入一个插件 fastclick.min.js 就是解决300MS延迟的插件）
+     *
+     *   2.目前项目中移动端的点击操作等基本上都是基于第三方类库（事件库完成的）
+     *     zepto:提供了移动端常用的事件操作
+     *     touch.js
+     *     hammer.js
+     *     ...
+     */
+
+    // let $box = $('.box');
+    //=>ZEPTO中提供的专门供移动端操作的事件方法
+    // $box.tap(ev => {
+    //     //=>点击
+    // });
+    // $box.singleTap(ev => {
+    //     //=>单击
+    // });
+    // $box.doubleTap(ev => {
+    //     //=>双击
+    // });
+    // $box.longTap(ev => {
+    //     //=>长按
+    // });
+    //=>swipe / swipeLeft / swipeRight / swipeUp / swipeDown...
+    //=>pinchIn / pinchOut ...
+
+    //=>ZEPTO VS JQ
+    //1.ZEPTO没有考虑浏览器的兼容，专门为移动端开发的小型类库，也仅仅是把JQ中的一些常规方法实现了，很多方法也没有实现（例如：slideDown/show...在ZEPTO中都没有） =>为了保证ZEPTO的体积足够小
+    //2.ZEPTO中提供了移动端专门操作的事件方法(例如：tap等)，这些方法都是基于移动端的TOUCH和GESTURE事件模型封装好的方法，JQ中并没有提供这些方法 =>ZEPTO更适合移动端
+    //...
+</script>
+</body>
+</html>

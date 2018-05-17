@@ -104,18 +104,23 @@ let phoneRender = (function () {
         $time.css('display', 'block');
         introduction.play();
         computedTime();
-
     };
 
     //=>计算播放时间
     let autoTimer = null;
     let computedTime = function computedTime() {
-        let duration = introduction.duration;
+        //=>我们让AUDIO播放,首先会去加载资源,部分资源加载完成才会播放,才会计算出总时间DURATION等信息,所以我们可以把获取信息放到CAN-PLAY事件中
+        /*let duration = 0;
+        introduction.oncanplay = function () {
+            duration = introduction.duration;
+        };*/
         autoTimer = setInterval(() => {
-            let val = introduction.currentTime;
+            let val = introduction.currentTime,
+                duration = introduction.duration;
             //=>播放完成
             if (val >= duration) {
                 clearInterval(autoTimer);
+                closePhone();
                 return;
             }
             let minute = Math.floor(val / 60),
@@ -126,13 +131,31 @@ let phoneRender = (function () {
         }, 1000);
     };
 
+    //=>关闭PHONE
+    let closePhone = function closePhone() {
+        clearInterval(autoTimer);
+        introduction.pause();
+        $(introduction).remove();
+        $phoneBox.remove();
+    };
+
     return {
         init: function () {
             //=>播放BELL
             answerBell.play();
             answerBell.volume = 0.3;
 
-            $answerMarkLink.on('click', answerMarkTouch);
+            $answerMarkLink.tap(answerMarkTouch);
+            $hangMarkLink.tap(closePhone);
+        }
+    }
+})();
+
+/*MESSAGE*/
+let messageRender = (function () {
+    return {
+        init: function () {
+
         }
     }
 })();
@@ -148,5 +171,8 @@ switch (hash) {
         break;
     case 'phone':
         phoneRender.init();
+        break;
+    case 'message':
+        messageRender.init();
         break;
 }
