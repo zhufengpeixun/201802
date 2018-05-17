@@ -70,11 +70,14 @@ let loadingRender = (function () {
         let timer = setTimeout(() => {
             $loadingBox.remove();
             clearTimeout(timer);
+
+            phoneRender.init();
         }, 1000);
     };
 
     return {
         init: function () {
+            $loadingBox.css('display', 'block');
             run(done);
             maxDelay(done);
         }
@@ -137,10 +140,14 @@ let phoneRender = (function () {
         introduction.pause();
         $(introduction).remove();
         $phoneBox.remove();
+
+        messageRender.init();
     };
 
     return {
         init: function () {
+            $phoneBox.css('display', 'block');
+
             //=>播放BELL
             answerBell.play();
             answerBell.volume = 0.3;
@@ -153,9 +160,113 @@ let phoneRender = (function () {
 
 /*MESSAGE*/
 let messageRender = (function () {
+    let $messageBox = $('.messageBox'),
+        $wrapper = $messageBox.find('.wrapper'),
+        $messageList = $wrapper.find('li'),
+        $keyBoard = $messageBox.find('.keyBoard'),
+        $textInp = $keyBoard.find('span'),
+        $submit = $keyBoard.find('.submit'),
+        demonMusic = $('#demonMusic')[0];
+
+    let step = -1,//=>记录当前展示信息的索引
+        total = $messageList.length + 1,//=>记录的是信息总条数(自己发一条所以加1)
+        autoTimer = null,
+        interval = 1500;//=>记录信息相继出现的间隔时间
+
+    //=>展示信息
+    let tt = 0;
+    let showMessage = function showMessage() {
+        ++step;
+        if (step === 2) {
+            //=>已经展示两条了:此时我们暂时结束自动信息发送，让键盘出来，开始执行手动发送
+            clearInterval(autoTimer);
+            handleSend();
+            return;
+        }
+        let $cur = $messageList.eq(step);
+        $cur.addClass('active');
+        if (step >= 3) {
+            //=>展示的条数已经是四条或者四条以上了,此时我们让WRAPPER向上移动(移动的距离是新展示这一条的高度)
+            /*let curH = $cur[0].offsetHeight,
+                wraT = parseFloat($wrapper.css('top'));
+            $wrapper.css('top', wraT - curH);*/
+            //=>JS中基于CSS获取TRANSFORM，得到的结果是一个矩阵
+            let curH = $cur[0].offsetHeight;
+            tt -= curH;
+            $wrapper.css('transform', `translateY(${tt}px)`);
+        }
+        if (step >= total - 1) {
+            //=>展示完了
+            clearInterval(autoTimer);
+            closeMessage();
+        }
+    };
+
+    //=>手动发送
+    let handleSend = function handleSend() {
+        $keyBoard.css({
+            transform: 'translateY(0)'
+        }).one('transitionend', () => {
+            //=>TRANSITION-END:监听当前元素TRASITION动画结束的事件(并且有几个样式属性改变，并且执行了过渡效果，事件就会被触发执行几次 =>用ONE方法做事件绑定,只会让其触发一次)
+            let str = '好的，马上介绍！',
+                n = -1,
+                textTimer = null;
+            textTimer = setInterval(() => {
+                let orginHTML = $textInp.html();
+                $textInp.html(orginHTML + str[++n]);
+                if (n >= str.length - 1) {
+                    //=>文字显示完成
+                    clearInterval(textTimer);
+                    $submit.css('display', 'block');
+                }
+            }, 100);
+        });
+    };
+
+    //=>点击SUBMIT
+    let handleSubmit = function handleSubmit() {
+        //=>把新创建的LI增加到页面中第二个LI的后面
+        $(`<li class="self">
+            <i class="arrow"></i>
+            <img src="img/zf_messageStudent.png" alt="" class="pic">
+            ${$textInp.html()}
+        </li>`).insertAfter($messageList.eq(1)).addClass('active');
+        $messageList = $wrapper.find('li');//=>重要:把新的LI放到页面中,我们此时应该重新获取LI，让MESSAGE-LIST和页面中的LI正对应，方便后期根据索引展示对应的LI
+
+        //=>该消失的消失
+        $textInp.html('');
+        $submit.css('display', 'none');
+        $keyBoard.css('transform', 'translateY(3.7rem)');
+
+        //=>继续向下展示剩余的消息
+        autoTimer = setInterval(showMessage, interval);
+    };
+
+    //=>关掉MESSAGE区域
+    let closeMessage = function closeMessage() {
+        let delayTimer = setTimeout(() => {
+            demonMusic.pause();
+            $(demonMusic).remove();
+            $messageBox.remove();
+            clearTimeout(delayTimer);
+
+        }, interval);
+    };
+
     return {
         init: function () {
+            $messageBox.css('display', 'block');
 
+            //=>加载模块立即展示一条信息,后期间隔INTERVAL在发送一条信息
+            showMessage();
+            autoTimer = setInterval(showMessage, interval);
+
+            //=>SUBMIT
+            $submit.tap(handleSubmit);
+
+            //=>MUSIC
+            demonMusic.play();
+            demonMusic.volume = 0.3;
         }
     }
 })();
@@ -175,4 +286,6 @@ switch (hash) {
     case 'message':
         messageRender.init();
         break;
+    default:
+        loadingRender.init();
 }
