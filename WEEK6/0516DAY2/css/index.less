@@ -30,7 +30,7 @@ html, body {
   background: #FFF;
 }
 
-.loadingBox, .phoneBox, .messageBox, .cubeBox {
+.loadingBox, .phoneBox, .messageBox, .cubeBox, .detailBox {
   display: none;
   position: relative;
   height: 100%;
@@ -395,3 +395,54 @@ html, body {
     transition: .3s; //=>后期让魔方旋转的时候有一个平稳的过渡动画效果
   }
 }
+
+/*DETAIL*/
+.detailBox {
+  .swiper-container {
+    height: 100%;
+    overflow: hidden;
+
+    .swiper-slide {
+      position: relative; /*每一个页面中的元素相对于自己的页面定位*/
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      &:nth-child(2) {
+        background: #FFF9C1;
+      }
+
+      &:nth-child(3) {
+        background: #E45454;
+      }
+
+      &:nth-child(4) {
+        background: #FAC471;
+      }
+
+      &:nth-child(5) {
+        background: #FBFFE8;
+      }
+
+      &:nth-child(6) {
+        background: #5975FF;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

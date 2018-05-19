@@ -330,8 +330,43 @@ let cubeRender = (function () {
     }
 })();
 
+/*DETAIL*/
+let detailRender = (function () {
+    let $detailBox = $('.detailBox'),
+        swiper = null;
 
-//=>开发过程中,由于当前项目版块众多(每一个版块都是一个单例),我们最好规划一种机制:通过标识的判断可以让程序只执行对应版块内容,这样开发哪个版块,我们就把标识改为啥（HASH路由控制）
+    let swiperInit = function swiperInit() {
+        swiper = new Swiper('.swiper-container', {
+            // initialSlide: 1  //=>初始SLIDE索引
+            // direction:'horizontal/vertical'  //=>控制滑动方向
+            // loop: true //=>SWIPER有一个BUG:3D切换设置LOOP为TRUE的时候偶尔会出现无法切换的情况(2D效果没问题)  =>无缝切换原理:把真实第一张克隆一份放到末尾，把真实最后一张也克隆一份放到开始（真实SLIDE有五个，WRAPPER中会有7个SLIDE）
+            effect: 'coverflow',
+            onInit: (swiper) => {
+                //=>初始化成功执行的回调函数(参数是当前初始化的实例)
+            },
+            onTransitionEnd: (swiper) => {
+                //=>切换动画完成执行的回调函数
+            }
+        });
+        //实例的私有属性:
+        //1.activeIndex：当前展示SLIDE块的索引
+        //2.slides：获取所有的SLIDE(数组)
+        //...
+        //实例的公有方法
+        //1.slideTo：切换到指定索引的SLIDE
+        //...
+    };
+
+
+    return {
+        init: function () {
+            $detailBox.css('display', 'block');
+            swiperInit();
+        }
+    }
+})();
+
+/*HASH*/
 let url = window.location.href,//=>获取当前页面的URL地址  location.href='xxx'这种写法是让其跳转到某一个页面
     well = url.indexOf('#'),
     hash = well === -1 ? null : url.substr(well + 1);
@@ -347,6 +382,9 @@ switch (hash) {
         break;
     case 'cube':
         cubeRender.init();
+        break;
+    case 'detail':
+        detailRender.init();
         break;
     default:
         loadingRender.init();
