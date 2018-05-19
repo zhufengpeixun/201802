@@ -271,6 +271,65 @@ let messageRender = (function () {
     }
 })();
 
+/*CUBE*/
+let cubeRender = (function () {
+    let $cubeBox = $('.cubeBox'),
+        $cube = $('.cube'),
+        $cubeList = $cube.find('li');
+
+    //=>手指控住旋转
+    let start = function start(ev) {
+        //=>记录手指按在位置的起始坐标
+        let point = ev.changedTouches[0];
+        this.strX = point.clientX;
+        this.strY = point.clientY;
+        this.changeX = 0;
+        this.changeY = 0;
+    };
+    let move = function move(ev) {
+        //=>用最新手指的位置-起始的位置，记录X/Y轴的偏移
+        let point = ev.changedTouches[0];
+        this.changeX = point.clientX - this.strX;
+        this.changeY = point.clientY - this.strY;
+    };
+    let end = function end(ev) {
+        //=>获取CHANGE/ROTATE值
+        let {changeX, changeY, rotateX, rotateY} = this,
+            isMove = false;
+        //=>验证是否发生移动（判断滑动误差）
+        Math.abs(changeX) > 10 || Math.abs(changeY) > 10 ? isMove = true : null;
+        //=>只有发生移动再处理
+        if (isMove) {
+            //1.左右滑=>CHANGE-X=>ROTATE-Y (正比:CHANGE越大ROTATE越大)
+            //2.上下滑=>CHANGE-Y=>ROTATE-X (反比:CHANGE越大ROTATE越小)
+            //3.为了让每一次操作旋转角度小一点，我们可以把移动距离的1/3作为旋转的角度即可
+            rotateX = rotateX - changeY / 3;
+            rotateY = rotateY + changeX / 3;
+            //=>赋值给魔方盒子
+            $(this).css('transform', `scale(0.6) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
+            //=>让当前旋转的角度成为下一次起始的角度
+            this.rotateX = rotateX;
+            this.rotateY = rotateY;
+        }
+        //=>清空其它记录的自定义属性值
+        ['strX', 'strY', 'changeX', 'changeY'].forEach(item => this[item] = null);
+    };
+
+    return {
+        init: function () {
+            $cubeBox.css('display', 'block');
+
+            //=>手指操作CUBE,让CUBE跟着旋转
+            let cube = $cube[0];
+            cube.rotateX = -35;
+            cube.rotateY = 35;//=>记录初始的旋转角度（存储到自定义属性上）
+            $cube.on('touchstart', start)
+                .on('touchmove', move)
+                .on('touchend', end);
+        }
+    }
+})();
+
 
 //=>开发过程中,由于当前项目版块众多(每一个版块都是一个单例),我们最好规划一种机制:通过标识的判断可以让程序只执行对应版块内容,这样开发哪个版块,我们就把标识改为啥（HASH路由控制）
 let url = window.location.href,//=>获取当前页面的URL地址  location.href='xxx'这种写法是让其跳转到某一个页面
@@ -285,6 +344,9 @@ switch (hash) {
         break;
     case 'message':
         messageRender.init();
+        break;
+    case 'cube':
+        cubeRender.init();
         break;
     default:
         loadingRender.init();
