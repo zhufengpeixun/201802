@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <!--<style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box {
+            margin: 20px auto;
+            width: 300px;
+            height: 300px;
+            background: lightblue;
+        }
+
+        /*
+         * 我们可以把@MEDIA理解为JS中的条件判断：在不同条件中使用不同的CSS样式进行渲染
+         *   @media [媒体设备]
+         *      all->所有设备
+         *      screen->所有屏幕设备（PC+电脑）
+         *      print->打印机设备
+         *      ...
+         *
+         *   @media [媒体设备] and [媒体条件] and [媒体条件] ...
+         *
+         *  手机常用的设备尺寸
+         *    苹果：320、375、414
+         *    安卓：320、360、480、540、640、(760...)
+         *    PAD：768*1024、1024*1366 ...
+         */
+
+        @media all and (max-width: 780px) {
+            .box {
+                width: 200px;
+                height: 200px;
+                background: lightcoral;
+            }
+        }
+
+        @media all and (max-width: 640px) {
+            /*当前页面的宽度小于等于640PX*/
+            .box {
+                width: 150px;
+                height: 150px;
+                background: orange;
+            }
+        }
+
+        @media all and (max-width: 480px) {
+            .box {
+                width: 100px;
+                height: 100px;
+                background: lightgreen;
+            }
+        }
+
+        @media all and (max-width: 375px) {
+            .box {
+                width: 50px;
+                height: 50px;
+                background: lightpink;
+            }
+        }
+
+       /*@media screen and (orientation: portrait ) {
+            !*portrait （竖） | landscape （横）*!
+            body {
+                background: lightcoral;
+            }
+        }
+
+        @media screen and (orientation: landscape ) {
+            body {
+                background: lightblue;
+            }
+        }*/
+    </style>-->
+
+    <!--<style>
+        .container {
+            margin: 0 auto;
+            width: 750px;
+            transform-origin: left top; /*控制最终缩放的时候：不是从中新点缩放，而是从左上角缩放*/
+        }
+
+        .headerBox {
+            height: 200px;
+            border: 2px solid lightcoral;
+        }
+
+        .headerBox h1 {
+            float: left;
+            width: 300px;
+            height: 100%;
+            line-height: 200px;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .headerBox ul {
+            float: right;
+        }
+
+        .headerBox ul li {
+            float: left;
+            padding: 0 20px;
+            height: 200px;
+            line-height: 200px;
+            font-size: 28px;
+        }
+    </style>-->
+
+    <!--<script>
+        window.addEventListener('load', () => {
+            let container = document.querySelector('.container'),
+                winW = document.documentElement.clientWidth;
+            container.style.transform = `scale(${winW / 750})`;
+        });
+    </script>-->
+
+    <style>
+        /*REM是相对单位，相对于根元素(HTML标签)的字体大小设定的单位*/
+        html {
+            /*font-size: 10px; !*1REM=10PX 浏览器都有自己默认的最小字体，例如谷歌是12PX，所以准确来说，此处这样写相当于1REM=12PX*!*/
+            /*font-size: 14px; !*1REM=14PX 这个比例计算转换的时候太麻烦*!*/
+            font-size: 100px; /*1REM=100PX =>750设计稿*/
+        }
+
+        .headerBox {
+            height: 2rem;
+            border: .02rem solid lightcoral;
+        }
+
+        .headerBox h1 {
+            float: left;
+            width: 3rem;
+            line-height: 2rem;
+            text-align: center;
+            font-size: .36rem;
+        }
+
+        .headerBox ul {
+            float: right;
+        }
+
+        .headerBox ul li {
+            float: left;
+            padding: 0 .2rem;
+            height: 2rem;
+            line-height: 2rem;
+            font-size: .28rem;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            let HTML = document.documentElement,
+                winW = HTML.clientWidth;
+            HTML.style.fontSize = `${winW / 750 * 100}px`;//=>重新调整HTML字体大小(重新调整REM的转换比例),这样以前所有以REM为单位的样式值都会按照最新的比例中心渲染
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <header class="headerBox">
+        <h1>珠峰培训</h1>
+        <ul class="menu clear">
+            <li>首页</li>
+            <li>团购</li>
+            <li>海外</li>
+        </ul>
+    </header>
+</div>
+
+</body>
+</html>

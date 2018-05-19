@@ -23,7 +23,7 @@ let musicRender = (function () {
     let queryLyric = function queryLyric() {
         return new Promise(resolve => {
             $.ajax({
-                url: 'json/lyric2.json',
+                url: 'json/lyric.json',
                 dataType: 'json',
                 success: resolve
             });
