@@ -430,11 +430,255 @@ html, body {
     }
   }
 
+  //=>PAGE1
+  .page1 {
+    dl {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -3.6rem 0 0 -2.7rem;
+      width: 5.4rem;
+      height: 7.2rem;
 
+      dt, dd {
+        box-sizing: border-box;
+        height: .6rem;
+        line-height: .6rem;
+        background: #8FBB4C;
+      }
+
+      dt {
+        text-align: center;
+        font-size: .4rem;
+        color: yellow;
+      }
+
+      dd {
+        position: relative;
+        border-top: .02rem dashed rgba(255, 255, 255, .3);
+
+        em {
+          position: absolute;
+          left: .15rem;
+          top: 50%;
+          margin-top: -.21rem;
+          width: .36rem;
+          height: .42rem;
+          line-height: .42rem;
+          text-align: center;
+          font-style: normal;
+          font-size: .2rem;
+          color: #FFF;
+          background: url("../img/zf_outline.png") no-repeat;
+          background-size: 100% 100%;
+        }
+
+        a {
+          position: relative;
+          display: block;
+          margin-left: .66rem;
+          font-size: .28rem;
+          color: #000;
+
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        em, a {
+          z-index: 1000; //=>基于MAKISU实现3D折叠，为了保证内容不被折叠创建的SPAN遮住，我们需要把内容的层级提高
+        }
+      }
+    }
+  } 
+
+  //=>PAGE2
+  .page2 {
+    h2 {
+      margin-top: .8rem;
+      line-height: .9rem;
+      text-align: center;
+      font-size: .6rem;
+      font-weight: normal;
+      opacity: 0;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -.5rem 0 0 -.5rem;
+      width: 1rem;
+      height: 1rem;
+      opacity: 0;
+      transition: .5s; //=>从中心到四周的动画我们可以基于TRANSITION完成
+
+      &:nth-last-of-type(1) {
+        margin: -.85rem 0 0 -.66rem;
+        width: 1.32rem;
+        height: 1.7rem;
+      }
+    }
+  }
+
+  #page2 {
+    //=>PAGE2中的动画都写在ID选择器中
+    h2 {
+      animation: bounceInLeft 1s both;
+    }
+
+    img {
+      &:nth-last-of-type(1) {
+        animation: shake 1s both;
+      }
+
+      &:not(:nth-last-of-type(1)) {
+        opacity: 1;
+        animation: tada 1s .5s infinite both;
+      }
+
+      &:nth-of-type(1) {
+        margin-top: -2.9rem; /*-.5-2.4*/
+      }
+
+      &:nth-of-type(2) {
+        margin-top: -1.7rem;
+        margin-left: 1.5rem;
+      }
+
+      &:nth-of-type(3) {
+        margin-top: .7rem;
+        margin-left: 1.5rem;
+      }
+
+      &:nth-of-type(4) {
+        margin-top: 1.9rem;
+      }
+
+      &:nth-of-type(5) {
+        margin-top: .7rem;
+        margin-left: -2.5rem;
+      }
+
+      &:nth-of-type(6) {
+        margin-top: -1.7rem;
+        margin-left: -2.5rem;
+      }
+    }
+  }
+
+  /*
+   * 基于SWIPER实现切换到哪一个页卡，让哪一个页卡中的后代元素有动画效果
+   *   1.除了编写正常的CSS样式(都写在.PAGE-X中)，把需要实现动画的元素所对应的动画写在#PAGE-X中(IE选择器优先级高)
+   *   2.在SWIPER插件的某些回调函数中(例如:onTransitionEnd...)获取当前展示SLIDE的索引，根据索引为其设置对应的ID值，当前展示的SLIDE有ID，其余的没有ID
+   *   3.为了保证切换到这一页面的时候，元素是动画运动出来的（也就是开始啥都看不见），每个元素都是基于动画显示的（在初始样式中.PAGE? 把所有需要运动的元素透明度设置为零  加ID后执行动画效果，在动画的最后一帧位置让透明度为1即可）
+   */
 }
 
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
 
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
 
 
 

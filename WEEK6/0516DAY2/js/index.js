@@ -333,30 +333,48 @@ let cubeRender = (function () {
 /*DETAIL*/
 let detailRender = (function () {
     let $detailBox = $('.detailBox'),
-        swiper = null;
+        swiper = null,
+        $dl = $('.page1>dl');
 
     let swiperInit = function swiperInit() {
         swiper = new Swiper('.swiper-container', {
-            // initialSlide: 1  //=>初始SLIDE索引
-            // direction:'horizontal/vertical'  //=>控制滑动方向
-            // loop: true //=>SWIPER有一个BUG:3D切换设置LOOP为TRUE的时候偶尔会出现无法切换的情况(2D效果没问题)  =>无缝切换原理:把真实第一张克隆一份放到末尾，把真实最后一张也克隆一份放到开始（真实SLIDE有五个，WRAPPER中会有7个SLIDE）
             effect: 'coverflow',
-            onInit: (swiper) => {
-                //=>初始化成功执行的回调函数(参数是当前初始化的实例)
-            },
-            onTransitionEnd: (swiper) => {
-                //=>切换动画完成执行的回调函数
-            }
+            onInit: move,
+            onTransitionEnd: move
         });
-        //实例的私有属性:
-        //1.activeIndex：当前展示SLIDE块的索引
-        //2.slides：获取所有的SLIDE(数组)
-        //...
-        //实例的公有方法
-        //1.slideTo：切换到指定索引的SLIDE
-        //...
     };
 
+    let move = function move(swiper) {
+        //=>SWIPER:当前创建的实例
+        //1.判断当前是否为第一个SLIDE:如果是让3D菜单展开,不是收起3D菜单
+        let activeIn = swiper.activeIndex,
+            slideAry = swiper.slides;
+        if (activeIn === 0) {
+            //=>PAGE1
+            $dl.makisu({
+                selector: 'dd',
+                overlap: 0.6,
+                speed: 0.8
+            });
+            $dl.makisu('open');
+        } else {
+            //=>OTHER PAGE
+            $dl.makisu({
+                selector: 'dd',
+                speed: 0
+            });
+            $dl.makisu('close');
+        }
+
+        //2.滑动到哪一个页面，把当前页面设置对应的ID，其余页面移除ID即可
+        slideAry.forEach((item, index) => {
+            if (activeIn === index) {
+                item.id = `page${index + 1}`;
+                return;
+            }
+            item.id = null;
+        });
+    };
 
     return {
         init: function () {
