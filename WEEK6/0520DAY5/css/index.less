@@ -1,0 +1,194 @@
+//=>清除默认样式
+@import "reset";
+//=>SWIPER插件需要使用的
+@import "swiper";
+//=>字体图标库
+@import "font";
+//=>公共的LESS资源
+@import "common";
+
+html {
+  //=>640设计稿:1REM=100PX
+  font-size: 100px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.mainBox {
+  margin: 0 auto;
+  max-width: 640px;
+  background: #F4F4F4;
+}
+
+//============================
+
+/*HEADER*/
+.headerBox {
+  padding: 0 .2rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: @blue;
+  overflow: hidden;
+
+  h1 {
+    float: left;
+    font-size: 0;
+
+    i {
+      font-size: .8rem;
+      color: #FFF;
+    }
+  }
+
+  a {
+    float: right;
+    margin-left: .32rem;
+    width: .44rem;
+    height: 100%;
+
+    &.weather {
+      background: url("../images/cloud.gif") no-repeat center center;
+      background-size: 100%;
+    }
+
+    &.person, &.navMenu {
+      font-size: .44rem;
+      color: #FFF;
+    }
+  }
+}
+
+/*NAV*/
+.navBox {
+  display: none;
+  padding: .16rem 0;
+
+  a {
+    float: left;
+    width: unit(100/6, %);
+    height: .64rem;
+    line-height: .64rem;
+    text-align: center;
+    font-size: .32rem;
+    color: @text;
+  }
+}
+
+/*BANNER*/
+.bannerBox {
+  display: none; //=>当JS中数据动态绑定完成，我们才显示这个区域
+  position: relative;
+  height: 3.4rem;
+  overflow: hidden;
+
+  .swiper-slide {
+    position: relative;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      box-sizing: border-box;
+      padding: 0 .2rem;
+      width: 100%;
+      height: .6rem;
+      line-height: .6rem;
+      font-size: .28rem;
+      color: #FFF;
+      background: rgba(0, 0, 0, .5);
+      .text-clip;
+    }
+  }
+
+  .swiper-pagination {
+    z-index: 10;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 1rem;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    font-size: .28rem;
+    color: rgba(255, 255, 255, .5);
+
+    .swiper-pagination-current {
+      color: #FFF;
+      font-weight: bold;
+    }
+  }
+}
+
+/*MESSAGE*/
+.messageBox {
+  display: none;
+  position: relative;
+  margin: .16rem 0;
+  height: .8rem;
+  background: #FFF;
+
+  .liveFlag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: .8rem;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -.2rem 0 0 -.37rem;
+      width: .74rem;
+      height: .4rem;
+      line-height: .4rem;
+      text-align: center;
+      font-size: .3rem;
+      color: #FFF;
+      background: @red;
+      content: '直播';
+    }
+  }
+
+  .swiper-container {
+    margin-left: 1rem;
+    height: .8rem;
+    overflow: hidden;
+
+    .swiper-slide {
+      height: .8rem;
+      line-height: .8rem;
+
+      a {
+        display: block;
+        font-size: .28rem;
+        color: @text;
+        .text-clip;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

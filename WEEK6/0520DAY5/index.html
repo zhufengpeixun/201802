@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <title>新浪网</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--IMPORT CSS-->
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>
+
+    <!--REM & OTHER-->
+    <script src="js/prefixfree.min.js"></script>
+    <script>
+        ;(function anonymous() {
+            let computedREM = function computedREM() {
+                let HTML = document.documentElement,
+                    winW = HTML.clientWidth,
+                    desW = 640;
+                if (winW >= desW) {
+                    HTML.style.fontSize = '100px';
+                    return;
+                }
+                HTML.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        })();
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <!--HEADER-->
+    <header class="headerBox">
+        <h1>
+            <i class="icon-logo"></i>
+            珠峰前端培训
+        </h1>
+        <a href="javascript:;" class="navMenu icon-menu"></a>
+        <a href="javascript:;" class="person icon-user"></a>
+        <a href="javascript:;" class="weather"></a>
+    </header>
+
+    <!--NAV-->
+    <nav class="navBox clearfix">
+        <a href="#">新闻</a>
+        <a href="#">财经</a>
+        <a href="#">体育</a>
+        <a href="#">娱乐</a>
+        <a href="#">军事</a>
+        <a href="#">汽车</a>
+        <a href="#">科技</a>
+        <a href="#">视频</a>
+        <a href="#">美图</a>
+        <a href="#">NBA</a>
+        <a href="#">博客</a>
+    </nav>
+
+    <!--BANNER-->
+    <section class="swiper-container bannerBox">
+        <div class="swiper-wrapper">
+            <!--<div class="swiper-slide">
+                <img src="images/1.jpg" alt="">
+                <p>最后的“国家司法考试”现场</p>
+            </div>-->
+        </div>
+        <!--分页器-->
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!--MESSAGE-->
+    <section class="messageBox">
+        <div class="liveFlag"></div>
+        <div class="swiper-container messageCon">
+            <div class="swiper-wrapper">
+                <!--<div class="swiper-slide"><a href="#">xxxxxx</a></div>-->
+            </div>
+        </div>
+    </section>
+
+    <!--NEWS-->
+    <section class="newsBox">
+        <ul class="container">
+            <li class="newsItem">
+                <img src="images/news.jpg" alt="">
+                <h3>房企再次涌入到三四线市场，持久性待考察</h3>
+                <span>20万</span>
+            </li>
+            <li class="newsItem imgBox">
+                <h3>房企再次涌入到三四线市场，持久性待考察</h3>
+                <div>
+                    <img src="images/news.jpg" alt="">
+                    <img src="images/news.jpg" alt="">
+                    <img src="images/news.jpg" alt="">
+                </div>
+                <span>20万</span>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<!--IMPORT JS-->
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

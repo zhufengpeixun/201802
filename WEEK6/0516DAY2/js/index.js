@@ -250,6 +250,7 @@ let messageRender = (function () {
             $messageBox.remove();
             clearTimeout(delayTimer);
 
+            cubeRender.init();
         }, interval);
     };
 
@@ -326,6 +327,15 @@ let cubeRender = (function () {
             $cube.on('touchstart', start)
                 .on('touchmove', move)
                 .on('touchend', end);
+
+            //=>点击每一个面跳转到详情区域对应的页面
+            $cubeList.tap(function () {
+                $cubeBox.css('display', 'none');
+
+                //=>跳转到详情区域,通过传递点击LI的索引,让其定位到具体的SLIDE
+                let index = $(this).index();
+                detailRender.init(index);
+            });
         }
     }
 })();
@@ -377,12 +387,22 @@ let detailRender = (function () {
     };
 
     return {
-        init: function () {
+        init: function (index = 0) {
             $detailBox.css('display', 'block');
-            swiperInit();
+            if (!swiper) {
+                //=>防止重复初始化
+                swiperInit();
+            }
+            swiper.slideTo(index, 0);//=>直接运动到具体的SLIDE页面(第二个参数是切换的速度：0立即切换没有切换的动画效果)
         }
     }
 })();
+
+/*以后在真实的项目中，如果页面中有滑动的需求，我们一定要把DOCUMENT本身滑动的默认行为阻止掉（不阻止：浏览器中预览，会触发下拉刷新或者左右滑动切换页卡等功能）*/
+$(document).on('touchstart touchmove touchend', (ev) => {
+    ev.preventDefault();
+});
+
 
 /*HASH*/
 let url = window.location.href,//=>获取当前页面的URL地址  location.href='xxx'这种写法是让其跳转到某一个页面
