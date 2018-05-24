@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    //=>$.ajax([URL],[OPTIONS]) 或者 $.ajax([OPTIONS]) 在OPTIONS中有一个URL字段代表请求的URL地址
+    //=>$.get / $.post / $.getJSON / $.getScript 这些方法都是基于$.ajax构建出来的快捷方法，项目中最常使用的还是$.ajax
+    /*
+     * URL：请求的API接口地址
+     * METHOD：请求的方式
+     *
+     * DATA：传递给服务器的信息可以放到DATA中
+     *   如果是GET请求是基于问号传参传递过去的
+     *   如果是POST请求是基于请求主体传递过去的
+     *
+     *   DATA的值可以是对象也可以是字符串(一般常用对象)
+     *     如果是对象类型，JQ会把对象转换为 xxx=xxx&xxx=xxx 的模式(x-www-form-urlencoded)
+     *     如果是字符串，我们写的是什么就传递什么
+     *
+     * DATA-TYPE：预设置获取结果的数据格式 TEXT/JSON/JSONP/HTML/SCRIPT/XML...（服务器返回给客户端的响应主体中的内容一般都是字符串[JSON格式居多]），而设置DATA-TYPE='JSON'，JQ会内部把获取的字符串转为JSON格式的对象 =>“他不会影响服务返回的结果，只是把返回的结果进行了二次处理”
+     *
+     * ASYNC：设置同步或者异步（TRUE->异步 FALSE->同步）
+     * CACHE：设置GET请求下是否建立缓存（默认TRUE->建立缓存 FALSE->不建立缓存），当我们设置FALSE，并且当前请求是GET请求，JQ会在请求的URL地址末尾追加随机数（时间辍）
+     *
+     * SUCCESS：回调函数，当AJAX请求成功执行，JQ执行回调函数的时候会把从响应主体中获取的结果(可能二次处理了)当做参数传递给回调函数
+     * ERROR：请求失败后执行的回调函数
+     */
+    /*$.ajax({
+        url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list',
+        method: 'GET',
+        data: {
+            name: '周啸天',
+            age: 28
+        },
+        dataType: 'json',
+        async: true,
+        cache: false,
+        success: (result, textStatus, xhr) => {
+            //=>RESULT就是从服务器获取的结果
+            console.log(result);
+            console.log(textStatus);
+            console.log(xhr.getResponseHeader('date'));//=>jqXHR
+        },
+        error: () => {
+
+        }
+    });*/
+
+</script>
+
+<script src="js/ajax.js"></script>
+<script>
+    ajax({
+        url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list2',
+        method: 'GET',
+        data: {
+            name: '周啸天',
+            age: 28
+        },
+        cache: false,
+        success: (result, xhr) => {
+            console.log(result);
+        },
+        error: (result, xhr) => {
+            console.log(result);
+        }
+    });
+</script>
+</body>
+</html>

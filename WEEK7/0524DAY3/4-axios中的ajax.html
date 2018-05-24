@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    //=>回调地狱
+    /*$.ajax({
+        url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list',
+        success: result => {
+            $.ajax({
+                url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info',
+                success: result => {
+                    $.ajax({
+                        url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/add',
+                        method:'POST',
+                        success: result => {
+
+                        }
+                    });
+                }
+            });
+        }
+    });*/
+
+    //=>发布订阅
+    /*let $plan = $.Callbacks(),
+        $planB = $.Callbacks();
+    $.ajax({
+        url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list',
+        success: result => {
+            $plan.fire(result);
+        }
+    });
+
+    $plan.add(result => {
+        $.ajax({
+            url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list',
+            success: result => {
+                $planB.fire(result);
+            }
+        });
+    });
+
+    $planB.add(result => {
+
+    });*/
+
+    //=>Promise
+    /*
+    let queryA = function queryA() {
+        return new Promise(resolve => {
+            $.ajax({
+                url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list',
+                success: resolve
+            });
+        });
+    };
+
+    let queryB = function queryB() {
+        return new Promise(resolve => {
+            $.ajax({
+                url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info',
+                success: resolve
+            });
+        });
+    };
+
+    let queryC = function queryC() {
+        return new Promise(resolve => {
+            $.ajax({
+                url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/add',
+                method: 'POST',
+                success: resolve
+            });
+        });
+    };
+
+    let promise = queryA();
+    promise.then(result => {
+        console.log('A', result);
+        return queryB();//=>上一个THEN中函数手动返回一个新的PROMISE实例(管控了一个异步操作)，下一个THEN会等上一个THEN中的异步成功后在执行
+    }).then(result => {
+        console.log('B', result);
+        return queryC();
+    }).then(result => {
+        console.log('C', result);
+    });*/
+</script>
+<script src="js/promise.js"></script>
+</body>
+</html>
