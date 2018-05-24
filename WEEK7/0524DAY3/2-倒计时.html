@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        .timeBox {
+            margin: 20px auto;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px dashed lightblue;
+            font-size: 20px;
+        }
+
+        .timeBox span {
+            color: lightcoral;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<div class="timeBox">
+    距离抢购还剩
+    <span>-- : -- : --</span>
+</div>
+
+<script>
+    let timeBox = document.querySelector('.timeBox'),
+        timeSpan = timeBox.querySelector('span'),
+        autoTimer = null,
+        _serverTime = null;
+
+    //=>从服务器获取时间（获取响应头中的时间信息即可）
+    let queryTime = function queryTime() {
+        //=>从服务器端获取时间会存在一个问题：由于服务器端返回数据需要时间，所以客户端拿到返回的“服务器时间”的时候，已经过去一会了，导致获取的时间和真实的时间是有一定误差的，这个误差越小越好，那么如何减少误差：
+        //1.在AJAX为2的时候就从响应头中获取信息，而不是等到更靠后的状态4
+        //2.请求方式设置为HEAD：只获取响应头信息即可，响应主体内容不需要
+        //3.特殊：即使我们想服务器发送一个不存在的请求地址，返回的是404状态码，但是响应头信息中都会存在服务器的时间（不建议使用，不友好）
+
+        //=>第二次执行QUERY-TIME：
+        //用之前记录的全局变量值，但是需要把这个值手动累加1秒钟
+        if (_serverTime) {
+            _serverTime = new Date(_serverTime.getTime() + 1000);
+            return _serverTime;
+        }
+
+        //=>第一次向服务器发送请求:把获取的结果存储到全局变量中
+        return new Promise(resolve => {
+            let xhr = new XMLHttpRequest(),
+                serverTime = null;
+            xhr.open('HEAD', 'json/data.json');
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 2) {
+                    serverTime = new Date(xhr.getResponseHeader('date'));
+                    _serverTime = serverTime;
+                    resolve(serverTime);
+                }
+            };
+            xhr.send(null);
+        });
+    };
+
+    //=>计算倒计时
+    /*let computedTime = function computedTime() {
+        //=>获取当前时间和目标时间之间的差值（两个时间相差的毫秒差）
+        let nowTime = new Date(),
+            tarTime = new Date('2018/05/24 18:00:00'),
+            diffTime = tarTime - nowTime;
+
+        //=>在毫秒差中计算出对应的“时分秒”
+        if (diffTime >= 0) {
+            let hours = Math.floor(diffTime / (1000 * 60 * 60));
+            diffTime = diffTime - hours * 3600000;
+            let minutes = Math.floor(diffTime / (1000 * 60));
+            diffTime = diffTime - minutes * 60000;
+            let seconds = Math.floor(diffTime / 1000);
+
+            hours < 10 ? hours = '0' + hours : null;
+            minutes < 10 ? minutes = '0' + minutes : null;
+            seconds < 10 ? seconds = '0' + seconds : null;
+
+            timeSpan.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+            return;
+        }
+
+        //=>已经到达抢购的时间了
+        timeSpan.innerHTML = '-- : -- : --';
+        clearInterval(autoTimer);
+    };*/
+
+    let computedTime = function computedTime() {
+        //=>这样处理也有一个问题：一个客户端每间隔1秒都会向服务器发送一个新的请求，这样下去访问用户多，服务器就爆了（超过负载均衡）
+        //=>解决方案：创建一个全局变量，记录第一次从后台获取的服务器时间，每一秒刷新的时候，都是在第一次的基础上一直累加一秒，而不是重新重新从服务器获取（减轻服务器的压力）
+        let promise = queryTime();
+        promise instanceof Promise ? promise.then(fn) : fn(promise);
+
+        function fn(serverTime) {
+            let nowTime = serverTime,
+                tarTime = new Date('2018/05/24 18:00:00'),
+                diffTime = tarTime - nowTime;
+
+            //=>在毫秒差中计算出对应的“时分秒”
+            if (diffTime >= 0) {
+                let hours = Math.floor(diffTime / (1000 * 60 * 60));
+                diffTime = diffTime - hours * 3600000;
+                let minutes = Math.floor(diffTime / (1000 * 60));
+                diffTime = diffTime - minutes * 60000;
+                let seconds = Math.floor(diffTime / 1000);
+
+                hours < 10 ? hours = '0' + hours : null;
+                minutes < 10 ? minutes = '0' + minutes : null;
+                seconds < 10 ? seconds = '0' + seconds : null;
+
+                timeSpan.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+                return;
+            }
+
+            //=>已经到达抢购的时间了
+            timeSpan.innerHTML = '-- : -- : --';
+            clearInterval(autoTimer);
+        }
+    };
+
+    computedTime();
+    autoTimer = setInterval(computedTime, 1000);
+
+
+    /*
+     * new Date() 获取当前客户端本机时间（是标准的时间格式数据 =>对象）
+     *   Thu May 24 2018 12:21:09 GMT+0800 (中国标准时间)
+     *
+     * new Date("时间字符串") 把指定的时间字符串转换为标准时间数据，时间字符串支持很多格式，例如："xxxx-xx-xx xx:xx:xx" 中杠换成斜杠也可以 、"xxxx/xx/xx" ...
+     */
+</script>
+</body>
+</html>

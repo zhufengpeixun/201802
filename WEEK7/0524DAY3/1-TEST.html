@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<!--<script>
+    let queryData = function queryData() {
+        return new Promise(resolve => {
+            let xhr = new XMLHttpRequest;
+            //=>GET请求是URL地址问号传参把信息传递给服务器
+            //=>GET请求会产生缓存，我们一般都在URL末尾追加随机数，让其不建立缓存
+            xhr.open('GET', `/custom/list?type=chengjiao&_=${Math.random()}`);
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && /^(2|3)\d{2}$/.test(xhr.status)) {
+                    let data = JSON.parse(xhr.responseText);
+                    resolve(data);
+                }
+            };
+            xhr.send(null);
+        });
+    };
+    let bindHTML = function bindHTML() {
+        let promise = queryData();
+        promise.then(data => {
+            //=>完成数据绑定
+        });
+    };
+    bindHTML();
+    let timer = setInterval(bindHTML, 10000);
+</script>-->
+
+<!--<script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '/temp/list', true);//=>异步
+    xhr.onreadystatechange = () => {//=>监听的是AJAX状态“改变”事件：设置监听之前有一个状态，当后续的状态和设置之前的状态不相同，才会触发这个事件
+        if (xhr.readyState === 2) {
+            console.log(1);
+        }
+        if (xhr.readyState === 4) {
+            console.log(2);
+        }
+    };
+    xhr.send();//=>发送AJAX请求：这个执行才证明AJAX任务开始
+    console.log(3);
+    //=>3 1 2
+</script>-->
+
+<!--<script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '笔记.MD', true);
+    xhr.send();//=>AJAX任务开始(异步)
+    //此时状态是1
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 2) {
+            console.log(1);
+        }
+        if (xhr.readyState === 4) {
+            console.log(2);
+        }
+    };
+    console.log(3);
+    //=>3 1 2
+</script>-->
+
+<!--<script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '笔记.MD', false);
+    xhr.onreadystatechange = () => {//=>监听前的状态是1
+        if (xhr.readyState === 2) {
+            console.log(1);
+        }
+        if (xhr.readyState === 4) {
+            console.log(2);
+        }
+    };
+    xhr.send();//=>任务开始(同步：只要当前AJAX请求这件事没有完成，什么都不能做)
+    console.log(3);
+    //=>2 3  当AJAX任务开始，由于是同步编程，主任务队列在状态没有变成4（任务结束）之前一直被这件事占用着，其它事情都做不了（当服务器把响应头返回的时候，状态为2，触发了事件readystatechange，但是由于主任务队列没有完成，被占着呢，绑定的方法也无法执行... 所有只有状态为4的时候执行一次这个方法）
+</script>-->
+
+<script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '笔记.MD', false);
+    xhr.send();//=>开始请求(状态不为4，其它是都做不了)
+    //=>事件绑定前状态已经是4了
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 2) {
+            console.log(1);
+        }
+        if (xhr.readyState === 4) {
+            console.log(2);
+        }
+    };
+    console.log(3);
+    //=>3
+</script>
+</body>
+</html>
