@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<!--<script src="js/ajax.js"></script>
+<script>
+    ajax({
+        url: 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/list',
+        method: 'GET',
+        data: {
+            name: 'zhufeng',
+            age: 9
+        },
+        dataType: 'json',
+        async: true,
+        cache: false,
+        success(result, xhr) {
+            console.log(result);
+        },
+        error(msg) {//=>error:function(){}
+            console.log('错误了');
+        }
+    });
+</script>-->
+
+<!--<script src="js/ajax.js"></script>
+<script>
+    //=>回调地狱：回调函数中嵌套回调函数
+    //1.可能存在性能上的小号，形成一层层不销毁的栈内存
+    //2.代码太恶心,后期维护起来太麻烦,不方便阅读
+    //...
+    /*ajax({
+        url: 'A',
+        success() {
+            ajax({
+                url: 'B',
+                success() {
+                    ajax({
+                        url: 'C',
+                        success() {
+
+                        }
+                    });
+                }
+            });
+        }
+    });*/
+
+    //=>基于Promise设计模式解决
+    //=>只要是执行成功的都是找后面最靠近的THEN中的方法执行，执行失败的都是找最靠近的CATCH执行（不管成功还是失败都会执行FINALLY中的方法）
+    /* new Promise((resolve, reject) => {
+         //=>异步:成功执行resolve 失败执行reject
+     }).then(res => {
+         //=>RES:执行RESOLVE传递的值
+     }).catch(msg => {
+         //=>MSG:执行REJECT会执行这个方法，或者上一个THEN执行出现问题也会走这个方法
+     }).then(res => {
+         //=>管控的是上面的THEN/CATCH中方法中的执行,执行不出错,就会把这个方法执行；如果执行出现问题，走CATCH中的方法
+     }).catch(msg => {
+
+     });*/
+
+    let A = () => {
+        return new Promise((resolve, reject) => {
+            ajax({
+                url: 'A',
+                success: resolve,
+                error: reject
+            });
+        });
+    };
+
+    let B = () => {
+        return new Promise((resolve, reject) => {
+            ajax({
+                url: 'B',
+                success: resolve,
+                error: reject
+            });
+        });
+    };
+
+    let C = () => {
+        return new Promise((resolve, reject) => {
+            ajax({
+                url: 'C',
+                success: resolve,
+                error: reject
+            });
+        });
+    };
+
+    let pro = A();
+    pro.then(res => {
+        return B();//=>B执行返回的是一个PROMISE实例:在PROMISE设计模式中,只有上一个THEN中的方法返回一个具体的值(哪怕不写返回UNDEFINED也是具体值),就会执行下一个THEN中的方法，并且把返回的值传递给下一个方法；但是如果返回的是一个的新的PROMISE，则会等到新PROMISE结束才会执行下一个方法，把异步操作成功或者失败的结果传递给下一个THEN或者CATCH；
+    }).then(res => {
+        return C();
+    }).then(res => {
+
+    });
+</script>-->
+
+<script src="node_modules/axios/dist/axios.min.js"></script>
+<script>
+    /*
+     * axios：它是一个类库，基于PROMISE管理的AJAX库
+     *   1.提供了对应请求方式的方法（例如：get/post/head/delete/put/options...）
+     *     axios.get() 向服务器发送一个请求，基于的是GET方式
+     *     ...
+     *
+     *   2.支持的参数配置
+     *     axios.get([URL],[OPTIONS])
+     *
+     *   3.基于GET或者POST方法发请求，返回的结果都是PROMISE实例
+     */
+    /*
+    axios.get('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info', {
+        params: {//=>GET请求中，会把PARAMS中的键值对拼接成URLENCODE格式的字符串，然后以问号传递参数的方式，传递给服务器，类似于JQ-AJAX中的DATA（或者自己基于URL后面拼接也可以，不用PARAMS）
+            name: 'zhufeng',
+            age: 9
+        }
+    });
+    */
+
+    /*
+    axios.post('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/add', {
+        //=>配置项中传递的内容都相当于基于请求主体专递给服务器，但是传递给服务器的内容格式是RAW(JSON格式的子字符串)，不是X-WWW-FORM-URLENCODED
+        name: 'zhufeng',
+        age: 9
+    });
+    */
+
+    /*let promise = axios.get('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info2', {
+        params: {
+            lx: 12
+        }
+    });
+    promise.then(result => {
+        // console.log(result);//=>获取的结果是一个对象
+        /!*
+         * data：从服务器获取的响应主体内容
+         * headers：从服务器获取的响应的头信息
+         * request：创建的AJAX实例
+         * status：状态码
+         * statusText：状态码的描述
+         * config：基于AXIOS发送请求的时候做的配置项
+         *!/
+    }).catch(msg => {
+        console.log(msg);//=>请求失败的原因
+    });*/
+
+
+    axios.get('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info', {
+        params: {
+            lx: 12
+        }
+    }).then(result => {
+        let {data} = result;
+        //...
+        console.log(data);
+
+        return axios.post('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/add');
+    }).then(result => {
+        let {data} = result;
+        console.log(data);
+    });
+
+
+</script>
+</body>
+</html>

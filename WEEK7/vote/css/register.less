@@ -1,0 +1,94 @@
+@import "reset";
+@import "animate";
+@import "common";
+
+.headerBox {
+  position: relative;
+  height: 3.4rem;
+  background: @blue-moderate;
+  border-bottom: .04rem solid @blue-darken;
+
+  img {
+    width: 4rem;
+    height: 2.8rem;
+    .middle(4, 2.8);
+    .animation(@name: tada);
+  }
+}
+
+.registerBox {
+  padding: .4rem;
+
+  .item {
+    h3 {
+      line-height: .6rem;
+      font-size: .32rem;
+      font-weight: normal;
+    }
+
+    input, textarea {
+      box-sizing: border-box;
+      display: block;
+      padding: 0 .2rem;
+      width: 100%;
+      height: .6rem;
+      border: .02rem solid #CCC;
+      font-size: .28rem;
+    }
+
+    span {
+      display: block;
+      box-sizing: border-box;
+      padding-left: .2rem;
+      height: .4rem;
+      line-height: .4rem;
+      font-size: .24rem;
+      color: #555;
+
+      &.error {
+        color: red;
+      }
+
+      &.ok {
+        color: green;
+      }
+    }
+
+    textarea {
+      padding: .1rem;
+      height: 1.8rem;
+      resize: none;
+    }
+
+    input[type='radio'] {
+      display: inline-block;
+      width: .4rem;
+      height: .4rem;
+      line-height: .6rem;
+      vertical-align: middle;
+    }
+
+    label {
+      display: inline-block;
+      margin-right: .4rem;
+      line-height: .6rem;
+      font-size: .28rem;
+      vertical-align: middle;
+    }
+  }
+
+  .submit {
+    display: block;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    color: #FFF;
+    font-size: .34rem;
+    background: #54ABE8;
+    border-radius: .06rem;
+
+    &:active {
+      background: darken(#54ABE8, 15%);
+    }
+  }
+}

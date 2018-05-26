@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>珠峰培训-个人信息详细页面</title>
+
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/detail.min.css">
+
+    <!--REM-->
+    <script>
+        ~function anonymous(window) {
+            let computedREM = function computedREM() {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= desW) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        }(window);
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <!--NAV-->
+    <nav class="navBox">
+        <a href="index.html">首页</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="detail.html"></a>
+        <a href="javascript:;">退出</a>
+    </nav>
+
+    <header class="headerBox">
+        <div class="userInfo">
+            <img src="img/man.png" alt="" class="picture">
+            <p class="info">
+                <span>canfoo</span>
+                |
+                <span>编号 #000</span>
+            </p>
+            <p class="bio">...</p>
+            <div class="vote">7</div>
+        </div>
+        <div class="slogan">同一个世界同一个梦想，同一个世界同一个梦想同一个世界同一个梦想</div>
+        <a href="javascript:;" class="voteBtn">投他一票</a>
+    </header>
+
+    <section class="voteList" id="voteMy">
+        <div class="title clearfix">
+            <div class="left">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="center">投递我的人员</div>
+            <div class="right">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="detail.html?userId=0">
+                    <img src="img/man.png" alt="" class="picture">
+                    <p class="title">canfoo</p>
+                    <p class="bio">...</p>
+                </a>
+                <div class="vote">
+                    <span class="voteNum">7</span>
+                    <a href="javascript:;" class="voteBtn">投他一票</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="voteList" id="myVote">
+        <div class="title clearfix">
+            <div class="left">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="center">我投递的人员</div>
+            <div class="right">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="detail.html?userId=0">
+                    <img src="img/man.png" alt="" class="picture">
+                    <p class="title">canfoo</p>
+                    <p class="bio">...</p>
+                </a>
+                <div class="vote">
+                    <span class="voteNum">7</span>
+                    <a href="javascript:;" class="voteBtn">投他一票</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+</main>
+</body>
+</html>
