@@ -27,8 +27,7 @@
   }
 
 2、投票操作
-  URL：/vote?userId=1&participantId=12
-    userId：投票人ID(当前登录用户的ID,未登录是不允许投票的)
+  URL：/vote?participantId=12
     participantId：参与者ID
   METHOD：GET
   RESULT：{
@@ -58,19 +57,16 @@
   }
 
 4、检测是否已经投递过该人
-  URL：/checkUser?userId=0&checkId=0
-    userId:当前用户ID
+  URL：/checkUser?checkId=0
     checkId:被检测者ID
   METHOD: GET
   RESULT：{
-      code:0,  整体返回数据状态 0->正常  1->非正常
-      message:'',
-      isVote:0  0->没有投过  1->已经投过
+      code:0,  整体返回数据状态 0->投递过  1->没投递过
+      message:''
   }
 
 5、获取我投票过的人员
-  URL：/getMyVote?userId=0
-      userId:当前登录用户的ID
+  URL：/getMyVote
   METHOD：GET
   RESULT：{
       code:0,  整体返回数据状态 0->正常  1->非正常
@@ -92,8 +88,7 @@
   }
 
 6、获取投票过我的人员
-  URL：/getVoteMy?userId=0
-      userId:当前登录用户的ID
+  URL：/getVoteMy
   METHOD：GET
   RESULT：{
       code:0,  整体返回数据状态 0->正常  1->非正常(无匹配信息)
@@ -126,12 +121,7 @@
   }
   RESULT：{
         code:0,  0->注册成功  1->注册失败
-        message:'',
-        data:{
-            id:1,
-            name:'xxx',
-            password:''
-        }
+        message:''
   }
 
 8、用户登录
@@ -143,12 +133,7 @@
   }
   RESULT：{
       code:0,  0->登录成功  1->登录失败
-      message:'',
-      data:{
-        id:1,
-        name:'xxx',
-        password:''
-      }
+      message:''
   }
 
 9、检测手机号是否已经被注册
@@ -160,9 +145,28 @@
   }
 
 10、参与比赛
-  URL：/match?userId=0&slogan=xxx
-  METHOD：GET
+  URL：/match
+  METHOD：POST,
+  DATA:{
+     slogan:xxx
+  }
   RESULT：{
     code:0,  0->参与成功  1->参与失败
     message:''
+  }
+
+11、检测是否登录
+  URL: /checkLogin
+  METHOD：GET
+  RESULT：{
+     code:0,  0->未登录  1->已经登录
+     message:''
+  }
+
+12、退出登录
+  URL: /exitLogin
+  METHOD：GET
+  RESULT：{
+     code:0,  0->成功  1->失败
+     message:''
   }

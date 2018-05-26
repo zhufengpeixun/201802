@@ -24,8 +24,13 @@ module.exports = {
                     reject(err);
                     return;
                 }
-                resolve();
+                resolve('OK');
             });
         });
+    },
+    handMD5(str) {
+        str = str.substring(4, str.length - 4);
+        str = str.split('').reverse();
+        return str.join('');
     }
 };
