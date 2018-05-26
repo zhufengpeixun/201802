@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script src="node_modules/axios/dist/axios.min.js"></script>
+<script src="node_modules/qs/dist/qs.js"></script>
+<!--<script>
+    //=>初始默认的配置项
+    axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp';
+    axios.interceptors.response.use(result => {
+        //=>设置响应拦截器，在AJAX请求成功，执行对应方法之前，把从服务器获取的RESULT(包含了响应主体和响应头等很多信息)中的DATA获取到然后返回，这样在请求成功执行的函数中，再次遇到的RESULT只有响应主体内容
+        return result['data'];
+    });
+    axios.defaults.transformRequest = data => {
+        //=>POST/PUT等请求中，基于请求主体传递给服务器的内容(对象)，我们一般都会把它转换为X-WWW-FORM-URLENCODED格式的字符串传递给服务器
+        //=>yarn add qs：安装QS插件实现把对象转换为URLENCODED格式的字符串（可以实现互逆的需求）
+        return Qs.stringify(data);
+    };
+    axios.defaults.validateStatus = status => {
+        return /^(2|3)\d{2}$/.test(status);
+    };
+
+    //=>开始使用
+    // axios.get('/list', {
+    //     params: {
+    //         a: 1,
+    //         b: 2
+    //     }
+    // }).then(result => {
+    //
+    // });
+    //
+    // axios.post('/add', {
+    //     a: 1,
+    //     b: 2
+    // }).then(result => {
+    //
+    // });
+
+    let promise1 = axios.get('/list'),
+        promise2 = axios.post('/add');
+    axios.all([promise1, promise2]).then(axios.spread((resA, resB) => {
+        console.log(resA, resB);
+    }));
+</script>-->
+
+<script>
+    /*
+     * FETCH不是AJAX，它诞生的目的是为了代替AJAX，它是JS中内置的API：基于FETCH可以实现客户端和服务器端的信息通信
+     *   1.FETCH是ES2018规范中新增的API，所以浏览器的支持度不是特别好（可以基于BABEL的最新语法解析包，把其进行解析），想要兼容性好一些，需要使用 “fetch polyfill”
+     *
+     *   2.使用FETCH发送请求
+     *
+     *     => GET/HEAD等请求不能设置BODY
+     *     => 不管服务器返回的状态是多少，FETCH都不认为是失败（那怕是4或者5开头的状态码），都执行的是THEN中的方法（需要我们自己进行异常抛出处理）
+     */
+    /*fetch('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info2', {
+        method: 'GET',
+        headers: {
+            //=>设置请求头
+            'content-type': 'x-www-form-urlencoded'
+        },
+        //=>不管同源还是跨域请求都带着COOKIE信息
+        credentials: 'include'
+    }).then(result => {
+        console.log(result);
+        /!*
+         * headers：{} 包含响应头信息
+         * redirected：false 是否重定向
+         * status：状态码
+         * statusText
+         * type：'basic'/'cors'
+         * url：请求的地址
+         *
+         * __proto__:Response
+         *   arrayBuffer()
+         *   blob()
+         *   json()
+         *   text()
+         *   ...
+         *   基于这些方法可以快速的把从服务器获取的结果找到
+         *!/
+    });*/
+
+    /*fetch('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/info').then(result => {
+        let {status} = result;
+        if (/^(4|5)\d{2}$/.test(status)) {
+            throw new Error('query data is error!');
+            return;
+        }
+        return result.json();
+    }).then(result => {
+        console.log(result);
+    }).catch(msg => {
+        console.log(msg);
+    });*/
+
+    /*fetch('https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp/add', {
+        method: 'POST',
+        body: 'a=1&b=2'//=>BODY中只支持字符串(GET请求还无法设置BODY)
+    }).then(result => {
+        let {status} = result;
+        if (/^(4|5)\d{2}$/.test(status)) {
+            throw new Error('query data is error!');
+            return;
+        }
+        return result.json();
+    }).then(result => {
+        console.log(result);
+    }).catch(msg => {
+        console.log(msg);
+    });*/
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script src="js/ajaxPromise.js"></script>
+<script>
+    //=>DEFAULT
+    ajaxPromise.defaults.baseURL = 'https://www.easy-mock.com/mock/5b0412beda8a195fb0978627/temp';
+
+    //=>SEND
+    ajaxPromise.get('/list').then((result) => {
+        console.log(result);
+    });
+
+    ajaxPromise.get('/info', {
+        params: {
+            id: 1000
+        },
+        cache: false
+    }).then((result) => {
+        console.log(result);
+    });
+
+    ajaxPromise.post('/add', {
+        name: 'xxx',
+        age: 9
+    }, {
+        headers: {
+            'content-type': 'x-www-form-urlencoded'
+        }
+    }).then((result) => {
+        console.log(result);
+    });
+</script>
+</body>
+</html>
