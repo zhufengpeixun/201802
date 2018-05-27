@@ -36,7 +36,7 @@
   }
 
 3、获取用户的详细信息
-  URL：/getUser?userId=0
+  URL：/getUser?userId=0 (如果USER-ID不传递就是获取已登录用户的信息)
   METHOD：GET
   RESULT：{
      code:0, 整体返回数据状态 0->正常  1->非正常(无匹配信息)
