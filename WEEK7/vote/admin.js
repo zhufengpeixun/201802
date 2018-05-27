@@ -61,7 +61,7 @@ app.get('/getMatchList', (req, res) => {
     }
 
     //=>分页返回数据
-    let total = req.userData.length,
+    let total = userData.length,
         pageNum = Math.ceil(total / limit),
         result = [];
     if (page <= pageNum) {
