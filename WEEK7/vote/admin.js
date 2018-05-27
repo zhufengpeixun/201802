@@ -10,7 +10,7 @@ app.listen(8000, () => {
 
 //=>USE
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "http://localhost:63342");
     res.header("Access-Control-Allow-Credentials", true);
     res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length,Authorization,Accept,X-Requested-With");
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
@@ -27,6 +27,22 @@ app.use(session({
     cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use((req, res, next) => {
+    if (/^(POST|PUT|PATCH)$/i.test(req.method)) {
+        let pass = '';
+        req.on('data', chunk => pass += chunk);
+        req.on('end', () => {
+            req.body = {};
+            pass.replace(/([^?=&]+)=([^?=&]+)/g, (...arg) => {
+                let [, key, value] = arg;
+                req.body[key] = value;
+            });
+            next();
+        });
+        return;
+    }
+    next();
+});
 
 //=>API
 let utils = require('./admin-utils');
@@ -347,3 +363,4 @@ app.use(function (req, res, next) {
     res.status(404);
     res.send('NOT FOUND!');
 });
+

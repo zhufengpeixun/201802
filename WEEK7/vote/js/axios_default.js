@@ -1,6 +1,6 @@
 if (typeof axios !== 'undefined') {
     axios.defaults.baseURL = 'http://localhost:8000';
-    // axios.defaults.withCredentials = true;//=>允许跨域请求
+    axios.defaults.withCredentials = true;//=>允许跨域请求
     axios.defaults.transformRequest = data => {
         let str = ``;
         if (data && typeof data === 'object') {
