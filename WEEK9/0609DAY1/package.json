@@ -1,0 +1,21 @@
+{
+  "name": "0609DAY1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "iscroll": "^5.2.0",
+    "jquery": "^3.3.1",
+    "less": "^3.0.4",
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "zxt": "lessc -v",
+    "nrm": "nrm ls",
+    "test": "node TEST.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

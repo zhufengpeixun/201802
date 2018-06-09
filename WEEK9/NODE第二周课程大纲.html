@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head><title>NODE第二周课程大纲</title>
+    <meta charset='utf-8'>
+    <link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'>
+    <style>.note-content {
+        font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;
+    }
+
+
+    </style>
+</head>
+<body>
+<div id='preview-contents' class='note-content'>
+
+
+    <div>
+        <div class="toc">
+            <div class="toc">
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a href="#node第二周课程大纲">NODE第二周课程大纲</a>
+                                <ul>
+                                    <li><a href="#npm的使用">npm的使用</a></li>
+                                    <li><a href="#node初级玩家">NODE初级玩家</a></li>
+                                    <li><a href="#global和window">GLOBAL和WINDOW</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="node第二周课程大纲">NODE第二周课程大纲</h2>
+
+    <p></p>
+
+
+    <h3 id="npm的使用">npm的使用</h3>
+
+    <ol start="1">
+        <li rel="1">复习：常规使用</li>
+    </ol>
+
+
+    <pre class="prettyprint hljs-dark"><code class="hljs smali"><div class="hljs-line">npm install/uninstall xxx@1.1  全局加-g
+</div><div class="hljs-line">yarn<span class="hljs-built_in"> add/remove </span>xxx@1.1
+</div><div class="hljs-line">nrm切源提高下载的速度等 
+</div></code></pre>
+
+    <ol start="2">
+        <li rel="2">安装在本地项目中：环境依赖项</li>
+    </ol>
+
+
+    <pre class="prettyprint hljs-dark"><code class="hljs q"><div class="hljs-line">npm/yarn init -y
+</div><div class="hljs-line">npm install xxx --<span class="hljs-built_in">save</span> / --<span class="hljs-built_in">save</span>-<span
+            class="hljs-built_in">dev</span>
+</div><div class="hljs-line">yarn add xxx  空/--<span class="hljs-built_in">dev</span>(或者-D)
+</div></code></pre>
+
+    <ol start="3">
+        <li rel="3">安装在本地和全局的区别：安装在本地如何使用命令操作</li>
+    </ol>
+
+
+    <pre class="prettyprint hljs-dark"><code class="hljs cmake"><div class="hljs-line">安装<span
+            class="hljs-keyword">less</span>和babel
+</div></code></pre>
+
+    <ol start="4">
+        <li rel="4">npm 发布</li>
+    </ol>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs coffeescript"><div class="hljs-line"><span
+            class="hljs-built_in">npm</span> addUser 没有就是注册，有的话就是登录（接下来输入用户名和密码及邮箱即可，新用户需要邮箱校验）
+</div><div class="hljs-line"><span class="hljs-built_in">npm</span> publish / unpublich
+</div></code></pre>
+
+
+    <h3 id="node初级玩家">NODE初级玩家</h3>
+
+    <ol>
+        <li rel="1"><p>复习：NODE和NODE特点</p></li>
+        <li rel="2"><p>NODE中的模块</p>
+
+            <ul>
+                <li>内置模块：http、fs、url、path…</li>
+                <li>第三方模块：基于npm安装</li>
+                <li>自定义模块：自己创建</li>
+            </ul>
+        </li>
+        <li rel="3"><p>自定义模块和Common.js模块规范</p></li>
+    </ol>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs java"><div class="hljs-line">Node应用由模块组成，采用CommonJS模块规范:
+</div><div class="hljs-line">每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">CommonJS规范规定，每个模块内部，<span class="hljs-keyword">module</span>变量代表当前模块。这个变量是一个对象，它的<span
+            class="hljs-keyword">exports</span>属性（即<span class="hljs-keyword">module</span>.<span class="hljs-keyword">exports</span>（或者<span
+            class="hljs-keyword">exports</span>变量））是对外的接口。require方法用于加载模块。
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">CommonJS模块的特点如下:
+</div><div class="hljs-line"><span class="hljs-number">1</span>. 所有代码都运行在模块作用域，不会污染全局作用域。
+</div><div class="hljs-line"><span class="hljs-number">2</span>. 模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。
+</div><div class="hljs-line"><span class="hljs-number">3</span>. 模块加载的顺序，按照其在代码中出现的顺序。
+</div><div class="hljs-line"><span class="hljs-number">4</span>. CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">模块变量：
+</div><div class="hljs-line">__dirname
+</div><div class="hljs-line">__filename
+</div></code></pre>
+
+    <ol start="4">
+        <li rel="4">内置模块 FS</li>
+    </ol>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">fs<span
+            class="hljs-selector-class">.access</span>
+</div><div class="hljs-line">fs<span class="hljs-selector-class">.readdir</span>
+</div><div class="hljs-line">fs<span class="hljs-selector-class">.readFile</span>
+</div><div class="hljs-line">fs<span class="hljs-selector-class">.writeFile</span>
+</div><div class="hljs-line">fs<span class="hljs-selector-class">.appendFile</span>
+</div><div class="hljs-line">fs<span class="hljs-selector-class">.mkdir</span>
+</div><div class="hljs-line">...
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">批量编译less
+</div></code></pre>
+
+    <ol start="5">
+        <li rel="5">内置模块 URL</li>
+        <li rel="6">内置模块 PATH</li>
+        <li rel="7">内置模块 HTTP</li>
+        <li rel="8">基于NODE创建WEB服务 <br>
+            <ul>
+                <li>处理静态资源文件</li>
+                <li>处理API接口请求</li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <h3 id="global和window">GLOBAL和WINDOW</h3>
+
+    <ol start="1">
+        <li rel="1">NODE中的同步异步</li>
+    </ol>
+
+
+    <pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line">macro task 宏任务：setImmediate、setTimeout、setInterval...
+</div><div class="hljs-line">micro task 微任务：process.nextTick、<span class="hljs-built_in">Promise</span>...
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">执行顺序：
+</div><div class="hljs-line">sync -&gt; micro -&gt; macro
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">//=&gt;案例</span>
+</div><div class="hljs-line">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span
+            class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'1'</span>)  
+</div><div class="hljs-line">},<span class="hljs-number">0</span>);  
+</div><div class="hljs-line"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span
+            class="hljs-function"><span class="hljs-keyword">function</span>(<span
+            class="hljs-params">resolve</span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'2'</span>);  
+</div><div class="hljs-line">    resolve();
+</div><div class="hljs-line">}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span
+            class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'3'</span>)  
+</div><div class="hljs-line">});  
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'4'</span>);  
+</div></code></pre>
+
+    <ol start="2">
+        <li rel="2">process.nextTick的使用场景</li>
+    </ol>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-comment">//=&gt;1.在多个事件里交叉执行CPU运算密集型的任务：</span>
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> http = <span
+            class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span
+            class="hljs-title">compute</span>(<span class="hljs-params"></span>) </span>{
+</div><div class="hljs-line">    process.nextTick(compute);
+</div><div class="hljs-line">}
+</div><div class="hljs-line">http.createServer(<span class="hljs-function"><span
+            class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+</div><div class="hljs-line">     res.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">'Content-Type'</span>: <span
+            class="hljs-string">'text/plain'</span>});
+</div><div class="hljs-line">     res.end(<span class="hljs-string">'Hello World'</span>);
+</div><div class="hljs-line">}).listen(<span class="hljs-number">5000</span>, <span
+            class="hljs-string">'127.0.0.1'</span>);
+</div><div class="hljs-line">compute();
+</div></code></pre>
+
+    <ol start="3">
+        <li rel="3">process.env.NODE_ENV</li>
+    </ol>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line"><span class="hljs-string">"scripts"</span>: {
+</div><div class="hljs-line">    <span class="hljs-string">"dev"</span>: <span class="hljs-string">"cross-env NODE_ENV=development node xxx.js"</span>,
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-comment">//=&gt;cross-env：需要提前安装这个模块，否则WINDOWS下不兼容</span>
+</div></code></pre>
+
+</div>
+</body>
+</html>
