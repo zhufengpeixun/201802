@@ -7,6 +7,7 @@
     "iscroll": "^5.2.0",
     "jquery": "^3.3.1",
     "less": "^3.0.4",
+    "less_zxt": "^1.0.0",
     "zepto": "^1.2.0"
   },
   "devDependencies": {},
