@@ -1,0 +1,172 @@
+1、获取参赛人员列表信息
+  URL：/getMatchList?limit=10&page=1&search=xxx
+    limit:每一页展示的数量
+    page:当前展示第几页
+    search:当前用户输入的搜索信息(为空代表展示全部)
+  METHOD：GET
+  RESULT：{
+    code:0,  整体返回数据状态 0->正常  1->非正常(无匹配信息)
+    message:'', 对于数据状态的描述
+    limit:10,
+    page:1,
+    pageNum:10, 总页数
+    total:98, 总数据量
+    list:[
+        {
+            id:1, 用户ID
+            name:'xxx', 用户名
+            picture:'xxx', 用户的头像
+            sex:0, 性别
+            matchId:'000', 参赛编号
+            slogan:'xxx', 参赛标语
+            voteNum:10, 获得的总票数
+            isVote:0  我是否已经投过此人  0->没投过  1->已经投过
+        },
+        ...
+    ]
+  }
+
+2、投票操作
+  URL：/vote?participantId=12
+    participantId：参与者ID
+  METHOD：GET
+  RESULT：{
+     code:0,  整体返回数据状态 0->正常(投票成功)  1->非正常(投票过程发生意外)
+     message:'', 对于数据状态的描述
+  }
+
+3、获取用户的详细信息
+  URL：/getUser?userId=0 (如果USER-ID不传递就是获取已登录用户的信息)
+  METHOD：GET
+  RESULT：{
+     code:0, 整体返回数据状态 0->正常  1->非正常(无匹配信息)
+     message:'',
+     data:{
+        id:1,
+        name:'xxx',
+        picture:'xxx',
+        sex:0,
+        phone:'',
+        bio:'',
+        time:'',
+        isMatch:0, 是否参赛  0->未参赛(默认)  1->已经参赛
+        matchId:'',
+        slogan:'',
+        voteNum:''
+     }
+  }
+
+4、检测是否已经投递过该人
+  URL：/checkUser?checkId=0
+    checkId:被检测者ID
+  METHOD: GET
+  RESULT：{
+      code:0,  整体返回数据状态 0->投递过  1->没投递过
+      message:''
+  }
+
+5、获取我投票过的人员
+  URL：/getMyVote
+  METHOD：GET
+  RESULT：{
+      code:0,  整体返回数据状态 0->正常  1->非正常
+      message:'',
+      total:98, 总数据量
+      list:[
+          {
+              id:1,
+              name:'xxx',
+              picture:'xxx',
+              sex:0,
+              matchId:'000',
+              slogan:'xxx',
+              voteNum:10,
+              isVote:0  我是否已经投过此人  0->没投过  1->已经投过
+          },
+          ...
+      ]
+  }
+
+6、获取投票过我的人员
+  URL：/getVoteMy
+  METHOD：GET
+  RESULT：{
+      code:0,  整体返回数据状态 0->正常  1->非正常(无匹配信息)
+      message:'',
+      total:98, 总数据量
+      list:[
+          {
+              id:1,
+              name:'xxx',
+              picture:'xxx',
+              sex:0,
+              matchId:'000',
+              slogan:'xxx',
+              voteNum:10,
+              isVote:0  我是否已经投过此人  0->没投过  1->已经投过
+          },
+          ...
+      ]
+  }
+
+7、注册新用户
+  URL：/register
+  METHOD：POST
+  DATA:{
+    name:'',
+    password:'',
+    phone:'',
+    sex:0,
+    bio:''
+  }
+  RESULT：{
+        code:0,  0->注册成功  1->注册失败
+        message:''
+  }
+
+8、用户登录
+  URL：/login
+  METHOD：POST
+  DATA:{
+    name:'',
+    password:''
+  }
+  RESULT：{
+      code:0,  0->登录成功  1->登录失败
+      message:''
+  }
+
+9、检测手机号是否已经被注册
+  URL：/checkPhone?phone=xxx
+  METHOD：GET
+  RESULT：{
+    code:0,  0->还没有被注册  1->已经被注册
+    message:''
+  }
+
+10、参与比赛
+  URL：/match
+  METHOD：POST,
+  DATA:{
+     slogan:xxx
+  }
+  RESULT：{
+    code:0,  0->参与成功  1->参与失败
+    message:''
+  }
+
+11、检测是否登录
+  URL: /checkLogin
+  METHOD：GET
+  RESULT：{
+     code:0,  0->未登录  1->已经登录
+     message:''
+  }
+
+12、退出登录
+  URL: /exitLogin
+  METHOD：GET
+  RESULT：{
+     code:0,  0->成功  1->失败
+     message:''
+  }

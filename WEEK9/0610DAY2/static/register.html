@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>珠峰培训-投票注册页面</title>
+
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/register.min.css">
+
+    <!--REM-->
+    <script>
+        ~function anonymous(window) {
+            let computedREM = function computedREM() {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= desW) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        }(window);
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <!--NAV-->
+    <nav class="navBox">
+        <a href="index.html">首页</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="detail.html"></a>
+        <a href="javascript:;">退出</a>
+    </nav>
+
+    <header class="headerBox">
+        <img src="img/title.png" alt="">
+    </header>
+
+    <section class="registerBox">
+        <div class="item">
+            <h3>用户名：</h3>
+            <input type="text" id="userName" placeholder="请填写您的真实姓名">
+            <span id="spanName"></span>
+        </div>
+        <div class="item">
+            <h3>手机号码：</h3>
+            <input type="tel" id="userPhone" placeholder="请填写您常用的手机号">
+            <span id="spanPhone"></span>
+        </div>
+        <div class="item">
+            <h3>密码：</h3>
+            <input type="password" id="userPass" placeholder="由6~12位数字和字母组成">
+            <span id="spanPass"></span>
+        </div>
+        <div class="item">
+            <h3>确认密码：</h3>
+            <input type="password" id="userPassConfirm" placeholder="">
+            <span id="spanPassConfirm"></span>
+        </div>
+        <div class="item">
+            <h3>自我描述：</h3>
+            <textarea id="userBio" placeholder="限制在10~100字之间"></textarea>
+            <span id="spanBio"></span>
+        </div>
+        <div class="item">
+            <h3>性别：</h3>
+            <input type="radio" id="man" name="sex" checked>
+            <label for="man">男</label>
+
+            <input type="radio" id="woman" name="sex">
+            <label for="woman">女</label>
+        </div>
+        <a href="javascript:;" class="submit" id="submit">提交注册信息</a>
+    </section>
+</main>
+
+</body>
+</html>
