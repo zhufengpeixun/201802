@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训-接口测试</title>
+</head>
+<body>
+<script src="js/axios.min.js"></script>
+<script src="js/md5.min.js"></script>
+<script>
+    axios.defaults.baseURL = 'http://localhost:8686';
+    axios.interceptors.response.use(result => result.data);//=>增加响应拦截器,在所有AXIOS请求成功后,把获取的结果中DATA单独返回(DATA就是服务器返回的JSON数据)
+    axios.defaults.transformRequest = data => {
+        //=>基于这个请求拦截器可以把POST和PUT等传递给服务器的请求主体内容进行格式化处理，DATA就是配置的请求主体对象
+        let str = ``;
+        if (data && typeof data === 'object') {
+            for (let key in data) {
+                if (data.hasOwnProperty(key)) {
+                    str += `${key}=${data[key]}&`;
+                }
+            }
+            data = str.substring(0, str.length - 1);
+        }
+        return data;
+    };
+
+    /*axios.get('/getUser', {
+        params: {
+            //=>GET请求问号传参：设置到PARAMS中即可
+            userId: 1
+        }
+    }).then(result => {
+        console.log(result);
+    });*/
+
+    // axios.post('/register', {
+    //     //=>请求主体中需要传递给服务器的内容
+    // }, {
+    //     //=>CONFIG配置信息:例如可以设置请求头等信息
+    // })
+
+    //=>AXIOS默认基于请求主体传递给服务器的是RAW格式的:'{"name":"xxx"...}'，真实项目中我们和服务器约定的传输格式应该是X-WWW-URL-ENCODEED:"name=xxx&..."
+    axios.post('/register', {
+        //=>请求主体中需要传递给服务器的内容
+        name: '测试',
+        password: hex_md5('000000'),//=>密码需要经过MD5加密(不可逆转的加密)
+        phone: '11111111111',
+        sex: 0,
+        bio: 'xxxxxxxxx'
+    }).then(result => {
+        console.log(result);
+    });
+</script>
+</body>
+</html>
