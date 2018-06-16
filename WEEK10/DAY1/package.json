@@ -1,0 +1,17 @@
+{
+  "name": "DAY1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-async.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=1 node index.js",
+    "pro": "cross-env NODE_ENV=2 node index.js",
+    "test": "cross-env NODE_ENV=3 node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

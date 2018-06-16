@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head><title>NODE第三周课程大纲</title>
+    <meta charset='utf-8'>
+    <link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'>
+    <style>
+        .note-content {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+<div id='preview-contents' class='note-content'>
+
+
+    <h2 id="node第三周课程大纲">NODE第三周课程大纲</h2>
+
+    <p></p>
+
+
+    <h3 id="1-js中的同步异步">1. JS中的同步异步</h3>
+
+    <blockquote>
+        <p>浏览器是多线程的 <br>
+            JS是单线程的</p>
+    </blockquote>
+
+    <p><strong><code>macro task 宏任务</code></strong>：setImmediate、setTimeout、setInterval… <br>
+        <strong><code>micro task 微任务</code></strong>：process.nextTick、Promise…</p>
+
+    <p>执行顺序： <br>
+        sync -&gt; micro -&gt; macro</p>
+
+    <p>process.nextTick的使用场景：</p>
+
+
+    <pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-comment">//=&gt;1.在多个事件里交叉执行CPU运算密集型的任务：</span>
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> http = <span
+            class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span
+            class="hljs-title">compute</span>(<span class="hljs-params"></span>) </span>{
+</div><div class="hljs-line">    process.nextTick(compute);
+</div><div class="hljs-line">}
+</div><div class="hljs-line">http.createServer(<span class="hljs-function"><span
+            class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+</div><div class="hljs-line">     res.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">'Content-Type'</span>: <span
+            class="hljs-string">'text/plain'</span>});
+</div><div class="hljs-line">     res.end(<span class="hljs-string">'Hello World'</span>);
+</div><div class="hljs-line">}).listen(<span class="hljs-number">5000</span>, <span
+            class="hljs-string">'127.0.0.1'</span>);
+</div><div class="hljs-line">compute();
+</div></code></pre>
+
+    <p>process.env.NODE_ENV：</p>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line"><span class="hljs-string">"scripts"</span>: {
+</div><div class="hljs-line">    <span class="hljs-string">"dev"</span>: <span class="hljs-string">"cross-env NODE_ENV=development node xxx.js"</span>,
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-comment">//=&gt;cross-env：需要提前安装这个模块，否则WINDOWS下不兼容</span>
+</div></code></pre>
+
+    <p>async/await vs Promise：</p>
+
+    <blockquote>
+        <p>await有暂时跳出线程队列的含义</p>
+    </blockquote>
+
+    <pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-keyword">async</span> <span
+            class="hljs-function"><span class="hljs-keyword">function</span> <span
+            class="hljs-title">async1</span>(<span class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'async1 start'</span>);
+</div><div class="hljs-line">    <span class="hljs-keyword">await</span> async2();
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'async1 end'</span>);
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-keyword">async</span> <span class="hljs-function"><span
+            class="hljs-keyword">function</span> <span class="hljs-title">async2</span>(<span
+            class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'async2'</span>);
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'script start'</span>);
+</div><div class="hljs-line">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span
+            class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'setTimeout'</span>);
+</div><div class="hljs-line">},<span class="hljs-number">0</span>);
+</div><div class="hljs-line">async1();
+</div><div class="hljs-line"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span
+            class="hljs-function"><span class="hljs-keyword">function</span>(<span
+            class="hljs-params">resolve</span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'promise1'</span>);
+</div><div class="hljs-line">    resolve();
+</div><div class="hljs-line">}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span
+            class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'promise2'</span>);
+</div><div class="hljs-line">});
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(<span
+            class="hljs-string">'script end'</span>);
+</div></code></pre>
+
+    <h3 id="2-promise-a">2. Promise A+</h3>
+
+    <blockquote>
+        <p>有三种状态，pending（进行中）、fulfilled（已成功）、rejected（已失败）</p>
+    </blockquote>
+
+    <ul>
+        <li>复习Promise的使用 <br>
+            <ul>
+                <li>非管控异步操作</li>
+                <li>管控异步操作</li>
+                <li>then中两个参数</li>
+                <li>then和catch</li>
+                <li>then链</li>
+                <li>then中返回新的Promise</li>
+                <li>Promise.all</li>
+                <li>…</li>
+            </ul>
+        </li>
+        <li>基于Promise A+规范，自己创造一个原生的Promise库</li>
+    </ul>
+
+    <h3 id="3-本地存储和服务器存储">3. 本地存储和服务器存储</h3>
+
+    <ul>
+        <li>localStorage VS sessionStorage</li>
+        <li>localstorage VS cookie</li>
+        <li>cookie VS session</li>
+        <li>真实场景应用</li>
+    </ul>
+
+    <h3 id="4-express">4. express</h3>
+
+    <blockquote>
+        <p>详细见PPT</p>
+    </blockquote>
+
+    <h3 id="5-跨域">5. 跨域</h3></div>
+</body>
+</html>
