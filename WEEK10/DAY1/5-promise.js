@@ -18,16 +18,3 @@ console.log(3);
 
 //=>等待所有的PROMISE都成功执行THEN，反之只要有一个失败就会执行CATCH
 Promise.all([promise1, ...]).then();
-
-
-
-
-
-
-
-
-
-
-
-
-
