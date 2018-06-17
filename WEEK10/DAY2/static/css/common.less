@@ -1,0 +1,116 @@
+.animation(@name,@duration:1s,@timing-function:ease,@delay:0s,@count:1,@fill-mode:both) {
+  -webkit-animation: @arguments;
+  animation: @arguments;
+}
+
+.transition(@property:all,@duration:1s,@timing-function:linear,@delay:0s) {
+  -webkit-transition: @arguments;
+  transition: @arguments;
+}
+
+.opacity(@val) {
+  @val2: @val*100;
+  opacity: @val;
+  filter: ~'alpha(opacity=@{val2})';
+}
+
+.middle(@w,@h) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: unit(-(@h/2), rem);
+  margin-left: unit(-(@w/2), rem);
+}
+
+@body-bg: #F4F4F4;
+@orange: #FF8B62;
+@blue-lighten: #EEF9FE;
+@blue-moderate: #75BEF1;
+@blue-darken: #44A1E2;
+
+/*--------COMMON CSS---------*/
+
+html {
+  font-size: 100px;
+}
+
+html, body {
+  height: 100%;
+  background: @body-bg;
+}
+
+.mainBox {
+  margin: 0 auto;
+  max-width: 640px;
+  min-height: 100%;
+  background: @blue-lighten;
+
+  color: #555;
+  a {
+    color: #555;
+  }
+}
+
+.markDialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  .box {
+    .middle(3.2, 2);
+    width: 3.2rem;
+    min-height: 2rem;
+    background: #FFF;
+    border-radius: .1rem;
+
+    h3 {
+      padding-left: .1rem;
+      height: .6rem;
+      line-height: .6rem;
+      color: #44A1E2;
+      font-size: .32rem;
+      font-weight: normal;
+      background: @blue-lighten;
+      border-radius: .1rem;
+      letter-spacing: .04rem;
+    }
+
+    .content {
+      padding: .2rem;
+      line-height: .4rem;
+      font-size: .28rem;
+      color: #555;
+    }
+  }
+}
+
+.navBox {
+  line-height: .7rem;
+  text-align: right;
+  background: @blue-moderate;
+
+  a {
+    display: inline-block;
+    margin-right: .2rem;
+    font-size: .32rem;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

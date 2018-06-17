@@ -18,7 +18,7 @@ let loginRender = (function ($) {
             let code = parseFloat(result.code);
             if (code === 0) {
                 //=>登录成功
-                // window.location.href = fromURL;
+                window.location.href = fromURL;
                 return;
             }
             alert('请检查用户名密码，登录失败了！');

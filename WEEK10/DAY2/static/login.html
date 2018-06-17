@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>珠峰培训-投票登录页面</title>
+
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/register.min.css">
+
+    <!--REM-->
+    <script>
+        ~function anonymous(window) {
+            let computedREM = function computedREM() {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= desW) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        }(window);
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <header class="headerBox">
+        <img src="img/title.png" alt="">
+    </header>
+    <section class="registerBox">
+        <div class="item">
+            <h3>用户名：</h3>
+            <input type="text" id="userName" placeholder="请填写您的真实姓名或者手机号码">
+            <span></span>
+        </div>
+        <div class="item">
+            <h3>密码：</h3>
+            <input type="password" id="userPass" placeholder="由6~12位数字和字母组成">
+            <span></span>
+        </div>
+        <a href="javascript:;" class="submit" id="submit">确认登录</a>
+    </section>
+</main>
+
+<!--IMPORT JS-->
+<script src="js/zepto.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/axios_default.js"></script>
+<script src="js/md5.min.js"></script>
+<script src="js/component/utils.js"></script>
+<script src="js/component/nav.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

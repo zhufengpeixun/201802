@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>珠峰培训-投票首页</title>
+
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/index.min.css">
+
+    <!--REM-->
+    <script>
+        ~function anonymous(window) {
+            let computedREM = function computedREM() {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= desW) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        }(window);
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <header class="headerBox">
+        <img src="img/title.png" alt="" class="title">
+        <a href="join.html" class="sign">我要参赛</a>
+        <div class="search">
+            <input type="search" placeholder="输入用户名查找">
+            <a href="javascript:;" class="searchBtn">搜索</a>
+        </div>
+    </header>
+
+    <section class="userList">
+        <ul>
+            <!--<li>
+                <a href="detail.html?userId=0">
+                    <img src="img/man.png" alt="" class="picture">
+                    <p class="title">
+                        <span>canfoo</span>
+                        |
+                        <span>编号 #001</span>
+                    </p>
+                    <p class="slogan">同一个世界同一个梦想同一个世界同一个梦想</p>
+                </a>
+                <div class="vote">
+                    <span class="voteNum">7</span>
+                    <a href="javascript:;" class="voteBtn">投他一票</a>
+                </div>
+            </li>-->
+        </ul>
+        <div class="tip">暂时没有匹配的数据</div>
+    </section>
+</main>
+
+<!--IMPORT JS-->
+<script src="js/zepto.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/axios_default.js"></script>
+<script src="js/component/nav.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "voterId": 186,
+    "participantId": 184,
+    "time": 1506606358575
+  },
+  {
+    "id": 2,
+    "voterId": 186,
+    "participantId": 183,
+    "time": 1506608046597
+  },
+  {
+    "id": 3,
+    "voterId": 185,
+    "participantId": 186,
+    "time": 1506608121923
+  },
+  {
+    "id": 4,
+    "voterId": 184,
+    "participantId": 186,
+    "time": 1506608148671
+  },
+  {
+    "id": 5,
+    "voterId": 186,
+    "participantId": 181,
+    "time": 1506609210421
+  },
+  {
+    "id": 6,
+    "voterId": 186,
+    "participantId": 170,
+    "time": 1508073577413
+  },
+  {
+    "id": 7,
+    "voterId": 186,
+    "participantId": 50,
+    "time": 1513161344208
+  },
+  {
+    "id": 8,
+    "voterId": 187,
+    "participantId": 186,
+    "time": 1513243198842
+  },
+  {
+    "id": 9,
+    "voterId": 186,
+    "participantId": 178,
+    "time": 1513499504846
+  },
+  {
+    "id": 10,
+    "voterId": 186,
+    "participantId": 176,
+    "time": 1513499516611
+  },
+  {
+    "id": 11,
+    "voterId": 186,
+    "participantId": 168,
+    "time": 1524972598433
+  },
+  {
+    "id": 12,
+    "voterId": 186,
+    "participantId": "1",
+    "time": 1527354724409
+  }
+]
