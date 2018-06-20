@@ -1,17 +1,41 @@
-import React from 'react';//=>每一个组件中都要导入REACT，因为需要基于它的CREATE-ELEMENT把JSX进行解析渲染呢
+import React from 'react';
 
-/*
- * 函数式声明组件
- *   1.函数返回结果是一个新的JSX（也就是当前组件的JSX结构）
- *
- *   2.PROPS变量存储的值是一个对象，包含了调取组件时候传递的属性值（不传递是一个空对象）
- */
 export default function Dialog(props) {
-    let {con, lx = 0} = props,
-        title = lx === 0 ? '系统提示' : '系统警告';
+    let {type, content, children} = props;
 
-    return <section>
-        <h2>{title}</h2>
-        <div>{con}</div>
+    //=>自己处理的一些样式
+    let objStyle = {
+        width: '50%',
+        margin: '10px auto'
+    };
+
+    //=>类型的处理
+    let typeValue = type || '系统提示';
+    if (typeof type === 'number') {
+        switch (type) {
+            case 0:
+                typeValue = '系统提示';
+                break;
+            case 1:
+                typeValue = '系统警告';
+                break;
+            case 2:
+                typeValue = '系统错误';
+                break;
+        }
+    }
+
+    return <section className='panel panel-default' style={objStyle}>
+        <div className='panel-heading'>
+            <h3 className='panel-title'>{typeValue}</h3>
+        </div>
+        <div className='panel-body'>{content}</div>
+
+        {/*如果传递了CHILDREN，我们把内容放到尾部中，不传递什么都不显示*/}
+        {
+            children ? <div className='panel-footer'>
+                {React.Children.map(children, item => item)}
+            </div> : null
+        }
     </section>;
-};
+}
