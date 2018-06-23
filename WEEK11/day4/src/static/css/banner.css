@@ -1,0 +1,84 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    background: #EEE;
+}
+
+.container:hover .arrow {
+    display: block;
+}
+
+.container .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6000px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container .wrapper li {
+    float: left;
+    width: 1000px;
+    height: 100%;
+}
+
+.container .wrapper li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container .focus {
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+    top: 270px;
+
+    padding: 4px;
+    font-size: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.container .focus li {
+    display: inline-block;
+    margin: 0 4px;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .focus li.active {
+    background: lightcoral;
+}
+
+.container .arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -22.5px;
+    width: 28px;
+    height: 45px;
+    background: url("../images/pre.png") no-repeat;
+    opacity: 0.5;
+}
+
+.container .arrow:hover {
+    opacity: 1;
+}
+
+.container .arrow.arrowLeft {
+    left: 0;
+}
+
+.container .arrow.arrowRight {
+    right: 0;
+    background-position: -50px 0;
+}
