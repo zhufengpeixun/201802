@@ -24,7 +24,7 @@ ReactDOM.render(<main>
       * SPEED：每一张切换所需要的运动时间 (300MS)
       */}
     <Banner data={IMG_DATA}
-            interval={3000}
+            interval={1000}
             step={1}
             speed={300}/>
 
