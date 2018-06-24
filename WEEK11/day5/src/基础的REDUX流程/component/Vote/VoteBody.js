@@ -6,15 +6,21 @@ export default class VoteBody extends React.Component {
         super(props);
 
         //=>INIT STATE
-        let {n, m} = this.props.store.getState().vote;
+        let {store: {getState}} = this.props,
+            {n, m} = getState();
         this.state = {n, m};
     }
 
     componentDidMount() {
-        this.props.store.subscribe(() => {
-            let {n, m} = this.props.store.getState().vote;
-            this.setState({n, m});
+        let {store: {getState, subscribe}} = this.props;
+        let unsubscribe = subscribe(() => {
+            let {n, m} = getState();
+            this.setState({
+                n,
+                m
+            });
         });
+        //unsubscribe(); 把当前追加的方法移除，解除绑定的方式
     }
 
     render() {
