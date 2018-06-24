@@ -2,29 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default class VoteBody extends React.Component {
-    constructor(props) {
-        super(props);
-
-        //=>INIT STATE
-        let {store: {getState}} = this.props,
-            {n, m} = getState();
-        this.state = {n, m};
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            refresh: 0
+        };
     }
 
     componentDidMount() {
-        let {store: {getState, subscribe}} = this.props;
-        let unsubscribe = subscribe(() => {
-            let {n, m} = getState();
+        this.props.myRedux.subscribe(() => {
             this.setState({
-                n,
-                m
+                refresh: this.state.refresh + 1
             });
         });
-        //unsubscribe(); 把当前追加的方法移除，解除绑定的方式
     }
 
     render() {
-        let {n, m} = this.state,
+        let state = this.props.myRedux.getState(),
+            {n = 0, m = 0} = state,
             rate = (n / (n + m)) * 100;
         isNaN(rate) ? rate = 0 : null;
 

@@ -16,16 +16,23 @@ export default class Vote extends React.Component {
 
     constructor(props) {
         super(props);
+
+        let {count: {n, m}, myRedux} = this.props;
+        myRedux.updateState(state => {
+            return {
+                ...state,
+                n,
+                m
+            }
+        });
     }
 
     render() {
-        let {store} = this.props;
-
         return <section className={'panel panel-default'} style={{width: '50%', margin: '20px auto'}}>
             <VoteHead title={this.props.title}/>
 
-            <VoteBody store={store}/>
-            <VoteFooter store={store}/>
+            <VoteBody myRedux={this.props.myRedux}/>
+            <VoteFooter myRedux={this.props.myRedux}/>
         </section>;
     }
 }

@@ -2,24 +2,28 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 export default class VoteFooter extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor(props, context) {
+        super(props, context);
     }
 
     render() {
-        let {store: {dispatch}} = this.props;
-
         return <div className={'panel-footer'}>
             <button className={'btn btn-success'} onClick={() => {
-                dispatch({
-                    type: 'VOTE_SUPPORT'
+                this.props.myRedux.updateState(state => {
+                    let {n = 0} = state;
+                    return {
+                        n: n + 1
+                    };
                 });
             }}>支持
             </button>
             &nbsp;&nbsp;
             <button className={'btn btn-danger'} onClick={() => {
-                dispatch({
-                    type: 'VOTE_AGAINST'
+                this.props.myRedux.updateState(state => {
+                    let {m = 0} = state;
+                    return {
+                        m: m + 1
+                    };
                 });
             }}>反对
             </button>
