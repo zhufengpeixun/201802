@@ -65,28 +65,34 @@ function createStore(reducer) {
 }
 
 /*
-//=>用法
-let reducer = (state = {}, action) => {
-    //=>STATE：原有状态信息
-    //=>ACTION：派发任务时候传递的行为对象
-    switch (action.type) {
-        //...根据TYPE执行不同的STATE修改操作
-        case TYPE.XXX:
-            state={...state,n:100};
+ * combineReducers：REDUCER合并的方法
+ *    @PARAMS
+ *      对象，对象中包含了每一个版块对象的REDUCER =>{xxx:function reducer...}
+ *    @RETURN
+ *      返回的是一个新的REDUCER函数（把这个值赋值给CREATE-STORE）
+ *
+ *  特殊处理：合并REDUCER之后，REDUX容器中的STATE也变为以对应对象管理的模式 =>{xxx:{}...}
+ */
+function combineReducers(reducers) {
+    //=>REDUCERS:传递进来的REDUCER对象集合
+    /*
+     * {
+     *    vote:function vote(state={n:0,m:0},action){... return state;},
+     *    personal:function personal(state={baseInfo:''},action){... return state;}
+     *    ...
+     * }
+     */
+    return function reducer(state = {}, action) {
+        //=>DISPATCH派发执行的时候，执行的是返回的REDUCER，这里也要返回一个最终的STATE对象替换原有的STATE，而且这个STATE中包含每个模块的状态信息 =>{vote:...,personal:...}
+        //=>我们所谓的REDUCER合并，其实就是DISPATCH派发的时候，把每一个模块的REDUCER都单独执行一遍，把每个模块返回的状态最后汇总在一起，替换容器中的状态信息
+        let newState = {};
+        for (let key in reducers) {
+            if (!reducers.hasOwnProperty(key)) break;
+            //=>reducers[key]：每个模块单独的REDUCER
+            //=>state[key]：当前模块在REDUX容器中存储的状态信息
+            //=>返回值是当前模块最新的状态，把它在放到NEW-STATE中
+            newState[key] = reducers[key](state[key], action);
+        }
+        return newState;
     }
-    return state;//=>返回的state会替换原有的state
-};
-let store = createStore(reducer);//=>CREATE的时候把REDUCER传递进来，但是此时REDUCER并没有执行呢，只有DISPATCH的时候才执行，通过执行REDUCER修改容器中的状态
-// store.dispatch({type:'xxx',....});
-*/
-
-// let unsubscribe=store.subscribe(fn);
-// unsubscribe();
-
-
-
-
-
-
-
-
+}

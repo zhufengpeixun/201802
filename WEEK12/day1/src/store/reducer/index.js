@@ -10,13 +10,13 @@ import personal from './personal';
  *     n:0,
  *     m:0
  *   },
- *   xxx:{
+ *   personal:{
  *     //=>以合并时候指定的属性名为主，作为最后划分管理的名字
  *   }
  * }
  */
 let reducer = combineReducers({
     vote: vote,
-    xxx: personal
+    personal: personal
 });
 export default reducer;
