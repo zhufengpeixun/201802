@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="static/css/reset.min.css">
+    <style>
+        html, body, .mainBox {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .headerBox {
+            height: 10%;
+            background: lightgoldenrodyellow;
+        }
+
+        .container {
+            height: 90%;
+        }
+
+        .container .menuNav {
+            float: left;
+            width: 10%;
+            height: 100%;
+            background: lightcyan;
+        }
+
+        .container .menuNav a {
+            display: block;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        .container .iframeBox {
+            float: right;
+            width: 90%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<main class="mainBox">
+    <header class="headerBox">
+        我是公共头部
+    </header>
+    <section class="container">
+        <nav class="menuNav">
+            <a href="javascript:;">百度</a>
+            <a href="javascript:;">京东</a>
+            <a href="javascript:;">腾讯</a>
+        </nav>
+        <iframe src="https://www.baidu.com/" class="iframeBox"></iframe>
+    </section>
+</main>
+
+<script>
+    let menuNav = document.querySelectorAll('.menuNav > a'),
+        iframeBox = document.querySelector('.iframeBox');
+    [].forEach.call(menuNav, item => {
+        item.onclick = function () {
+            let text = this.innerHTML,
+                url = 'https://www.baidu.com/';
+            text === '京东' ? url = 'https://www.jd.com/' : (text === '腾讯' ? url = 'http://www.qq.com/' : null);
+            iframeBox.src = url;
+        };
+    });
+</script>
+</body>
+</html>
