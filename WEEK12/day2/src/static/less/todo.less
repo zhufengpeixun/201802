@@ -1,0 +1,51 @@
+/*input:focus::-webkit-input-placeholder {
+  color: transparent;
+}*/
+
+.panel {
+  margin: 20px auto;
+  width: 500px;
+
+  .panel-title {
+    margin-bottom: 10px;
+    .count {
+      color: #9D0800;
+      font-weight: bold;
+    }
+  }
+}
+
+.list-group-item {
+  position: relative;
+
+  input {
+    vertical-align: top;
+  }
+
+  span {
+    margin-left: 10px;
+    vertical-align: top;
+
+    &.complete {
+      text-decoration: line-through;
+    }
+  }
+
+  a {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &:hover {
+    a {
+      display: block;
+    }
+  }
+}
