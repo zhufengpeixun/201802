@@ -19,6 +19,3 @@ render(<Provider store={store}>
         <Footer/>
     </main>
 </Provider>, root);
-
-
-
