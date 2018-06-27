@@ -12,8 +12,25 @@ export default function todo(state = {
             payload.id = state.data.length === 0 ? 1 : (parseFloat(state.data[state.data.length - 1]['id']) + 1);
             state.data.push(payload);
             break;
+
+        //=>更新筛选方式
         case TYPES.TODO_FILTER:
             state.flag = action.text;
+            break;
+
+        //=>修改任务状态
+        case TYPES.TODO_UPDATE_STATE:
+            let {taskId, newState} = action,
+                item = state.data.find(item => item.id === taskId);
+            if (item) {
+                item.state = newState;
+            }
+            break;
+
+        //=>删除指定任务（不要和上面的TASK-ID重名）
+        case TYPES.TODO_DELETE:
+            let {taskId: taskId_del} = action;
+            state.data = state.data.filter(item => item.id !== taskId_del);
             break;
     }
     return state;

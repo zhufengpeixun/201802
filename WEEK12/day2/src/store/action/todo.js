@@ -15,6 +15,23 @@ let todo = {
             type: TYPES.TODO_FILTER,
             text
         }
+    },
+
+    //=>更新指定任务的状态信息
+    updateState(taskId, newState) {
+        return {
+            type: TYPES.TODO_UPDATE_STATE,
+            taskId,
+            newState
+        }
+    },
+
+    //=>删除指定任务信息
+    remove(taskId) {
+        return {
+            type: TYPES.TODO_DELETE,
+            taskId
+        };
     }
 };
 export default todo;
