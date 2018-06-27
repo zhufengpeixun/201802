@@ -12,6 +12,9 @@ export default function todo(state = {
             payload.id = state.data.length === 0 ? 1 : (parseFloat(state.data[state.data.length - 1]['id']) + 1);
             state.data.push(payload);
             break;
+        case TYPES.TODO_FILTER:
+            state.flag = action.text;
+            break;
     }
     return state;
 }
