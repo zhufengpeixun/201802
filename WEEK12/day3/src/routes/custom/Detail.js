@@ -8,7 +8,9 @@ class Detail extends React.Component {
 
     render() {
         return <div>
-
+            编号：1
+            <br/>
+            姓名：xxx
         </div>;
     }
 }

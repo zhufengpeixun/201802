@@ -7,9 +7,13 @@ class List extends React.Component {
     }
 
     render() {
-        return <div>
-
-        </div>;
+        return <ul className='list-group'>
+            <li className='list-group-item'>
+                编号：1
+                &nbsp;&nbsp;
+                姓名：xxx
+            </li>
+        </ul>;
     }
 }
 

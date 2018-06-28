@@ -8,7 +8,7 @@ class Plan extends React.Component {
 
     render() {
         return <div>
-
+            我是计划管理页PLAN
         </div>;
     }
 }
