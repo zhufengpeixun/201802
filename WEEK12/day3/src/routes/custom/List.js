@@ -7,14 +7,18 @@ class List extends React.Component {
     }
 
     render() {
+        let {data} = this.props;
         return <ul className='list-group'>
-            <li className='list-group-item'>
-                编号：1
-                &nbsp;&nbsp;
-                姓名：xxx
-            </li>
+            {data.map((item, index) => {
+                let {id, name} = item;
+                return <li className='list-group-item' key={index}>
+                    编号：{id}
+                    &nbsp;&nbsp;
+                    姓名：{name}
+                </li>;
+            })}
         </ul>;
     }
 }
 
-export default connect()(List);
+export default connect(state => ({...state.custom}))(List);
