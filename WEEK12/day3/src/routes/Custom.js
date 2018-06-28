@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route, Switch, Redirect} from 'react-router-dom';
+import {Route, Switch, Redirect, NavLink, Link} from 'react-router-dom';
 
 /*IMPORT COMPONENT*/
 import List from './custom/List';
@@ -17,10 +17,10 @@ class Custom extends React.Component {
             {/*左侧MENU导航*/}
             <ul className='nav nav-pills nav-stacked col-md-2'>
                 <li className="presentation">
-                    <a href="javascript:;">客户列表</a>
+                    <NavLink to='/custom/list'>客户列表</NavLink>
                 </li>
                 <li className="presentation">
-                    <a href="javascript:;">增加客户</a>
+                    <NavLink to='/custom/create'>增加客户</NavLink>
                 </li>
             </ul>
 

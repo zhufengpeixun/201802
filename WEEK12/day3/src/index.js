@@ -13,23 +13,24 @@ import Plan from './routes/Plan';
 
 /*IMPORT CSS*/
 import 'bootstrap/dist/css/bootstrap.css';
+import './static/css/common.css';
 
 /*RENDER*/
 render(<Provider store={store}>
-    <div>
-        {/*NAV:HEADER区域*/}
-        <Nav/>
+    <HashRouter>
+        <div>
+            {/*NAV:HEADER区域*/}
+            <Nav/>
 
-        {/*基于HASH-ROUTER展示不同的页面*/}
-        <HashRouter>
+            {/*基于HASH-ROUTER展示不同的页面*/}
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/custom' component={Custom}/>
                 <Route path='/plan' component={Plan}/>
                 <Redirect to='/?lx=unsafe'/>
             </Switch>
-        </HashRouter>
-    </div>
+        </div>
+    </HashRouter>
 </Provider>, root);
 
 
