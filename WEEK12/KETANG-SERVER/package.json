@@ -1,0 +1,16 @@
+{
+  "name": "KETANG-ADMIN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start_server": "node index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "qs": "^6.5.2"
+  }
+}

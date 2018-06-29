@@ -1,0 +1,205 @@
+<!DOCTYPE html><html><head><title>珠峰课堂APP–API接口文档</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h3 id="珠峰课堂appapi接口文档">珠峰课堂APP–API接口文档</h3>
+
+<p><strong><code>[ 个人中心 ]</code></strong></p>
+
+<ol start="1"><li rel="1">用户登录接口 &amp;&amp;  验证是否登录</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/personal/login
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：name=xxx&amp;password=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,  <span class="hljs-comment">//=&gt;0 登录成功   1 登录失败</span>
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,  <span class="hljs-comment">//=&gt;0 已登录   1 未登录</span>
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="2"><li rel="2">用户注册接口</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/personal/register
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：name=xxx&amp;password=xxx&amp;phone=xxx&amp;email=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,  <span class="hljs-comment">//=&gt;0 注册成功   1 失败</span>
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="3"><li rel="3">获取个人信息</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs haskell"><div class="hljs-line">地址：/personal/info
+</div><div class="hljs-line">方式：<span class="hljs-type">GET</span>
+</div><div class="hljs-line">参数：<span class="hljs-comment">--</span>
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   code:<span class="hljs-number">0</span>  //=&gt;<span class="hljs-number">0</span> 成功  <span class="hljs-number">1</span>=&gt;失败
+</div><div class="hljs-line">   mag:'xxx',
+</div><div class="hljs-line">   <span class="hljs-class"><span class="hljs-keyword">data</span>:{
+</span></div><div class="hljs-line">       <span class="hljs-title">id</span>,
+</div><div class="hljs-line">       <span class="hljs-title">name</span>,
+</div><div class="hljs-line">       <span class="hljs-title">email</span>,
+</div><div class="hljs-line">       <span class="hljs-title">phone</span>
+</div><div class="hljs-line">   }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<p><strong><code>[ 购买中心 ]</code></strong></p>
+
+<ol start="1"><li rel="1">加入购物车</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs dockerfile"><div class="hljs-line">地址：/store/<span class="hljs-keyword">add</span><span class="bash">
+</span></div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：courseID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   code:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="2"><li rel="2">从购物车删除</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/store/remove
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：courseID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="3"><li rel="3">获取购物信息</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs pf"><div class="hljs-line">地址：/store/info
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：<span class="hljs-keyword">state</span>=<span class="hljs-number">0</span>/<span class="hljs-number">1</span>/<span class="hljs-number">2</span>
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   code:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:'xxx',
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">       {
+</div><div class="hljs-line">        <span class="hljs-string">"id"</span>: <span class="hljs-number">999</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"name"</span>: <span class="hljs-string">"REACT框架开发课程[第999讲]"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"pic"</span>: <span class="hljs-string">"http://img.zhufengpeixun.cn/reactposter.png"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"date"</span>: <span class="hljs-string">"2018-01-01"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"address"</span>: <span class="hljs-string">"珠峰培训302"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"time"</span>: <span class="hljs-string">"1小时"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"dec"</span>: <span class="hljs-string">"..."</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"price"</span>: <span class="hljs-number">3000</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"type"</span>: <span class="hljs-string">"react"</span>
+</div><div class="hljs-line">       },
+</div><div class="hljs-line">       ...
+</div><div class="hljs-line">   ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="4"><li rel="4">支付</li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/store/pay
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：storeID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<p><strong><code>[ 课程中心 ]</code></strong></p>
+
+<ol start="1"><li rel="1">轮播图</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/course/banner
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">       {
+</div><div class="hljs-line">        <span class="hljs-string">"id"</span>: <span class="hljs-number">999</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"name"</span>: <span class="hljs-string">"REACT框架开发课程[第999讲]"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"pic"</span>: <span class="hljs-string">"http://img.zhufengpeixun.cn/reactposter.png"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"date"</span>: <span class="hljs-string">"2018-01-01"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"address"</span>: <span class="hljs-string">"珠峰培训302"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"time"</span>: <span class="hljs-string">"1小时"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"dec"</span>: <span class="hljs-string">"..."</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"price"</span>: <span class="hljs-number">3000</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"type"</span>: <span class="hljs-string">"react"</span>
+</div><div class="hljs-line">       },
+</div><div class="hljs-line">       ...
+</div><div class="hljs-line">   ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="2"><li rel="2">课程详情</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/course/info
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：courseID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:{
+</div><div class="hljs-line">      ...
+</div><div class="hljs-line">   }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="3"><li rel="3">课程列表</li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs nimrod"><div class="hljs-line">地址：/course/list
+</div><div class="hljs-line">方式：<span class="hljs-type">GET</span>
+</div><div class="hljs-line">参数：limit=<span class="hljs-number">10</span>&amp;page=<span class="hljs-number">1</span>&amp;<span class="hljs-keyword">type</span>=all
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">    code:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">    msg:'xxx',
+</div><div class="hljs-line">    total:<span class="hljs-number">100</span>,
+</div><div class="hljs-line">    limit:<span class="hljs-number">10</span>,
+</div><div class="hljs-line">    page:<span class="hljs-number">1</span>,
+</div><div class="hljs-line">    data:[
+</div><div class="hljs-line">      <span class="hljs-meta">{...}</span>,
+</div><div class="hljs-line">      ...
+</div><div class="hljs-line">    ]
+</div><div class="hljs-line">}
+</div></code></pre></div></body></html>
