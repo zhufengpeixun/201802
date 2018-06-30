@@ -1,2 +1,77 @@
 /*IMPORT ANTD*/
 @import "~antd/dist/antd.css";
+
+/*REM*/
+html {
+  font-size: 100px; /*750:1REM=100PX*/
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+/*NAV-TOP*/
+.headerNavBox {
+  @BG: #2A2A2A;
+
+  position: relative;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  background: @BG;
+  color: #FFF;
+
+  .homeBox {
+    height: 100%;
+
+    .baseBox {
+      position: relative;
+      height: 100%;
+
+      .logo {
+        position: absolute;
+        left: .16rem;
+        top: 50%;
+        margin-top: -.31rem;
+        width: 2.1rem;
+        height: .62rem;
+        font-size: 0;
+        background: url("../images/logo.png") no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .icon {
+        position: absolute;
+        right: .16rem;
+        top: 50%;
+        margin-top: -.3rem;
+      }
+    }
+
+    .filterBox {
+      position: absolute;
+      top: 1.1rem;
+      left: 0;
+      z-index: 9999;
+      padding: 0 .56rem;
+      width: 100%;
+      background: @BG;
+
+      li {
+        line-height: 1.1rem;
+        text-align: center;
+        color: #FFF;
+        font-size: .32rem;
+        border-top: .02rem solid lighten(@BG, 20%); //=>LESS中降低颜色的方法
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+

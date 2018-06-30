@@ -6,6 +6,24 @@
     <title>珠峰培训-REACT</title>
 </head>
 <body>
+<!--把REM计算放到BODY头部，目的是为了保证CSS导入后才执行这段JS（不写在INDEX中而是写在页面中，就是为了保证这段程序加载速度快一些，没必要等到合并后的JS加载，先把样式处理了）-->
+<script>
+    ;(function anonymous() {
+        function computed() {
+            let HTML = document.documentElement,
+                winW = HTML.clientWidth,
+                desW = 750;
+            if (winW >= desW) {
+                HTML.style.fontSize = '100px';
+                return;
+            }
+            HTML.style.fontSize = winW / 750 * 100 + 'px';//=>HTML中单独编写的代码尽量不要出现{}等操作，例如：ES6模板字符串，否则WEBPACK编译失败
+        }
+
+        computed();
+        window.addEventListener('resize', computed, false);
+    })();
+</script>
 <div id="root"></div>
 </body>
 </html>

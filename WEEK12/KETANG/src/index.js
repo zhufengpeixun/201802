@@ -47,7 +47,3 @@ render(<Provider store={store}>
         </LocaleProvider>
     </HashRouter>
 </Provider>, root);
-
-
-
-
