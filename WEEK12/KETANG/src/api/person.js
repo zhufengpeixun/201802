@@ -20,6 +20,11 @@ export function login(payload) {
     return axios.post('/personal/login', payload);
 }
 
+//=>注册
+export function register(payload) {
+    return axios.post('/personal/register', payload);
+}
+
 
 
 

@@ -12,5 +12,19 @@
     "email": "zhou_xiao_tian@163.com",
     "phone": "13041086186",
     "password": "26ef1520f9c16b70e23e0ad2"
+  },
+  {
+    "id": 3,
+    "name": "于校斌",
+    "email": "yuxiaobin@163.com",
+    "phone": "12323434564",
+    "password": "f02f750e65ebba95ab9493cd"
+  },
+  {
+    "id": 4,
+    "name": "陈文",
+    "email": "chenwen@qq.com",
+    "phone": "11111111111",
+    "password": "33a5dd945a29c27be5698129"
   }
 ]

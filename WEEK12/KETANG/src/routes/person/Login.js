@@ -4,6 +4,7 @@ import {Form, Icon, Input, Button, Checkbox, Modal} from 'antd';
 import {Link} from 'react-router-dom';
 import md5 from 'blueimp-md5';
 import {login} from '../../api/person';
+import action from '../../store/action/index';
 
 const FormItem = Form.Item;
 
@@ -31,6 +32,7 @@ class Login extends React.Component {
                     password: userPass
                 });
                 if (parseFloat(result.code) === 0) {
+                    this.props.queryBaseInfo();
                     this.props.history.go(-1);
                     return;
                 }
@@ -60,4 +62,4 @@ class Login extends React.Component {
     }
 }
 
-export default Form.create()(connect()(Login));
+export default Form.create()(connect(null, action.person)(Login));
