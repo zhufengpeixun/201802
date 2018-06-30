@@ -49,7 +49,7 @@ class Person extends React.Component {
                     if (this.state.isLogin) {
                         return <Info/>;
                     }
-                    return <Info/>;
+                    return <Tip/>;
                 }}/>
                 <Route path='/person/login' component={Login}/>
                 <Route path='/person/register' component={Register}/>

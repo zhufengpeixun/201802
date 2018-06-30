@@ -14,3 +14,17 @@ export function exitLogin() {
 export function queryInfo() {
     return axios.get('/personal/info');
 }
+
+//=>登录
+export function login(payload) {
+    return axios.post('/personal/login', payload);
+}
+
+
+
+
+
+
+
+
+
