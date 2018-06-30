@@ -10,6 +10,7 @@ import Tip from './person/Tip';
 
 /*IMPORT API*/
 import {checkLogin} from '../api/person';
+import '../static/css/person.less';
 
 /*RENDER*/
 class Person extends React.Component {
@@ -44,10 +45,11 @@ class Person extends React.Component {
                 }}/>
                 */}
                 <Route path='/person/info' render={() => {
+                    //=>基于RENDER返回的组件不是受路由管控的组件
                     if (this.state.isLogin) {
                         return <Info/>;
                     }
-                    return <Tip/>;
+                    return <Info/>;
                 }}/>
                 <Route path='/person/login' component={Login}/>
                 <Route path='/person/register' component={Register}/>

@@ -43,7 +43,8 @@ class NavTop extends React.Component {
                     {state => {
                         return <ul className='filterBox' style={{
                             ...defaultStyle,
-                            ...transitionStyles[state]
+                            ...transitionStyles[state],
+                            display: this.state.in ? 'block' : 'none'
                         }}>
                             <li>全部课程</li>
                             <li>REACT课程</li>

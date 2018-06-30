@@ -74,4 +74,9 @@ route.get('/info', (req, res) => {
     res.send({code: 1, msg: 'NO!', data: null});
 });
 
+route.get('/out', (req, res) => {
+    req.session.personID = null;
+    res.send({code: 0, msg: 'OK!'});
+});
+
 module.exports = route;
