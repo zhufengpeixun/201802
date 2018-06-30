@@ -33,11 +33,10 @@ render(<Provider store={store}>
                 {/*MAIN=>ROUTE*/}
                 <main className='container'>
                     <Switch>
-                        <Route path='/' exact component={Home}/>
                         <Route path='/course' component={Home}/>
                         <Route path='/mycourse' component={Mycourse}/>
                         <Route path='/person' component={Person}/>
-                        <Redirect to='/?from=404'/>
+                        <Redirect to='/course'/>
                     </Switch>
                 </main>
 

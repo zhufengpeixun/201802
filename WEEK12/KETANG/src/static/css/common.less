@@ -15,7 +15,11 @@ html {
 .headerNavBox {
   @BG: #2A2A2A;
 
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
   height: 1.12rem;
   line-height: 1.12rem;
   background: @BG;
@@ -66,7 +70,48 @@ html {
       }
     }
   }
+}
 
+/*NAV-BOTTOM*/
+.footerNavBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 1.06rem;
+  line-height: 1.06rem;
+  border-top: .02rem solid #D5D5D5;
+
+  display: flex;
+  a {
+    flex: 1;
+    text-align: center;
+    color: #000;
+
+    i {
+      display: block;
+      margin-top: .12rem;
+      font-size: .4rem;
+    }
+
+    span {
+      display: block;
+      height: .5rem;
+      line-height: .5rem;
+      font-size: .32rem;
+    }
+
+    &.active {
+      color: #9D0800;
+      font-weight: bold;
+    }
+  }
+}
+
+/*CONTAINER*/
+.container {
+  padding: 1.12rem 0 1.08rem 0;
 }
 
 

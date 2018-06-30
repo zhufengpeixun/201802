@@ -54,7 +54,6 @@ class NavTop extends React.Component {
                 </Transition>
             </div>
 
-
         </header>;
     }
 }
