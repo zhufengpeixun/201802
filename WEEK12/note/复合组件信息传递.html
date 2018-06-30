@@ -1,0 +1,566 @@
+<!DOCTYPE html><html><head><title>复合组件信息传递</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h3 id="复合组件信息传递">复合组件信息传递</h3>
+
+<ol><li rel="1"><p>父子组件信息传递</p>
+
+<ul>
+<li>父传子：属性传递</li>
+<li>子传父：回调函数机制</li>
+<li>context上下文</li></ul></li>
+<li rel="2"><p>平行组件信息传递</p>
+
+<ul>
+<li>共同父级</li>
+<li>redux / react-redux</li>
+<li>… </li></ul></li>
+</ol>
+
+
+
+<h4 id="context">context</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs scala"><div class="hljs-line"><span class="hljs-keyword">import</span> <span class="hljs-type">React</span>, {<span class="hljs-type">Component</span>} from <span class="hljs-symbol">'reac</span>t';
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> <span class="hljs-type">ReactDOM</span>, {render} from <span class="hljs-symbol">'react</span>-dom';
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> <span class="hljs-type">PropTypes</span> from <span class="hljs-symbol">'prop</span>-types';
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Parent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+</div><div class="hljs-line">    <span class="hljs-comment">/*
+</span></div><div class="hljs-line">     * 后代组件可以获取所在上下文(父组件)中的一些属性值(这些属性值需要事先指定安排好才可以:在父组件中指定和安排)
+</div><div class="hljs-line">     *
+</div><div class="hljs-line">     * 1、设置子组件上下文中属性的类型
+</div><div class="hljs-line">     * 2、获取(指定)子组件的上下文属性信息
+</div><div class="hljs-line">     */
+</div><div class="hljs-line">    static childContextTypes = {
+</div><div class="hljs-line">        num: <span class="hljs-type">PropTypes</span>.number,
+</div><div class="hljs-line">        text: <span class="hljs-type">PropTypes</span>.string
+</div><div class="hljs-line">    };
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    getChildContext() {
+</div><div class="hljs-line">        <span class="hljs-comment">//=&gt;返回的是啥,后代组件中就可以用哪些属性值</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> {
+</div><div class="hljs-line">            num: <span class="hljs-keyword">this</span>.state.num,
+</div><div class="hljs-line">            text: '珠峰培训'
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+</div><div class="hljs-line">    <span class="hljs-comment">/*
+</span></div><div class="hljs-line">     * 3、子组件中需要设置使用的上下文属性值的类型
+</div><div class="hljs-line">     */
+</div><div class="hljs-line">    static contextTypes = {
+</div><div class="hljs-line">        num: <span class="hljs-type">PropTypes</span>.number
+</div><div class="hljs-line">    };
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div><div class="hljs-line">render(&lt;<span class="hljs-type">Parent</span>/&gt;, window.root);
+</div></code></pre>
+
+
+
+<h4 id="redux">redux</h4>
+
+<blockquote>
+  <p>$ yarn add redux react-redux</p>
+</blockquote>
+
+<p>[基础使用]</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-comment">/*===index.js===*/</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> {createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">'redux'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> initState = {
+</div><div class="hljs-line">    <span class="hljs-attr">n</span>: <span class="hljs-number">0</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">m</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> store = createStore(reducer);
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state = initState, action</span>) </span>{
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;action：我们修改状态信息的行为集合</span>
+</div><div class="hljs-line">    <span class="hljs-comment">// -&gt; type</span>
+</div><div class="hljs-line">    <span class="hljs-comment">// -&gt; 其余的属性值都是具体派发任务的时候传递的值</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">switch</span> (action.type) {
+</div><div class="hljs-line">        <span class="hljs-keyword">case</span> <span class="hljs-string">'BUTTON_SUPPORT'</span>:
+</div><div class="hljs-line">            state = {...state, <span class="hljs-attr">n</span>: state.n + <span class="hljs-number">1</span>};
+</div><div class="hljs-line">            <span class="hljs-keyword">break</span>;
+</div><div class="hljs-line">        <span class="hljs-keyword">case</span> <span class="hljs-string">'BUTTON_AGAINST'</span>:
+</div><div class="hljs-line">            state = {...state, <span class="hljs-attr">m</span>: state.m + <span class="hljs-number">1</span>};
+</div><div class="hljs-line">            <span class="hljs-keyword">break</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;把通过某种行为修改后的状态返回(替换容器中现有的状态信息)</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> state;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">render(&lt;div&gt;
+</div><div class="hljs-line">    &lt;Button store={store}/&gt;
+</div><div class="hljs-line">    &lt;Result store={store}/&gt;
+</div><div class="hljs-line">&lt;/div&gt;, window.root);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">/*===派发操作===*/
+</div><div class="hljs-line">export default class Button extends Component {
+</div><div class="hljs-line">    render() {
+</div><div class="hljs-line">        return &lt;button className="btn-success" 
+</div><div class="hljs-line">             onClick={() =&gt; {
+</div><div class="hljs-line">                this.props.store.dispatch({
+</div><div class="hljs-line">                    type: 'BUTTON_SUPPORT'
+</div><div class="hljs-line">                });
+</div><div class="hljs-line">            }}&gt;支持&lt;/button&gt;;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">/*===获取状态和事件监听===*/
+</div><div class="hljs-line">export default class Result extends Component {
+</div><div class="hljs-line">    constructor(props) {
+</div><div class="hljs-line">        super();
+</div><div class="hljs-line">        let store_state = props.store.getState();
+</div><div class="hljs-line">        this.state = {...store_state};
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    componentDidMount() {
+</div><div class="hljs-line">        //=&gt;向事件池中追加方法:当REDUX容器中的状态改变,会触发方法执行
+</div><div class="hljs-line">        this.props.store.subscribe(() =&gt; {
+</div><div class="hljs-line">            let store_state = this.props.store.getState();
+</div><div class="hljs-line">            this.setState({...store_state});
+</div><div class="hljs-line">        });
+</div><div class="hljs-line">    }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    render() {
+</div><div class="hljs-line">        return &lt;div className="panel panel-default"&gt;
+</div><div class="hljs-line">            &lt;div className="panel-body"&gt;
+</div><div class="hljs-line">                支持：{this.state.n}
+</div><div class="hljs-line">                &lt;br/&gt;
+</div><div class="hljs-line">                反对：{this.state.m}
+</div><div class="hljs-line">            &lt;/div&gt;
+</div><div class="hljs-line">        &lt;/div&gt;;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<p>[工程化管理]</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs r"><div class="hljs-line">/*
+</div><div class="hljs-line"> * my-app
+</div><div class="hljs-line"> *   build 打包后的项目
+</div><div class="hljs-line"> *     static
+</div><div class="hljs-line"> *       <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> *     index.html
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *   public 页面
+</div><div class="hljs-line"> *     index.html
+</div><div class="hljs-line"> *     <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *   src JS程序
+</div><div class="hljs-line"> *     component  按照模块编写组件
+</div><div class="hljs-line"> *        vote
+</div><div class="hljs-line"> *          xxx.js
+</div><div class="hljs-line"> *          <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> *        product
+</div><div class="hljs-line"> *          xxx.js
+</div><div class="hljs-line"> *          <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *     store REDUX管理文件夹
+</div><div class="hljs-line"> *        action 派发行为集合
+</div><div class="hljs-line"> *          vote.js
+</div><div class="hljs-line"> *          <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> *          index.js 所有分模块行为的汇总
+</div><div class="hljs-line"> *        
+</div><div class="hljs-line"> *        reducer 管理员集合
+</div><div class="hljs-line"> *          vote.js
+</div><div class="hljs-line"> *          <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> *          index.js 所有管理员的集合汇总
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *        action-types.js 所有行为标识
+</div><div class="hljs-line"> *        index.js 创建REDUX容器
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *     index.js 主入口
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *  .gitignore
+</div><div class="hljs-line"> *  package.json
+</div><div class="hljs-line"> *  yarn.lock
+</div><div class="hljs-line"> *  <span class="hljs-keyword">...</span>
+</div><div class="hljs-line"> */
+</div></code></pre>
+
+<p><code>index.js</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line">import store from './store';
+</div><div class="hljs-line">render(<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}/</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">Result</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}/</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>, window.root);
+</div></code></pre>
+
+<p><code>store/index.js</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-keyword">import</span> {createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">'redux'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">'./reducer'</span>;<span class="hljs-comment">//=&gt;没有指定具体文件,一般都是默认找INDEX.JS</span>
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> store = createStore(reducer);
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</div></code></pre>
+
+<p><code>store/action-types.js</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs arduino"><div class="hljs-line"><span class="hljs-comment">/*VOTE*/</span>
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BUTTON_SUPPORT = <span class="hljs-string">'BUTTON_SUPPORT'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BUTTON_AGAINST = <span class="hljs-string">'BUTTON_AGAINST'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BUTTON_CLEAR = <span class="hljs-string">'BUTTON_CLEAR'</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">/*PRODUCT*/</span>
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PRODUCT_ADD = <span class="hljs-string">'PRODUCT_ADD'</span>;
+</div></code></pre>
+
+<p><code>store/reducer</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs pf"><div class="hljs-line">//=&gt;vote.js
+</div><div class="hljs-line">import * as TYPE <span class="hljs-keyword">from</span> '../action-types';
+</div><div class="hljs-line">function reducer_vote(<span class="hljs-keyword">state</span> = {
+</div><div class="hljs-line">    n: <span class="hljs-number">0</span>,
+</div><div class="hljs-line">    m: <span class="hljs-number">0</span>
+</div><div class="hljs-line">}, action) {
+</div><div class="hljs-line">    switch (action.type) {
+</div><div class="hljs-line">        case TYPE.BUTTON_SUPPORT:
+</div><div class="hljs-line">            <span class="hljs-keyword">state</span> = {...<span class="hljs-keyword">state</span>, n: <span class="hljs-keyword">state</span>.n + <span class="hljs-number">1</span>};
+</div><div class="hljs-line">            break;
+</div><div class="hljs-line">        ...
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    return <span class="hljs-keyword">state</span>;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">export <span class="hljs-keyword">default</span> reducer_vote;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">//=&gt;index.js
+</div><div class="hljs-line">import reducer_vote <span class="hljs-keyword">from</span> './vote';
+</div><div class="hljs-line">import reducer_product <span class="hljs-keyword">from</span> './product';
+</div><div class="hljs-line">import {combineReducers} <span class="hljs-keyword">from</span> 'redux';
+</div><div class="hljs-line">/*
+</div><div class="hljs-line"> * 合并之后，容器中的状态存储结构就变了
+</div><div class="hljs-line"> *   [之前]
+</div><div class="hljs-line"> *     n:xxx m:xxx data:xxx
+</div><div class="hljs-line"> *     store.getState().n =&gt;这样获取信息
+</div><div class="hljs-line"> *   [之后]
+</div><div class="hljs-line"> *     reducer_vote:{
+</div><div class="hljs-line"> *        n:xxx,
+</div><div class="hljs-line"> *        m:xxx
+</div><div class="hljs-line"> *     },
+</div><div class="hljs-line"> *     reducer_product:{
+</div><div class="hljs-line"> *        data:xxx
+</div><div class="hljs-line"> *     }
+</div><div class="hljs-line"> *     store.getState().reducer_vote.n =&gt;这样获取信息
+</div><div class="hljs-line"> *  
+</div><div class="hljs-line"> *   合并后会以每一个REDUCER的名称作为属性名，管理自己的状态属性，目的就是为了防止多个REDUCER中的状态重名，如果合并成为一个整体，会产生冲突，现在分开管理
+</div><div class="hljs-line"> */
+</div><div class="hljs-line">let reducer = combineReducers({
+</div><div class="hljs-line">    reducer_vote,
+</div><div class="hljs-line">    reducer_product
+</div><div class="hljs-line">});
+</div><div class="hljs-line">export <span class="hljs-keyword">default</span> reducer;
+</div></code></pre>
+
+<p><code>store/action</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs typescript"><div class="hljs-line"><span class="hljs-comment">//=&gt;vote.js</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> TYPE <span class="hljs-keyword">from</span> <span class="hljs-string">'../action-types'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> voteAction = {
+</div><div class="hljs-line">    support() {
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> {
+</div><div class="hljs-line">            <span class="hljs-keyword">type</span>: TYPE.BUTTON_SUPPORT
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> voteAction;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">//=&gt;index.js</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> voteAction <span class="hljs-keyword">from</span> <span class="hljs-string">'./vote'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> productAction <span class="hljs-keyword">from</span> <span class="hljs-string">'./product'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> action = {
+</div><div class="hljs-line">    <span class="hljs-string">'vote'</span>: {...voteAction},
+</div><div class="hljs-line">    <span class="hljs-string">'product'</span>: {...productAction}
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> action;
+</div></code></pre>
+
+<p><code>组件中调用</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-comment">//=&gt;派发</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> action <span class="hljs-keyword">from</span> <span class="hljs-string">'../../store/action'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Button</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+</div><div class="hljs-line">    <span class="hljs-keyword">let</span> store=<span class="hljs-keyword">this</span>.props.store;
+</div><div class="hljs-line">    render() {
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"btn-success"</span> 
+</span></span></div><div class="hljs-line">            <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt; {
+</div><div class="hljs-line">                  store.dispatch(action.vote.support());
+</div><div class="hljs-line">                }}&gt;支持<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">//=&gt;绑定获取</span>
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Result</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+</div><div class="hljs-line">    <span class="hljs-keyword">constructor</span>(props) {
+</div><div class="hljs-line">        <span class="hljs-keyword">super</span>();
+</div><div class="hljs-line">        <span class="hljs-keyword">let</span> store_state = props.store.getState().reducer_vote;
+</div><div class="hljs-line">        <span class="hljs-keyword">this</span>.state = {...store_state};
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    componentDidMount() {
+</div><div class="hljs-line">        <span class="hljs-comment">//=&gt;向事件池中追加方法:当REDUX容器中的状态改变,会触发方法执行</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">this</span>.props.store.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+</div><div class="hljs-line">            <span class="hljs-keyword">let</span> store_state = <span class="hljs-keyword">this</span>.props.store.getState().reducer_vote;
+</div><div class="hljs-line">            <span class="hljs-keyword">this</span>.setState({...store_state});
+</div><div class="hljs-line">        });
+</div><div class="hljs-line">    }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    render() {
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"panel panel-default"</span>&gt;</span>
+</span></div><div class="hljs-line">            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"panel-body"</span>&gt;</span>
+</div><div class="hljs-line">                支持：{this.state.n}
+</div><div class="hljs-line">                <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+</div><div class="hljs-line">                反对：{this.state.m}
+</div><div class="hljs-line">            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h4 id="redux原理">redux原理</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-comment">/*
+</span></div><div class="hljs-line"> * 创建REDUX容器
+</div><div class="hljs-line"> *   REDUCER：容器的管理员
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> * 返回的结果
+</div><div class="hljs-line"> *   DISPATCH：任务派发
+</div><div class="hljs-line"> *   GET-STATE：获取容器中的状态
+</div><div class="hljs-line"> *   SUB-SCRIBE：向事件池中追加方法
+</div><div class="hljs-line"> */
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> TYPE <span class="hljs-keyword">from</span> <span class="hljs-string">"./store/action-types"</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createStore</span>(<span class="hljs-params">reducer</span>) </span>{
+</div><div class="hljs-line">    <span class="hljs-keyword">let</span> state,<span class="hljs-comment">//=&gt;统一管理的状态</span>
+</div><div class="hljs-line">        listenerAry = [];<span class="hljs-comment">//=&gt;事件池</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;每一次任务派发,都会传递一个ACTION行为对象,并且把实现设定的管理员REDUCER执行(传递参数:STATE,ACTION)</span>
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;执行REDUCER(函数类型),会通过ACTION中的TYPE(行为标识),把原有的状态进行修改,最后把新的状态返回</span>
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;获取最新的状态后,覆盖旧的状态即可(把容器中的状态修改了)</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dispatch</span>(<span class="hljs-params">action</span>) </span>{
+</div><div class="hljs-line">        state = reducer(state, action);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">//=&gt;每一次派发任务把状态修改后,都要把事件池中订阅的方法依次执行</span>
+</div><div class="hljs-line">        listenerAry.forEach(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+</div><div class="hljs-line">            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> item === <span class="hljs-string">'function'</span>) {
+</div><div class="hljs-line">                item();
+</div><div class="hljs-line">            }
+</div><div class="hljs-line">        });
+</div><div class="hljs-line">    }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;FN:需要向事件池中追加的方法</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">subscribe</span>(<span class="hljs-params">fn</span>) </span>{
+</div><div class="hljs-line">        listenerAry.push(fn);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">//=&gt;每一次订阅完成,都会返回一个取消订阅的方法,执行这个方法可以把当前订阅的函数从事件池中移除</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">unsubscribe</span>(<span class="hljs-params"></span>) </span>{
+</div><div class="hljs-line">            <span class="hljs-keyword">let</span> index = listenerAry.indexOf(fn);
+</div><div class="hljs-line">            listenerAry.splice(index, <span class="hljs-number">1</span>);
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">    }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getState</span>(<span class="hljs-params"></span>) </span>{
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> (!state) {
+</div><div class="hljs-line">            <span class="hljs-comment">//=&gt;第一次还没有STATE,我们执行REDUCER,把默认值处理一下</span>
+</div><div class="hljs-line">            state = reducer(state, {});
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">        <span class="hljs-comment">//return state;//=&gt;把自己管理的STATE空间地址返回,外面接收使用,如果进行修改,会直接导致REDUX容器中的状态也跟着修改</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//return {...state};//=&gt;这样也不行:只能把第一级克隆,第二级及以后还是沿用之前的空间地址 （浅克隆）</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(state));<span class="hljs-comment">//=&gt;深度克隆</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> {dispatch, subscribe, getState};<span class="hljs-comment">//=&gt;把三个方法返回,以后创建容器返回的结果,就可以调取三个方法了</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">/*
+</span></div><div class="hljs-line"> * 把多个REDUCER合并成为一个REDUCER
+</div><div class="hljs-line"> *   1、REDUCER管理员(函数)
+</div><div class="hljs-line"> *    A:用户自己手动设置的,在创建容器的时候传递给CREATE-STORE方法的
+</div><div class="hljs-line"> *    B:当执行DISPATCH派发的时候,通知REDUCER执行(传递两个值:STATE,ACTION)
+</div><div class="hljs-line"> *      ACTION:用户执行DISPATCH时候传递进来的
+</div><div class="hljs-line"> *      STATE:获取的是容器中原有的STATE,如果容器中的STATE不存在(第一次执行DISPATCH的时候就不存在),我们每一个小的REDUCER会给STATE设置初始值
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *   2、容器只允许一个REDUCER,所以要执行COMBINE-REDUCERS方法进行合并
+</div><div class="hljs-line"> *    A:执行这个方法返回一个新的函数(总的REDUCER函数),创建容器传递进来的也是总的REDUCER,也就是以后每一次执行DISPATCH,通知执行的方法都是这个总的REDUCER
+</div><div class="hljs-line"> *    B:每一次派发的目的不是为了执行总的,是为了把我们之前写的子REDUCER执行（子的REDUCER都是执行COMBINE-REDUCERS的时候传递进来的）
+</div><div class="hljs-line"> *      reducers={vote:function...,todo:function...}
+</div><div class="hljs-line"> */
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combineReducers</span>(<span class="hljs-params">reducers</span>) </span>{
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state = {}, action</span>) </span>{
+</div><div class="hljs-line">        <span class="hljs-keyword">let</span> obj = {};
+</div><div class="hljs-line">        <span class="hljs-comment">//=&gt;目的:把子的REDUCER执行</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> reducers) {
+</div><div class="hljs-line">            <span class="hljs-keyword">if</span> (!reducers.hasOwnProperty(key)) <span class="hljs-keyword">continue</span>;
+</div><div class="hljs-line">            <span class="hljs-comment">//=&gt;key:vote/todo</span>
+</div><div class="hljs-line">            <span class="hljs-comment">//=&gt;reducers[key]:每一个小的REDUCER</span>
+</div><div class="hljs-line">            <span class="hljs-comment">//=&gt;执行它返回的是每一个小的REDUCER管理的最新状态</span>
+</div><div class="hljs-line">            obj[key] = reducers[key](state[key], action);
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> obj;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> {
+</div><div class="hljs-line">    createStore,
+</div><div class="hljs-line">    combineReducers
+</div><div class="hljs-line">};
+</div></code></pre>
+
+
+
+<h4 id="react-redux">react-redux</h4>
+
+<p><code>index.js</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">'./store'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> {Provider, connect} <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+</span></div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>/&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">Result</span>/&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span>, <span class="hljs-built_in">window</span>.root);
+</div><div class="hljs-line"><span class="hljs-comment">/*
+</span></div><div class="hljs-line"> * react-redux
+</div><div class="hljs-line"> *  1、安装 yarn add react-redux
+</div><div class="hljs-line"> *  2、import {Provider, connect} from 'react-redux'
+</div><div class="hljs-line"> *    Provider:组件
+</div><div class="hljs-line"> *    connect:高阶组件
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *  3、把所有的组件都嵌入到Provider组件中
+</div><div class="hljs-line"> *    =&gt;Provider组件中只能有一个子元素
+</div><div class="hljs-line"> *    =&gt;需要把之前创建的store容器作为属性传递给Provider组件
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *  4、在每一个子组件中，需要做一些特殊处理
+</div><div class="hljs-line"> */
+</div></code></pre>
+
+<p><code>获取数据</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-keyword">import</span> {connect} <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> action <span class="hljs-keyword">from</span> <span class="hljs-string">'../../store/action'</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Result</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+</div><div class="hljs-line">    render() {
+</div><div class="hljs-line">        <span class="hljs-comment">//=&gt;只要REDUX容器中的状态改变,就会重新获取最新的状态值(把值传递给组件的属性),并且重新渲染组件(REACT-REDUX完成)</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">let</span> {n, m, support, against} = <span class="hljs-keyword">this</span>.props;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"panel panel-default"</span>&gt;</span>
+</span></div><div class="hljs-line">            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"panel-heading"</span>&gt;</span>
+</div><div class="hljs-line">                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"panel-title"</span>&gt;</span>
+</div><div class="hljs-line">                    投票结果
+</div><div class="hljs-line">                <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+</div><div class="hljs-line">            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line">            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"panel-body"</span>&gt;</span>
+</div><div class="hljs-line">                支持：{n}
+</div><div class="hljs-line">                <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+</div><div class="hljs-line">                反对：{m}
+</div><div class="hljs-line">            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">/*
+</span></div><div class="hljs-line"> * 第一个括号中传递两个函数
+</div><div class="hljs-line"> *    mapStateToProps：这个方法完成的事情是把REDUX中管理的状态做为属性传递给组件
+</div><div class="hljs-line"> *    mapDispatchToProps：这个方法完成的事情是把REDUX中的DISPATCH作为属性传递给组件
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *    =&gt;以后在组件中想要用到REDUX中的状态或者DISPATCH方法,直接通过本身的属性PROPS获取即可(不用自己去操作REDUX)
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> * 最后一个括号中传递的是子组件名称
+</div><div class="hljs-line"> */
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mapStateToProps</span>(<span class="hljs-params">state</span>) </span>{
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;STATE:REDUX容器中的STATE</span>
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;RETURN的是啥,就给组件传递了哪些属性</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> {
+</div><div class="hljs-line">        <span class="hljs-attr">n</span>: state.vote.n,
+</div><div class="hljs-line">        <span class="hljs-attr">m</span>: state.vote.m
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mapDispatchToProps</span>(<span class="hljs-params">dispatch</span>) </span>{
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;DISPATCH:STORE中的DISPATCH</span>
+</div><div class="hljs-line">    <span class="hljs-comment">//=&gt;RETURN的是啥,相当于给当前的组件设置了哪些属性</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> {
+</div><div class="hljs-line">        support() {
+</div><div class="hljs-line">            <span class="hljs-comment">//=&gt;实现的是任务派发</span>
+</div><div class="hljs-line">            dispatch(action.vote.support());
+</div><div class="hljs-line">        },
+</div><div class="hljs-line">        against() {
+</div><div class="hljs-line">            dispatch(action.vote.against());
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(mapStateToProps, mapDispatchToProps)(Result);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">/*
+</span></div><div class="hljs-line"> * 子组件做的一些特殊处理
+</div><div class="hljs-line"> *   1、导入 react-redux
+</div><div class="hljs-line"> *   2、现在导出的不在是子组件了,而是通过connect返回的高阶组件
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *   3、之前在子组件中做的一些事情：
+</div><div class="hljs-line"> *     -&gt;获取容器中的状态赋值给组件的状态
+</div><div class="hljs-line"> *     -&gt;在第一次挂载完成后,向REDUX事件池中追加方法,等任务派发完成,容器状态改变,我们改变子组件状态,完成页面重新的渲染
+</div><div class="hljs-line"> *     ...
+</div><div class="hljs-line"> *     这些事情,REACT-REDUX帮我们完成了(不需要自己写)
+</div><div class="hljs-line"> *
+</div><div class="hljs-line"> *    4、执行connect做一些配置
+</div><div class="hljs-line"> */
+</div></code></pre>
+
+<p><code>操作按钮</code></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-keyword">import</span> action <span class="hljs-keyword">from</span> <span class="hljs-string">'../../store/action'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> {connect} <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Button</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+</div><div class="hljs-line">    render() {
+</div><div class="hljs-line">        <span class="hljs-keyword">let</span> {n, m, support, against, clear} = <span class="hljs-keyword">this</span>.props;
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"btn-success"</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{support}</span>&gt;</span>支持<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> ({...state.vote}), action.vote)(Button);
+</div><div class="hljs-line"><span class="hljs-comment">//=&gt;直接写ACTION,REACT-REDUX会帮我们处理成为刚才自己写MAP-DISPATCH-TO-PROPS这种模式</span>
+</div></code></pre></div></body></html>
