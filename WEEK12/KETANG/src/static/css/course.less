@@ -18,6 +18,65 @@
         background: #9D0800 !important;
       }
     }
+
+    //=>列表
+    .courseList {
+      padding: .2rem;
+      h2 {
+        line-height: .7rem;
+        i {
+          margin-right: .1rem;
+          font-size: .4rem;
+        }
+      }
+
+      ul {
+        li {
+          box-sizing: border-box;
+          margin-bottom: .2rem;
+          padding: .1rem;
+          border: .02rem solid #DDD;
+
+          a {
+            display: block;
+            color: #000;
+
+            h3 {
+              line-height: .6rem;
+              font-size: .34rem;
+            }
+
+            .content {
+              display: flex;
+              .pic {
+                width: 2rem;
+                height: 1.4rem;
+                background: #EEE;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .desc {
+                flex: 1;
+                font-size: .32rem;
+                padding-left: .2rem;
+                overflow: hidden;
+                p:first-child {
+                  color: #666;
+                  height: .8rem;
+                  line-height: .4rem;
+                  overflow: hidden;
+                }
+                p:last-child {
+                  color: #999;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
 }
