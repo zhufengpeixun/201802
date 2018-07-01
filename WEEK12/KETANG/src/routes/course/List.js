@@ -7,6 +7,7 @@ import action from '../../store/action/index';
 class List extends React.Component {
     constructor(props, context) {
         super(props, context);
+        this.state = {isLoading: false};
     }
 
     async componentDidMount() {
@@ -17,6 +18,11 @@ class List extends React.Component {
         if (courseData.data.length === 0) {
             queryList();//=>DISPATCH
         }
+    }
+
+    componentWillReceiveProps() {
+        //=>在当前案例中，触发这个生命周期函数，说明传递给组件的属性改变了（路由重新渲染或者是REDUX容器中的状态改变了）
+        this.setState({isLoading: false});
     }
 
     queryType = () => {
@@ -34,6 +40,21 @@ class List extends React.Component {
                 break;
         }
         return text;
+    };
+
+    loadMore = () => {
+        let {queryList, courseData, courseType} = this.props;
+
+        //=>防止重复点击
+        if (this.state.isLoading) return;
+        this.setState({isLoading: true});
+
+        //=>重新发送新的DISPATCH：PAGE是在当前PAGE的基础上累加1，TYPE一定要沿用当前筛选的TYPE，FLAG点击加载更多，是向REDUX容器中追加新获取的信息
+        queryList({
+            page: courseData.page + 1,
+            type: courseType,
+            flag: 'push'
+        });
     };
 
     render() {
@@ -77,7 +98,8 @@ class List extends React.Component {
                             </li>;
                         })}
                     </ul>
-                    <Button type='dashed'>加载更多数据</Button>
+                    {courseData.total <= courseData.page ? '' : (
+                        <Button type='dashed' onClick={this.loadMore} loading={this.state.isLoading}>加载更多数据</Button>)}
                 </div>) : '暂无数据'}
             </div>
         </div>;

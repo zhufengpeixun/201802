@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import {Icon} from 'antd';
+import action from '../store/action/index';
 
 /*TRANSITION*/
 import Transition from 'react-transition-group/Transition';
@@ -23,6 +24,19 @@ class NavTop extends React.Component {
         };
     }
 
+    handleClick = ev => {
+        let target = ev.target,
+            tarTag = target.tagName;
+        if (tarTag === 'LI') {
+            this.props.queryList({
+                page: 1,
+                type: target.getAttribute('type'),
+                flag: 'replace'//=>切换类别是替换REDUX容器中的状态信息
+            });
+            this.setState({in: false});
+        }
+    };
+
     render() {
         return <header className='headerNavBox'>
             {/*首页的导航*/}
@@ -38,25 +52,23 @@ class NavTop extends React.Component {
                         });
                     }}/>
                 </div>
-
                 <Transition in={this.state.in} timeout={0}>
                     {state => {
                         return <ul className='filterBox' style={{
                             ...defaultStyle,
                             ...transitionStyles[state],
                             display: this.state.in ? 'block' : 'none'
-                        }}>
-                            <li>全部课程</li>
-                            <li>REACT课程</li>
-                            <li>VUE课程</li>
-                            <li>小程序课程</li>
+                        }} onClick={this.handleClick}>
+                            <li type="all">全部课程</li>
+                            <li type="react">REACT课程</li>
+                            <li type="vue">VUE课程</li>
+                            <li type="xiaochengxu">小程序课程</li>
                         </ul>;
                     }}
                 </Transition>
             </div>
-
         </header>;
     }
 }
 
-export default withRouter(connect()(NavTop));
+export default withRouter(connect(null, action.course)(NavTop));
