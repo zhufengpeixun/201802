@@ -11,3 +11,12 @@ export function queryList(payload) {
         params: payload
     });
 }
+
+//=>获取课程详细信息
+export function queryInfo(courseID) {
+    return axios.get('/course/info', {
+        params: {
+            courseID
+        }
+    });
+}
