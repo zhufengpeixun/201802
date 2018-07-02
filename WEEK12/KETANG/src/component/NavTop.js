@@ -22,6 +22,10 @@ class NavTop extends React.Component {
         this.state = {
             in: false
         };
+
+        //=>每一次页面刷新，REDUX中存储的购物车信息都会消失，所以我们需要在页面刷新的时候，执行一个DISPATCH派发，把服务器中存储的购物信息存放到REDUX中（NAV是每一次页面刷新，不管在哪一个路由下都会执行的组件）
+        this.props.queryUnpay();
+        this.props.queryPay();
     }
 
     handleClick = ev => {
