@@ -32,7 +32,7 @@ class Unpay extends React.Component {
             </div>
             <ul className='courseItem'>
                 {unpay.map((item, index) => {
-                    return <CourseItem key={index} item={item}/>;
+                    return <CourseItem key={index} item={item} input={true}/>;
                 })}
             </ul>
         </div>;
@@ -67,7 +67,25 @@ class Unpay extends React.Component {
             return;
         }
 
-
+        //=>获取所有被选中的存储ID
+        let selectIDList = [];
+        this.props.shopCart.unpay.forEach(item => {
+            if (item.check) {
+                selectIDList.push(item.storeID);
+            }
+        });
+        if (selectIDList.length === 0) {
+            alert('没有要被删除的信息!');
+            return;
+        }
+        //=>根据ID发送删除的请求：生成每一个AXIOS删除操作的返回PROMISE数组，基于Promise.all验证是否都完成
+        selectIDList = selectIDList.map(storeID => {
+            return payShopCart(storeID);
+        });
+        Promise.all(selectIDList).then(() => {
+            this.props.queryUnpay();//=>DISPATCH
+            this.props.queryPay();
+        });
     }
 }
 

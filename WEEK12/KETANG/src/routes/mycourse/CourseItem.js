@@ -11,7 +11,8 @@ class CourseItem extends React.Component {
     render() {
         let {id, name, pic, dec, price, check} = this.props.item;
         return <li>
-            <input type="checkbox" checked={check} onChange={this.props.handleSelect.bind(this, id)}/>
+            {this.props.input ?
+                <input type="checkbox" checked={check} onChange={this.props.handleSelect.bind(this, id)}/> : ''}
 
             <Link to={`/course/info?courseId=${id}`}>
                 <h3>{name}</h3>
