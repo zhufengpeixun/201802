@@ -8,7 +8,11 @@ let INIT_STATE = {
         page: 1,
         data: []
     },
-    courseType: 'all'
+    courseType: 'all',
+    shopCart: {
+        unpay: [],
+        pay: []
+    }
 };
 export default function course(state = INIT_STATE, action) {
     state = JSON.parse(JSON.stringify(state));
@@ -30,6 +34,18 @@ export default function course(state = INIT_STATE, action) {
                 state.courseData.limit = parseFloat(result.limit);
                 state.courseData.page = parseFloat(result.page);
                 state.courseData.data = flag === 'push' ? state.courseData.data.concat(result.data) : result.data;
+            }
+            break;
+
+        //=>获取已支付和未支付的购物车信息
+        case TYPES.COURSE_UNPAY:
+            if (parseFloat(action.result.code) === 0) {
+                state.shopCart.unpay = action.result.data;
+            }
+            break;
+        case TYPES.COURSE_PAY:
+            if (parseFloat(action.result.code) === 0) {
+                state.shopCart.pay = action.result.data;
             }
             break;
     }
