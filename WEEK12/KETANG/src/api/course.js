@@ -44,14 +44,9 @@ export function queryShopCart(state = 0) {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
+//=>支付
+export function payShopCart(storeID) {
+    return axios.post('/store/pay', {
+        storeID
+    });
+}

@@ -56,18 +56,25 @@ route.get('/info', (req, res) => {
     if (personID) {
         req.storeDATA.forEach(item => {
             if (parseFloat(item.personID) === personID && parseFloat(item.state) === state) {
-                storeList.push(parseFloat(item.courseID));
+                storeList.push({
+                    courseID: parseFloat(item.courseID),
+                    storeID: parseFloat(item.id)
+                });
             }
         });
     } else {
         if (state === 0) {
             storeList = req.session.storeList || [];
+            storeList = storeList.map(item => {
+                return {courseID: item, storeID: 0};
+            });
         }
     }
-    
+
     let data = [];
-    storeList.forEach(courseID => {
+    storeList.forEach(({courseID, storeID} = {}) => {
         let item = req.courseDATA.find(item => parseFloat(item.id) === courseID);
+        item.storeID = storeID;
         data.push(item);
     });
     res.send({

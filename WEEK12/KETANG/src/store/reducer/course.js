@@ -46,6 +46,7 @@ export default function course(state = INIT_STATE, action) {
                 state.shopCart.unpay = state.shopCart.unpay.map(item => {
                     return {...item, check: true};
                 });
+                state.selectAll = true;
             }
             break;
         case TYPES.COURSE_PAY:
