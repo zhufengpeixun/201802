@@ -14,6 +14,7 @@ class Unpay extends React.Component {
         if (unpay.length === 0) {
             return <Alert description='当前还没有购买任何课程，快去购买吧' type='warning' style={{marginTop: '.2rem'}}/>
         }
+
         return <ul className='courseItem'>
             {unpay.map((item, index) => {
                 return <CourseItem key={index} item={item}/>;

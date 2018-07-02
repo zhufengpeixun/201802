@@ -12,7 +12,8 @@ let INIT_STATE = {
     shopCart: {
         unpay: [],
         pay: []
-    }
+    },
+    selectAll: true //=>存储的是全选还是全不选
 };
 export default function course(state = INIT_STATE, action) {
     state = JSON.parse(JSON.stringify(state));
@@ -41,11 +42,36 @@ export default function course(state = INIT_STATE, action) {
         case TYPES.COURSE_UNPAY:
             if (parseFloat(action.result.code) === 0) {
                 state.shopCart.unpay = action.result.data;
+                //=>给每一条数据加一个选中的属性
+                state.shopCart.unpay = state.shopCart.unpay.map(item => {
+                    return {...item, check: true};
+                });
             }
             break;
         case TYPES.COURSE_PAY:
             if (parseFloat(action.result.code) === 0) {
                 state.shopCart.pay = action.result.data;
+            }
+            break;
+
+        //=>操作全选等
+        case TYPES.COURSE_HANDLE:
+            let mode = action.mode;
+            if (mode === 'all') {
+                state.selectAll = !state.selectAll;
+                state.shopCart.unpay = state.shopCart.unpay.map(item => {
+                    return {...item, check: state.selectAll};
+                });
+            } else {
+                let item = state.shopCart.unpay.find(item => {
+                    return parseFloat(item.id) === mode;
+                });
+                item.check = !item.check;
+                //=>注意:验证是否所有的课程都是选中的，如果是全选也要选中
+                let f = state.shopCart.unpay.find(item => {
+                    return item.check === false;
+                });
+                f ? state.selectAll = false : state.selectAll = true;
             }
             break;
     }

@@ -44,6 +44,15 @@ let course = {
                 result
             });
         }
+    },
+
+    //=>未支付列表选中态的操作
+    handleSelect(mode) {
+        //=>MODE：all->全选或者全不选  id(具体数字)->把某一个课程控制选择（注意：操作某一个的时候都要验证是否存在没选中的，如果没有，我们同时也得修改全选状态）
+        return {
+            type: TYPES.COURSE_HANDLE,
+            mode
+        }
     }
 };
 export default course;
