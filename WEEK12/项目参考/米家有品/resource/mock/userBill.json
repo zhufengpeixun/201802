@@ -1,0 +1,162 @@
+[
+  {
+    "userId": "U10001",
+    "bill": [
+      {
+        "pid": "70816215765",
+        "time": "2018/02/05  15:39",
+        "state": "pendingReceived",
+        "commodity": [
+          {
+            "gid": "100744",
+            "title": "双面穿羽绒服男款",
+            "describe": "90%鹅绒，防水防风",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_ed6b8b259ff03aa9d89f21fa5259230f.jpeg",
+            "link": "/detail?gid=100744",
+            "price": 299,
+            "mark": true,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "广东小厨科技有限公司",
+            "number": 5
+          }
+        ]
+      },
+      {
+        "pid": "47923240589",
+        "time": "2018/02/06  14:33",
+        "state": "pendingReceived",
+        "commodity": [
+          {
+            "gid": "100744",
+            "title": "双面穿羽绒服男款",
+            "describe": "90%鹅绒，防水防风",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_ed6b8b259ff03aa9d89f21fa5259230f.jpeg",
+            "link": "/detail?gid=100744",
+            "price": 299,
+            "mark": true,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "广东小厨科技有限公司",
+            "number": 1
+          },
+          {
+            "gid": "700",
+            "title": "小米6",
+            "describe": "年货节手机专场",
+            "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+            "link": "/detail?gid=700",
+            "price": 2299,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "小米/米家自营",
+            "number": 1
+          },
+          {
+            "gid": "100656",
+            "title": "运动休闲羽绒服",
+            "describe": "保温蓄热，防风防寒，无缝工艺",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_ee72efd8e6566d332e45a8893cfc7dff.jpeg",
+            "link": "/detail?gid=100656",
+            "price": 149,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "小吉科技",
+            "number": 1
+          },
+          {
+            "gid": "100954",
+            "title": "米兔智能故事机mini",
+            "describe": "精选故事，安全材质  纯正音质，安心哄睡",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_bc3e60bf2994186a84f37f6f368f2fea.jpeg",
+            "link": "/detail?gid=100954",
+            "price": 149,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "有品配送",
+            "number": 1
+          },
+          {
+            "gid": "668",
+            "title": "故事机儿童套装",
+            "describe": "海量好故事，微信远程互动",
+            "url": "https://static.home.mi.com/app/shop/img?id=shop_fc5f5d0a64323978f77119fc556fefa7.jpeg",
+            "link": "/detail?gid=668",
+            "price": 249,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "广东小厨科技有限公司",
+            "number": 2
+          },
+          {
+            "gid": "100305",
+            "title": "菌菇礼盒",
+            "describe": "有机种植、臻品菌菇、送礼佳品",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_02d17e00d10eaeaed32442c6ca5cb316.jpeg",
+            "link": "/detail?gid=100305",
+            "price": 191,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "广东小厨科技有限公司",
+            "number": 1
+          },
+          {
+            "gid": "100956",
+            "title": "米兔 Hape 70粒益智积木",
+            "describe": "欧洲榉木，环保水性漆，启智专属，无限拼搭",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b20c04fcc49192ae4e1497370d3e79e7.jpeg",
+            "link": "/detail?gid=100956",
+            "price": 99,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "广东小厨科技有限公司",
+            "number": 4
+          }
+        ]
+      },
+      {
+        "pid": "54134433564",
+        "time": "2018/02/06  23:49",
+        "state": "pendingReceived",
+        "commodity": [
+          {
+            "gid": "100954",
+            "title": "米兔智能故事机mini",
+            "describe": "精选故事，安全材质  纯正音质，安心哄睡",
+            "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_bc3e60bf2994186a84f37f6f368f2fea.jpeg",
+            "link": "/detail?gid=100954",
+            "price": 149,
+            "mark": false,
+            "isSelected": true,
+            "delState": false,
+            "minfreight": 0,
+            "from": "有品配送",
+            "number": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "U10003",
+    "bill": []
+  },
+  {
+    "userId": "U10004",
+    "bill": []
+  }
+]

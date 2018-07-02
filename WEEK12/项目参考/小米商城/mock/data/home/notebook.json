@@ -1,0 +1,214 @@
+{
+  "hot": [
+    {
+      "id": 301,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/cf11ac38e1c8b1caeefa672ef908d94c!696x436.jpg",
+      "title": "13.3\"笔记本Air i7 8GB 独显",
+      "desc": "轻薄全金属机身，指纹解锁，画面流畅",
+      "price": 5999,
+      "curPrice": 5599,
+      "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/30679380b3d0f457bb0d3a4b345163cc.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 302,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/e9dbcaac03907010f67723914f3da1a4!344x280.jpg",
+      "title": "12.5\"笔记本Air 128GB",
+      "desc": "轻薄长续航，超窄边框",
+      "price": 3599,
+      "curPrice": 3599,
+      "discount": "",
+      "shape": false
+    },
+    {
+      "id": 303,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/d4994c82ce928650bec87eeb7d0aceb9!344x280.jpg",
+      "title": "13.3\"笔记本i5 独显",
+      "desc": "指纹解锁，全金属机身",
+      "price": 5199,
+      "curPrice": 4999,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 304,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/24d2d7476a2ebb32e0e0013e0baaeb2a!344x280.jpg",
+      "title": "15.6\"笔记本i5 8GB",
+      "desc": "更强悍的专业笔记本",
+      "price": 5599,
+      "curPrice": 5599,
+      "discount": "",
+      "shape": false
+    },
+    {
+      "id": 305,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/ea192562faa8fcd52acb08eeb8fc4122!344x280.jpg",
+      "title": "15.6\"笔记本i7 8GB",
+      "desc": "全新高性能独显",
+      "price": 6399,
+      "curPrice": 6199,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": false
+    }
+  ],
+  "new": [
+    {
+      "id": 306,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/925ecede912aa28ab559b87312befa21!696x436.jpg",
+      "title": "13.3\"笔记本四核增强i5 8G ",
+      "desc": "四核增强版，带独立显卡的轻薄笔记本",
+      "price": 5399,
+      "curPrice": 5399,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5822c27ef342a5fa5b5f761ed61f5bad.png?w=167&h=167",
+      "shape": true
+    }
+  ],
+  "thin": [
+    {
+      "id": 302,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/45edfdbeb375317f6d7cc9ff7fabf68f!696x436.jpg",
+      "title": "12.5\"笔记本Air 128GB 银色",
+      "desc": "轻薄全金属机身，超长续航，超窄边框",
+      "price": 3599,
+      "curPrice": 3599,
+      "discount": "",
+      "shape": true
+    },
+    {
+      "id": 307,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/99b8fb1788e5905e37b908fb5d513988!344x280.jpg",
+      "title": "12.5\"笔记本Air 128GB",
+      "desc": "长续航全金属，超窄边框",
+      "price": 3599,
+      "curPrice": 3599,
+      "discount": "",
+      "shape": false
+    },
+    {
+      "id": 308,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/47fe877fda6e326933b310e706c0fe48!344x280.jpg",
+      "title": "12.5\"笔记本Air 256GB",
+      "desc": "轻薄长续航，金属机身",
+      "price": 3999,
+      "curPrice": 3999,
+      "discount": "",
+      "shape": false
+    }
+  ],
+  "speed": [
+    {
+      "id": 306,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/925ecede912aa28ab559b87312befa21!696x436.jpg",
+      "title": "13.3\"笔记本四核增强i5 8G ",
+      "desc": "四核增强版，带独立显卡的轻薄笔记本",
+      "price": 5399,
+      "curPrice": 5399,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5822c27ef342a5fa5b5f761ed61f5bad.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 309,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/8999c9c3ad1e9cf1754582572bc5d145!344x280.jpg",
+      "title": "13.3\"笔记本i7 独显",
+      "desc": "轻薄全金属，超长续航",
+      "price": 5999,
+      "curPrice": 5599,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/30679380b3d0f457bb0d3a4b345163cc.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 303,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/1a174587127b467c93e5dfb94391c062!344x280.jpg",
+      "title": "13.3\"笔记本i5 独显",
+      "desc": "指纹解锁，全金属机身",
+      "price": 5199,
+      "curPrice": 4999,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 310,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/38b4953f2b9e2ed848cadffb96e487f6!344x280.jpg",
+      "title": "13.3\"笔记本 8GB",
+      "desc": "轻薄全金属，指纹解锁",
+      "price": 4999,
+      "curPrice": 4799,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 311,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/3cf33ac9910db724449cda4067ece958!344x280.jpg",
+      "title": "13.3\"笔记本 4GB",
+      "desc": "轻薄便携，指纹解锁",
+      "price": 4599,
+      "curPrice": 4299,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/451a179dcb2ae08e7c63e5bd2412c2f2.png?w=167&h=167",
+      "shape": false
+    }
+  ],
+  "super": [
+    {
+      "id": 312,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/36a5e6733bd7ed6613a4d1ac09884069!696x436.jpg",
+      "title": "15.6\"笔记本Pro i7 8GB",
+      "desc": "更强悍的专业笔记本，超窄边大视野",
+      "price": 6399,
+      "curPrice": 6199,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 304,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/24d2d7476a2ebb32e0e0013e0baaeb2a!344x280.jpg",
+      "title": "15.6\"笔记本i5 8GB",
+      "desc": "更强悍的专业笔记本",
+      "price": 5599,
+      "curPrice": 5599,
+      "discount": "",
+      "shape": false
+    },
+    {
+      "id": 313,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/6c4bb3f64a8dc03781acb1d99171f0ca!344x280.jpg",
+      "title": "15.6\"笔记本i7 16GB",
+      "desc": "全新第八代处理器",
+      "price": 6999,
+      "curPrice": 6999,
+      "discount": "",
+      "shape": false
+    }
+  ],
+  "accessory": [
+    {
+      "id": 314,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/ef7e3b52eed45567e887686990011675!696x436.jpg",
+      "title": "小米便携鼠标",
+      "desc": "轻薄便携，含电池仅重77.5g",
+      "price": 99,
+      "curPrice": 94,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ac72570e3c975295f550d4093313ed3c.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 315,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/54808d312963f1ca8299f3a885334114!344x280.jpg",
+      "title": "小米无线鼠标",
+      "desc": "把舒服握在手里",
+      "price": 69,
+      "curPrice": 64,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ac72570e3c975295f550d4093313ed3c.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 316,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/0a490d9c885fbd829a60520e4c6c09e3!344x280.jpg",
+      "title": "VGA网口多功能转接器",
+      "desc": "小巧便携，节省桌面空间",
+      "price": 199,
+      "curPrice": 179,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e7d55ed9337627b727b6f3919deabd60.png?w=167&h=167",
+      "shape": false
+    }
+  ]
+}

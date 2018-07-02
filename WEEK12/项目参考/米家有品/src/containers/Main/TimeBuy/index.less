@@ -1,0 +1,113 @@
+.cwj-time-buy {
+  background: #ccc;
+  position: relative;
+  .timer-group {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 18%;
+    margin-top: 2px;
+    align-items: center;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .timer-group-item {
+      flex: 1;
+      margin-right: 2px;
+      padding-top: .18rem;
+      background: #fff;
+      .timer-container {
+        width: 1.5rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .marl {
+          margin-left: 14px;
+        }
+        .timer-container-title {
+
+          p {
+            font-size: .13rem;
+            color: rgb(51, 51, 51);
+            line-height: 15.6px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            max-height: 15.6px;
+          }
+
+        }
+        .timer-container-remaining {
+          .remaining-box {
+            border-style: solid;
+            border-width: 1px;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            width: .72rem;
+            height: 3px;
+            border-radius: 1.5px;
+            border-color: rgb(192, 67, 67);
+            margin-right: 6px;
+            display: inline-block;
+            top: -4px;
+            .div {
+
+              left: 0px;
+              position: relative;
+              height: 100%;
+              overflow: hidden;
+              background-color: transparent;
+              width: 93%;
+
+              .remaining {
+                position: relative;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                border-radius: 1.5px;
+                background-color: rgb(192, 67, 67);
+                width: 72px;
+              }
+            }
+          }
+          span {
+
+          }
+        }
+        .timer-container-price {
+          .container-price-num {
+            display: inline-block;
+            font-size: .16rem;
+            color: rgb(192, 67, 67);
+            line-height: .192rem;
+            span {
+              font-size: .11rem;
+              color: rgb(204, 204, 204);
+              line-height: .132rem;
+              text-decoration: line-through;
+            }
+          }
+
+        }
+        .timer-container-img {
+          width: 1rem;
+          height: 1rem;
+          margin: auto;
+          img {
+            width: 100%;
+            height: 100%;
+
+          }
+
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,54 @@
+.cwj-only-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  .only-img {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    img {
+      width: 100%;
+      &:nth-of-type(2) {
+        position: absolute;
+        left: 0;
+        top: -0.56rem;
+
+      }
+    }
+  }
+  .t-row-text {
+    position: absolute;
+    padding-left: .15rem;
+    padding-top: .1875rem;
+    .row-title {
+      color: rgb(51, 51, 51);
+      background-color: transparent;
+      font-size: .15rem;
+      line-height: .18rem;
+      overflow: hidden;
+      max-height: .18rem;
+
+    }
+    .row-price {
+      display: block;
+    }
+    .row-alt {
+      width: 58%;
+      display: inline-block;
+      color: rgb(153, 153, 153);
+      background-color: transparent;
+      font-size: .11rem;
+      line-height: .132rem;
+      margin-top: 3.4px;
+    }
+    .row-price {
+      color: rgb(192, 67, 67);
+      font-size: .16rem;
+      line-height: .192rem;
+    }
+  }
+}
+
+

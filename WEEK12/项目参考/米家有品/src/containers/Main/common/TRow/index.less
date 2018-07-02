@@ -1,0 +1,46 @@
+.t-row-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  .row-tool {
+    flex: 1;
+    position: relative;
+    margin-right: 2px;
+    background-color: rgb(244, 244, 244);
+    margin-bottom: 2px;
+    img {
+      width: 100%;
+    }
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+    .t-row-bg {
+      height: 100%;
+      width: 100%;
+      background-position-y: .06rem;
+      background-size: 100%;
+      background-color: rgb(237, 248, 236);
+      background-image: url(https://shop.io.mi-img.com/app/shop/img?id=shop_6c8b592365cb0137928cdc7bef23f979.png&w=537&h=426,https://shop.io.mi-img.com/app/shop/img?id=shop_8a0b96cba6d1a2e01950776552420d14.png&w=540&h=420&t=webp);
+    }
+    .right-row-bg {
+      background-color: rgb(237, 248, 236);
+      background-image: url(https://shop.io.mi-img.com/app/shop/img?id=shop_6c8b592365cb0137928cdc7bef23f979.png&w=537&h=426,https://shop.io.mi-img.com/app/shop/img?id=shop_8a0b96cba6d1a2e01950776552420d14.png&w=540&h=420&t=webp);
+
+    }
+    .t-row-text {
+      position: absolute;
+      top: .15rem;
+      left: .12rem;
+      .row-title {
+        font-size: .13rem;
+        color: rgb(51, 51, 51);
+      }
+      .row-price {
+        color: rgb(192, 67, 67);
+        font-size: .14rem;
+      }
+    }
+  }
+
+}

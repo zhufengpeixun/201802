@@ -1,0 +1,150 @@
+// 个人资料修改
+.personal-data {
+  position: absolute;
+  top: 45/100rem;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+
+  .personal-data-list {
+    padding: 0 20/100rem;
+    dl {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10/100rem;
+    }
+    dd {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      border-bottom: 1/100rem solid #e5e5e5;
+      height: 50/100rem;
+      line-height: 50/100rem;
+
+      span {
+        color: #3a3a3a;
+        font-size: 14/100rem;
+      }
+
+      div {
+        span {
+          color: #939393;
+          font-size: 12/100rem;
+        }
+        a {
+          padding-left: 5/100rem;
+          color: #adadad;
+          font: 14/100rem "sans-serif";
+        }
+      }
+    }
+    dt {
+      color: #9b9b9b;
+      font-size: 12/100rem;
+      border-bottom: 1/100rem solid #f1f1f1;
+      height: 40/100rem;
+      line-height: 40/100rem;
+    }
+  }
+
+  .personal-data-exit {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 50/100rem;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 35/100rem;
+      line-height: 35/100rem;
+      color: #887e75;
+      font-size: 14/100rem;
+      border: 1/100rem solid #908c89;
+      border-radius: 4/100rem;
+      box-sizing: border-box;
+    }
+
+  }
+
+}
+
+// 修改用户名信息
+.personal-data-userdialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, .5);
+  overflow: hidden;
+
+  .personal-data-username-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 10/100rem;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    .personal-data-username {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 5/100rem;
+      text-align: center;
+    }
+    p {
+      font-size: 15/100rem;
+      color: #2b2b2b;
+      padding: 20/100rem 0;
+    }
+    .personal-data-input {
+      padding: 0 28/100rem 20/100rem;
+      input {
+        display: block;
+        border: 1/100rem solid #d5d5d5;
+        border-radius: 5/100rem;
+        width: 100%;
+        height: 40/100rem;
+        line-height: 40/100rem;
+        text-indent: 10/100rem;
+        color: #5f5f5f;
+        outline: none;
+      }
+    }
+
+    .personal-data-btn {
+      text-align: center;
+      border-top: 1/100rem solid #e3e5e2;
+
+      a {
+        display: inline-block;
+        width: 50%;
+        padding: 10/100rem 0;
+        font-size: 16/100rem;
+      }
+
+      a:nth-of-type(1) {
+        color: #040603;
+      }
+
+      a:nth-of-type(2) {
+        border-left: 1/100rem solid #eff1ee;
+        box-sizing: border-box;
+        color: #95806d;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "gid": "101004",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_2174cf9f9dbae0ecd90ed40029b408ce.jpeg&w=1080&h=450&t=webp",
+    "link": "/detail?gid=n1fd7d039b040c701"
+  },
+  {
+    "gid": "101004",
+    "title": "多功能电火锅",
+    "describe": "360°环形加热，4L大容量",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_e5519de8f392ad9ea8bc45883b59c8eb.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 239,
+    "mark": false
+  },
+  {
+    "gid": "662",
+    "title": "心想胶囊咖啡机",
+    "describe": "快速萃取，9档浓度预设",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_4f74019190c08258fabae90bcc85a85e.jpeg",
+    "link": "/detail?gid=662",
+    "price": 499,
+    "mark": true
+  },
+  {
+    "gid": "100748",
+    "title": "米家电水壶",
+    "describe": "快速沸腾，304不锈钢内胆",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b45caf4f1156751e108b0047299e1a5d.jpeg",
+    "link": "/detail?gid=100748",
+    "price": 99,
+    "mark": false
+  },
+  {
+    "gid": "203",
+    "title": "小米6",
+    "describe": "米家恒温电水壶",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_0146653164ea7f061b9fb78b91a2f335.jpeg",
+    "link": "/detail?gid=203",
+    "price": 199,
+    "mark": false
+  },
+  {
+    "gid": "101004",
+    "title": "多功能电火锅",
+    "describe": "360°环形加热，4L大容量",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_e5519de8f392ad9ea8bc45883b59c8eb.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 239,
+    "mark": false
+  },
+  {
+    "gid": "662",
+    "title": "心想胶囊咖啡机",
+    "describe": "快速萃取，9档浓度预设",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_4f74019190c08258fabae90bcc85a85e.jpeg",
+    "link": "/detail?gid=662",
+    "price": 499,
+    "mark": true
+  },
+  {
+    "gid": "100748",
+    "title": "米家电水壶",
+    "describe": "快速沸腾，304不锈钢内胆",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b45caf4f1156751e108b0047299e1a5d.jpeg",
+    "link": "/detail?gid=100748",
+    "price": 99,
+    "mark": false
+  },
+  {
+    "gid": "203",
+    "title": "小米6",
+    "describe": "米家恒温电水壶",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_0146653164ea7f061b9fb78b91a2f335.jpeg",
+    "link": "/detail?gid=203",
+    "price": 199,
+    "mark": false
+  },
+  {
+    "gid": "101004",
+    "title": "多功能电火锅",
+    "describe": "360°环形加热，4L大容量",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_e5519de8f392ad9ea8bc45883b59c8eb.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 239,
+    "mark": false
+  },
+  {
+    "gid": "662",
+    "title": "心想胶囊咖啡机",
+    "describe": "快速萃取，9档浓度预设",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_4f74019190c08258fabae90bcc85a85e.jpeg",
+    "link": "/detail?gid=662",
+    "price": 499,
+    "mark": true
+  },
+  {
+    "gid": "100748",
+    "title": "米家电水壶",
+    "describe": "快速沸腾，304不锈钢内胆",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b45caf4f1156751e108b0047299e1a5d.jpeg",
+    "link": "/detail?gid=100748",
+    "price": 99,
+    "mark": false
+  },
+  {
+    "gid": "203",
+    "title": "小米6",
+    "describe": "米家恒温电水壶",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_0146653164ea7f061b9fb78b91a2f335.jpeg",
+    "link": "/detail?gid=203",
+    "price": 199,
+    "mark": false
+  }
+]

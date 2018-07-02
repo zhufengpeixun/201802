@@ -1,0 +1,82 @@
+.wj-product-list-big {
+  font-size: 12/100rem;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      border: 1/100rem solid rgb(239, 239, 239);
+      width: 49%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+  }
+
+  .wj-product-list-top {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-sizing: border-box;
+    div {
+      width: 116/100rem;
+      margin: 0 auto;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      font-size: 12/100rem;
+      color: rgb(132, 95, 63);
+      padding: 0 8/100rem 8/100rem;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .wj-product-list-bot {
+    background-color: rgb(247, 247, 247);
+    padding: 0 8/100rem;
+    box-sizing: border-box;
+    p {
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      box-sizing: border-box;
+      &:nth-of-type(1) {
+        padding-top: 8/100rem;
+        color: rgb(51, 51, 51);
+        font-size: 12/100rem;
+      }
+
+      &:nth-of-type(2) {
+        font-size: 10/100rem;
+        line-height: 12/100rem;
+        color: rgb(182, 9, 9);
+        padding: 4/100rem 0;
+        span {
+          font-size: 13/100rem;
+          line-height: 15.6/100rem;
+          padding-right: 4/100rem;
+        }
+        em {
+          font-size: 10/100rem;
+          color: rgb(255, 255, 255);
+          background-color: rgb(217, 58, 57);
+          line-height: 12/100rem;
+          padding: 0 4/100rem;
+        }
+      }
+    }
+  }
+}

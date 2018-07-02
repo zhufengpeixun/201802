@@ -1,0 +1,87 @@
+[
+  {
+    "userId": "U10001",
+    "cart": [
+      {
+        "gid": "700",
+        "title": "小米6",
+        "describe": "年货节手机专场",
+        "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+        "link": "/detail?gid=700",
+        "price": 2299,
+        "mark": false,
+        "isSelected": true,
+        "delState": false,
+        "minfreight": 0,
+        "from": "小米/米家自营",
+        "number": 1
+      },
+      {
+        "gid": "254",
+        "title": "米兔智能故事机",
+        "describe": "海量好故事，微信远程互动",
+        "url": "https://static.home.mi.com/app/shop/img?id=shop_c71c34944c21b3ca3d5183e0c7390051.png",
+        "link": "/detail?gid=254",
+        "price": 199,
+        "mark": true,
+        "isSelected": true,
+        "delState": false,
+        "minfreight": 0,
+        "from": "有品配送",
+        "number": 1
+      },
+      {
+        "gid": "100305",
+        "title": "菌菇礼盒",
+        "describe": "有机种植、臻品菌菇、送礼佳品",
+        "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_02d17e00d10eaeaed32442c6ca5cb316.jpeg",
+        "link": "/detail?gid=100305",
+        "price": 191,
+        "mark": false,
+        "isSelected": true,
+        "delState": false,
+        "minfreight": 0,
+        "from": "广东小厨科技有限公司",
+        "number": 1
+      }
+    ]
+  },
+  {
+    "userId": "U10003",
+    "cart": [
+      {
+        "gid": "100663",
+        "title": "轻便可收纳羽绒马甲",
+        "describe": "90%白鸭绒，可变U型枕",
+        "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_f62f481467b83240c9402b0a70361685.jpeg",
+        "link": "/detail?gid=100663",
+        "price": 179,
+        "mark": false,
+        "isSelected": true,
+        "delState": false,
+        "minfreight": 0,
+        "from": "广东小厨科技有限公司",
+        "number": 1
+      }
+    ]
+  },
+  {
+    "userId": "U10004",
+    "cart": [
+      {
+        "gid": "100748",
+        "title": "红米5",
+        "describe": "千元全面屏，4+32G版新品首发",
+        "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_3fa3ed5be0efa75d475ccc898a213deb.jpeg",
+        "link": "/detail?gid=100748",
+        "price": 799,
+        "mark": false,
+        "isSelected": true,
+        "delState": false,
+        "minfreight": 0,
+        "from": "小米/米家自营",
+        "number": 10
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+a.product-item {
+  display: flex;
+  border-bottom: 1px solid #e4e4e4;
+  .img-box {
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    //float: left;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 .32rem .08rem;
+    width: 4.2rem;
+    box-sizing: border-box;
+    text-align: left;
+    flex: 1;
+    .product-title {
+      color: rgba(0, 0, 0, .87);
+      font-size: .24rem;
+    }
+    .product-desc {
+      padding: .1rem 0;
+      font-size: .20rem;
+    }
+    .product-price {
+      color: #ff6000;
+      font-size: .26rem;
+    }
+  }
+}

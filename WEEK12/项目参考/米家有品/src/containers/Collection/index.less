@@ -1,0 +1,115 @@
+.cwj-collection-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  top: 45px;
+  overflow: hidden;
+  background: #fff;
+  .collection-box {
+    position: absolute;
+    display: flex;
+    flex: 1 1 0%;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*水平居中*/
+    top: 25%;
+    width: 100%;
+    flex-direction: column;
+    .collection-box-view {
+      flex-direction: column;
+      align-items: center; /*垂直居中*/
+      width: 100%;
+      text-align: center;
+      img {
+        width: .83rem;
+        height: .83rem;
+
+      }
+      span {
+        display: block;
+        font-size: .14rem;
+        margin: 20px 0px 17px;
+        color: rgb(153, 153, 153);
+        line-height: 16.8px;
+
+      }
+
+    }
+    .collection-box-look {
+      cursor: pointer;
+      background-color: transparent;
+      margin: auto;
+      a {
+        align-items: center;
+        text-align: center;
+        display: block;
+        color: #000;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        width: 1rem;
+        height: .45rem;
+        margin: auto;
+        border-style: solid;
+        border-color: rgb(178, 178, 178);
+        border-width: 1px;
+        border-radius: .22rem;
+        padding: 2px;
+        font-size: .14rem;
+        line-height: .4rem;
+
+      }
+    }
+  }
+  //  有数据参数
+  .collection-has-data {
+    font-size: 12px;
+    .goods-container {
+      .goods-wrrap {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        //border-top: 1px solid #ccc;
+        align-items: center;
+        color: #000000;
+        justify-content: space-between;
+        img {
+          margin-left: .1rem;
+          height: .92rem;
+          &:nth-of-type(2) {
+
+            height: .16rem;
+            float: right;
+            margin-right: .2rem;
+          }
+        }
+        .goods-text-box {
+          flex: 1;
+          margin-left: .2rem;
+          span {
+            font-size: .16rem;
+            flex: 1;
+            display: block;
+            line-height: .24rem;
+            &:nth-of-type(2) {
+              color: rgb(182, 9, 9);
+            }
+          }
+        }
+        &:nth-last-child(1) {
+          border-bottom: 1px solid #ccc;
+        }
+      }
+
+    }
+  }
+}
+
+//.cwj-collection-pos{
+//  position: relative;
+//  top: 45px;
+//
+//  .collection-has-data{
+//    position: static;
+//  }
+//}

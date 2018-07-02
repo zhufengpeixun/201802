@@ -1,0 +1,122 @@
+.container {
+  font-size: .14rem;
+
+  .g-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    box-sizing: border-box;
+    height: .45rem;
+    width: 100%;
+    background-color: rgb(239, 239, 240);
+    align-items: center;
+    padding-bottom: .01rem;
+    padding-left: .12rem;
+    padding-right: .12rem;
+    .search {
+      display: flex;
+      align-items: center;
+      height: .27rem;
+      line-height: .27rem;
+      width: 100%;
+      background: #FFF;
+      color: rgb(219, 218, 218);
+      font-size: .11rem;
+      border-radius: .03rem;
+      cursor: pointer;
+      img {
+        width: .17rem;
+        height: .17rem;
+        margin-left: .08rem;
+      }
+      span {
+        flex: 1;
+        margin-left: .02rem;
+      }
+    }
+  }
+  .g-body {
+    background: #FFF;
+
+    .nav {
+      position: fixed;
+      left: 0;
+      top: .45rem;
+      bottom: 1rem;
+      width: .75rem;
+      height: 100%;
+      padding-top: .13rem;
+      border-style: solid;
+      border-width: 0 .01rem 0 0;
+      border-color: black rgba(0, 0, 0, 0.1) black black;
+      text-align: center;
+      background: #FFF;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      li {
+        height: .24rem;
+        line-height: .24rem;
+        margin-bottom: .2rem;
+        white-space: nowrap;
+        font-size: .12rem;
+        &.current {
+          font-size: .13rem;
+          border-style: solid;
+          border-width: 0 0 0 .03rem;
+          border-color: black black black rgb(132, 95, 63);
+          color: rgb(132, 95, 63);
+        }
+      }
+    }
+    .content {
+      position: fixed;
+      margin-left: .76rem;
+      margin-bottom: .5rem;
+      top: .45rem;
+      bottom: 0;
+      padding-top: .13rem;
+      padding-right: .15rem;
+      padding-left: .15rem;
+      display: flex;
+      flex-direction: column;
+      background: #FFF;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .banner {
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .items {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 26%;
+          text-align: center;
+          img {
+            width: 100%;
+          }
+          span {
+            font-size: .11rem;
+            color: rgb(102, 102, 102);
+          }
+          &:nth-of-type(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

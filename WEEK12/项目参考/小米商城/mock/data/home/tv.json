@@ -1,0 +1,381 @@
+{
+  "hot": [
+    {
+      "id": 201,
+      "title": "小米电视4A 49英寸 标准版",
+      "desc": "全高清，HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/70f12de3-b028-1c21-adf1-5612029d563e!720x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 2399,
+      "curPrice": 2199,
+      "shape": true
+    },
+    {
+      "id": 202,
+      "title": "55'' 电视4C 体育版",
+      "desc": "64位四核处理器，超窄边",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/db49b8f2332efa3b4277b85fab720c68.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 203,
+      "title": "小米电视4A 32英寸",
+      "desc": "64位处理器，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/d342ccbf-e3d6-2dcc-47a3-18656f28a0cc!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 1199,
+      "curPrice": 999,
+      "shape": false
+    },
+    {
+      "id": 243,
+      "title": "小米电视4C 43英寸",
+      "desc": "超窄边，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/3961de40-63f1-16cc-6ced-2c034f1f5e43!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2099,
+      "curPrice": 1799,
+      "shape": false
+    },
+    {
+      "id": 205,
+      "title": "小米电视4A 55英寸",
+      "desc": "4K HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/ff90f0af-29a3-dead-9fc1-4455ff3eb17b!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2999,
+      "curPrice": 2699,
+      "shape": false
+    }
+  ],
+  "smart": [
+    {
+      "id": 206,
+      "title": "32'' 小米电视4A 体育版",
+      "desc": "高清液晶屏，第6代画质引擎",
+      "imgUrl": "//i8.mifile.cn/v1/a1/a0d2d712-177a-911b-6d2c-eb546b9a0c56!720x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 1299,
+      "curPrice": 1099,
+      "shape": true
+    },
+    {
+      "id": 203,
+      "title": "小米电视4A 32英寸",
+      "desc": "64位处理器，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/d342ccbf-e3d6-2dcc-47a3-18656f28a0cc!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 1199,
+      "curPrice": 999,
+      "shape": false
+    },
+    {
+      "id": 244,
+      "title": "小米电视4A 43英寸",
+      "desc": "全高清 HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/3961de40-63f1-16cc-6ced-2c034f1f5e43!360x360.webp",
+      "discount": "",
+      "price": 1999,
+      "curPrice": 1999,
+      "shape": false
+    },
+    {
+      "id": 201,
+      "title": "小米电视4A 49英寸",
+      "desc": "全高清，HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/c46f28b5-636e-ffcc-c0cb-2347bd2c4890!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 2399,
+      "curPrice": 2199,
+      "shape": false
+    },
+    {
+      "id": 205,
+      "title": "小米电视4A 55英寸",
+      "desc": "4K HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/ff90f0af-29a3-dead-9fc1-4455ff3eb17b!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2999,
+      "curPrice": 2699,
+      "shape": false
+    },
+    {
+      "id": 207,
+      "title": "小米电视4A 65英寸",
+      "desc": "4K HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/a9ab24e2-55e0-4a3e-d0cd-cb19591a74a3!360x360.webp",
+      "discount": "",
+      "price": 4999,
+      "curPrice": 4999,
+      "shape": false
+    },
+    {
+      "id": 208,
+      "title": "小米电视4A 50英寸",
+      "desc": "4K HDR，人工智能语音系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/c2428d05-c3d0-31c6-830d-feaf22326813!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 2399,
+      "curPrice": 2399,
+      "shape": false
+    }
+  ],
+  "narrow": [
+    {
+      "id": 202,
+      "title": "55'' 电视4C 体育版",
+      "desc": "64位四核处理器，超窄边",
+      "imgUrl": "//i8.mifile.cn/v1/a1/75d8d8c8-e5cb-c6ec-a83e-9c77819c4eac!720x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": true
+    },
+    {
+      "id": 255,
+      "title": "小米电视4C 55英寸",
+      "desc": "4K HDR 人工智能系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/57a93607-fee1-fabc-53b1-18129d39851a!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 243,
+      "title": "小米电视4C 43英寸",
+      "desc": "超窄边，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/3961de40-63f1-16cc-6ced-2c034f1f5e43!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2099,
+      "curPrice": 1799,
+      "shape": false
+    }
+  ],
+  "symbol": [
+    {
+      "id": 211,
+      "title": "小米电视4 49英寸",
+      "desc": "极超薄高端旗舰电视",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/eff4f7a747d15ce9af8223248eb8d838.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 3599,
+      "curPrice": 3399,
+      "shape": false
+    },
+    {
+      "id": 212,
+      "title": "小米电视4 55英寸",
+      "desc": "无边框式沉浸设计",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/50cf0d18052e7771bf24711ee8ce58dd.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 4499,
+      "curPrice": 4499,
+      "shape": false
+    },
+    {
+      "id": 213,
+      "title": "小米电视4 65英寸",
+      "desc": "杜比全景声影院电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/fc42f947-2c35-6a73-3805-63fd4c18e9cc!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/9c110ac2-5c37-86a4-cbfa-90884996e8a2.webp?w=180&h=48",
+      "price": 9999,
+      "curPrice": 8999,
+      "shape": false
+    },
+    {
+      "id": 214,
+      "title": "65''电视3s 曲面",
+      "desc": "原装三星4K屏，超薄金属机身",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/8284e56d3613e73783fe472a2efb22ee.jpg?thumb=1&w=360&h=360",
+      "discount": "",
+      "price": 9299,
+      "curPrice": 9299,
+      "shape": false
+    }
+  ],
+  "newProduct": [
+    {
+      "id": 206,
+      "title": "32'' 小米电视4A 体育版",
+      "desc": "高清液晶屏，第6代画质引擎",
+      "imgUrl": "//i8.mifile.cn/v1/a1/a0d2d712-177a-911b-6d2c-eb546b9a0c56!720x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 1299,
+      "curPrice": 1099,
+      "shape": true
+    },
+    {
+      "id": 202,
+      "title": "55'' 电视4C 体育版",
+      "desc": "64位四核处理器，超窄边",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/db49b8f2332efa3b4277b85fab720c68.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 208,
+      "title": "小米电视4A 50英寸",
+      "desc": "4K HDR，人工智能语音系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/c2428d05-c3d0-31c6-830d-feaf22326813!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 2399,
+      "curPrice": 2399,
+      "shape": false
+    }
+  ],
+  "bestWatch1": [
+    {
+      "id": 203,
+      "title": "小米电视4A 32英寸",
+      "desc": "64位处理器，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/d342ccbf-e3d6-2dcc-47a3-18656f28a0cc!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 1199,
+      "curPrice": 999,
+      "shape": false
+    },
+    {
+      "id": 206,
+      "title": "32'' 小米电视4A 体育版",
+      "desc": "高清液晶屏，第6代画质引擎",
+      "imgUrl": "//i8.mifile.cn/v1/a1/8bbb5877-e568-1a21-682d-59962f1da6f0!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 1299,
+      "curPrice": 1099,
+      "shape": false
+    },
+    {
+      "id": 243,
+      "title": "小米电视4C 43英寸",
+      "desc": "超窄边，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/3961de40-63f1-16cc-6ced-2c034f1f5e43!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2099,
+      "curPrice": 1799,
+      "shape": false
+    },
+    {
+      "id": 244,
+      "title": "小米电视4A 43英寸",
+      "desc": "全高清 HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/203d1299-970a-f100-3f76-65177ad152ab!360x360.webp",
+      "discount": "",
+      "price": 1999,
+      "curPrice": 1999,
+      "shape": false
+    }
+  ],
+  "bestWatch2": [
+    {
+      "id": 201,
+      "title": "小米电视4A 49英寸",
+      "desc": "全高清，HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/70f12de3-b028-1c21-adf1-5612029d563e!720x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 2399,
+      "curPrice": 2199,
+      "shape": true
+    },
+    {
+      "id": 208,
+      "title": "小米电视4A 50英寸",
+      "desc": "4K HDR，人工智能语音系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/c2428d05-c3d0-31c6-830d-feaf22326813!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 2399,
+      "curPrice": 2399,
+      "shape": false
+    },
+    {
+      "id": 211,
+      "title": "小米电视4 49英寸",
+      "desc": "极超薄高端旗舰电视",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/eff4f7a747d15ce9af8223248eb8d838.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 3599,
+      "curPrice": 3399,
+      "shape": false
+    }
+  ],
+  "bestWatch3": [
+    {
+      "id": 202,
+      "title": "55'' 电视4C 体育版",
+      "desc": "64位四核处理器，超窄边",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/db49b8f2332efa3b4277b85fab720c68.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 256,
+      "title": "小米电视4A 55英寸",
+      "desc": "4K HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/ff90f0af-29a3-dead-9fc1-4455ff3eb17b!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2999,
+      "curPrice": 2699,
+      "shape": false
+    },
+    {
+      "id": 257,
+      "title": "小米电视4 55英寸",
+      "desc": "无边框式沉浸设计",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/50cf0d18052e7771bf24711ee8ce58dd.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 4499,
+      "curPrice": 4499,
+      "shape": false
+    },
+    {
+      "id": 255,
+      "title": "小米电视4C 55英寸",
+      "desc": "4K HDR 人工智能系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/57a93607-fee1-fabc-53b1-18129d39851a!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    }
+  ],
+  "tvBox": [
+    {
+      "id": 215,
+      "title": "小米盒子3 增强版 ",
+      "desc": "高端 4K 网络机顶盒，标配智能遥控器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/85622792-8558-e997-fa04-b37b7274b111!720x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/e688cc6b-fbe2-e528-7e09-a84a6bb88be6.webp?w=180&h=48",
+      "price": 449,
+      "curPrice": 399,
+      "shape": true
+    },
+    {
+      "id": 216,
+      "title": "小米盒子3s",
+      "desc": "4K HDR 人工智能机顶盒",
+      "imgUrl": "//i8.mifile.cn/v1/a1/a78ed74e-533f-ef0e-207f-40c4448d9133!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/e688cc6b-fbe2-e528-7e09-a84a6bb88be6.webp?w=180&h=48",
+      "price": 349,
+      "curPrice": 299,
+      "shape": false
+    },
+    {
+      "id": 217,
+      "title": "小米盒子3c",
+      "desc": "4K 人工智能机顶盒",
+      "imgUrl": "//i8.mifile.cn/v1/a1/656a5863-6af1-6302-4e36-a33bd49e45cb!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/e688cc6b-fbe2-e528-7e09-a84a6bb88be6.webp?w=180&h=48",
+      "price": 249,
+      "curPrice": 249,
+      "shape": false
+    }
+  ]
+}
+

@@ -1,0 +1,91 @@
+[
+  {
+    "userid": "U10001",
+    "userimg": "",
+    "username": "杨波",
+    "password": "4QrcOUm6Wau+VuBX8g+IPg==",
+    "mobile": "15134578149",
+    "paypsd": "888888",
+    "bill": {
+      "all": [],
+      "pendingPayment": [],
+      "pendingReceived": [],
+      "pendingEvaluate": [],
+      "refund": [],
+      "received": []
+    },
+    "cart": [],
+    "assets": {},
+    "collection": {},
+    "address": {},
+    "news": {},
+    "help": {}
+  },
+  {
+    "userid": "U10002",
+    "userimg": "",
+    "username": "E4930688",
+    "password": "BN3p9GIlX+FLUWC78qz/6A==",
+    "email": "",
+    "mobile": "17863671216",
+    "bill": {
+      "all": [],
+      "pendingPayment": [],
+      "pendingReceived": [],
+      "pendingEvaluate": [],
+      "refund": [],
+      "received": []
+    },
+    "cart": [],
+    "assets": {},
+    "collection": {},
+    "address": {},
+    "news": {},
+    "help": {}
+  },
+  {
+    "userid": "U10003",
+    "userimg": "",
+    "username": "周老师",
+    "password": "BN3p9GIlX+FLUWC78qz/6A==",
+    "email": "",
+    "mobile": "15111111111",
+    "bill": {
+      "all": [],
+      "pendingPayment": [],
+      "pendingReceived": [],
+      "pendingEvaluate": [],
+      "refund": [],
+      "received": []
+    },
+    "cart": [],
+    "assets": {},
+    "collection": {},
+    "address": {},
+    "news": {},
+    "help": {}
+  },
+  {
+    "userid": "U10004",
+    "userimg": "",
+    "username": "E6742466",
+    "password": "BN3p9GIlX+FLUWC78qz/6A==",
+    "email": "",
+    "paypsd": "888888",
+    "mobile": "18310612838",
+    "bill": {
+      "all": [],
+      "pendingPayment": [],
+      "pendingReceived": [],
+      "pendingEvaluate": [],
+      "refund": [],
+      "received": []
+    },
+    "cart": [],
+    "assets": {},
+    "collection": {},
+    "address": {},
+    "news": {},
+    "help": {}
+  }
+]

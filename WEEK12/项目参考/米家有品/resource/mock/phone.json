@@ -1,0 +1,115 @@
+[
+  {
+    "gid": "100264",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_96e4c1cbe3aa60ccb2a698695f179aba.jpeg&w=1080&h=450&t=webp",
+    "link": "/detail?gid=100264"
+  },
+  {
+    "gid": "100749",
+    "title": "红米5 Plus",
+    "describe": "限时赠壳膜",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 999,
+    "mark": false
+  },
+  {
+    "gid": "757",
+    "title": "小米5X",
+    "describe": "5X全系直降100，64G版领券再减100",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_2d4c3be025f6d350ba1b2c3905912f7e.jpeg",
+    "link": "/detail?gid=757",
+    "price": 1199,
+    "mark": true
+  },
+  {
+    "gid": "100748",
+    "title": "红米5",
+    "describe": "千元全面屏，4+32G版新品首发",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_3fa3ed5be0efa75d475ccc898a213deb.jpeg",
+    "link": "/detail?gid=100748",
+    "price": 799,
+    "mark": false
+  },
+  {
+    "gid": "700",
+    "title": "小米6",
+    "describe": "年货节手机专场",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+    "link": "/detail?gid=700",
+    "price": 2299,
+    "mark": false
+  },
+  {
+    "gid": "100749",
+    "title": "红米5 Plus",
+    "describe": "限时赠壳膜",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 999,
+    "mark": false
+  },
+  {
+    "gid": "757",
+    "title": "小米5X",
+    "describe": "5X全系直降100，64G版领券再减100",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_2d4c3be025f6d350ba1b2c3905912f7e.jpeg",
+    "link": "/detail?gid=757",
+    "price": 1199,
+    "mark": true
+  },
+  {
+    "gid": "100748",
+    "title": "红米5",
+    "describe": "千元全面屏，4+32G版新品首发",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_3fa3ed5be0efa75d475ccc898a213deb.jpeg",
+    "link": "/detail?gid=100748",
+    "price": 799,
+    "mark": false
+  },
+  {
+    "gid": "700",
+    "title": "小米6",
+    "describe": "年货节手机专场",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+    "link": "/detail?gid=700",
+    "price": 2299,
+    "mark": false
+  },
+  {
+    "gid": "100749",
+    "title": "红米5 Plus",
+    "describe": "限时赠壳膜",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 999,
+    "mark": false
+  },
+  {
+    "gid": "757",
+    "title": "小米5X",
+    "describe": "5X全系直降100，64G版领券再减100",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_2d4c3be025f6d350ba1b2c3905912f7e.jpeg",
+    "link": "/detail?gid=757",
+    "price": 1199,
+    "mark": true
+  },
+  {
+    "gid": "100748",
+    "title": "红米5",
+    "describe": "千元全面屏，4+32G版新品首发",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_3fa3ed5be0efa75d475ccc898a213deb.jpeg",
+    "link": "/detail?gid=100748",
+    "price": 799,
+    "mark": false
+  },
+  {
+    "gid": "700",
+    "title": "小米6",
+    "describe": "年货节手机专场",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+    "link": "/detail?gid=700",
+    "price": 2299,
+    "mark": false
+  }
+]

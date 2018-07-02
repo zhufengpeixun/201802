@@ -1,0 +1,360 @@
+{
+  "star": [
+    {
+      "id": 1201,
+      "imgUrl": "//i8.mifile.cn/v1/a1/ba0edad3-31af-7c3b-c6cb-b37de5b2f172!360x360.webp",
+      "title": "红米Note 5A 16GB",
+      "price": 699,
+      "curPrice": 649,
+      "desc": "5.5''高清大屏",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/e688cc6b-fbe2-e528-7e09-a84a6bb88be6.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/5568ef18-6d57-45b1-f578-ea56c7c0932f!720x792.webp",
+        "//i8.mifile.cn/v1/a1/19c99d79-cf50-507f-d540-d109640cec07!720x792.webp",
+        "//i8.mifile.cn/v1/a1/95eb0453-11f4-5a72-4f97-771020a9427c!720x792.webp"
+      ]
+    },
+    {
+      "id": 1202,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5603273010ab9182a1527cfab5cd2a9e.jpg?thumb=1&w=360&h=360",
+      "title": "小米5X 变焦双摄",
+      "price": 1299,
+      "curPrice": 1199,
+      "desc": "5.5''大屏轻薄全金属",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/866343fb-7a7e-3dd3-d152-a51e17b36306.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/2da996b7-4b5d-0b42-917d-fdb27db12dc9!720x792.webp",
+        "//i8.mifile.cn/v1/a1/090d6b69-5d8b-2895-85f2-13c22577bede!720x792.webp",
+        "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/16c29ae096d0d35eaa8a2139b6ed2bd1.jpg?thumb=1&w=720&h=792"
+      ]
+    },
+    {
+      "id": 1203,
+      "imgUrl": "//i8.mifile.cn/v1/a1/55f43fdd-13a0-c8d8-231d-1ce2005c7327!360x360.webp",
+      "title": "小米移动电源高配版",
+      "price": 149,
+      "curPrice": 129,
+      "desc": " 轻薄设计，轻松出行",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/d0c422e3-5c9c-cfe6-06cf-717ec333642f.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/2036e7ee-fecc-96de-2614-1d92ae00f9b6!720x792.webp",
+        "//i8.mifile.cn/v1/a1/1dbbefde-eaa8-f199-f43e-5ed5110c80de!720x792.webp",
+        "//i8.mifile.cn/v1/a1/fc5c585c-5211-9e5d-b72b-9a2d609d8d58!720x792.webp"
+      ]
+    },
+    {
+      "id": 1204,
+      "imgUrl": "//i8.mifile.cn/v1/a1/fd88c85e-d74f-1002-61d0-e001fbb02cf6!360x360.webp",
+      "title": "米家恒温电水壶",
+      "price": 199,
+      "curPrice": 179,
+      "desc": "一杯水的温度，刚刚好",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/d0c422e3-5c9c-cfe6-06cf-717ec333642f.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/0bcd8f74-b0c1-5bd7-04c0-5c23c1412a3b!720x792.webp",
+        "//i8.mifile.cn/v1/a1/6353c772-90b2-df0d-071e-b14ce8cf151e!720x792.webp"
+      ]
+    },
+    {
+      "id": 1205,
+      "imgUrl": "//i8.mifile.cn/v1/a1/4730b800-80a7-8ce3-1cd6-be442c3f1cad!360x360.webp",
+      "title": "小米体脂秤",
+      "price": 199,
+      "curPrice": 179,
+      "desc": "简约纤薄精准掌握身体数据",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/d0c422e3-5c9c-cfe6-06cf-717ec333642f.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/54f183e8-93a9-33df-c03a-7884862d8174!720x792.jpg",
+        "//i8.mifile.cn/v1/a1/917b9e6a-2d50-4713-bc6e-b84f650b6781!720x792.jpg",
+        "//i8.mifile.cn/v1/a1/aae23a4f-285e-a027-3385-6952db5aeb8d!720x792.jpg"
+      ]
+    },
+    {
+      "id": 1206,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e9e5e8fb9e0b5d16a52df672861be5af.png?thumb=1&w=360&h=360",
+      "title": "小米WiFi放大器 Pro",
+      "price": 79,
+      "curPrice": 79,
+      "desc": "轻松扩展WiFi信号",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/5c1953ea-4e1a-045e-9fca-026096d75059.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/3f2df905-343e-3741-70e6-b28e17aa5c97!720x792.webp",
+        "//i8.mifile.cn/v1/a1/4bf0c71b-3383-a489-a251-9662df2dce75!720x792.webp",
+        "//i8.mifile.cn/v1/a1/feed996e-17f1-ec42-a6da-3684172d7580!720x792.webp"
+      ]
+    }
+  ],
+  "newArrival": [
+    {
+      "id": 1207,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a9462097ca7665ab9638526856415cce.jpg?thumb=1&w=360&h=360",
+      "title": "贝医生巴氏牙刷",
+      "price": 39.9,
+      "curPrice": 34.9,
+      "desc": "进口刷毛，好品质",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/5c1953ea-4e1a-045e-9fca-026096d75059.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/e5c17807-0197-aa59-0dac-419e1bcc50f9!720x792.webp",
+        "//i8.mifile.cn/v1/a1/430e78f3-237f-ce80-054d-3011fe7fa436!720x792.jpg",
+        "//i8.mifile.cn/v1/a1/8c95457e-971a-813f-f8d6-dd7b8ea6ec1f!720x792.webp"
+      ]
+    },
+    {
+      "id": 1208,
+      "imgUrl": "//i8.mifile.cn/v1/a1/63478c28-1971-a8f7-c80a-511e3ed966e8!360x360.webp",
+      "title": "小白智能摄像机大众版",
+      "price": 109,
+      "curPrice": 99,
+      "desc": "家庭看护小卫士",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/6a0d92d1-3540-6b77-7d2a-1ee6bde14aad.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/345ff011-1fba-b6ca-3a6d-2c88062c44bd!720x792.webp",
+        "//i8.mifile.cn/v1/a1/b59b2081-b316-237b-026f-bdcef71b1d93!720x792.webp",
+        "//i8.mifile.cn/v1/a1/33ed77ae-85be-6f1c-9bd5-fb393623f96c!720x792.webp"
+      ]
+    },
+    {
+      "id": 1209,
+      "imgUrl": "//i8.mifile.cn/v1/a1/941aa386-9a54-f1a5-d990-6bdb981ec6ab!360x360.webp",
+      "title": "最生活方巾​青春系列",
+      "price": 14.9,
+      "curPrice": 14.5,
+      "desc": "年轻就要多姿多彩",
+      "buybtn": "立即购买",
+      "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/9053dc7b652db0961c543347f2b9626a.png?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/06d97d80-472a-c687-b1d7-172fb3ba01b6!720x792.webp",
+        "//i8.mifile.cn/v1/a1/8335f800-0653-2fc1-8a2c-61918c54ccdd!720x792.webp",
+        "//i8.mifile.cn/v1/a1/2af8b1bd-5ec2-741e-1eca-16d49e1a462b!720x792.webp"
+      ]
+    },
+    {
+      "id": 1210,
+      "imgUrl": "//i8.mifile.cn/v1/a1/5c46b47c-c837-1476-99c2-83d9b8b09213!360x360.webp",
+      "title": "小米移动电源2 (5000mAh版)",
+      "price": 49,
+      "curPrice": 49,
+      "desc": "锂聚合物电芯，轻巧便捷",
+      "buybtn": "立即购买",
+      "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c654f4e818d7e77c4a5aa0a2a6c9e022.png?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/0014d640-7753-9c70-5ed1-87854205c807!720x792.webp",
+        "//i8.mifile.cn/v1/a1/b0bbbfbc-4269-43e3-03f6-35caa03d3740!720x792.webp",
+        "//i8.mifile.cn/v1/a1/9c7aa46c-cb70-105c-aa48-0723e8aaf4bf!720x792.webp"
+      ]
+    },
+    {
+      "id": 1211,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c41b12f06fc0d8b61b34f20ac46be4dd.jpg?thumb=1&w=360&h=360",
+      "title": "米家二位转换器（含2口USB 2A快充）",
+      "price": 44.9,
+      "curPrice": 44.9,
+      "desc": "双国标组合插孔，双USB充电口，过载保护",
+      "buybtn": "立即购买",
+      "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c654f4e818d7e77c4a5aa0a2a6c9e022.png?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/09544b00-9ec1-0687-7e86-f9d9fa3fe839!720x792.webp",
+        "//i8.mifile.cn/v1/a1/35ddfc88-f70e-d5b3-12a9-9efffd3b3b2e!720x792.webp",
+        "//i8.mifile.cn/v1/a1/e2d0b34a-3c10-6f1e-7a76-54edadb6315a!720x792.webp"
+      ]
+    },
+    {
+      "id": 1212,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/d75a2f3b510b1f003f9eef17e757fc7f.jpg?thumb=1&w=360&h=360",
+      "title": "新小米移动电源2 (10000mAh)",
+      "price": 79,
+      "curPrice": 79,
+      "desc": "双向快充，铝合金金属外壳",
+      "buybtn": "立即购买",
+      "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f2b894e82de033f366967a908f3abce4.png?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/8cbe23bd-6041-6b48-a65a-1e108e851dc1!720x792.webp",
+        "//i8.mifile.cn/v1/a1/8cbe23bd-6041-6b48-a65a-1e108e851dc1!720x792.webp",
+        "//i8.mifile.cn/v1/a1/7a6effd3-8b1c-66f0-824a-71775f4cca38!720x792.webp"
+      ]
+    }
+  ],
+  "miHome": [
+    {
+      "id": 1213,
+      "imgUrl": "//i8.mifile.cn/v1/a1/2bdb0e26-a28a-9448-18d3-b0c8b78c1553!360x360.webp",
+      "title": "小米小钢炮蓝牙音箱2 ",
+      "price": 129,
+      "curPrice": 119,
+      "desc": "简设计，专业喇叭，约7小时续航",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/6a0d92d1-3540-6b77-7d2a-1ee6bde14aad.webp?w=180&h=48",
+      "shape": true,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/f54b47c3-9e24-cc0f-d4c5-28fde761c307!720x792.webp",
+        "//i8.mifile.cn/v1/a1/ba70a899-e89d-a8d0-3d8b-3f87670d7477!720x792.webp",
+        "//i8.mifile.cn/v1/a1/1514e0a9-68a8-58eb-1a56-f9cfe5ce0480!720x792.webp"
+      ]
+    },
+    {
+      "id": 1214,
+      "imgUrl": "//i8.mifile.cn/v1/a1/e155b6c3-8610-4bd3-2158-cea74ae33182!360x360.webp",
+      "title": "米家多功能网关",
+      "price": 149,
+      "curPrice": 149,
+      "desc": "米家设备，远程控制；1600万色夜灯玩出炫酷",
+      "buybtn": "立即购买",
+      "discount": "",
+      "shape": true,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/17f0f5f3-423f-1859-75b7-ff95685dc87a!720x792.webp",
+        "//i8.mifile.cn/v1/a1/9e4c2419-dc1c-020e-2391-3c1d97cc9fce!720x792.webp",
+        "//i8.mifile.cn/v1/a1/7e47d117-95a9-36c0-f47f-ce1337b82e63!720x792.webp"
+      ]
+    },
+    {
+      "id": 1215,
+      "imgUrl": "//i8.mifile.cn/v1/a1/51cb366f-c6a2-5767-053d-633c1c5a5f1c!360x360.webp",
+      "title": "米兔智能故事机 ",
+      "price": 199,
+      "curPrice": 179,
+      "desc": "海量好故事，智能语音交互，材质安全耐用",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/d0c422e3-5c9c-cfe6-06cf-717ec333642f.webp?w=180&h=48",
+      "shape": true,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/002621b7-70a1-2dbd-107d-35058912e787!720x792.webp",
+        "//i8.mifile.cn/v1/a1/6eefea8e-545f-d37d-0cf1-d3770383e68e!720x792.webp",
+        "//i8.mifile.cn/v1/a1/6b0525a1-6d4e-e279-df29-2ab480f7c9c1!720x792.webp"
+      ]
+    },
+    {
+      "id": 1215,
+      "imgUrl": "https://i8.mifile.cn/v1/a1/e46f3ec2-8537-b2b6-3590-196e98fa44f7!360x360.webp",
+      "title": "小米手环 ",
+      "price": 199,
+      "curPrice": 179,
+      "desc": "彩色IPS触摸屏，50米游泳防水",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/d0c422e3-5c9c-cfe6-06cf-717ec333642f.webp?w=180&h=48",
+      "shape": true,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/002621b7-70a1-2dbd-107d-35058912e787!720x792.webp",
+        "//i8.mifile.cn/v1/a1/6eefea8e-545f-d37d-0cf1-d3770383e68e!720x792.webp",
+        "//i8.mifile.cn/v1/a1/6b0525a1-6d4e-e279-df29-2ab480f7c9c1!720x792.webp"
+      ]
+    }
+  ],
+  "miTelevision": [
+    {
+      "id": 1216,
+      "imgUrl": "//i8.mifile.cn/v1/a1/3961de40-63f1-16cc-6ced-2c034f1f5e43!360x360.webp",
+      "title": "小米电视4C 43英寸",
+      "price": 2099,
+      "curPrice": 1799,
+      "desc": "超窄边，高清智能电视",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/ad16a1bf-8f50-617b-e6aa-ec6b4aec062c!720x792.webp",
+        "//i8.mifile.cn/v1/a1/cdd3293f-850c-d5b2-d702-fd9c24718379!720x792.webp",
+        "//i8.mifile.cn/v1/a1/4546f37e-2e0b-6039-398c-d14c5a7f4565!720x792.webp"
+      ]
+    },
+    {
+      "id": 201,
+      "imgUrl": "//i8.mifile.cn/v1/a1/c46f28b5-636e-ffcc-c0cb-2347bd2c4890!360x360.webp",
+      "title": "小米电视4A 49英寸",
+      "price": 2399,
+      "curPrice": 2199,
+      "desc": "全高清，HDR，64位处理器",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/ad747066-f2e4-3e5c-e4fa-358923f606ac!720x792.webp",
+        "//i8.mifile.cn/v1/a1/2bc3f6e7-42a2-f657-4cb8-78b71276bdfc!720x792.webp"
+      ]
+    },
+    {
+      "id": 1218,
+      "imgUrl": "//i8.mifile.cn/v1/a1/57a93607-fee1-fabc-53b1-18129d39851a!360x360.webp",
+      "title": "小米电视4C 55英寸",
+      "price": 3099,
+      "curPrice": 2899,
+      "desc": "4K HDR 人工智能系统",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/d238c597-8a85-0921-01ec-3ebcf73ea1cc!720x792.webp",
+        "//i8.mifile.cn/v1/a1/0f9845e2-0658-884f-4f4d-4755d88635aa!720x792.webp",
+        "//i8.mifile.cn/v1/a1/b3f71d40-4ae2-4d34-ca49-7aa9c1cb5fc6!720x792.webp"
+      ]
+    },
+    {
+      "id": 1219,
+      "imgUrl": "//i8.mifile.cn/v1/a1/ff90f0af-29a3-dead-9fc1-4455ff3eb17b!360x360.webp",
+      "title": "小米电视4A 55英寸",
+      "price": 2999,
+      "curPrice": 2799,
+      "desc": "4K HDR，64位处理器",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/7607e9da-9d01-6418-3f50-2ddd9be66cdc!720x792.webp",
+        "//i8.mifile.cn/v1/a1/fad17480-455c-9eb2-22cd-52704e52d904!720x792.webp",
+        "//i8.mifile.cn/v1/a1/8f1aee7f-092e-f142-b8a3-b6eed3f51c4d!720x792.webp"
+      ]
+    },
+    {
+      "id": 1220,
+      "imgUrl": "//i8.mifile.cn/v1/a1/e4c4573b-47fc-4f38-a447-1caf76e12b6c!360x360.webp",
+      "title": "小米盒子3 增强版 ",
+      "price": 449,
+      "curPrice": 399,
+      "desc": "高端 4K 网络机顶盒",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/e688cc6b-fbe2-e528-7e09-a84a6bb88be6.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/8211c189-b600-91df-9b9f-8738c52c89e0!720x792.webp",
+        "//i8.mifile.cn/v1/a1/afcf9651-3d01-e9cb-eda4-579181a44f57!720x792.webp",
+        "//i8.mifile.cn/v1/a1/3fa86d00-8a00-7b82-5398-f90321614ffb!720x792.webp"
+      ]
+    },
+    {
+      "id": 1221,
+      "imgUrl": "//i8.mifile.cn/v1/a1/a78ed74e-533f-ef0e-207f-40c4448d9133!360x360.webp",
+      "title": "小米盒子3s",
+      "price": 349,
+      "curPrice": 299,
+      "desc": "4K HDR 人工智能机顶盒",
+      "buybtn": "立即购买",
+      "discount": "//i8.mifile.cn/v1/a1/e688cc6b-fbe2-e528-7e09-a84a6bb88be6.webp?w=180&h=48",
+      "shape": false,
+      "sliderList": [
+        "//i8.mifile.cn/v1/a1/03cec0b6-0637-6ff7-01b9-86b75c7d3f8a!720x792.webp",
+        "//i8.mifile.cn/v1/a1/0664c560-d8a1-8ee8-d2cb-33810f54139d!720x792.webp",
+        "//i8.mifile.cn/v1/a1/8baba62f-0075-6e70-3da5-757953d1bd31!720x792.webp"
+      ]
+    }
+  ]
+}

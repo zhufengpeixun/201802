@@ -1,0 +1,115 @@
+[
+  {
+    "gid": "100873",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_89fe62dd9eefad369d4e96db45dbe04c.jpeg&w=1080&h=450&t=webp",
+    "link": "/detail?gid=100873"
+  },
+  {
+    "gid": "100749",
+    "title": "小米空气净化器2",
+    "describe": "净化性能高达310m³/h，手机智能控制，一目了然",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_5af19eaf8991fc71d3613fe26ced1af8.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 699,
+    "mark": false
+  },
+  {
+    "gid": "100606",
+    "title": "小米米家空气净化器2S",
+    "describe": "经典再升级，好空气看得见",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_707b1cf5569abac017aeab4ea9912a28.jpeg",
+    "link": "/detail?gid=100606",
+    "price": 899,
+    "mark": true
+  },
+  {
+    "gid": "339",
+    "title": "米家空气净化器Pro",
+    "describe": "澎湃动力，净化能力更快更强",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b0f187eb461c20e0f6130931d67bd30a.jpeg",
+    "link": "/detail?gid=339",
+    "price": 1499,
+    "mark": false
+  },
+  {
+    "gid": "152",
+    "title": "小米净水器(厨下式)",
+    "describe": "隐藏安装，400加仑大流量",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_630d3e97477d420231b882eeaa4a29e6.jpeg",
+    "link": "/detail?gid=152",
+    "price": 1999,
+    "mark": false
+  },
+  {
+    "gid": "100749",
+    "title": "小米空气净化器2",
+    "describe": "净化性能高达310m³/h，手机智能控制，一目了然",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_5af19eaf8991fc71d3613fe26ced1af8.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 699,
+    "mark": false
+  },
+  {
+    "gid": "100606",
+    "title": "小米米家空气净化器2S",
+    "describe": "经典再升级，好空气看得见",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_707b1cf5569abac017aeab4ea9912a28.jpeg",
+    "link": "/detail?gid=100606",
+    "price": 899,
+    "mark": true
+  },
+  {
+    "gid": "339",
+    "title": "米家空气净化器Pro",
+    "describe": "澎湃动力，净化能力更快更强",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b0f187eb461c20e0f6130931d67bd30a.jpeg",
+    "link": "/detail?gid=339",
+    "price": 1499,
+    "mark": false
+  },
+  {
+    "gid": "152",
+    "title": "小米净水器(厨下式)",
+    "describe": "隐藏安装，400加仑大流量",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_630d3e97477d420231b882eeaa4a29e6.jpeg",
+    "link": "/detail?gid=152",
+    "price": 1999,
+    "mark": false
+  },
+  {
+    "gid": "100749",
+    "title": "小米空气净化器2",
+    "describe": "净化性能高达310m³/h，手机智能控制，一目了然",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_5af19eaf8991fc71d3613fe26ced1af8.jpeg",
+    "link": "/detail?gid=100749",
+    "price": 699,
+    "mark": false
+  },
+  {
+    "gid": "100606",
+    "title": "小米米家空气净化器2S",
+    "describe": "经典再升级，好空气看得见",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_707b1cf5569abac017aeab4ea9912a28.jpeg",
+    "link": "/detail?gid=100606",
+    "price": 899,
+    "mark": true
+  },
+  {
+    "gid": "339",
+    "title": "米家空气净化器Pro",
+    "describe": "澎湃动力，净化能力更快更强",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b0f187eb461c20e0f6130931d67bd30a.jpeg",
+    "link": "/detail?gid=339",
+    "price": 1499,
+    "mark": false
+  },
+  {
+    "gid": "152",
+    "title": "小米净水器(厨下式)",
+    "describe": "隐藏安装，400加仑大流量",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_630d3e97477d420231b882eeaa4a29e6.jpeg",
+    "link": "/detail?gid=152",
+    "price": 1999,
+    "mark": false
+  }
+]

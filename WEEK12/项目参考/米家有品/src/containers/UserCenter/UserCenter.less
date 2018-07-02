@@ -1,0 +1,424 @@
+
+html, body {
+  width: 100%;
+  height: 100%;
+  //overflow: hidden;
+}
+
+.lyc-user-center {
+  background: rgb(243, 243, 243);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .lyc-user-list {
+    background: rgb(243, 243, 243);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40/100rem;
+    font-size: .14rem;
+
+    .lyc-user-header {
+      background-image: url("../../images/personal_bg_top.png");
+      background-size: cover;
+      height: 1rem;
+      padding-right: .1rem;
+      display: flex;
+      flex-direction: row;
+
+      .lyc-user-left {
+        display: flex;
+
+        .lyc-user-img {
+          padding-left: .25rem;
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
+          align-items: center;
+
+          img {
+            width: .6rem;
+            height: .6rem;
+            border-radius: 50%;
+          }
+        }
+
+        .lyc-user-login {
+          padding-left: .15rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+
+      .lyc-user-right {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: .12rem;
+
+        .set-user-info {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            display: none;
+            font-size: .2rem;
+            color: #fff;
+          }
+        }
+
+        img {
+          display: none;
+          width: .18rem;
+          height: .18rem;
+        }
+
+      }
+    }
+
+    .lyc-user-orderBox {
+      height: 1.1rem;
+      background: #ffffff;
+      margin-top: .05rem;
+      display: flex;
+      flex-direction: column;
+
+      .lyc-user-order {
+        height: .41rem;
+        padding: 0 .1rem 0 .2rem;
+        border-bottom: 1px solid rgb(229, 229, 229);
+        display: flex;
+        flex-direction: row;
+
+        .lyc-order {
+          padding: 0 .2rem 0 0;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          span {
+            color: rgb(51, 51, 51);
+            font-size: .14rem;
+          }
+        }
+
+        .lyc-order-arw {
+          padding-right: .05rem;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          flex: 1;
+          flex-direction: column;
+
+          img {
+            width: .15rem;
+            height: .15rem;
+          }
+        }
+      }
+
+      .lyc-user-order-detail {
+        height: .7rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .information {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+        }
+        img {
+          width: .23rem;
+          height: .23rem;
+          display: inline-block;
+        }
+        span {
+          display: inline-block;
+          margin-top: .05rem;
+          font-size: .12rem;
+          color: rgba(0, 0, 0, .6);
+        }
+      }
+    }
+
+    .lyc-user-about-me {
+      margin-top: .05rem;
+      border-bottom: .01rem solid rgb(229, 229, 229);
+      display: flex;
+      position: relative;
+      flex-direction: column;
+
+      .about-me-top {
+        background: #ffffff;
+
+        .lyc-user-assets {
+          height: .5rem;
+          margin-right: .1rem;
+          border-bottom: .01rem solid rgb(229, 229, 229);
+          display: flex;
+          flex-direction: row;
+
+          .assets-img {
+            padding-left: .15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              height: .38rem;
+              width: .38rem;
+            }
+          }
+
+          .assets-name {
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            span {
+              display: inline-block;
+              font-size: .14rem;
+              color: rgb(51, 51, 51);
+            }
+          }
+
+          .assets-discount {
+            display: flex;
+            align-items: center;
+
+            span {
+              font-size: .12rem;
+              color: rgb(153, 153, 153);
+            }
+          }
+
+          .assets-arw {
+            padding-right: .05rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: .15rem;
+              height: .15rem;
+            }
+          }
+        }
+
+        .lyc-user-collection {
+          height: .5rem;
+          margin-right: .1rem;
+          display: flex;
+          flex-direction: row;
+
+          .collection-img {
+            padding-left: .15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              height: .38rem;
+              width: .38rem;
+            }
+          }
+
+          .collection-name {
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            span {
+              display: inline-block;
+              font-size: .14rem;
+              color: rgb(51, 51, 51);
+            }
+          }
+
+          .collection-arw {
+            padding-right: .05rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: .15rem;
+              height: .15rem;
+            }
+          }
+        }
+      }
+
+      .about-me-bootom {
+        background: #ffffff;
+        margin-top: .05rem;
+
+        .lyc-user-address {
+          height: .5rem;
+          margin-right: .1rem;
+          display: flex;
+          flex-direction: row;
+          border-bottom: .01rem solid rgb(229, 229, 229);
+
+          .address-img {
+            padding-left: .15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              height: .38rem;
+              width: .38rem;
+            }
+          }
+
+          .address-name {
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            span {
+              display: inline-block;
+              font-size: .14rem;
+              color: rgb(51, 51, 51);
+            }
+          }
+
+          .address-arw {
+            padding-right: .05rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: .15rem;
+              height: .15rem;
+            }
+          }
+        }
+
+        .lyc-user-news {
+          height: .5rem;
+          margin-right: .1rem;
+          display: flex;
+          flex-direction: row;
+          border-bottom: .01rem solid rgb(229, 229, 229);
+
+          .news-img {
+            padding-left: .15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              height: .38rem;
+              width: .38rem;
+            }
+          }
+
+          .news-name {
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            span {
+              display: inline-block;
+              font-size: .14rem;
+              color: rgb(51, 51, 51);
+            }
+          }
+
+          .news-arw {
+            padding-right: .05rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: .15rem;
+              height: .15rem;
+            }
+          }
+        }
+
+        .lyc-user-help {
+          height: .5rem;
+          margin-right: .1rem;
+          display: flex;
+          flex-direction: row;
+
+          .help-img {
+            padding-left: .15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              height: .38rem;
+              width: .38rem;
+            }
+          }
+
+          .help-name {
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            span {
+              display: inline-block;
+              font-size: .14rem;
+              color: rgb(51, 51, 51);
+            }
+          }
+
+          .help-arw {
+            padding-right: .05rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: .15rem;
+              height: .15rem;
+            }
+          }
+        }
+      }
+    }
+
+    .lyc-user-quit {
+      display: none;
+      margin: .3rem auto .8rem;
+      background: #ffffff;
+      width: 1rem;
+      height: .45rem;
+      border-radius: .05rem;
+      border: 1px solid rgb(178, 178, 178);
+      font-size: .13rem;
+      color: rgb(51, 51, 51);
+      text-align: center;
+      line-height: .45rem;
+    }
+  }
+}

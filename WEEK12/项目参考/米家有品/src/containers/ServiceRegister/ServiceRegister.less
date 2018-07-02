@@ -1,0 +1,282 @@
+.lyc-user-layout {
+  position: absolute;
+  background: #eee;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  .user-layout-panel {
+    .user-layout {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 .2rem;
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+
+      .mi-logo {
+
+        .header-logoBox {
+          padding: .4rem 0 .22rem;
+          text-align: center;
+
+          .custom-logo {
+            width: .49rem;
+            height: .48rem;
+            margin: 0 auto .22rem;
+            position: relative;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .header-tit {
+            font-size: .2rem;
+            color: #424242;
+            font-weight: normal;
+          }
+        }
+
+        .user-register-input {
+          width: 2.8rem;
+          height: .85rem;
+          border-radius: .1rem;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: #ffffff;
+
+          .region-core {
+            padding: 0 .1rem;
+            display: flex;
+            height: .42rem;
+            border-bottom: .01rem solid #F3F3F3;
+
+            .city-list {
+              padding: .1rem .1rem .1rem 0;
+              margin-right: .08rem;
+              color: #333;
+              border-right: 1px solid #e0e0e0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              span {
+                font-size: .14rem;
+              }
+            }
+
+            .phone-count {
+              display: flex;
+              flex: 1;
+              padding: .12rem 0;
+              font-size: .16rem;
+              border: none;
+              outline: none;
+            }
+          }
+
+          .pwd-panel {
+            padding: 0 .1rem;
+            display: flex;
+            height: .42rem;
+
+            .check-numBox {
+              display: flex;
+              width: 55%;
+
+              .check-num {
+                padding: .12rem 0;
+                font-size: .16rem;
+                border: none;
+                outline: none;
+              }
+            }
+
+            .get-num {
+              display: flex;
+              flex: 1;
+              padding: .1rem .1rem;
+              border-left: 1px solid #e0e0e0;
+
+              a {
+                cursor: pointer;
+                color: #003ab5;
+                font-size: .14rem;
+              }
+            }
+          }
+        }
+
+        .phone-dialog {
+          height: .2rem;
+          margin-bottom: .05rem;
+          line-height: .2rem;
+          color: #f56700;
+          padding-top: .14rem;
+          display: none;
+          flex-direction: row;
+          align-items: center;
+
+          .dialog-logo {
+            height: .14rem;
+            width: .14rem;
+            border-radius: 50%;
+            color: #ffffff;
+            background: #f56700;
+            font-size: .08rem;
+            text-align: center;
+            line-height: .14rem;
+          }
+
+          .dialog-tit {
+            height: .28rem;
+            width: 80%;
+            font-size: .14rem;
+            padding-left: .1rem;
+            line-height: .28rem;
+          }
+        }
+
+        .login_phone {
+          width: 2.8rem;
+          padding-top: .24rem;
+          //margin-bottom: .1rem;
+
+          .btn_login {
+            background: #33b4ff;
+            width: 100%;
+            padding: .1rem 0;
+            display: block;
+            text-align: center;
+            font-size: .16rem;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: .2rem;
+            border: .01rem solid rgba(186, 186, 186, .3);
+            overflow: hidden;
+          }
+        }
+
+        .others_logo {
+          width: 2.8rem;
+
+          .phone_msg_log {
+
+            a {
+              background: #ffffff;
+              margin-top: .15rem;
+              border: .01rem solid #ddd;
+              color: #333;
+              width: 100%;
+              display: block;
+              padding: .1rem 0;
+              margin-bottom: .14rem;
+              text-align: center;
+              font-size: .16rem;
+              cursor: pointer;
+              border-radius: .2rem;
+              overflow: hidden;
+            }
+          }
+
+          .others-tit {
+            position: relative;
+            width: 2.8rem;
+            height: .4rem;
+            border-bottom: .01rem dashed #ccc;
+
+            span {
+              position: absolute;
+              display: block;
+              font-size: .14rem;
+              color: #b0b0b0;
+              left: 1rem;
+              top: .3rem;
+            }
+          }
+
+          .others-link {
+            padding-top: .25rem;
+            text-align: center;
+            width: 2.8rem;
+            height: .5rem;
+
+            i {
+              width: .45rem;
+              height: .45rem;
+              margin: 0 .1rem;
+              font-style: normal;
+              display: inline-block;
+              border-radius: 50%;
+              font-size: .44rem;
+              vertical-align: top;
+
+              &:nth-child(1) {
+                font-size: .5rem;
+                color: rgb(2, 136, 209);
+                margin-top: -.05rem;
+              }
+              &:nth-child(2) {
+                color: rgb(211, 47, 47);
+              }
+              &:nth-child(3) {
+                color: rgb(0, 170, 238);
+              }
+            }
+          }
+
+          .n-links-area {
+            padding: .4rem 0 .1rem;
+            text-align: center;
+            color: #e0e0e0;
+            width: 100%;
+            height: 0;
+
+            a {
+              vertical-align: top;
+              padding: 0 .09rem;
+              font-size: .14rem;
+              display: inline-block;
+              color: #757575;
+            }
+
+            span {
+              border: 0;
+              margin: 0;
+              padding: 0;
+            }
+          }
+
+          .language {
+            padding-top: .6rem;
+            display: flex;
+            justify-content: center;
+            color: #757575;
+            text-align: center;
+            font-size: .14rem;
+            height: .9rem;
+
+            span {
+              margin-right: .05rem;
+              margin-left: .05rem;
+
+              &:nth-child(1) {
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

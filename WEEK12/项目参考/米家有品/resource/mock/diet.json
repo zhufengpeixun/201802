@@ -1,0 +1,115 @@
+[
+  {
+    "gid": "101002",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_fa89ff52c3684196d3234665a6b11c85.jpeg&w=1080&h=450&t=webp",
+    "link": "/detail?gid=101002"
+  },
+  {
+    "gid": "100977",
+    "title": "金洋河浓香型白酒",
+    "describe": "甄选名酒，古法传承  多粮酿造，甜绵软净香",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b318b70e698d2d7090b17e494a4a69d4.jpeg",
+    "link": "/detail?gid=100977",
+    "price": 248,
+    "mark": false
+  },
+  {
+    "gid": "100978",
+    "title": "新派健康茶-1号黑茶（200g）",
+    "describe": "洁净免洗，营养丰富，科学重塑",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_8fbf3bfe4c41a915fcb2bb18831d9038.jpeg",
+    "link": "/detail?gid=100978",
+    "price": 349,
+    "mark": true
+  },
+  {
+    "gid": "100973",
+    "title": "有品定制·年味礼盒",
+    "describe": "坚果牛肉，营养红枣，海味组合，香酥脆虾",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_6758b16d991a70b16f27d04410a480d1.jpeg",
+    "link": "/detail?gid=100973",
+    "price": 299,
+    "mark": false
+  },
+  {
+    "gid": "100305",
+    "title": "菌菇礼盒",
+    "describe": "有机种植、臻品菌菇、送礼佳品",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_02d17e00d10eaeaed32442c6ca5cb316.jpeg",
+    "link": "/detail?gid=100305",
+    "price": 191,
+    "mark": false
+  },
+  {
+    "gid": "100979",
+    "title": "金洋河浓香型白酒",
+    "describe": "甄选名酒，古法传承  多粮酿造，甜绵软净香",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b318b70e698d2d7090b17e494a4a69d4.jpeg",
+    "link": "/detail?gid=100979",
+    "price": 248,
+    "mark": false
+  },
+  {
+    "gid": "100948",
+    "title": "新派健康茶-1号黑茶（200g）",
+    "describe": "洁净免洗，营养丰富，科学重塑",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_8fbf3bfe4c41a915fcb2bb18831d9038.jpeg",
+    "link": "/detail?gid=100948",
+    "price": 349,
+    "mark": true
+  },
+  {
+    "gid": "100973",
+    "title": "有品定制·年味礼盒",
+    "describe": "坚果牛肉，营养红枣，海味组合，香酥脆虾",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_6758b16d991a70b16f27d04410a480d1.jpeg",
+    "link": "/detail?gid=100973",
+    "price": 299,
+    "mark": false
+  },
+  {
+    "gid": "100305",
+    "title": "菌菇礼盒",
+    "describe": "有机种植、臻品菌菇、送礼佳品",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_02d17e00d10eaeaed32442c6ca5cb316.jpeg",
+    "link": "/detail?gid=100305",
+    "price": 191,
+    "mark": false
+  },
+  {
+    "gid": "100957",
+    "title": "金洋河浓香型白酒",
+    "describe": "甄选名酒，古法传承  多粮酿造，甜绵软净香",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_b318b70e698d2d7090b17e494a4a69d4.jpeg",
+    "link": "/detail?gid=100957",
+    "price": 248,
+    "mark": false
+  },
+  {
+    "gid": "100978",
+    "title": "新派健康茶-1号黑茶（200g）",
+    "describe": "洁净免洗，营养丰富，科学重塑",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_8fbf3bfe4c41a915fcb2bb18831d9038.jpeg",
+    "link": "/detail?gid=100978",
+    "price": 349,
+    "mark": true
+  },
+  {
+    "gid": "100973",
+    "title": "有品定制·年味礼盒",
+    "describe": "坚果牛肉，营养红枣，海味组合，香酥脆虾",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_6758b16d991a70b16f27d04410a480d1.jpeg",
+    "link": "/detail?gid=100973",
+    "price": 299,
+    "mark": false
+  },
+  {
+    "gid": "100305",
+    "title": "菌菇礼盒",
+    "describe": "有机种植、臻品菌菇、送礼佳品",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_02d17e00d10eaeaed32442c6ca5cb316.jpeg",
+    "link": "/detail?gid=100305",
+    "price": 191,
+    "mark": false
+  }
+]

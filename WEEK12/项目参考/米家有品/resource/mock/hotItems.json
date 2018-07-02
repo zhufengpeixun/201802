@@ -1,0 +1,42 @@
+[
+  {
+    "gid": "100622",
+    "title": "鹿客智能指纹锁Classic",
+    "describe": "",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_dc4955a7f668f79135bf689005746475.png&w=537&h=426,https://shop.io.mi-img.com/app/shop/img?id=shop_1d26c4fec9f7de43e090f5058a6532b2.png&w=540&h=420&t=webp",
+    "link": "/detail?gid=100622",
+    "price": 1699
+  },
+  {
+    "gid": "757",
+    "title": "小米5X",
+    "describe": "",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_fbac9bcd7a15e60e3d6e864c66a62047.png&w=540&h=420,https://shop.io.mi-img.com/app/shop/img?id=shop_06a052b2c28bc7c80ad4ce96919fb82d.png&w=540&h=420&t=webp",
+    "link": "/detail?gid=757",
+    "price": 1199
+  },
+  {
+    "gid": "339",
+    "title": "米家空气净化器Pro",
+    "describe": "澎湃动力，净化能力更快更强",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_d52f9fa59bcd507e9807e4014ab55418.jpeg&w=537&h=852&t=webp",
+    "link": "/detail?gid=339",
+    "price": 1499
+  },
+  {
+    "gid": "266",
+    "title": "米家扫地机器人",
+    "describe": "",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_68eaff32dfae580e6ca7250ca7fa4a0b.png&w=537&h=426&t=webp",
+    "link": "/detail?gid=266",
+    "price": 1699
+  },
+  {
+    "gid": "100570",
+    "title": "石墨烯发热腰带",
+    "describe": "",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_da726d59c27705dedc637fcc169aebdf.png&w=540&h=420&t=webp",
+    "link": "/detail?gid=100570",
+    "price": 116
+  }
+]

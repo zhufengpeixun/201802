@@ -1,0 +1,19 @@
+[
+  {
+    "gid": "p873dd039bd147603",
+    "title": "https://shop.io.mi-img.com/app/shop/img?id=shop_50223c8c41e70ab3fdf0b6fd7819d076.jpeg&w=1080&h=420&t=webp",
+    "describe": "https://shop.io.mi-img.com/app/shop/img?id=shop_e364c764ca394a6ce5e676cf67781cc3.png&w=1080&h=546&t=webp",
+    "url": "q2ea1d039f88f74e3",
+    "link": "https://home.mi.com/app/shop/content?id=p873dd039bd147603"
+  },
+  {
+    "gid": "q2ea1d039f88f74e3",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_e4826275efd77207255273a9c4b910ad.jpeg&w=540&h=420&t=webp",
+    "link": "https://home.mi.com/app/shop/content?id=q2ea1d039f88f74e3"
+  },
+  {
+    "gid": "m9c66d039bd8a27b1",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_4b0cd606a1cfb18160eca203722d247d.jpeg&w=540&h=420&t=webp",
+    "link": "https://home.mi.com/app/shop/content?id=m9c66d039bd8a27b1"
+  }
+]

@@ -1,0 +1,103 @@
+.product-small {
+  @coral: #ea625b;
+  width: 50%;
+  float: left;
+  background: #BA3332;
+
+  a {
+    display: block;
+    padding: 0 0 .12rem .12rem;
+    &.noborder {
+      padding: 0;
+    }
+
+    .product-imgBox {
+      position: relative;
+      img {
+        display: block;
+        width: 100%;
+      }
+      .discount-img {
+        position: absolute;
+        display: block;
+      }
+      .discount-img-square {
+        .discount-img;
+        top: 0;
+        left: 0;
+        height: .32rem;
+        width: auto;
+      }
+      .discount-img-circle {
+        .discount-img;
+        right: 0;
+        bottom: 0;
+        width: 1rem;
+        height: auto;
+      }
+    }
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      padding: .2rem .27rem;
+      background: #fff;
+      justify-content: space-between;
+      text-align: center;
+
+      .info-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .info-title {
+          text-align: center;
+          width: 100%;
+          font-size: .26rem !important;
+          color: rgba(0, 0, 0, .87);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .info-desc {
+          text-align: center;
+          width: 100%;
+          font-size: .20rem;
+          color: rgba(0, 0, 0, .54);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          &.info-desc-left {
+            text-align: left;
+          }
+        }
+      }
+      .info-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .info-price {
+          color: @coral;
+          .prev-price {
+            margin-left: .1rem;
+            font-size: .76em;
+            color: rgba(0, 0, 0, 0.54);
+          }
+        }
+        .buybtn {
+          width: 1.6rem;
+          border-radius: .05rem;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+          font-weight: 700;
+          color: #fff;
+          background: @coral;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+}

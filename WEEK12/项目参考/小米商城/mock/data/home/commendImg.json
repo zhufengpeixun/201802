@@ -1,0 +1,18 @@
+{
+  "star": [
+    "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/584494e6725671e19c8226999dd51f3f.jpg?thumb=1&w=720&h=280",
+    "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/611bf7ad7b1a6e6f0d5b67ee884795c1.jpg?thumb=1&w=720&h=440"
+  ],
+  "newArrival": [
+    "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f2b6f48d9bc06d3f094047db9264ca87.jpg?thumb=1&w=720&h=280",
+    "https://i8.mifile.cn/v1/a1/82ef7e04-d9ba-4bfb-a6cb-78fb865dd137!720x440.webp"
+  ],
+  "miHome": [
+    "https://i8.mifile.cn/v1/a1/b98b2615-832b-c3f4-ce7d-2524c0e62bd2!720x280.webp",
+    "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/54c587ec014050ae7dc7f460a8b9786b.jpg?thumb=1&w=720&h=440"
+  ],
+  "miTelevision": [
+    "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f671b1156cf297e562af127af3e15367.jpg?thumb=1&w=720&h=280",
+    "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/56cf1a73ed68795e383e93ebc4a353dc.jpg?thumb=1&w=720&h=440"
+  ]
+}

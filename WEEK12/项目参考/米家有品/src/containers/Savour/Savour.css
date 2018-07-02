@@ -1,0 +1,71 @@
+.savour_main {
+    font-size: 1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    text-align: center;
+    font-family: "Helvetica Neue", STHeiTi, sans-serif;
+}
+
+.savour_main .savour_taste {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .44rem;
+    line-height: .44rem;
+    background: #ffffff;
+    font-size: 16px;
+    border-bottom: 1px solid #999;
+}
+
+.savour_main .savour_container li {
+    padding-top: 0.5px;
+    text-align: center;
+    border-bottom: 7px solid #eeeeee;
+    cursor: pointer;
+    width: 100%;
+    height: 3.68rem;
+    background: #fff;
+}
+
+.savour_main .savour_container li img {
+    display: block;
+    width: 95%;
+    height: 2.175rem;
+    margin: 2.5% 2.5%;
+}
+
+.savour_main .savour_container li span {
+    display: block;
+    font-size: 18px;
+    padding-top: 10px;
+    color: #333333;
+    word-wrap: break-word;
+}
+
+.savour_main .savour_container li b {
+    display: block;
+    color: #999999;
+    font-size: 13px;
+    padding-top: 8px;
+    word-wrap: break-word;
+}
+
+.savour_main .savour_container li p {
+    margin: 18px auto;
+    width: .74rem;
+    height: .3rem;
+    background-color: #d1bfa7;
+    border-radius: 2.28889px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #ffffff;
+}

@@ -1,0 +1,26 @@
+{
+  "commendSlider": [
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/dc11184d302d21a36145f2f9eca1def0.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/7a45cf1bfc56b6bce305a6d9c78e71c5.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f01144daad4ebaaf16ae2706cff49366.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/9becd644a9b616bf0ad4ac9b8d8cdaad.jpg?thumb=1&w=720&h=360"
+  ],
+  "smartSlider": [
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a79e73f3bb9e4ffc0437fe4b02ec0384.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f679fed7be819726ff8cfbcaf20219c9.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5cb9fe21bd59658091891b8255b33425.jpg?thumb=1&w=720&h=360"
+  ],
+  "tvSlider": [
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/2a1098cee5105d5b96001ae30c4fe3b5.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/83a0a51cb5199744275455feacd8fd8b.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/7b9caa9660b96f1cdb3f9f37fafbb1cc.jpg?thumb=1&w=720&h=360"
+  ],
+  "computerSlider": [
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a6810bf7cd7efe14a8789c53fa652db1.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e9612d0da2b15934329040ba7f02d80f.jpg?thumb=1&w=720&h=360",
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/15147da36c7a27d9df2ab182b9ca755e.jpg?thumb=1&w=720&h=360"
+  ],
+  "lifeSlider": [
+    "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b1d151bb530bb3890c1e53516e416a68.jpg?thumb=1&w=720&h=360"
+  ]
+}

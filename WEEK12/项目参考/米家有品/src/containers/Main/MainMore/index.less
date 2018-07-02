@@ -1,0 +1,59 @@
+.cwj-more-box {
+
+  .cwj-more {
+    padding: .13rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    margin-top: 2px;
+    flex: 1;
+    .more-img {
+      width: 1.3rem;
+      img {
+        height: 1.3rem;
+        width: 1.3rem;
+      }
+    }
+    .more-info {
+      display: flex;
+      flex-direction: column;
+      .more-info-title {
+        color: rgb(51, 51, 51);
+        background-color: transparent;
+        font-size: .13rem;
+        margin: -.12rem 0 0 0;
+      }
+      .more-info-describe {
+        color: rgb(153, 153, 153);
+        background-color: transparent;
+        font-size: .11rem;
+
+      }
+      .more-info-activety {
+        display: flex;
+        flex-direction: row;
+        margin: .06rem 0px 0px;
+        span {
+          color: rgb(192, 67, 67);
+          background-color: transparent;
+          font-size: .14rem;
+          line-height: .168rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          max-height: .168rem;
+          &:nth-of-type(2) {
+            font-size: .11rem;
+            color: rgb(255, 255, 255);
+            background-color: rgb(217, 58, 57);
+            padding: 0 2px;
+            margin-left: 4px;
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,31 @@
+* {
+    font-size: 1%;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    border-bottom: 1px solid #999;
+}
+
+.header .header_icon {
+    position: absolute;
+    left: 0;
+}
+
+.header .header_icon img {
+    display: block;
+    width: 39px;
+    height: 48px;
+}

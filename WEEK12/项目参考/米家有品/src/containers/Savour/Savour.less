@@ -1,0 +1,62 @@
+.savour_main {
+  font-size: 100/100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  font-family: "Helvetica Neue", STHeiTi, sans-serif;
+
+  .savour_container {
+    box-sizing: border-box;
+    li {
+      padding-top: 0.5px;
+      text-align: center;
+      border-bottom: 7px solid rgb(238, 238, 238);
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      img {
+        display: block;
+        width: 95%;
+        height: 95%;
+        margin: 2.5% 2.5%;
+      }
+      span {
+
+        display: block;
+        font-size: 18px;
+        padding-top: 10px;
+        color: rgb(51, 51, 51);
+        word-wrap: break-word;
+      }
+      b {
+        display: block;
+        color: rgb(153, 153, 153);
+        font-size: 13px;
+        padding-top: 8px;
+        word-wrap: break-word;
+      }
+      p {
+        margin: 18px auto;
+        width: .74rem;
+        height: .3rem;
+        background-color: rgb(209, 191, 167);
+        border-radius: 2.28889px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+      }
+      &:last-of-type {
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

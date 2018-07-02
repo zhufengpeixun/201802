@@ -1,0 +1,115 @@
+[
+  {
+    "gid": "100982",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_940e96da0d8707e657c58c5d7278e64a.jpeg&w=1080&h=450&t=webp",
+    "link": "/detail?gid=100982"
+  },
+  {
+    "gid": "100982",
+    "title": "小米笔记本Air13.3\" 四核",
+    "describe": "带独立显卡的轻薄笔记本",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_367ad26b15fec5173de7438076f3c160.jpeg",
+    "link": "/detail?gid=100982",
+    "price": 5399,
+    "mark": false
+  },
+  {
+    "gid": "100902",
+    "title": "小米笔记本Air  12.5\"  128G",
+    "describe": "轻薄便携又不失性能！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_207804cc738b6d83c775a8a1cc827352.png",
+    "link": "/detail?gid=100902",
+    "price": 3599,
+    "mark": false
+  },
+  {
+    "gid": "100903",
+    "title": "小米笔记本Air  12.5\"  256G",
+    "describe": "小身材，大容量，超长续航，移动办公利器！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_207804cc738b6d83c775a8a1cc827352.png",
+    "link": "/detail?gid=100903",
+    "price": 3999,
+    "mark": false
+  },
+  {
+    "gid": "100596",
+    "title": "小米笔记本Air13.3\" 集显 4G版",
+    "describe": "指纹识别，性价比首选！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_dd55d5c6408c67c10b69e2c1c531afa3.jpeg",
+    "link": "/detail?gid=100596",
+    "price": 4299,
+    "mark": true
+  },
+  {
+    "gid": "100982",
+    "title": "小米笔记本Air13.3\" 四核",
+    "describe": "带独立显卡的轻薄笔记本",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_367ad26b15fec5173de7438076f3c160.jpeg",
+    "link": "/detail?gid=100982",
+    "price": 5399,
+    "mark": false
+  },
+  {
+    "gid": "100902",
+    "title": "小米笔记本Air  12.5\"  128G",
+    "describe": "轻薄便携又不失性能！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_207804cc738b6d83c775a8a1cc827352.png",
+    "link": "/detail?gid=100902",
+    "price": 3599,
+    "mark": false
+  },
+  {
+    "gid": "100903",
+    "title": "小米笔记本Air  12.5\"  256G",
+    "describe": "小身材，大容量，超长续航，移动办公利器！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_207804cc738b6d83c775a8a1cc827352.png",
+    "link": "/detail?gid=100903",
+    "price": 3999,
+    "mark": false
+  },
+  {
+    "gid": "100596",
+    "title": "小米笔记本Air13.3\" 集显 4G版",
+    "describe": "指纹识别，性价比首选！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_dd55d5c6408c67c10b69e2c1c531afa3.jpeg",
+    "link": "/detail?gid=100596",
+    "price": 4299,
+    "mark": true
+  },
+  {
+    "gid": "100982",
+    "title": "小米笔记本Air13.3\" 四核",
+    "describe": "带独立显卡的轻薄笔记本",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_367ad26b15fec5173de7438076f3c160.jpeg",
+    "link": "/detail?gid=100982",
+    "price": 5399,
+    "mark": false
+  },
+  {
+    "gid": "100902",
+    "title": "小米笔记本Air  12.5\"  128G",
+    "describe": "轻薄便携又不失性能！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_207804cc738b6d83c775a8a1cc827352.png",
+    "link": "/detail?gid=100902",
+    "price": 3599,
+    "mark": false
+  },
+  {
+    "gid": "100903",
+    "title": "小米笔记本Air  12.5\"  256G",
+    "describe": "小身材，大容量，超长续航，移动办公利器！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_207804cc738b6d83c775a8a1cc827352.png",
+    "link": "/detail?gid=100903",
+    "price": 3999,
+    "mark": false
+  },
+  {
+    "gid": "100596",
+    "title": "小米笔记本Air13.3\" 集显 4G版",
+    "describe": "指纹识别，性价比首选！",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_dd55d5c6408c67c10b69e2c1c531afa3.jpeg",
+    "link": "/detail?gid=100596",
+    "price": 4299,
+    "mark": true
+  }
+]

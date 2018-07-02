@@ -1,0 +1,102 @@
+{
+  "hot": [
+    {
+      "id": 207,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/e30444f65a95eefbdbdbaea16084b827!720x360.jpg",
+      "title": "红米5 Plus 千元全面屏",
+      "desc": "5.99\"大屏，17天超长续航",
+      "price": 999,
+      "curPrice": 999,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c4cba8408feece56d32925d19fc3fb4a.png?w=120&h=48"
+    },
+    {
+      "id": 266,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/dae9ef0aaa2c4e66d762ef9187548f80!720x360.jpg",
+      "title": "红米5 千元全面屏",
+      "desc": "5.7\"大屏，前置柔光自拍",
+      "price": 799,
+      "curPrice": 799,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c4cba8408feece56d32925d19fc3fb4a.png?w=120&h=48"
+    }
+  ],
+  "new": [
+    {
+      "id": 807,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/2928a0791a8a9e74bb50f29c9a20632d!720x496.jpg"
+    },
+    {
+      "id": 808,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/259041d71b937fa9184c0d586c326861!720x496.jpg"
+    },
+    {
+      "id": 809,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/b9a8c8cc6a58fde3d899bd612f9a1a55!720x496.jpg"
+    },
+    {
+      "id": 810,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/59b7c902aa14581bda20e36cb53103a5!720x496.jpg"
+    },
+    {
+      "id": 811,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/649ffaf9e5b208e3252551b4df6f4419!720x496.jpg"
+    },
+    {
+      "id": 812,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/afeb0bfa4d99b32135ba9a753b7f6f46!720x496.jpg"
+    },
+    {
+      "id": 813,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/c5eda5a4f6ff9575c3357c0a35d94da8!720x496.jpg"
+    }
+  ],
+  "mix2": [
+    {
+      "id": 404,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/ab8f655f7a7951e87f355cfb20061829!720x360.jpg",
+      "title": "小米MIX 2  全面屏2.0",
+      "desc": "5.99\"大屏，骁龙835旗舰处理器",
+      "price": 3299,
+      "curPrice": 2999,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ada1c75e9ee41b07b865faeb50e23946.png?w=180&h=48"
+    },
+    {
+      "id": 440,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/c8b52506247533daf994566e96cea5ce!720x360.jpg",
+      "title": "小米MIX 2 全陶瓷尊享版",
+      "desc": "全面屏2.0，Unibody 全陶瓷",
+      "price": 4699,
+      "curPrice": 4199,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/660d85e54b4d62c593cd3bc11c948f30.png?w=180&h=48"
+    }
+  ],
+  "future": [
+    {
+      "id": 800,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/3b0612505da093e85d1f60ff9d959ec7!720x496.jpg"
+    },
+    {
+      "id": 801,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/9c11491fd29329b71a7100b3582d21be!720x496.jpg"
+    },
+    {
+      "id": 802,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/c1e4bd57874e6a07589e24955684db25!720x496.jpg"
+    },
+    {
+      "id": 803,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/fcd7745d93905986c15cc157cef89ea0!720x496.jpg"
+    },
+    {
+      "id": 804,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/e98d67e7a72f35b45f24cf963b210da1!720x496.jpg"
+    },
+    {
+      "id": 805,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/8b70f7598b78f4feca26f06a35697aee!720x496.jpg"
+    },
+    {
+      "id": 806,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/a7a6ea4dd2275ff577044617e885bc64!720x496.jpg"
+    }
+  ]
+}

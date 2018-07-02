@@ -1,0 +1,171 @@
+.searchPage {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.search_list {
+  position: absolute;
+  z-index: 101;
+  top: .46rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  overflow: auto;
+
+  ul {
+    li {
+      line-height: .42rem;
+      padding: 0 .17rem;
+      border-bottom: 1px solid #ccc;
+      color: #757575;
+    }
+  }
+}
+
+.search_com {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d2d2d2;
+  display: flex;
+  position: relative;
+  font-size: 14px;
+
+  .icon_back {
+    width: .39rem;
+    height: .45rem;
+  }
+  .search_box {
+    flex-direction: row;
+    width: 2.8rem;
+    height: .3rem;
+    background-color: #f4f4f4;
+    border-radius: 0.03rem;
+    align-items: center;
+    margin: .075rem 0;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: .15rem;
+      height: .15rem;
+      margin: .075rem .03rem 0 .09rem;
+    }
+    label {
+      position: absolute;
+      left: .3rem;
+      top: .06rem;
+      color: #757575;
+      z-index: 1;
+    }
+    .search_input {
+      background-color: #f4f4f4;
+      width: 2.5rem;
+      height: 30px;
+      line-height: 30px;
+      outline: none;;
+      box-sizing: border-box;
+      padding: 0.02rem;
+      position: absolute;
+    }
+  }
+  .search_btn {
+    font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-size: .13rem;
+    align-items: center;
+    line-height: .45rem;
+    color: #757575;
+    padding: 0 .14rem;
+    white-space: nowrap;
+
+  }
+}
+
+.detailSearch {
+  padding: 0 .16rem;
+  .hot_search {
+    background-color: #fff;
+    color: #757575;
+
+    h3 {
+      font-size: .14rem;
+      color: #a6a6c4;
+      margin: .18rem 0 .1rem;
+    }
+
+    .hot_list {
+      display: flex;
+      flex-flow: row wrap;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      li {
+        margin-right: .1rem;
+        margin-bottom: .1rem;
+        box-sizing: border-box;
+        border: 1 xp solid #ccc;
+
+        a {
+          display: block;
+          background-color: #ffe6e6;
+          border-radius: 3px;
+          opacity: 1;
+          color: #757575;
+          padding: .03rem .1rem;
+          white-space: nowrap;
+          font-size: .14rem;
+        }
+      }
+    }
+  }
+  .history_search {
+    background-color: #fff;
+    color: #757575;
+
+    h3 {
+      font-size: .14rem;
+      color: #a6a6c4;
+      margin: .18rem 0 .1rem;
+
+      .clear_Btn {
+        float: right;
+      }
+    }
+    .history_list {
+      display: flex;
+      flex-flow: row wrap;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      li {
+        margin-right: 0.1rem;
+        margin-bottom: .1rem;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: .03rem;
+        float: left;
+
+        a {
+          box-sizing: border-box;
+          display: block;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          border-radius: 3px;
+          opacity: 1;
+          color: #757575;
+          padding: .03rem .1rem;
+          white-space: nowrap;
+          font-size: .14rem;
+        }
+      }
+    }
+  }
+}

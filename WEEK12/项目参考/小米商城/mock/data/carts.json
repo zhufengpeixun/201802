@@ -1,0 +1,291 @@
+[
+  {
+    "userId": 1,
+    "cart": [
+      {
+        "id": 302,
+        "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/e9dbcaac03907010f67723914f3da1a4!344x280.jpg",
+        "title": "12.5\"笔记本Air 128GB",
+        "desc": "轻薄长续航，超窄边框",
+        "price": 3599,
+        "curPrice": 3599,
+        "discount": "",
+        "shape": false,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/d9242687-07c8-a862-b549-e72984891948!720x792.webp",
+          "//i8.mifile.cn/v1/a1/1dde941d-29ca-2ff5-4265-5ab1e194bd2a!720x792.webp",
+          "//i8.mifile.cn/v1/a1/96d5b0df-3df2-1759-916e-2bdb50f77667!720x792.webp",
+          "//i8.mifile.cn/v1/a1/05a71f73-e998-44ae-de3a-2660eea2adf8!720x792.webp"
+        ],
+        "count": 2
+      },
+      {
+        "id": 301,
+        "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/cf11ac38e1c8b1caeefa672ef908d94c!696x436.jpg",
+        "title": "13.3\"笔记本Air i7 8GB 独显",
+        "desc": "轻薄全金属机身，指纹解锁，画面流畅",
+        "price": 5999,
+        "curPrice": 5599,
+        "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/30679380b3d0f457bb0d3a4b345163cc.png?w=167&h=167",
+        "shape": true,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/ee4dc538-0464-cc88-126a-e5be2fd80336!720x792.webp",
+          "//i8.mifile.cn/v1/a1/7cde1c69-945d-f927-853b-6f5ec5be430a!720x792.webp",
+          "//i8.mifile.cn/v1/a1/389ca0dd-66a1-9b46-7540-f71810642306!720x792.webp",
+          "//i8.mifile.cn/v1/a1/25affe09-6e50-e1fa-0db6-f42e1fdc94fc!720x792.webp"
+        ],
+        "count": 2
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/0252f42ac06556b92b2854d5511d3f36!120x120.jpg",
+        "title": "米兔智能积木",
+        "id": 902,
+        "desc": "动手又动脑",
+        "price": 199,
+        "curPrice": 199,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/50d1dc62-4d44-b2ba-d647-7c8e8c2156aa!720x792.webp",
+          "//i8.mifile.cn/v1/a1/91deaf9e-bab7-589b-db02-1adfc460e7d6!720x792.webp",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ee0d97e33f87f9d418eafebd8f161f61.jpg?thumb=1&w=720&h=792"
+        ],
+        "count": 1
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/dd2cdf91ccdadcbe9776050eebb5b437!120x120.png",
+        "title": "红米5",
+        "desc": "前置柔光自拍，骁龙处理器，超长续航",
+        "price": 799,
+        "curPrice": 799,
+        "id": 266,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/7dc38112-bbf4-f3fa-db39-5f4674f9d0d4!720x792.webp",
+          "//i8.mifile.cn/v1/a1/7d040eee-5569-5074-864d-8c03f073e8c8!720x792.webp",
+          "//i8.mifile.cn/v1/a1/e3980743-9d5d-0a8a-9dab-0a37c8b98ef5!720x792.webp"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "userId": 2,
+    "cart": [
+      {
+        "id": 301,
+        "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/cf11ac38e1c8b1caeefa672ef908d94c!696x436.jpg",
+        "title": "13.3\"笔记本Air i7 8GB 独显",
+        "desc": "轻薄全金属机身，指纹解锁，画面流畅",
+        "price": 5999,
+        "curPrice": 5599,
+        "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/30679380b3d0f457bb0d3a4b345163cc.png?w=167&h=167",
+        "shape": true,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "userId": 11,
+    "cart": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/e86a2f01f65b88869b78f2c54cc7f258!120x120.png",
+        "title": "笔记本Pro 15.6\"",
+        "id": 304,
+        "desc": "更强悍的专业笔记本，超窄边大视野",
+        "price": 6399,
+        "curPrice": 6399,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/5c6244d2-8214-dde6-8a83-8e25f08a6783!720x792.webp"
+        ],
+        "count": 4
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/dd2cdf91ccdadcbe9776050eebb5b437!120x120.png",
+        "title": "红米5",
+        "desc": "前置柔光自拍，骁龙处理器，超长续航",
+        "price": 799,
+        "curPrice": 799,
+        "id": 266,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/7dc38112-bbf4-f3fa-db39-5f4674f9d0d4!720x792.webp",
+          "//i8.mifile.cn/v1/a1/7d040eee-5569-5074-864d-8c03f073e8c8!720x792.webp",
+          "//i8.mifile.cn/v1/a1/e3980743-9d5d-0a8a-9dab-0a37c8b98ef5!720x792.webp"
+        ],
+        "count": 5
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c195bfa5edff0b02da47231023cf6789.jpg?thumb=1&w=120&h=120",
+        "title": "摄像机",
+        "id": 604,
+        "desc": " 红外夜视,倒置安装",
+        "price": 199,
+        "curPrice": 199,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/bc0374f1-9da0-34e4-2267-633e786e86e0!720x792.webp",
+          "//i8.mifile.cn/v1/a1/e3584b39-168b-2650-dcf4-f30d2a442a09!720x792.webp",
+          "//i8.mifile.cn/v1/a1/c7f83cb7-be39-e1ff-35fc-4ab50a8e81b3!720x792.webp"
+        ],
+        "count": 15
+      },
+      {
+        "id": 1301,
+        "imgUrl": "//i8.mifile.cn/v1/a1/cdca0c30-56cd-3aa7-d24e-f7bd1e6923b1!696x436.webp",
+        "title": "小米AI音箱",
+        "price": 299,
+        "curPrice": 299,
+        "desc": "能播音乐、讲故事、查路况、设闹钟，还能控制智能设备",
+        "buybtn": "30日14点开售",
+        "discount": "",
+        "shape": true,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/7479d926-46ca-1e7a-d39b-5c29b7a924e4!720x792.webp",
+          "//i8.mifile.cn/v1/a1/2e656927-ddd4-42ee-09a3-a6a68d0b7da3!720x792.webp",
+          "//i8.mifile.cn/v1/a1/ca9676ba-7d6b-0d87-6e14-3bc2f602fe24!720x792.webp"
+        ],
+        "count": 4
+      },
+      {
+        "id": 205,
+        "title": "小米电视4A 55英寸",
+        "desc": "4K HDR，64位处理器",
+        "imgUrl": "//i8.mifile.cn/v1/a1/ff90f0af-29a3-dead-9fc1-4455ff3eb17b!360x360.webp",
+        "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+        "price": 2999,
+        "curPrice": 2699,
+        "shape": false,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/7607e9da-9d01-6418-3f50-2ddd9be66cdc!720x792.webp",
+          "//i8.mifile.cn/v1/a1/fad17480-455c-9eb2-22cd-52704e52d904!720x792.webp",
+          "//i8.mifile.cn/v1/a1/8f1aee7f-092e-f142-b8a3-b6eed3f51c4d!720x792.webp"
+        ],
+        "count": 4
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/95e18c104b398643101805287a00ad2b!120x120.png",
+        "title": "小米MIX 2",
+        "id": 404,
+        "desc": "5.99''大屏，4轴光学防抖",
+        "price": 3299,
+        "curPrice": 2999,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/6ef534bb-6817-f6e2-192a-460e659819b8!720x792.webp",
+          "//i8.mifile.cn/v1/a1/2ec6acfd-6d81-0bbd-191c-830b91802564!720x792.webp",
+          "//i8.mifile.cn/v1/a1/59508b3c-fdb4-70b3-1364-d2260478617c!720x792.webp"
+        ],
+        "count": 2
+      },
+      {
+        "id": 1806,
+        "imgUrl": "//i8.mifile.cn/v1/a1/792f0c6a-1647-025c-cf03-8ee75801b873!360x360.webp",
+        "title": "8H护颈乳胶枕 Z2",
+        "price": 239,
+        "curPrice": 239,
+        "desc": "多重新科技  升级好睡眠",
+        "buybtn": "立即购买",
+        "discount": "",
+        "shape": false,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2c6efb1c-ef50-5628-ea0a-e3348afba065!720x792.webp",
+          "//i8.mifile.cn/v1/a1/9fc60bb9-d478-755e-e556-1e614b2cbffc!720x792.webp",
+          "//i8.mifile.cn/v1/a1/6e5d290c-2d03-de4f-6fd1-6fda28607297!720x792.webp"
+        ],
+        "count": 1
+      },
+      {
+        "id": 1811,
+        "imgUrl": "//i8.mifile.cn/v1/a1/7d41e6a2-0b7e-4d2b-f897-33f0a90be2d0!360x360.webp",
+        "title": "TS偏光太阳镜",
+        "price": 99,
+        "curPrice": 89,
+        "desc": "夏季优选，时尚随行",
+        "buybtn": "立即购买",
+        "discount": "//i8.mifile.cn/v1/a1/6a0d92d1-3540-6b77-7d2a-1ee6bde14aad.webp?w=180&h=48",
+        "shape": false,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/770c2322-e9a1-b7ba-42f9-39cb78fb9a4e!720x792.webp",
+          "//i8.mifile.cn/v1/a1/a3dc7377-c2eb-20f3-5b97-4de611e50045!720x792.webp",
+          "//i8.mifile.cn/v1/a1/ce7ba6db-af3a-24e5-a811-c81c4da8e754!720x792.webp"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "userId": 13,
+    "cart": [
+      {
+        "id": 301,
+        "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/cf11ac38e1c8b1caeefa672ef908d94c!696x436.jpg",
+        "title": "13.3\"笔记本Air i7 8GB 独显",
+        "desc": "轻薄全金属机身，指纹解锁，画面流畅",
+        "price": 5999,
+        "curPrice": 5599,
+        "discount": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/30679380b3d0f457bb0d3a4b345163cc.png?w=167&h=167",
+        "shape": true,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/ee4dc538-0464-cc88-126a-e5be2fd80336!720x792.webp",
+          "//i8.mifile.cn/v1/a1/7cde1c69-945d-f927-853b-6f5ec5be430a!720x792.webp",
+          "//i8.mifile.cn/v1/a1/389ca0dd-66a1-9b46-7540-f71810642306!720x792.webp",
+          "//i8.mifile.cn/v1/a1/25affe09-6e50-e1fa-0db6-f42e1fdc94fc!720x792.webp"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "userId": 22,
+    "cart": []
+  },
+  {
+    "userId": 24,
+    "cart": [
+      {
+        "id": 203,
+        "title": "小米电视4A 32英寸",
+        "desc": "64位处理器，高清智能电视",
+        "imgUrl": "//i8.mifile.cn/v1/a1/d342ccbf-e3d6-2dcc-47a3-18656f28a0cc!360x360.webp",
+        "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+        "price": 1199,
+        "curPrice": 999,
+        "shape": false,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/8bc57432-97b8-2a53-1806-a72b3f58f1f0!720x792.webp",
+          "//i8.mifile.cn/v1/a1/99c74004-5aa8-2c1f-6fe2-581ea2661a6d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/9fd60730-764d-2ea9-c983-161f3de3d107!720x792.webp"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "userId": 25,
+    "cart": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f0e283f74845939fd24d53f7fb1d35c1!120x120.png",
+        "title": "小米6",
+        "id": 213,
+        "desc": "骁龙835 旗舰处理器",
+        "price": 2299,
+        "curPrice": 2199,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2928abd1-0e07-b1ba-59cc-9f3410cf7fde!720x792.webp",
+          "//i8.mifile.cn/v1/a1/3c96e923-284b-0d4c-b7e3-e3e6acd713f1!720x792.webp",
+          "//i8.mifile.cn/v1/a1/a25fd308-dce7-393e-3113-02d52b817d5d!720x792.webp"
+        ],
+        "count": 4
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f50a66098acdec2fa16e5d30a7f50769!120x120.png",
+        "title": "小米5X",
+        "id": 204,
+        "desc": "5.5''大屏轻薄全金属",
+        "price": 1299,
+        "curPrice": 1199,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2da996b7-4b5d-0b42-917d-fdb27db12dc9!720x792.webp",
+          "//i8.mifile.cn/v1/a1/090d6b69-5d8b-2895-85f2-13c22577bede!720x792.webp",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/16c29ae096d0d35eaa8a2139b6ed2bd1.jpg?thumb=1&w=720&h=792"
+        ],
+        "count": 5
+      }
+    ]
+  }
+]

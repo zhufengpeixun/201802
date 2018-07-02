@@ -1,0 +1,290 @@
+.pay-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .content {
+    font-size: .14rem;
+    margin-top: .45rem;
+    margin-bottom: .63rem;
+    //padding-bottom: .2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    background: #FFF;
+    .bar-thick {
+      width: 100%;
+      height: .05rem;
+      background: rgb(243, 243, 243);
+    }
+    .bar {
+      width: 100%;
+      height: .01rem;
+      background: rgb(230, 230, 230);
+      margin: 0 auto;
+    }
+    .address {
+      margin: 0.08rem .2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: .7rem;
+      //span{
+      //  font-size: .14rem;
+      //  color: rgb(182,9,9);
+      //}
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        .name-phone {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .ad {
+          font-size: .12rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+      }
+
+      img {
+        width: .13rem;
+        height: .13rem;
+      }
+
+    }
+    .pay-method {
+      display: flex;
+      flex-direction: column;
+      margin: 0 .2rem;
+      //align-items: center;
+
+      .method {
+        height: .42rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          img {
+            width: .26rem;
+            height: .26rem;
+          }
+          span {
+            margin-left: .1rem;
+            font-size: .13rem;
+          }
+        }
+
+        .checkbox {
+          width: .18rem;
+          height: .18rem;
+        }
+      }
+    }
+    .goods {
+      margin: 0 .2rem;
+      .goods-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: .42rem;
+
+        img {
+          width: .24rem;
+          height: .24rem;
+          margin-right: .1rem;
+        }
+        p {
+          font-size: .14rem;
+        }
+      }
+      .goods-body {
+        .item {
+          height: .85rem;
+          display: flex;
+          align-items: center;
+          img {
+            width: .6rem;
+            height: .6rem;
+            margin-right: .1rem;
+          }
+          & > div {
+            flex: 1;
+            p {
+              font-size: .13rem;
+            }
+            & > div {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              p {
+                &:nth-child(1) {
+                  color: rgb(192, 4, 4);
+                  font-size: .15rem;
+                }
+                &:nth-child(2) {
+                  color: rgb(153, 153, 153);
+                  font-size: .12rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .goods-footer {
+        .msg {
+          height: .42rem;
+          display: flex;
+          align-items: center;
+          input {
+            flex: 1;
+            height: 100%;
+            margin-left: .2rem;
+            padding-left: .1rem;
+          }
+        }
+        .xiaoji {
+          font-size: .14rem;
+          height: .42rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            color: rgb(182, 9, 9);
+          }
+        }
+      }
+    }
+    .other-info {
+      margin: 0 .2rem;
+      .youhui {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: .42rem;
+        img {
+          width: .13rem;
+          height: .13rem;
+        }
+      }
+      .peisong {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: .42rem;
+        p {
+          &:nth-child(1) {
+            font-size: .13rem;
+          }
+          &:nth-child(2) {
+            font-size: .12rem;
+            color: rgb(153, 153, 153);
+          }
+        }
+      }
+      .fapiao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: .42rem;
+        div {
+          display: flex;
+          align-items: center;
+          p {
+            color: rgb(153, 153, 153);
+            font-size: .12rem;
+          }
+          img {
+            width: .13rem;
+            height: .13rem;
+          }
+        }
+      }
+    }
+
+    .total {
+      margin: 0 .2rem;
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: .42rem;
+        p {
+          &:nth-child(2) {
+            color: rgb(192, 4, 4);
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .bottom {
+    position: fixed;
+    height: .7rem;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+    .address {
+      display: flex;
+      align-items: center;
+      padding: 0 .2rem;
+      height: .3rem;
+      color: rgb(153, 153, 153);
+      background: rgb(252, 249, 196);
+      font-size: .12rem;
+    }
+    .footer {
+      //position: fixed;
+      height: .53rem;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      //z-index: 11;
+      background: rgb(242, 242, 242);
+      border-style: solid;
+      border-width: .01rem 0 0;
+      border-color: rgb(191, 191, 191);
+      display: flex;
+      justify-content: space-between;
+      .total {
+        display: flex;
+        margin-left: .2rem;
+        align-items: center;
+        span {
+          font-size: .13rem;
+          &:nth-child(2) {
+            color: rgb(182, 9, 9);
+          }
+        }
+      }
+      .paybtn {
+        flex: 0 0 1rem;
+        background: rgb(182, 9, 9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: .13rem;
+          color: #FFF;
+        }
+      }
+
+    }
+  }
+}
+

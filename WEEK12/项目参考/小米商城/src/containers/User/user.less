@@ -1,0 +1,188 @@
+@import "../../common/reset";
+
+.app-user-navigation {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 52px;
+  left: 0;
+  max-width: 7.2rem;
+  background: #f5f5f5;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .ui-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-header-wrapper {
+    background: url(https://m.mi.com/static/img/bg.63c8e19.png) center 0 #f37d0f;
+    background-size: auto 100%;
+    padding: .24rem 0;
+    width: 100%;
+
+    .img {
+      margin: 0 .16rem 0 .32rem;
+      width: .9rem;
+      height: .9rem;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-radius: 100%;
+      border: 3px solid hsla(0, 0%, 100%, .4);
+      text-align: center;
+
+      img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+    .name {
+      color: #fff;
+      font-size: .22rem;
+      text-align: left;
+    }
+  }
+
+  .app-content-wrapper {
+    .b1 {
+      background-color: #fff;
+      height: .75rem;
+      border-bottom: 1px solid rgba(0, 0, 0, .15);
+      color: rgba(0, 0, 0, .54);
+      position: relative;
+      width: 100%;
+
+      .cite {
+        font-size: .24rem;
+        padding: 0 0 0 .3rem;
+        color: rgba(0, 0, 0, .87);
+      }
+      .span {
+        position: absolute;
+        right: 0.2rem;
+        flex-direction: row-reverse;
+        font-size: .22rem;
+        color: rgba(0, 0, 0, .87);
+        a {
+          font-size: .22rem;
+          color: rgba(0, 0, 0, .87);
+        }
+      }
+    }
+
+    .b2 {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      li {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      li.dfk {
+        -webkit-align-content: space-between;
+        padding: .4rem 0;
+
+        .icon {
+          width: .44rem;
+          height: .44rem;
+          margin: 0 auto .16rem;
+          background: url("../../common/img/icon-loadpay.png") no-repeat center 0;
+          background-size: 100% auto;
+        }
+        span {
+          color: rgba(0, 0, 0, .87);
+        }
+      }
+
+      li.thx {
+        -webkit-align-content: space-between;
+        padding: .4rem 0;
+
+        .icon {
+          width: .48rem;
+          height: .48rem;
+          margin: 0 auto .16rem;
+          background: url("../../common/img/icon-fixed.png") no-repeat center 0;
+          background-size: 100% auto;
+        }
+        span {
+          color: rgba(0, 0, 0, .87);
+        }
+      }
+
+      li.dah {
+        -webkit-align-content: space-between;
+        padding: .4rem 0;
+
+        .icon {
+          width: .48rem;
+          height: .48rem;
+          margin: 0 auto .16rem;
+          background: url("../../common/img/icon-receive.png") no-repeat center 0;
+          background-size: 100% auto;
+        }
+        span {
+          color: rgba(0, 0, 0, .87);
+        }
+      }
+    }
+
+    .items {
+      margin-top: .15rem;
+      background: #fff;
+      li {
+        position: relative;
+        color: rgba(0, 0, 0, .54);
+        background-repeat: no-repeat;
+        background-position: .32rem;
+        background-size: .44rem auto;
+        border-bottom: 1px solid rgba(0, 0, 0, .15);
+        line-height: 0;
+        &.i-member {
+          background-image: url("../../common/img/icon-vip.png");
+        }
+        &.i-wallet {
+          background-image: url("../../common/img/icon-youhui.png");
+        }
+        &.i-service {
+          background-image: url("../../common/img/icon-fuwu.png");
+        }
+        &.i-mihome {
+          background-image: url("../../common/img/icon-mihome.png");
+        }
+        &.i-fcode {
+          background-image: url("../../common/img/icon-Fma.png");
+        }
+        &.i-setting {
+          background-image: url("../../common/img/icon-setInfo.png");
+        }
+
+        a {
+          padding-right: .56rem;
+          padding-left: 1.12rem;
+          height: .9rem;
+          display: -webkit-box;
+          -webkit-box-align: center;
+          -webkit-box-pack: justify;
+          color: currentColor;
+          cite {
+            font-size: .26rem;
+            font-style: normal;
+            color: rgba(0, 0, 0, .87);
+          }
+          i {
+            position: absolute;
+            right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+}

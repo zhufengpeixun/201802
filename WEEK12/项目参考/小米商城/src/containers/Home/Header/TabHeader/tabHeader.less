@@ -1,0 +1,26 @@
+.tabheader {
+  overflow: auto;
+  background: #f2f2f2;
+  font-size: .26rem;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+  a {
+    display: inline-block;
+    padding: 0 .3rem;
+    box-sizing: border-box;
+    height: 34px;
+    span {
+      display: inline-block;
+      line-height: 32px;
+      border-bottom: 2px solid rgba(237, 91, 0, 0);
+    }
+    &.active {
+      span {
+        border-bottom: 2px solid rgb(237, 91, 0);
+
+      }
+    }
+  }
+}

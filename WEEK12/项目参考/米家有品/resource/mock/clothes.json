@@ -1,0 +1,115 @@
+[
+  {
+    "gid": "100852",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a421f14489f50fda98416fd955d8cb82.jpeg&w=1080&h=450&t=webp",
+    "link": "/detail?gid=100852"
+  },
+  {
+    "gid": "100907",
+    "title": "三合一冲锋衣",
+    "describe": "防水防风，耐磨抗撕裂，内胆可拆卸",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_419b5741b4c1b0e6544f70e716b47733.jpeg",
+    "link": "/detail?gid=100907",
+    "price": 299,
+    "mark": false
+  },
+  {
+    "gid": "100744",
+    "title": "双面穿羽绒服男款",
+    "describe": "90%鹅绒，防水防风",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_ed6b8b259ff03aa9d89f21fa5259230f.jpeg",
+    "link": "/detail?gid=100744",
+    "price": 299,
+    "mark": true
+  },
+  {
+    "gid": "100663",
+    "title": "轻便可收纳羽绒马甲",
+    "describe": "90%白鸭绒，可变U型枕",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_f62f481467b83240c9402b0a70361685.jpeg",
+    "link": "/detail?gid=100663",
+    "price": 179,
+    "mark": false
+  },
+  {
+    "gid": "100656",
+    "title": "运动休闲羽绒服",
+    "describe": "保温蓄热，防风防寒，无缝工艺",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+    "link": "/detail?gid=100656",
+    "price": 149,
+    "mark": false
+  },
+  {
+    "gid": "100907 ",
+    "title": "三合一冲锋衣",
+    "describe": "防水防风，耐磨抗撕裂，内胆可拆卸",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_419b5741b4c1b0e6544f70e716b47733.jpeg",
+    "link": "/detail?gid=100907",
+    "price": 299,
+    "mark": false
+  },
+  {
+    "gid": "100744",
+    "title": "双面穿羽绒服男款",
+    "describe": "90%鹅绒，防水防风",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_ed6b8b259ff03aa9d89f21fa5259230f.jpeg",
+    "link": "/detail?gid=100744",
+    "price": 299,
+    "mark": true
+  },
+  {
+    "gid": "100663",
+    "title": "轻便可收纳羽绒马甲",
+    "describe": "90%白鸭绒，可变U型枕",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_f62f481467b83240c9402b0a70361685.jpeg",
+    "link": "/detail?gid=100663",
+    "price": 179,
+    "mark": false
+  },
+  {
+    "gid": "100656",
+    "title": "运动休闲羽绒服",
+    "describe": "保温蓄热，防风防寒，无缝工艺",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+    "link": "/detail?gid=100656",
+    "price": 149,
+    "mark": false
+  },
+  {
+    "gid": "100907",
+    "title": "三合一冲锋衣",
+    "describe": "防水防风，耐磨抗撕裂，内胆可拆卸",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_419b5741b4c1b0e6544f70e716b47733.jpeg",
+    "link": "/detail?gid=100907",
+    "price": 299,
+    "mark": false
+  },
+  {
+    "gid": "100744",
+    "title": "双面穿羽绒服男款",
+    "describe": "90%鹅绒，防水防风",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_ed6b8b259ff03aa9d89f21fa5259230f.jpeg",
+    "link": "/detail?gid=100744",
+    "price": 299,
+    "mark": true
+  },
+  {
+    "gid": "100663",
+    "title": "轻便可收纳羽绒马甲",
+    "describe": "90%白鸭绒，可变U型枕",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_f62f481467b83240c9402b0a70361685.jpeg",
+    "link": "/detail?gid=100663",
+    "price": 179,
+    "mark": false
+  },
+  {
+    "gid": "100656",
+    "title": "运动休闲羽绒服",
+    "describe": "保温蓄热，防风防寒，无缝工艺",
+    "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+    "link": "/detail?gid=100656",
+    "price": 149,
+    "mark": false
+  }
+]

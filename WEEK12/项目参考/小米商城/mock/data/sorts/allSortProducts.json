@@ -1,0 +1,766 @@
+[
+  {
+    "手机": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/dd2cdf91ccdadcbe9776050eebb5b437!120x120.png",
+        "title": "红米5",
+        "id": 266,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/7dc38112-bbf4-f3fa-db39-5f4674f9d0d4!720x792.webp",
+          "//i8.mifile.cn/v1/a1/7d040eee-5569-5074-864d-8c03f073e8c8!720x792.webp",
+          "//i8.mifile.cn/v1/a1/e3980743-9d5d-0a8a-9dab-0a37c8b98ef5!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/5b0e5782bbd17756bbe62b0fd0105070!120x120.png",
+        "title": "红米5 Plus",
+        "id": 207,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2af7bc21-ce55-b992-788e-c8c42792f772!720x792.webp",
+          "//i8.mifile.cn/v1/a1/d108bc58-3f1f-3a13-9213-ba2627e00a14!720x792.webp",
+          "//i8.mifile.cn/v1/a1/c66b6801-f13a-07c7-97b6-361ade5f4a32!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/95e18c104b398643101805287a00ad2b!120x120.png",
+        "title": "小米MIX 2",
+        "id": 404,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/6ef534bb-6817-f6e2-192a-460e659819b8!720x792.webp",
+          "//i8.mifile.cn/v1/a1/2ec6acfd-6d81-0bbd-191c-830b91802564!720x792.webp",
+          "//i8.mifile.cn/v1/a1/59508b3c-fdb4-70b3-1364-d2260478617c!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/7bb843bdb8e1f61f4567f1e2acb43262!120x120.png",
+        "title": "小米Note 3",
+        "id": 202,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/341a8d0d-84b4-c8b2-cffa-1beb9c83d114!720x792.webp",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/568b07688b343f667c7040a968f3ee97.jpg?thumb=1&w=720&h=792",
+          "//i8.mifile.cn/v1/a1/8ca21046-f1d0-cc61-05ae-222f10611746!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f0e283f74845939fd24d53f7fb1d35c1!120x120.png",
+        "title": "小米6",
+        "id": 213,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2928abd1-0e07-b1ba-59cc-9f3410cf7fde!720x792.webp",
+          "//i8.mifile.cn/v1/a1/3c96e923-284b-0d4c-b7e3-e3e6acd713f1!720x792.webp",
+          "//i8.mifile.cn/v1/a1/a25fd308-dce7-393e-3113-02d52b817d5d!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f50a66098acdec2fa16e5d30a7f50769!120x120.png",
+        "title": "小米5X",
+        "id": 204,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2da996b7-4b5d-0b42-917d-fdb27db12dc9!720x792.webp",
+          "//i8.mifile.cn/v1/a1/090d6b69-5d8b-2895-85f2-13c22577bede!720x792.webp",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/16c29ae096d0d35eaa8a2139b6ed2bd1.jpg?thumb=1&w=720&h=792"
+        ]
+      }
+    ],
+    "电视": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/0ceafb0119fb20b519f422240ff7bdb0!120x120.png",
+        "title": "32英寸",
+        "id": 203,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/8bc57432-97b8-2a53-1806-a72b3f58f1f0!720x792.webp",
+          "//i8.mifile.cn/v1/a1/99c74004-5aa8-2c1f-6fe2-581ea2661a6d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/9fd60730-764d-2ea9-c983-161f3de3d107!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/9870612fa0f3700a4031219b6f628b7d!120x120.png",
+        "title": "43英寸",
+        "id": 243,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/ad16a1bf-8f50-617b-e6aa-ec6b4aec062c!720x792.webp",
+          "//i8.mifile.cn/v1/a1/cdd3293f-850c-d5b2-d702-fd9c24718379!720x792.webp",
+          "//i8.mifile.cn/v1/a1/4546f37e-2e0b-6039-398c-d14c5a7f4565!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/e47f77da9d3b5d994d11fd7c6cce7b97!120x120.png",
+        "title": "55英寸",
+        "id": 255,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/d238c597-8a85-0921-01ec-3ebcf73ea1cc!720x792.webp",
+          "//i8.mifile.cn/v1/a1/0f9845e2-0658-884f-4f4d-4755d88635aa!720x792.webp",
+          "//i8.mifile.cn/v1/a1/b3f71d40-4ae2-4d34-ca49-7aa9c1cb5fc6!720x792.webp"
+        ]
+      }
+    ],
+    "电脑": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/e86a2f01f65b88869b78f2c54cc7f258!120x120.png",
+        "title": "笔记本Pro 15.6\"",
+        "id": 304,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/5c6244d2-8214-dde6-8a83-8e25f08a6783!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f0d7f8167e14f0c70fd84aa6cb321cb6!120x120.png",
+        "title": "笔记本 13.3\" i7",
+        "id": 301,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/00766a98-2468-5cc0-ad4b-19b6a4b6c23d!720x792.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "小米手机": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/95e18c104b398643101805287a00ad2b!120x120.png",
+        "title": "小米MIX 2",
+        "id": 404
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/7bb843bdb8e1f61f4567f1e2acb43262!120x120.png",
+        "title": "小米Note 3",
+        "id": 202
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/0ed187521ff28e6616798c1c990c1788.png?thumb=1&w=120&h=120",
+        "title": "小米6",
+        "id": 213
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f50a66098acdec2fa16e5d30a7f50769!120x120.png",
+        "title": "小米5X",
+        "id": 204
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/88bc9af6c3bd4e7a695060fe628971e8!120x120.png",
+        "title": "小米Max 2",
+        "id": 205
+      }
+    ],
+    "红米手机": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/dd2cdf91ccdadcbe9776050eebb5b437!120x120.png",
+        "title": "红米5",
+        "id": 266
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/5b0e5782bbd17756bbe62b0fd0105070!120x120.png",
+        "title": "红米5 Plus",
+        "id": 207
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/b3fcf9a7432858f4e4a7eab6e44f7b90!120x120.png",
+        "title": "红米5A",
+        "id": 208,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/9c989247-4871-f667-ede0-4ac233e9c410!720x792.webp",
+          "//i8.mifile.cn/v1/a1/93684422-b7af-34dd-fbaa-8feb576cdd55!720x792.webp",
+          "//i8.mifile.cn/v1/a1/8f89e97c-495e-4432-168e-e257340d854b!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/e72c32611dd54e71d3579eeee2266c81!120x120.png",
+        "title": "红米Note 5A",
+        "id": 209
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/ea6275142315b78422e4f047406fc76c!120x120.png",
+        "title": "红米Note 4X",
+        "id": 210
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/661f8ad7f2014f352e3a47fbb5ee2939.png?thumb=1&w=120&h=120",
+        "title": "红米4X",
+        "id": 211
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/983cf498daddfb0db4fd0967a907d57f.png?thumb=1&w=120&h=120",
+        "title": "红米4A",
+        "id": 212,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/e232a4be-14ed-112c-bfbc-90e5e827e296!720x792.webp",
+          "//i8.mifile.cn/v1/a1/407dd65d-56b8-82af-4a65-fa1115144231!720x792.webp",
+          "//i8.mifile.cn/v1/a1/dec64767-c4f4-c64c-5766-9f8897d05a0d!720x792.webp"
+        ]
+      }
+    ],
+    "移动4G+专区": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f0e283f74845939fd24d53f7fb1d35c1!120x120.png",
+        "title": "小米6",
+        "id": 213,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/3560ec7d-550c-e787-1338-08120685d1a1!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/ea6275142315b78422e4f047406fc76c!120x120.png",
+        "title": "红米Note 4X",
+        "id": 214,
+        "sliderList": [
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/fae2588f951d793f3397fb7c8a170ca7.jpg?thumb=1&w=720&h=792",
+          "//i8.mifile.cn/v1/a1/7dff9bd7-7afe-e2dc-f927-e4638c6978c3!720x792.webp",
+          "//i8.mifile.cn/v1/a1/8b0d5b7b-01bd-7660-e999-67ee106c50df!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/661f8ad7f2014f352e3a47fbb5ee2939!120x120.png",
+        "title": "红米4X",
+        "id": 215,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/42104313-afc1-6bab-1338-7d772ae87b72!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/a075a3e6c3847b0f658cda1464c5d5c1!120x120.jpg",
+        "title": "小米5X",
+        "id": 204,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/82cc08c1-fb2d-b32f-5f0c-b5dcba273c33!720x792.webp",
+          "//i8.mifile.cn/v1/a1/74d8a5df-2a44-38f8-156a-5901aa646470!720x792.webp",
+          "//i8.mifile.cn/v1/a1/d00afcd4-34e1-40c1-87da-450b5845a129!720x792.webp"
+        ]
+      }
+    ],
+    "手机配件": [
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/e55a5383-9b7f-1dfd-7f12-e648f69f5c41!120x120.png",
+        "title": "以旧换新",
+        "id": 217
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f56e7030f11712746a6ba8f3002e6064.png?thumb=1&w=120&h=120",
+        "title": "定位电话",
+        "id": 218,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/f480c9d8-b9c9-761b-cd40-b974813b999d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/3957264f-737c-8120-25fd-249fb06c6a99!720x792.webp",
+          "//i8.mifile.cn/v1/a1/77ee510d-174d-c826-5a7b-171c854570d7!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i1.mifile.cn/v1/a1/T1XKE_B_hT1R4cSCrK!120x120.png",
+        "title": "贴膜",
+        "id": 219
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/T1P0LgBgdv1R4cSCrK!120x120.png",
+        "title": "保护壳",
+        "id": 220
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/eff418ab8f3f0a19f419f730edea5e1b.png?thumb=1&w=120&h=120",
+        "title": "充电器",
+        "id": 221
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/b0580f26-ce5f-a53e-c4ef-6adaf4b798f9!120x120.jpg",
+        "title": "数据线",
+        "id": 222
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/8b34276a77f8bc0d4210105d227aeeed!120x120.jpg",
+        "title": "存储卡",
+        "id": 223
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/4a881b13-d65b-3d63-2bcd-063697074c81!120x120.jpg",
+        "title": "自拍杆",
+        "id": 224
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/51fa8670-774c-c9d0-564b-cf5ff06e6773!120x120.png",
+        "title": "手机支架",
+        "id": 225,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/f94a6e56-169e-d21c-0506-297a2e2348a8!720x792.webp",
+          "//i8.mifile.cn/v1/a1/42e2bc4d-b307-4acc-c990-c544f5aff52d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/21a22578-9412-9109-1b66-a73e18ef7a71!720x792.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "电视": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/ae525d6481ad090edc97ac64ed93e048!120x120.png",
+        "title": "32英寸",
+        "listId": 1001
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/de645bfe55dd46d3fc5ec78a8755a644!120x120.jpg",
+        "title": "43英寸",
+        "listId": 1002
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/efb682b76a29411fd26d990971992c3e!120x120.png",
+        "title": "49-50英寸",
+        "listId": 1003
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/a68d31ccb3ac07f289abc39a5682f334!120x120.png",
+        "title": "55英寸",
+        "listId": 1004
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/976a7cf20fc4d2c72be96c0a7ded63d1!120x120.png",
+        "title": "65英寸",
+        "listId": 1005
+      }
+    ],
+    "盒子": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/6f2896bb755fc5bc90c6d5db716660eb!120x120.jpg",
+        "title": "盒子4",
+        "id": 701,
+        "sliderList": [
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/06314cb89f0b30b7224131a7f9c01ed8.jpg?thumb=1&w=720&h=792",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c1fb5fe02e171623d51309bd64289c5d.jpg?thumb=1&w=720&h=792"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/18c9cf8de4d55c5d41fe63028b92f4b2!120x120.jpg",
+        "title": "盒子4c",
+        "id": 702,
+        "sliderList": [
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/0415297a0d566025e4e63341ed0b48a7.jpg?thumb=1&w=720&h=792",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e0141401fe8cd3136f7ba091e10ec326.jpg?thumb=1&w=720&h=792"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/2ba96ac5-dff1-4ee3-663a-3ae893fb73b9!120x120.jpg",
+        "title": "盒子3s",
+        "id": 703,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/03cec0b6-0637-6ff7-01b9-86b75c7d3f8a!720x792.webp",
+          "//i8.mifile.cn/v1/a1/0664c560-d8a1-8ee8-d2cb-33810f54139d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/8baba62f-0075-6e70-3da5-757953d1bd31!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/2ba96ac5-dff1-4ee3-663a-3ae893fb73b9!120x120.jpg",
+        "title": "盒子3c",
+        "id": 704,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/8f891d2d-6781-e56d-4f85-7cc2e047e949!720x792.webp",
+          "//i8.mifile.cn/v1/a1/a2a22700-d893-4b46-8ea3-7f678b961b7e!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/T16AhgBCVv1RXrhCrK!120x120.jpg",
+        "title": "盒子3增强版",
+        "id": 705,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/8211c189-b600-91df-9b9f-8738c52c89e0!720x792.webp",
+          "//i8.mifile.cn/v1/a1/afcf9651-3d01-e9cb-eda4-579181a44f57!720x792.webp",
+          "//i8.mifile.cn/v1/a1/3fa86d00-8a00-7b82-5398-f90321614ffb!720x792.webp"
+        ]
+      }
+    ],
+    "电视配件与会员": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/114ee8a84c2080d15a167d1d23f5cf62!120x120.png",
+        "title": "会员卡",
+        "id": 699,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/44777df3-b045-5148-2351-110a9d723ec5.jpg"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/T1gox_BsWT1RXrhCrK!120x120.jpg",
+        "title": "遥控器",
+        "id": 698
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/bc66bce5-6674-2d6f-25b6-0167bbb6affa!120x120.jpg",
+        "title": "线材转接器",
+        "id": 697
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/07f6f6c592ed9bb6d6feea460b021c7e!120x120.png",
+        "title": "安装服务",
+        "id": 696
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/161b5d9d91ffbb0a47681b36d7ea6e17.png?thumb=1&w=120&h=120",
+        "title": "麦克风",
+        "id": 695,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/d29885da-f82f-8e9f-0464-58964339c3c3!720x792.webp",
+          "//i8.mifile.cn/v1/a1/729633b0-33fc-9fa5-e8b2-84b07f1d7044!720x792.webp",
+          "//i8.mifile.cn/v1/a1/79345153-e3b5-1c7c-6091-b604b9621374!720x792.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "电脑": [
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/78e8a82a-1ef7-453b-5a07-d8394081ae2e!120x120.png",
+        "title": "笔记本12.5",
+        "listId": 1101
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/8a9485f0-3b11-9d50-cbaa-1ee1cc0936cd!120x120.png",
+        "title": "笔记本13.3",
+        "listId": 1102
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/0643559b70964014c1d672cc783121d2!120x120.jpg",
+        "title": "笔记本15.6",
+        "listId": 1103
+      }
+    ],
+    "电脑配件": [
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/2ca61893-68b9-d0a0-5f85-bdc28e655a3e!120x120.jpg",
+        "title": "鼠标/鼠标垫",
+        "listId": 1104
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/12925f99d858e3155c4bb3ecd1f37ae7.png?thumb=1&w=120&h=120",
+        "title": "机械键盘",
+        "id": 405,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/8bc119c0-b520-0f89-4b09-1e4acb18e40f!720x792.webp",
+          "//i8.mifile.cn/v1/a1/72d50c5f-6a8c-06b2-c056-3db3e942f332!720x792.jpg"
+        ]
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/84d48d9bc2b6e6169cf6e1b09dee9b0c.png?thumb=1&w=120&h=120",
+        "title": "平板保护类",
+        "id": 406
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/08cdff9da904a7846813b004bccd6ccd.png?thumb=1&w=120&h=120",
+        "title": "转接线/电源",
+        "id": 407
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/7ced9e58-ee4d-664f-fdb7-d9ec1eb6d298!120x120.png",
+        "title": "随身WiFi",
+        "id": 408,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/9427e685-9320-f6be-61fa-90a604363450!720x792.webp",
+          "//i8.mifile.cn/v1/a1/9427e685-9320-f6be-61fa-90a604363450!720x792.webp",
+          "//i8.mifile.cn/v1/a1/421874a9-a74c-2f6b-70c1-c3d5f0553ba0!720x792.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "家电": [
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a9370fface3457e13c0db169f650fa05.png?thumb=1&w=120&h=120",
+        "title": "电饭煲",
+        "id": 501
+      },
+      {
+        "imgUrl": "//i1.mifile.cn/v1/a1/T1hyAgB_VT1R4cSCrK!120x120.png",
+        "title": "净水器",
+        "id": 502
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/41c838f5587ef2e6d0a8e1a18a86bace.png?thumb=1&w=120&h=120",
+        "title": "净化器",
+        "id": 503
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/101e2128-624d-ce9f-973f-50b868f8036a!120x120.png",
+        "title": "扫地机器人",
+        "id": 504
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/705a0e385622969cebaa785d5209c431!120x120.jpg",
+        "title": "米家投影仪",
+        "id": 505,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/cafbb585-23c2-e806-0727-f7080f8d2f23!720x792.webp",
+          "//i8.mifile.cn/v1/a1/dac34559-9932-11c8-fba9-b29f3666d871!720x792.webp",
+          "//i8.mifile.cn/v1/a1/d1dd2819-6949-f955-2e78-8827e46e4e32!720x792.webp",
+          "//i8.mifile.cn/v1/a1/d1dd2819-6949-f955-2e78-8827e46e4e32!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/91cd8c44-11ca-79bd-429f-de882bdeaf3b!120x120.png",
+        "title": "电水壶",
+        "id": 506
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e07c98e7b3096f08a1e47234fc0ebbb3.png?thumb=1&w=120&h=120",
+        "title": "灯具",
+        "id": 507
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f0f096dc38408237709036101c7f37ec!120x120.jpg",
+        "title": "空调",
+        "id": 508,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/1e76f501-86b9-1ffc-ef02-4c0cb1988908!720x792.webp",
+          "//i8.mifile.cn/v1/a1/15ab5e43-e7a1-38d1-8f6f-4f43475c71e3!720x792.webp",
+          "//i8.mifile.cn/v1/a1/10467efa-2003-5d1d-98c3-6b4c27cdd804!720x792.webp",
+          "//i8.mifile.cn/v1/a1/877fc030-3d5a-e15a-cee6-a60ddacbd21f!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/7382a91d1f2611ce859bd6fd8578c994!120x120.jpg",
+        "title": "电磁炉",
+        "id": 509
+      }
+    ]
+  },
+  {
+    "路由": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/f379231485fd98d0d0ff553d82896bfc!120x120.jpg",
+        "title": "路由器3A",
+        "id": 510,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/89f0c029-97b6-704b-c2d1-df69ee315fb9!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/b6af48e3285c69c7143c9906c8f5db01!120x120.jpg",
+        "title": "路由器3G",
+        "id": 511,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/abfdcae1-1a48-a2dc-29be-98293ea98dce!720x792.webp",
+          "//i8.mifile.cn/v1/a1/85168020-f7f2-dfa5-3c10-6d2896ca7a6c!720x792.webp",
+          "//i8.mifile.cn/v1/a1/2fb7fd66-d73a-76cf-d60f-f1e7c99e9202!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/T1ECC_B_Av1RXrhCrK!120x120.jpg",
+        "title": "路由器3 ",
+        "id": 512,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/dd099fbb-e37f-38a9-4398-4b378c344ef3!720x792.webp",
+          "//i8.mifile.cn/v1/a1/a2d2266c-1615-3104-4749-ade269220bce!720x792.webp",
+          "//i8.mifile.cn/v1/a1/e682bdd5-9e49-6146-ade1-d68dd9b8e106!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/a94fb522-9d59-bf53-a2c2-a5d982f21499!120x120.png",
+        "title": "路由器3c",
+        "id": 513,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/59aafd26-8750-7e51-4107-36c5fbfde8a6!720x792.webp",
+          "//i8.mifile.cn/v1/a1/41a2d918-62a5-e1c8-8eff-8b41a4ef7669!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/197ed32a9ed39701110a45fc9673b779.png?thumb=1&w=120&h=120",
+        "title": "路由器HD",
+        "id": 514,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/10318957-e194-515b-a2c5-6db1df1c0e5a!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/651a9878ffafc9e9a053d430fedddaa1.png?thumb=1&w=120&h=120",
+        "title": "路由器Pro",
+        "id": 515,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/0812df4a-f49b-644d-7bec-792ddacf9acb!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/T1q6_vBKdv1RXrhCrK!120x120.jpg",
+        "title": "WiFi放大器",
+        "id": 516
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a688c0c2cf5e7095de70b8a540455271.png?thumb=1&w=120&h=120",
+        "title": "电力猫",
+        "id": 517
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/913b9ae01b6a95b7a446d31b48e4d411.png?thumb=1&w=120&h=120",
+        "title": "线材",
+        "id": 518
+      }
+    ]
+  },
+  {
+    "智能": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/9abf516845949cc938188965479c9568!120x120.jpg",
+        "title": "剃须刀",
+        "id": 601,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/efd41550-c2ab-24af-503c-f085e6b043aa!720x792.webp",
+          "//i8.mifile.cn/v1/a1/eb4ba232-184f-25eb-ab00-71b5eda06d81!720x792.webp",
+          "//i8.mifile.cn/v1/a1/44790205-25b8-47e1-2d52-6af5ec949a71!720x792.webp",
+          "//i8.mifile.cn/v1/a1/3be50147-4c9f-aca0-5409-cb074507b892!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/60c481917f13192c4c98e1503c967b4a.png?thumb=1&w=120&h=120",
+        "title": "智能家庭",
+        "id": 602
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/9363c83afe8185b63fc84357b3017697.png?thumb=1&w=120&h=120",
+        "title": "VR眼镜",
+        "id": 603
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c195bfa5edff0b02da47231023cf6789.jpg?thumb=1&w=120&h=120",
+        "title": "摄像机",
+        "id": 604
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/dda59951d5934569aae5ed712b47bc77.jpg?thumb=1&w=120&h=120",
+        "title": "智能插座",
+        "id": 605
+      }
+    ],
+    "健康": [
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/6931e742eb4da4716994ce711d147317.png?thumb=1&w=120&h=120",
+        "title": "手环",
+        "id": 600
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/v1/a1/T14BVjB_YT1R4cSCrK!120x120.png",
+        "title": "血压计",
+        "id": 690
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5dafe36a4db9dcae09ad629548d84753.png?thumb=1&w=120&h=120",
+        "title": "秤",
+        "id": 691
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/5304c138850e21ce2586c6658ea712f9!120x120.png",
+        "title": "体温计",
+        "id": 692
+      }
+    ],
+    "户外": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/6c35232de6adf01edf626a01c7947f1c!120x120.png",
+        "title": "出行",
+        "id": 680
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c97e1f3665ce0d2b1fe33f917c6a38ef.png?thumb=1&w=120&h=120",
+        "title": "无人机",
+        "id": 681
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/0e89ec8bd1c377538241e8efcc684715.png?thumb=1&w=120&h=120",
+        "title": "对讲机",
+        "id": 682
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/7cfd858d0941bf237f7e8a9d62897ce8.png?thumb=1&w=120&h=120",
+        "title": "车载用品",
+        "id": 613
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/e62376482045bb82ff7f1cd63819dbee!120x120.png",
+        "title": "摄影摄像",
+        "id": 614
+      },
+      {
+        "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e8f71941f5749a5768ab1e746c185d34.png?thumb=1&w=120&h=120",
+        "title": "智能硬件套装",
+        "id": 615
+      }
+    ]
+  },
+  {
+    "儿童": [
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/dbfe1ea1c2c5132eb6b88857798dde89!120x120.jpg",
+        "title": "儿童手表",
+        "id": 901,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/543d6741-b352-f250-e1c4-f2321d008b54!720x792.webp",
+          "//i8.mifile.cn/v1/a1/c9075ceb-2d61-6c63-b749-f3332da5829f!720x792.webp",
+          "//i8.mifile.cn/v1/a1/7f38692d-5e5e-2166-6fdf-b3ffb2729362!720x792.webp",
+          "//i8.mifile.cn/v1/a1/040533a4-eb15-cd92-f43c-203c7e4bb3a4!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/0252f42ac06556b92b2854d5511d3f36!120x120.jpg",
+        "title": "米兔智能积木",
+        "id": 902,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/50d1dc62-4d44-b2ba-d647-7c8e8c2156aa!720x792.webp",
+          "//i8.mifile.cn/v1/a1/91deaf9e-bab7-589b-db02-1adfc460e7d6!720x792.webp",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ee0d97e33f87f9d418eafebd8f161f61.jpg?thumb=1&w=720&h=792"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/3ee6cd390d1aea55b8a2b66ee8ed5bcc!120x120.jpg",
+        "title": "积木机器人",
+        "id": 903,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/ee821c71-1005-144f-6fb0-224b73248115!720x792.webp",
+          "//i8.mifile.cn/v1/a1/6a102fc7-7735-40f3-234f-42a1d76cc998!720x792.webp",
+          "//i8.mifile.cn/v1/a1/c9b1925b-41fe-2722-74ca-6c18c5a72ed3!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/50f0767425d52d7ab26e04298581068d!120x120.jpg",
+        "title": "故事机mini",
+        "id": 904,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/7139cc54-c566-6ed7-73d7-80289f1b5711!720x792.webp",
+          "//i8.mifile.cn/v1/a1/02a0f577-02bb-8631-05db-4595af0a470d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/80c3a406-8268-ea7b-5207-148a59d430b7!720x792.webp",
+          "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1f84683e4d2b71847cd81dc24e2dddc1.jpg?thumb=1&w=720&h=792"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/79071ef0cfd489bcce6e8696fec1e17a!120x120.jpg",
+        "title": "70粒益智积木",
+        "id": 905,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/21c2ce01-06cc-c333-0951-d230690295f6!720x792.webp",
+          "//i8.mifile.cn/v1/a1/a336706e-cedb-89b6-367c-8ddfbf7347b6!720x792.webp",
+          "//i8.mifile.cn/v1/a1/0dafd71c-300e-9263-c937-dff0c2fca20f!720x792.webp",
+          "//i8.mifile.cn/v1/a1/914f5387-4781-d2e4-1bd8-4097316b4aa4!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/2e088409a099ecbc1e305623f79ec8e7!120x120.jpg",
+        "title": "米兔儿童书包",
+        "id": 906,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/2b7a3a3b-ba4e-c37b-72c3-198f8270f6d2!720x792.webp",
+          "//i8.mifile.cn/v1/a1/e8858f64-d97a-891d-bab0-77fba100cecd!720x792.webp",
+          "//i8.mifile.cn/v1/a1/ee62db60-97b6-8d80-2992-4b6f80ef68ad!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/021429d2ec8e0259c59426d30af68de6!120x120.jpg",
+        "title": "定位电话",
+        "id": 907,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/f480c9d8-b9c9-761b-cd40-b974813b999d!720x792.webp",
+          "//i8.mifile.cn/v1/a1/3957264f-737c-8120-25fd-249fb06c6a99!720x792.webp",
+          "//i8.mifile.cn/v1/a1/77ee510d-174d-c826-5a7b-171c854570d7!720x792.webp"
+        ]
+      },
+      {
+        "imgUrl": "//i8.mifile.cn/b2c-mimall-media/af51d715f00e1fab7b59a62909235116!120x120.jpg",
+        "title": "智能故事机",
+        "id": 908,
+        "sliderList": [
+          "//i8.mifile.cn/v1/a1/b4126cbd-ecd6-fe4a-d9a2-d7fc12292589.jpg",
+          "//i8.mifile.cn/v1/a1/002621b7-70a1-2dbd-107d-35058912e787!720x792.webp",
+          "//i8.mifile.cn/v1/a1/6eefea8e-545f-d37d-0cf1-d3770383e68e!720x792.webp",
+          "//i8.mifile.cn/v1/a1/6b0525a1-6d4e-e279-df29-2ab480f7c9c1!720x792.webp",
+          "//i8.mifile.cn/v1/a1/71309262-9a7d-5071-ddc5-00df05965c1b!720x792.webp"
+        ]
+      }
+    ]
+  }
+]

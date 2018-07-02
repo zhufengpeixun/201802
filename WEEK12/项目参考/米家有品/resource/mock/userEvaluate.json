@@ -1,0 +1,35 @@
+[
+  {
+    "gid": "100907",
+    "eva": [
+      {
+        "userId": "U10100",
+        "username": "王凯",
+        "userImg": "https://s1.mi-img.com/mfsv2/avatar/s010/p01O8zcc7ymn/6G2iZwpdvVrqVj.jpg",
+        "text": "这件商品真的是很好用",
+        "time": "2018.01.31 22.48"
+      },
+      {
+        "userId": "U10101",
+        "username": "靳东",
+        "userImg": "https://s1.mi-img.com/mfsv2/avatar/s010/p01mGjKjRv44/y9nQArpo7l3c01.jpg",
+        "text": "这件商品真的是很好用",
+        "time": "2018.01.31 22.48"
+      },
+      {
+        "userId": "U10102",
+        "username": "胡歌",
+        "userImg": "https://s1.mi-img.com/mfsv2/avatar/fdsc3/p01NywNc7Svz/PXMZbQ2dzeIdSd.jpg",
+        "text": "这件商品真的是很好用",
+        "time": "2018.01.31 22.48"
+      },
+      {
+        "userId": "U10103",
+        "username": "霍建华",
+        "userImg": "https://static.home.mi.com/youpin/static/m/res/images/evaluation_icon_user.png",
+        "text": "这件商品真的是很好用",
+        "time": "2018.01.31 22.48"
+      }
+    ]
+  }
+]

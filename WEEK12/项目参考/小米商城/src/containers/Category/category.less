@@ -1,0 +1,44 @@
+.content_m {
+  position: relative;
+
+  .nav-list {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    bottom: 50px;
+    box-sizing: border-box;
+    border-right: 1px solid #efefef;
+    width: 1.52rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    li {
+      height: .9rem;
+      line-height: .9rem;
+      overflow: hidden;
+      text-align: center;
+      color: #3C3C3C;
+      transition: all .3s ease-in-out;
+
+      &.active {
+        color: #fb7d34;
+        font-size: .32rem;
+      }
+
+      span {
+      }
+    }
+  }
+
+  .list-wrap {
+    height: 100%;
+    position: absolute;
+    left: 1.52rem;
+    right: 0;
+    padding: 0 .32rem;
+    overflow-y: scroll;
+  }
+}

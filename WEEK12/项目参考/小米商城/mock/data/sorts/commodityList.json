@@ -1,0 +1,290 @@
+{
+  "1001": [
+    {
+      "id": 203,
+      "title": "小米电视4A 32英寸",
+      "desc": "64位处理器，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/d342ccbf-e3d6-2dcc-47a3-18656f28a0cc!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 1199,
+      "curPrice": 999,
+      "shape": false
+    },
+    {
+      "id": 206,
+      "title": "32'' 小米电视4A 体育版",
+      "desc": "高清液晶屏，第6代画质引擎",
+      "imgUrl": "//i8.mifile.cn/v1/a1/8bbb5877-e568-1a21-682d-59962f1da6f0!360x3600.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 1299,
+      "curPrice": 1099,
+      "shape": false
+    }
+  ],
+  "1002": [
+    {
+      "id": 202,
+      "title": "55'' 电视4C 体育版",
+      "desc": "64位四核处理器，超窄边",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/db49b8f2332efa3b4277b85fab720c68.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 243,
+      "title": "小米电视4C 43英寸",
+      "desc": "超窄边，高清智能电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/3961de40-63f1-16cc-6ced-2c034f1f5e43!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2099,
+      "curPrice": 1799,
+      "shape": false
+    },
+    {
+      "id": 244,
+      "title": "小米电视4A 43英寸",
+      "desc": "全高清 HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/203d1299-970a-f100-3f76-65177ad152ab!360x3600.webp",
+      "discount": "",
+      "price": 1999,
+      "curPrice": 1999,
+      "shape": false
+    }
+  ],
+  "1003": [
+    {
+      "id": 201,
+      "title": "小米电视4A 49英寸",
+      "desc": "全高清，HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/c46f28b5-636e-ffcc-c0cb-2347bd2c4890!360x3600.webp",
+      "discount": "//i8.mifile.cn/v1/a1/50a05029-990d-791d-06b7-65e60fd8c26f.webp?w=180&h=48",
+      "price": 2399,
+      "curPrice": 2199,
+      "shape": true
+    },
+    {
+      "id": 208,
+      "title": "小米电视4A 50英寸",
+      "desc": "4K HDR，人工智能语音系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/c2428d05-c3d0-31c6-830d-feaf22326813!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 2399,
+      "curPrice": 2399,
+      "shape": false
+    },
+    {
+      "id": 211,
+      "title": "小米电视4 49英寸",
+      "desc": "极超薄高端旗舰电视",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/eff4f7a747d15ce9af8223248eb8d838.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 3599,
+      "curPrice": 3399,
+      "shape": false
+    }
+  ],
+  "1004": [
+    {
+      "id": 202,
+      "title": "55'' 电视4C 体育版",
+      "desc": "64位四核处理器，超窄边",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/db49b8f2332efa3b4277b85fab720c68.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 255,
+      "title": "小米电视4C 55英寸",
+      "desc": "4K HDR 人工智能系统",
+      "imgUrl": "//i8.mifile.cn/v1/a1/57a93607-fee1-fabc-53b1-18129d39851a!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120&h=48",
+      "price": 3099,
+      "curPrice": 2899,
+      "shape": false
+    },
+    {
+      "id": 256,
+      "title": "小米电视4A 55英寸",
+      "desc": "4K HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/ff90f0af-29a3-dead-9fc1-4455ff3eb17b!360x360.webp",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 2999,
+      "curPrice": 2699,
+      "shape": false
+    },
+    {
+      "id": 257,
+      "title": "小米电视4 55英寸",
+      "desc": "无边框式沉浸设计",
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/50cf0d18052e7771bf24711ee8ce58dd.jpg?thumb=1&w=360&h=360",
+      "discount": "//i8.mifile.cn/v1/a1/a251f082-15f0-8034-da00-ccfe929012cc.webp?w=180&h=48",
+      "price": 4499,
+      "curPrice": 4499,
+      "shape": false
+    }
+  ],
+  "1005": [
+    {
+      "id": 207,
+      "title": "小米电视4A 65英寸",
+      "desc": "4K HDR，64位处理器",
+      "imgUrl": "//i8.mifile.cn/v1/a1/a9ab24e2-55e0-4a3e-d0cd-cb19591a74a3!360x360.webp",
+      "discount": "",
+      "price": 4999,
+      "curPrice": 4999,
+      "shape": false
+    },
+    {
+      "id": 299,
+      "title": "小米电视4 65英寸",
+      "desc": "杜比全景声影院电视",
+      "imgUrl": "//i8.mifile.cn/v1/a1/fc42f947-2c35-6a73-3805-63fd4c18e9cc!360x360.webp",
+      "discount": "",
+      "price": 9999,
+      "curPrice": 9999,
+      "shape": false
+    }
+  ],
+  "1101": [
+    {
+      "id": 302,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/19a01dfb52bd52d9a3654eab319b457e.jpg",
+      "title": "12.5\"笔记本Air 128GB 银色",
+      "desc": "轻薄全金属机身，超长续航，超窄边框",
+      "price": 3599,
+      "curPrice": 3599,
+      "discount": "",
+      "shape": true
+    },
+    {
+      "id": 307,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/d5d9f9a97adcfdbe427a9a062446ff1a.jpg",
+      "title": "12.5\"笔记本Air 128GB",
+      "desc": "长续航全金属，超窄边框",
+      "price": 3599,
+      "curPrice": 3599,
+      "discount": "",
+      "shape": false
+    },
+    {
+      "id": 308,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/19a01dfb52bd52d9a3654eab319b457e.jpg",
+      "title": "12.5\"笔记本Air 256GB",
+      "desc": "轻薄长续航，金属机身",
+      "price": 3999,
+      "curPrice": 3999,
+      "discount": "",
+      "shape": false
+    }
+  ],
+  "1102": [
+    {
+      "id": 306,
+      "imgUrl": "//i8.mifile.cn/v1/a1/ce985ac0-8fb7-1472-ccd9-f937b4ea43c7!360x3600.webp",
+      "title": "13.3\"笔记本四核增强i5 8G ",
+      "desc": "四核增强版，带独立显卡的轻薄笔记本",
+      "price": 5399,
+      "curPrice": 5399,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5822c27ef342a5fa5b5f761ed61f5bad.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 303,
+      "imgUrl": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg",
+      "title": "13.3\"笔记本i5 独显",
+      "desc": "指纹解锁，全金属机身",
+      "price": 5199,
+      "curPrice": 4999,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 309,
+      "imgUrl": "//i8.mifile.cn/v1/a1/09532c59-01e8-e1d8-97df-eda8245d9788!360x3600.webp",
+      "title": "13.3\"笔记本i7 独显",
+      "desc": "轻薄全金属，超长续航",
+      "price": 5999,
+      "curPrice": 5599,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/30679380b3d0f457bb0d3a4b345163cc.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 310,
+      "imgUrl": "//i8.mifile.cn/v1/a1/7ced406e-f826-cd47-e4ff-f4b38209c32c!360x3600.webp",
+      "title": "13.3\"笔记本 8GB",
+      "desc": "轻薄全金属，指纹解锁",
+      "price": 4999,
+      "curPrice": 4799,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": false
+    },
+    {
+      "id": 311,
+      "imgUrl": "//i8.mifile.cn/v1/a1/dafaf705-9b87-3043-5721-4419ac88b9e5!360x3600.webp",
+      "title": "13.3\"笔记本 4GB",
+      "desc": "轻薄便携，指纹解锁",
+      "price": 4599,
+      "curPrice": 4299,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/451a179dcb2ae08e7c63e5bd2412c2f2.png?w=167&h=167",
+      "shape": false
+    }
+  ],
+  "1103": [
+    {
+      "id": 313,
+      "imgUrl": "//i8.mifile.cn/v1/a1/71a40922-389b-70fd-375c-2e409df60338!360x3600.webp",
+      "title": "15.6\"笔记本i7 16GB",
+      "desc": "全新第八代处理器",
+      "price": 6999,
+      "curPrice": 6999,
+      "discount": "",
+      "shape": false
+    },
+    {
+      "id": 312,
+      "imgUrl": "//i8.mifile.cn/v1/a1/82488d9e-b7ec-c845-e9d7-4e03f5c5e272!360x3600.webp",
+      "title": "15.6\"笔记本Pro i7 8GB",
+      "desc": "更强悍的专业笔记本，超窄边大视野",
+      "price": 6399,
+      "curPrice": 6199,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b6e5335b9c1243664459f56626ebe43d.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 304,
+      "imgUrl": "//i8.mifile.cn/v1/a1/c0de124b-305d-1149-50ef-a49c02877d7b!360x3600.webp",
+      "title": "15.6\"笔记本i5 8GB",
+      "desc": "更强悍的专业笔记本",
+      "price": 5599,
+      "curPrice": 5599,
+      "discount": "",
+      "shape": false
+    }
+  ],
+  "1104": [
+    {
+      "id": 314,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/ef7e3b52eed45567e887686990011675!696x436.jpg",
+      "title": "小米便携鼠标",
+      "desc": "轻薄便携，含电池仅重77.5g",
+      "price": 99,
+      "curPrice": 94,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ac72570e3c975295f550d4093313ed3c.png?w=167&h=167",
+      "shape": true
+    },
+    {
+      "id": 315,
+      "imgUrl": "https://i8.mifile.cn/b2c-mimall-media/54808d312963f1ca8299f3a885334114!344x280.jpg",
+      "title": "小米无线鼠标",
+      "desc": "把舒服握在手里",
+      "price": 69,
+      "curPrice": 64,
+      "discount": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ac72570e3c975295f550d4093313ed3c.png?w=167&h=167",
+      "shape": false
+    }
+  ]
+}

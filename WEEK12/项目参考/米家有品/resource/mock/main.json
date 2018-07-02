@@ -1,0 +1,320 @@
+{
+  "sliders": [
+    {
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_9334c3fd5811978f84fe7035ae54b00d.jpeg&w=1080&h=450&crop=a_0_0_1080_480&t=webp",
+      "link": "https://home.mi.com/app/shopv3/site/0118"
+    },
+    {
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_800b78d4c2287c6c7a3681076f9b1606.jpeg&w=1080&h=450&crop=a_0_0_1080_480&t=webp",
+      "link": "https://home.mi.com/detail?gid=100400"
+    },
+    {
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a1e493684d4b9a60d2c4445e95960c81.jpeg&w=1080&h=450&crop=a_0_0_1080_480&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=q283ad0390a96ed83"
+    },
+    {
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_7f79014b3984f9a2ca0ccd989fee960a.jpeg&w=1080&h=450&crop=a_0_0_1080_480&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=s8fa0d039077a9c85"
+    },
+    {
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_940e96da0d8707e657c58c5d7278e64a.jpeg&w=1080&h=450&crop=a_0_0_1080_480&t=webp",
+      "link": "https://home.mi.com/detail?gid=100982"
+    }
+  ],
+  "activity": [
+    {
+      "pId": "有品上新",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_54ca70fc076091c2584b65b68353476d.jpeg&w=270&h=300&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=oc73bd039ebabc5e1"
+    },
+    {
+      "pId": "小米众筹",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_d71c74bce7255baff40ac979ec47f282.png&w=270&h=300&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=s8939d03918810635"
+    },
+    {
+      "pId": "限时购",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a07dceacd5b42d513fa36b7dc5cbe3eb.jpeg&w=270&h=300&t=webp",
+      "link": "https://home.mi.com/activity?cid=oed6fd0393b6297e1"
+    },
+    {
+      "pId": "智能满减",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_0e5a7c4ff9ae447f9bcca643461bcf38.jpeg&w=270&h=300&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=t24cdd039aac1ae76"
+    },
+    {
+      "pId": "好运红包",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_f3b0463f876a98e82d5e7592536472ce.jpeg&w=270&h=300&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=of210d0391acc6412"
+    }
+  ],
+  "recommend": [
+    {
+      "pId": "p873dd039bd147603",
+      "title": "https://shop.io.mi-img.com/app/shop/img?id=shop_50223c8c41e70ab3fdf0b6fd7819d076.jpeg&w=1080&h=420&t=webp",
+      "describe": "https://shop.io.mi-img.com/app/shop/img?id=shop_e364c764ca394a6ce5e676cf67781cc3.png&w=1080&h=546&t=webp",
+      "url": "q2ea1d039f88f74e3",
+      "link": "https://home.mi.com/app/shop/content?id=p873dd039bd147603"
+    },
+    {
+      "pId": "q2ea1d039f88f74e3",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_e4826275efd77207255273a9c4b910ad.jpeg&w=540&h=420&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=q2ea1d039f88f74e3"
+    },
+    {
+      "pId": "m9c66d039bd8a27b1",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_4b0cd606a1cfb18160eca203722d247d.jpeg&w=540&h=420&t=webp",
+      "link": "https://home.mi.com/app/shop/content?id=m9c66d039bd8a27b1"
+    }
+  ],
+  "crowdfunding": [
+    {
+      "gid": 100998,
+      "title": "单身狗“佟旺旺”",
+      "describe": "古法铸造，优质黄铜，高温着色，寓意吉祥",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_7055ceddee6cb63b575fd741be2c3fa2.png&w=1080&h=546&t=webp",
+      "link": "/detail?gid=100998",
+      "price": 199,
+      "ratedPerson": 2000,
+      "actualPerson": 8106,
+      "color": "#c04343"
+    },
+    {
+      "gid": 100958,
+      "title": "LuckyME 金元宝贺岁红包",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_2bbb52715a051a20a21a3186ed86d9ec.jpeg&w=540&h=372&t=webp",
+      "link": "/detail?gid=100958",
+      "price": 99,
+      "ratedPerson": null,
+      "actualPerson": 21416,
+      "color": "#c04343"
+    },
+    {
+      "gid": 100998,
+      "title": "乐范魔力贴温情版",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_11c2849471277114151765570f65faa8.jpeg&w=540&h=372&t=webp",
+      "link": "/detail?gid=100998",
+      "price": 169,
+      "ratedPerson": null,
+      "actualPerson": 10644,
+      "color": "#c04343"
+    }
+  ],
+  "hotItems": [
+    {
+      "gid": "100622",
+      "title": "鹿客智能指纹锁Classic",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_dc4955a7f668f79135bf689005746475.png&w=537&h=426,https://shop.io.mi-img.com/app/shop/img?id=shop_1d26c4fec9f7de43e090f5058a6532b2.png&w=540&h=420&t=webp",
+      "link": "/detail?gid=100622",
+      "price": 1699
+    },
+    {
+      "gid": "757",
+      "title": "小米5X",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_fbac9bcd7a15e60e3d6e864c66a62047.png&w=540&h=420,https://shop.io.mi-img.com/app/shop/img?id=shop_06a052b2c28bc7c80ad4ce96919fb82d.png&w=540&h=420&t=webp",
+      "link": "/detail?gid=757",
+      "price": 1199
+    },
+    {
+      "gid": "339",
+      "title": "米家空气净化器Pro",
+      "describe": "澎湃动力，净化能力更快更强",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_d52f9fa59bcd507e9807e4014ab55418.jpeg&w=537&h=852&t=webp",
+      "link": "/detail?gid=339",
+      "price": 1499
+    },
+    {
+      "gid": "266",
+      "title": "米家扫地机器人",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_68eaff32dfae580e6ca7250ca7fa4a0b.png&w=537&h=426&t=webp",
+      "link": "/detail?gid=266",
+      "price": 1699
+    },
+    {
+      "gid": "100570",
+      "title": "石墨烯发热腰带",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_da726d59c27705dedc637fcc169aebdf.png&w=540&h=420&t=webp",
+      "link": "/detail?gid=100570",
+      "price": 116
+    }
+  ],
+  "newItems": [
+    {
+      "gid": "101004",
+      "title": "圈厨多功能家用电火锅",
+      "describe": "360°环形加热，1500W大功率，食品级不沾涂层，4L大容量",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_acbd8624ea4eb6bf09ba424ac2a82049.png&w=1080&h=546&t=webp",
+      "link": "/detail?gid=101004",
+      "price": 239
+    },
+    {
+      "gid": "100994",
+      "title": "雪荞·小荞酒 清香型白酒",
+      "describe": "古法苦荞酿 雅致荞麦香  好喝回味长  已售3万瓶",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_6c15b15e184bfd4fd604a1052683edef.jpeg&w=540&h=846&t=webp",
+      "link": "/detail?gid=100994",
+      "price": 19.9
+    },
+    {
+      "gid": "100965",
+      "title": "须眉电吹风",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_68ec22a58c9f08ee4c7dddb62f20662f.png&w=540&h=420&t=webp",
+      "link": "/detail?gid=100965",
+      "price": 169
+    },
+    {
+      "gid": "100918",
+      "title": "不上火的人参茶-人参玉竹 108g",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_67950a18a9647fd5d03eb4ec37a861e9.png&w=540&h=420&t=webp",
+      "link": "/detail?gid=100918",
+      "price": 399
+    }
+  ],
+  "limit": [
+    {
+      "id": "oed6fd0393b6297e1",
+      "title": "青米插线板（三孔位）",
+      "describe": "",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_954d8bee31cf91966c14d93734e9ad28.jpeg&t=webp",
+      "link": "/activity?cid=oed6fd0393b6297e1",
+      "ratednum": 1000,
+      "soldnum": 640,
+      "price": 28,
+      "oprice": 35
+    },
+    {
+      "id": "oed6fd0393b6297e1",
+      "title": "多口USB电源适配器",
+      "describe": "",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_0c4c1cde7e2ff397ea4bbc24bb16cd1a.jpeg&t=webp",
+      "link": "/activity?cid=oed6fd0393b6297e1",
+      "ratednum": 2000,
+      "soldnum": 640,
+      "price": 129,
+      "oprice": 169
+    },
+    {
+      "id": "oed6fd0393b6297e1",
+      "title": "萌托斯·法式手工甜品",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_093f784845f89d87fa711f433c78f1a9.jpeg&t=webp",
+      "link": "/activity?cid=oed6fd0393b6297e1",
+      "ratednum": 1000,
+      "soldnum": 800,
+      "price": 99,
+      "oprice": 109
+    },
+    {
+      "id": "oed6fd0393b6297e1",
+      "title": "极米Z5家用智能投影",
+      "describe": "",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_7372aeb265665cc1134cdf9608bf069b.jpeg&t=webp",
+      "link": "/activity?cid=oed6fd0393b6297e1",
+      "ratednum": 1000,
+      "soldnum": 430,
+      "price": 2599,
+      "oprice": 3499
+    }
+  ],
+  "brand": [
+    {
+      "id": "18",
+      "title": "8H",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_54e499c796696b4729d09fef6fd265ac.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=18&title=8H"
+    },
+    {
+      "id": "25",
+      "title": "90分",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_1a3e852b84897e0eca965fbc8c0ecf56.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=25&title=90分"
+    },
+    {
+      "id": "69",
+      "title": "Yeelight",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_3d84b8c77e98ab7f329feaa4bf59a1be.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=69&title=Yeelight"
+    },
+    {
+      "id": "262",
+      "title": "一悟一什",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_fef502fd9572c7fd97827703d2889a2e.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=262&title=一悟一什"
+    },
+    {
+      "id": "68",
+      "title": "云米",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_0e72adae696db1442046208a821b40f8.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=68&title=云米"
+    },
+    {
+      "id": "263",
+      "title": "小吉",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_796ae52154e1e70cdf4399340733da60.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=263&title=小吉"
+    },
+    {
+      "id": "29",
+      "title": "素士",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_5c3cd0f15b0b67705af35e43e985901d.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=29&title=素士"
+    },
+    {
+      "id": "21",
+      "title": "最生活",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_c4396107bf41747ea1691722df9e75e4.jpeg&w=453&h=429&t=webp",
+      "link": "/flagshipstore?id=21&title=最生活"
+    }
+  ],
+  "phone": [
+    {
+      "gid": "100264",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_96e4c1cbe3aa60ccb2a698695f179aba.jpeg&w=1080&h=450&t=webp",
+      "link": "/detail?gid=100264"
+    },
+    {
+      "gid": "100749",
+      "title": "红米5 Plus",
+      "describe": "限时赠壳膜",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg",
+      "link": "/detail?gid=100749",
+      "price": 999,
+      "mark": false
+    },
+    {
+      "gid": "757",
+      "title": "小米5X",
+      "describe": "5X全系直降100，64G版领券再减100",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_2d4c3be025f6d350ba1b2c3905912f7e.jpeg",
+      "link": "/detail?gid=757",
+      "price": 1199,
+      "mark": true
+    },
+    {
+      "gid": "100748",
+      "title": "红米5",
+      "describe": "千元全面屏，4+32G版新品首发",
+      "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_3fa3ed5be0efa75d475ccc898a213deb.jpeg",
+      "link": "/detail?gid=100748",
+      "price": 799,
+      "mark": false
+    },
+    {
+      "gid": "700",
+      "title": "小米6",
+      "describe": "年货节手机专场",
+      "url": "https://static.home.mi.com/app/shop/img?id=shop_51225f14dca0dc9c584b7d55e49a8348.jpeg",
+      "link": "/detail?gid=700",
+      "price": 2299,
+      "mark": false
+    }
+  ]
+}

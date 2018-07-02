@@ -1,0 +1,35 @@
+[
+  {
+    "gid": 100998,
+    "title": "单身狗“佟旺旺”",
+    "describe": "古法铸造，优质黄铜，高温着色，寓意吉祥",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_7055ceddee6cb63b575fd741be2c3fa2.png&w=1080&h=546&t=webp",
+    "link": "/detail?gid=100998",
+    "price": 199,
+    "ratedPerson": 2000,
+    "actualPerson": 8106,
+    "color": "#c04343"
+  },
+  {
+    "gid": 100958,
+    "title": "LuckyME 金元宝贺岁红包",
+    "describe": "",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_2bbb52715a051a20a21a3186ed86d9ec.jpeg&w=540&h=372&t=webp",
+    "link": "/detail?gid=100958",
+    "price": 99,
+    "ratedPerson": null,
+    "actualPerson": 21416,
+    "color": "#c04343"
+  },
+  {
+    "gid": 100998,
+    "title": "乐范魔力贴温情版",
+    "describe": "",
+    "url": "https://shop.io.mi-img.com/app/shop/img?id=shop_11c2849471277114151765570f65faa8.jpeg&w=540&h=372&t=webp",
+    "link": "/detail?gid=100998",
+    "price": 169,
+    "ratedPerson": null,
+    "actualPerson": 10644,
+    "color": "#c04343"
+  }
+]

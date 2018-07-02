@@ -1,0 +1,63 @@
+.wraper1 .img1 {
+    width: 50px;
+    height: 50px;
+}
+
+.wraper1 {
+    animation: vertical-animation 1.5s ease-in 1;
+    -webkit-animation: vertical-animation 1.5s ease-in 1;
+    -moz-animation: vertical-animation 1.5s ease-in 1;
+}
+
+.wraper1 .img1 {
+    animation: hor-animation 1.5s linear 1s forwards;
+    -webkit-animation: hor-animation 1.5s linear forwards;
+    -moz-animation: hor-animation 1.5s linear forwards;
+}
+
+@-moz-keyframes hor-animation {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-300px);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes hor-animation {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-300px);
+        opacity: 0
+    }
+}
+
+@-moz-keyframes vertical-animation {
+    0% {
+        transform: translateY(0px);
+    }
+    80% {
+        opacity: 1
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes vertical-animation {
+    0% {
+        transform: translateY(0px);
+    }
+    80% {
+        opacity: 1
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 0
+    }
+
+}
