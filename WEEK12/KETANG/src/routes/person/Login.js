@@ -33,6 +33,8 @@ class Login extends React.Component {
                 });
                 if (parseFloat(result.code) === 0) {
                     this.props.queryBaseInfo();
+                    //=>登录成功后我们需要重新获取已购买的课程信息（未登录下从服务获取的支付课程信息是获取不到的，但是登录后我们需要把购买信息同步到REDUX中，这样在我的课程中才能展示出来相关的信息）
+                    this.props.queryPay();
                     this.props.history.go(-1);
                     return;
                 }
@@ -40,7 +42,7 @@ class Login extends React.Component {
             }
         });
     };
-
+    
     render() {
         const {getFieldDecorator} = this.props.form;
         return <div className='personLoginBox'>
@@ -62,4 +64,4 @@ class Login extends React.Component {
     }
 }
 
-export default Form.create()(connect(null, action.person)(Login));
+export default Form.create()(connect(null, {...action.person, ...action.course})(Login));

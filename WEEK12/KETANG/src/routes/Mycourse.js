@@ -10,7 +10,8 @@ class Mycourse extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            current: 'unpay'
+            //=>根据当前的路由地址，验证初始选中的MENU到底是PAY还是UNPAY
+            current: this.props.location.pathname === '/mycourse/pay' ? 'pay' : 'unpay'
         };
     }
 
