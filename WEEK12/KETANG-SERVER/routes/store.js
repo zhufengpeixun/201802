@@ -4,12 +4,13 @@ const express = require('express'),
     STORE_PATH = './json/store.json',
     utils = require('../utils/utils');
 
+//=>增加购物车信息
 route.post('/add', (req, res) => {
-    let personID = req.session.personID,
-        {courseID} = req.body;
+    let personID = req.session.personID,//=>登录用户的ID
+        {courseID} = req.body;//=>传递的课程ID，我就是要把这个课程加入购物车
     courseID = parseFloat(courseID);
 
-    //=>已经登录状态下，把信息直接存储到JSON中即可
+    //=>已经登录状态下，把信息直接存储到JSON中即可（用户在其它平台上登录，也可以从JSON中获取到数据，实现信息跨平台）
     if (personID) {
         utils.ADD_STORE(req, res, courseID).then(() => {
             res.send({code: 0, msg: 'OK!'});
@@ -19,7 +20,7 @@ route.post('/add', (req, res) => {
         return;
     }
 
-    //=>未登录状态下，临时存储到SESSION中，等到下一次登录成功，直接把信息存储到文件中（并且清空SESSION中的信息）
+    //=>未登录状态下，临时存储到SESSION中(等到下一次登录成功，也要把SESSION中存储的信息，直接存储到文件中（并且清空SESSION中的信息）
     !req.session.storeList ? req.session.storeList = [] : null;
     req.session.storeList.push(courseID);
     res.send({code: 0, msg: 'OK!'});
@@ -54,6 +55,7 @@ route.get('/info', (req, res) => {
         personID = req.session.personID,
         storeList = [];
     if (personID) {
+        //=>登录状态下是从JSON文件中获取：在STORE.JSON中找到所有personID和登录用户相同的(服务器从SESSION中可以获取用户ID的)
         req.storeDATA.forEach(item => {
             if (parseFloat(item.personID) === personID && parseFloat(item.state) === state) {
                 storeList.push({
@@ -71,6 +73,7 @@ route.get('/info', (req, res) => {
         }
     }
 
+    //=>根据上面查找到的课程ID（storeList），把每一个课程的详细信息获取到，返回给客户端
     let data = [];
     storeList.forEach(({courseID, storeID} = {}) => {
         let item = req.courseDATA.find(item => parseFloat(item.id) === courseID);
@@ -85,6 +88,7 @@ route.get('/info', (req, res) => {
 });
 
 route.post('/pay', (req, res) => {
+    //=>把某一个课程的STATE修改为1（改完后也是需要把原始JSON文件替换的）
     let {storeID} = req.body,
         personID = req.session.personID,
         isUpdate = false;
