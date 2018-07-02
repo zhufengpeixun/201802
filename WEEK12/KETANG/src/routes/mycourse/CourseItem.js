@@ -1,15 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import action from '../../store/action/index';
 
-export default class CourseItem extends React.Component {
+class CourseItem extends React.Component {
     constructor(props, context) {
         super(props, context);
     }
 
     render() {
-        let {id, name, pic, dec, price} = this.props.item;
+        let {id, name, pic, dec, price, check} = this.props.item;
         return <li>
-            <input type="checkbox"/>
+            <input type="checkbox" checked={check} onChange={this.props.handleSelect.bind(this, id)}/>
 
             <Link to={`/course/info?courseId=${id}`}>
                 <h3>{name}</h3>
@@ -24,3 +26,5 @@ export default class CourseItem extends React.Component {
         </li>;
     }
 }
+
+export default connect(state => state.course, action.course)(CourseItem);
