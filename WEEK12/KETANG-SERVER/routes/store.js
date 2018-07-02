@@ -64,16 +64,7 @@ route.get('/info', (req, res) => {
             storeList = req.session.storeList || [];
         }
     }
-
-    if (storeList.length === 0) {
-        res.send({
-            code: 1,
-            msg: 'NO!',
-            data: []
-        });
-        return;
-    }
-
+    
     let data = [];
     storeList.forEach(courseID => {
         let item = req.courseDATA.find(item => parseFloat(item.id) === courseID);
