@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训 8000</title>
+</head>
+<body>
+<iframe src="http://localhost:8002/C.html" frameborder="0" id="iframeBox"></iframe>
+
+<script>
+    /* iframeBox.onload = () => {
+         //=>contentWindow：获取子页面WINDOW对象中的信息
+         console.log(iframeBox.contentWindow.name);//=>A.html:13 Uncaught DOMException: Blocked a frame with origin "http://localhost:8000" from accessing a cross-origin frame.  不允许跨域访问内容
+     };*/
+
+    //=>把C加载成功:WINDOW.NAME已经存在了
+    /*iframeBox.onload = () => {
+        iframeBox.src = "http://localhost:8000/proxy.html";//=>我们让SRC嵌套同源下的页面,但是PROXY中不会修改WINDOW.NAME的值，记录的还是C中改过的；但是这样在获取内容的时候，就不在是跨域获取。 （这样会一直触发LOAD事件）
+        console.log(iframeBox.contentWindow.name);
+    };*/
+
+    let count = 0;
+    iframeBox.onload = () => {
+        if (count === 0) {
+            iframeBox.src = "http://localhost:8000/proxy.html";
+            count++;
+            return;
+        }
+        console.log(iframeBox.contentWindow.name);
+    };
+</script>
+</body>
+</html>

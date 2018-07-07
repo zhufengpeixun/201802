@@ -48,7 +48,8 @@ render(<Provider store={store}>
     </HashRouter>
 </Provider>, root);*/
 
-import React from 'react';
-import ReactDOM, {render} from 'react-dom';
+import axios from 'axios';
 
-console.log(window.wx);
+axios.get('/message/allCount').then(result => {
+    console.log(result);
+});

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<!--<script src="jquery.min.js"></script>
+<script>
+    let xhr = new XMLHttpRequest;
+    xhr.withCredentials = true;//=>服务端和客户端的这个属性要设置为TRUE，否则客户端传递给服务器端请求中的COOKIE无法基于请求头设置传递
+    xhr.open('POST', 'http://localhost:9000/queryInfo');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && /^(2|3)\d{2}$/.test(xhr.status)) {
+            console.log(xhr.responseText);
+        }
+    };
+    xhr.send('xxx=xxx');
+</script>-->
+
+<!--<script src="axios.min.js"></script>
+<script>
+    axios.defaults.withCredentials = true;//=>xhr.withCredentials=true
+    axios.post('http://localhost:9000/queryInfo', {
+        xxx: 'xxx'
+    }).then(result => {
+        console.log(result);
+    });
+</script>-->
+
+<script src="axios.min.js"></script>
+<script>
+    axios.get('/proxy').then(result => {
+        console.log(result);
+    });
+</script>
+</body>
+</html>

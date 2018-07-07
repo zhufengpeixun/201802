@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<!--<script src="jquery.min.js"></script>
+<script>
+    /*$.ajax({
+        url: 'http://localhost:9000/queryInfo',
+        method: 'GET',
+        //=>当DATA-TYPE设置为JSONP的时候，实现的是JSONP跨域请求
+        dataType: 'jsonp',
+        jsonp: 'cb',//=>把传递时候的CALLBACK修改为CB:?cb=xxx
+        success: function (result) {
+            //=>从服务器获取的结果
+            console.log(result);
+        }
+    });*/
+    //=>http://localhost:9000/queryInfo?callback=jQuery1113043216574307319444_1530948179098&_=1530948179099  JQ会帮我们生成一个全局的随机函数，并且把函数传递给服务器（也是利用SCRIPT的SRC完成等）
+
+    let fn = function (result) {
+        console.log(result);
+    };
+    $.ajax({
+        url: 'http://localhost:9000/queryInfo',
+        method: 'GET',
+        dataType: 'jsonp',
+        jsonp: 'cb',
+        jsonpCallback: 'fn' //=>不走JQ默认生成的函数名，执行我们自己指定的方法
+    });
+</script>-->
+
+<script src="jsonp.js"></script>
+<script>
+    jsonp('http://localhost:9000/queryInfo', {
+        jsonp: 'cb',
+        jsonpCallback: 'fn'
+    }).then(result => {
+        console.log(result);
+    });
+</script>
+</body>
+</html>

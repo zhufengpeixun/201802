@@ -107,5 +107,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "proxy": "http://shequweb.sports.qq.com"
 }

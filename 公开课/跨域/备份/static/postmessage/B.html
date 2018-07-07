@@ -7,7 +7,7 @@
 <body>
 <script>
     window.onmessage = function (ev) {
-        console.log(ev.data + ' [B]');
+        console.log(ev.data + ' [B]');//=>'AA [B]'
         ev.source.postMessage('BB', ev.origin);
     }
 </script>
