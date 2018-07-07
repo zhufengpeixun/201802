@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script>
+    window.onmessage = function (ev) {
+        console.log(ev.data + ' [B]');
+        ev.source.postMessage('BB', ev.origin);
+    }
+</script>
+</body>
+</html>

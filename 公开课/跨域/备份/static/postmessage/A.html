@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<iframe src="http://localhost:8002/B.html"></iframe>
+<script>
+    let iframeBox = document.querySelector('iframe');
+    iframeBox.onload = function () {
+        this.contentWindow.postMessage('AA', 'http://localhost:8002/');
+    }
+    window.onmessage = function (ev) {
+        console.log(ev.data + ' [A]');
+    }
+</script>
+</body>
+</html>

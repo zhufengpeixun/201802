@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<iframe src="http://localhost:8002/B.html" frameborder="0"></iframe>
+<script>
+    //=>window.name属性的神奇之处在于name值在不同的页面（甚至不同域名）加载后依旧存在（如果没修改则值不会变化），并且可以支持非常长的name值（2MB）。
+    let iframeBox = document.querySelector('iframe'),
+        count = 0;
+    iframeBox.onload = function () {
+        if (count === 0) {
+            this.src = 'http://localhost:8001/proxy.html';
+            count++;
+            return;
+        }
+        console.log(this.contentWindow.name);
+    }
+</script>
+</body>
+</html>
