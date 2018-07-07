@@ -4,7 +4,7 @@ app.listen(9000, () => {
     console.log('SERVER IS 9000!');
 });
 app.get('/queryInfo', (req, res) => {
-    let fn = req.query.callback,//=>获取客户端传递的函数名
+    let fn = req.query.cb,//=>获取客户端传递的函数名
         data = {
             code: 0,
             msg: 'my name is zhufeng!'
