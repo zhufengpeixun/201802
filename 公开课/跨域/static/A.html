@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script src="jquery.min.js"></script>
+<!--<script>
+    $.ajax({
+        url: 'http://localhost:9000/queryInfo',
+        method: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            console.log(result);
+        }
+    });
+</script>-->
+
+<!--JSONP-->
+<script>
+    function fn(result) {
+        console.log(result);//=>就是从服务器获取的数据
+    }
+</script>
+<script src="http://localhost:9000/queryInfo?callback=fn"></script>
+</body>
+</html>

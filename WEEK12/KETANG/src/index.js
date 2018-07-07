@@ -1,36 +1,37 @@
-/*BASE*/
+/*
+/!*BASE*!/
 import React from 'react';
 import ReactDOM, {render} from 'react-dom';
 import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
 
-/*REDUX STORE*/
+/!*REDUX STORE*!/
 import {Provider} from 'react-redux';
 import store from './store/index';
 
-/*ANTD*/
+/!*ANTD*!/
 import {LocaleProvider} from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 
-/*IMPORT CSS*/
+/!*IMPORT CSS*!/
 import './static/css/reset.min.css';
 import './static/css/common.less';
 
-/*IMPORT COMPONENT*/
+/!*IMPORT COMPONENT*!/
 import NavTop from './component/NavTop';
 import NavBottom from './component/NavBottom';
 import Home from './routes/Home';
 import Mycourse from './routes/Mycourse';
 import Person from './routes/Person';
 
-/*RENDER*/
+/!*RENDER*!/
 render(<Provider store={store}>
     <HashRouter>
         <LocaleProvider locale={zh_CN}>
             <div>
-                {/*HEADER*/}
+                {/!*HEADER*!/}
                 <NavTop/>
 
-                {/*MAIN=>ROUTE*/}
+                {/!*MAIN=>ROUTE*!/}
                 <main className='container'>
                     <Switch>
                         <Route path='/course' component={Home}/>
@@ -40,9 +41,14 @@ render(<Provider store={store}>
                     </Switch>
                 </main>
 
-                {/*FOOTER*/}
+                {/!*FOOTER*!/}
                 <NavBottom/>
             </div>
         </LocaleProvider>
     </HashRouter>
-</Provider>, root);
+</Provider>, root);*/
+
+import React from 'react';
+import ReactDOM, {render} from 'react-dom';
+
+console.log(window.wx);
